@@ -1,16 +1,15 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "Filcan",
+  "description": "Official Filcan website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sharidan Barboza",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "font-awesome": "^4.7.0",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.46",
+    "gatsby": "^1.9.153",
+    "gatsby-link": "^1.6.34",
+    "gatsby-plugin-netlify-cms": "^1.0.0",
     "gatsby-plugin-react-helmet": "^2.0.11",
-    "nivo-slider": "^3.2.0",
-    "owl.carousel": "^2.3.4",
     "react-bootstrap": "^0.32.4",
     "react-helmet": "^5.2.0"
   },
@@ -29,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/sharibarboza/FilcanJS"
   }
 }
