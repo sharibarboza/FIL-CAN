@@ -479,7 +479,7 @@ position: absolute;
 /* team area css */
 
 .team_area {
-	padding: 0px 0 100px;
+	padding: 100px 0 100px;
 }
 .team_area2 {
 	padding-bottom: 99px;
@@ -499,16 +499,20 @@ position: absolute;
 .text {
     border-radius: 50%;
     bottom: 0;
-    height: 99%;
+    height: 300px;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 99%;
+    width: 300px;
     z-index: 1;
     right: 0;
     left: 0;
     margin: auto;
     background:#1e73be;
+}
+
+#wrapper-yellow {
+  background: #CCB508;
 }
 
 
@@ -3451,14 +3455,28 @@ transition: all 0.3s ease-in-out 0s;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
-	transform:scale(1);
-	transition:.5s;
+    transform:scale(1);
+    transition:.5s;
 }
-.team-style-2 .em-content-image img {
+.em-content-image {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    overflow:hidden;
+    margin: 0 auto;
+}
+.em-content-image img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 0;
     margin: 0 auto;
     display: block;
-    width: 100%;
-    border-radius: 100%;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    filter: grayscale(100%);
 }
 .team-style-2 .em-team:hover .em-content-image:before {
     background: rgba(0, 0, 0, .7);
@@ -3474,16 +3492,16 @@ transition: all 0.3s ease-in-out 0s;
 .team-back-wraper {
     border-radius: 50%;
     bottom: 0;
-    height: 99%;
+    height: 300px;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 99%;
+    width: 300px;
     z-index: 1;
     right: 0;
     left: 0;
     margin: auto;
-	background:#B51D29;
+	  background:#B51D29;
 
 }
 .em-content-waraper1 {

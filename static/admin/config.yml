@@ -3,6 +3,7 @@ backend:
   repo: sharibarboza/FilcanJS #replace with your username/repo
 
 media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: campmeeting_date
@@ -11,4 +12,14 @@ collections:
     create: true
     fields:
       - { label: Title, name: title, widget: string }
-      - { name: date, label: Date, widget: date }
+      - { label: Date, name: date, widget: date }
+
+  - name: officer
+    label: Officer
+    folder: leadership
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Name, name: name, widget: string }
+      - { label: Church, name: church, widget: string }
+      - { label: Photo, name: photo, widget: image }
