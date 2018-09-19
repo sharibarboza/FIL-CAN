@@ -1,6 +1,6 @@
 ---
 title: Treasurer
-name: Retna Baragona
+name: Emma Baragona
 photo: /static/assets/officer1.jpg
 ---
 
