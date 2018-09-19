@@ -10,6 +10,9 @@
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-netlify-cms": "^1.0.0",
     "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-remark": "^1.7.28",
+    "netlify-cms": "^2.1.2",
     "react-bootstrap": "^0.32.4",
     "react-helmet": "^5.2.0"
   },
