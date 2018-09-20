@@ -58,15 +58,21 @@ class Header extends React.Component {
   					<div className="col-md-8 col-sm-9 col-xs-8">
   						<nav className="astute_menu main-search-menu">
   							<ul className="sub-menu">
-  								<li><a href="index.html">Home</a>
-  									<ul className="sub-menu">
-  										<li><a href="index-2.html">Home 2</a></li>
-  										<li><a href="index-3.html">Home 3</a></li>
-  										<li><a href="index-onepage.html">Home OnePage</a></li>
-  									</ul>
-  								</li>
-  								<li><a href="about.html">About</a></li>
-  								<li><a href="project.html">Events</a></li>
+  								<li><a href="index.html">Home</a></li>
+  								<li><a href="about.html">About</a>
+                    <ul className="sub-menu">
+                      <li><a href="index-2.html">History</a></li>
+                      <li><a href="index-2.html">Churches</a></li>                      
+                      <li><a href="index-3.html">Leadership</a></li>
+                      <li><a href="index-onepage.html">Bylaws</a></li>
+                      <li><a href="index-onepage.html">Financials</a></li>
+                    </ul>
+                  </li>
+  								<li><a href="project.html">Events</a>
+                    <ul className="sub-menu">
+                      <li><a href="index-2.html">Camp Meeting</a></li>
+                    </ul>
+                  </li>
   								<li><a href="service.html">Meetings</a></li>
   								<li><a href="contact.html">Contact</a></li>
   							</ul>

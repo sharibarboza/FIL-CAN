@@ -499,11 +499,11 @@ position: absolute;
 .text {
     border-radius: 50%;
     bottom: 0;
-    height: 300px;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 300px;
+    height: 295px;
+    width: 295px;
     z-index: 1;
     right: 0;
     left: 0;
@@ -2797,9 +2797,13 @@ astute FOOTER MIDDLE AREA CSS
   font-size: 14px;
 }
 
+.footer-col p {
+  line-height: 25px;
+}
+
 .sda-logo {
-  width: 70px;
-  margin-bottom: 10px;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 #menu-quick-link {
@@ -3364,49 +3368,42 @@ EM40 TEAM CSS
     background-color: #fff;
     bottom: -67px;
     left: 0;
-    margin: 0 10px;
+    margin: 0 2vw;
     padding: 30px 0;
     position: absolute;
     right: 0;
     transition: all 0.3s ease 0s;
 }
 .em-team-content-title h2 {
-margin-bottom: 5px;
-text-transform: uppercase;
-transition: all 0.3s ease-in-out 0s;
-font-size:17px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
+  font-size:17px;
 }
 .em-team-content-subtitle {
-font-size: 14px;
-margin-bottom: 0;
-text-transform: uppercase;
-transition: all 0.3s ease-in-out 0s;
+  font-size: 14px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
 }
-.em-team-content-socials a {
-  background: #fff none repeat scroll 0 0;
-  border-radius: 50%;
-  display: inline-block;
-  height: 35px;
-  line-height: 35px;
-  margin: 14px 3px 0;
-  text-align: center;
-  width: 35px;
-  color:#f62459;
+.em-team-content-socials span {
+    display: inline-block;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    margin: 14px 3px 0;
+    text-align: center;
+    width: 100%;
 }
 .em-team-content-socials {
     position: relative;
-	transition:.5s;
-}
-.em-team-content-socials a:hover{
-	 background-color: rgba(235, 27, 43, 1);
-	color:#fff;
+	  transition:.5s;
 }
 .em-team:hover .em-team-content-waraper{
     background-color: rgba(235, 27, 43, 0.8);
  bottom: 0px;
 }
 .em-team:hover .em-team-content-socials {
-
 
 }
 
@@ -3459,10 +3456,9 @@ transition: all 0.3s ease-in-out 0s;
     transition:.5s;
 }
 .em-content-image {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     position: relative;
-    border-radius: 50%;
     overflow:hidden;
     margin: 0 auto;
 }
@@ -3473,9 +3469,6 @@ transition: all 0.3s ease-in-out 0s;
     background-position: 50% 0;
     margin: 0 auto;
     display: block;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     filter: grayscale(100%);
 }
 .team-style-2 .em-team:hover .em-content-image:before {
@@ -3492,11 +3485,11 @@ transition: all 0.3s ease-in-out 0s;
 .team-back-wraper {
     border-radius: 50%;
     bottom: 0;
-    height: 300px;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 300px;
+    height: 295px;
+    width: 295px;
     z-index: 1;
     right: 0;
     left: 0;

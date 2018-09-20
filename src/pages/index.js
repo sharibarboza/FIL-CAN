@@ -16,14 +16,14 @@ class IndexPage extends React.Component {
     const dateStr = date + 'T00:00:00';
 
     // Get the officers data
-    const treasurer = get(this, 'props.data.treasurer.edges.0.node.frontmatter');
+    const officers = get(this, 'props.data.officers.edges');
 
     return (
       <div>
       <Carousel />
       <Features />
       <Counter date={dateStr} />
-      <Executives treasurer={treasurer} />
+      <Executives officers={officers} />
       </div>
     )
   }
@@ -44,8 +44,8 @@ export const query = graphql`
         }
       }
     }
-    treasurer: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq:"Treasurer" } } }
+    officers: allMarkdownRemark(
+      filter: { frontmatter: { officer: { eq:true } } }
     ) {
       edges {
         node {

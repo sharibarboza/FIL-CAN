@@ -4,6 +4,8 @@ import Link from 'gatsby-link';
 import counterBg from '../images/campmeeting.jpg';
 import divider from '../images/divider-white.png';
 
+var dateFormat = require('dateformat');
+
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -75,6 +77,16 @@ class Counter extends React.Component {
     return value;
   }
 
+  getLastDate() {
+    var date = new Date(this.props.date);
+    date.setDate(date.getDate() + 3);
+    return dateFormat(date, "dddd, mmmm dS, yyyy");
+  }
+
+  getDateString() {
+    return dateFormat(this.props.date, "dddd, mmmm dS, yyyy");
+  }
+
   render() {
     const countDown = this.state;
 
@@ -91,7 +103,7 @@ class Counter extends React.Component {
   							<div className="em-image1">
                   <img src={divider} alt="divider" />
   							</div>
-  							<p className="text-alignm1">Join us at Foothills Camp on Thursday - Saturday, August 27, 2019  </p>
+  							<p className="text-alignm1">Join us at Foothills Camp on {this.getDateString()} - {this.getLastDate()}  </p>
     					</div>
     				</div>
     			</div>
