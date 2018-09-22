@@ -65,7 +65,6 @@ export const query = graphql`
           frontmatter {
             title
             name
-            church
             photo
             type
           }
