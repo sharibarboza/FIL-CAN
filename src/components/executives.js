@@ -64,11 +64,6 @@ class Executives extends React.Component {
                     <div className="em-team-content-subtitle-inner">
                       <div className="em-content-subtitle">PRESIDENT</div>
                     </div>
-                    <div className="em-team-content-socials-inner">
-                      <div className="em-team-content-socials">
-                        <span>{'President' in this.officers ? this.officers['President'].church : ' '}</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -91,11 +86,6 @@ class Executives extends React.Component {
     								<div className="em-team-content-subtitle-inner">
     									<div className="em-content-subtitle">SECRETARY</div>
     								</div>
-    								<div className="em-team-content-socials-inner">
-    									<div className="em-team-content-socials">
-    										<span>{'Secretary' in this.officers ? this.officers['Secretary'].church : ' '}</span>
-    									</div>
-    								</div>
     							</div>
     						</div>
     					</div>
@@ -117,11 +107,6 @@ class Executives extends React.Component {
     								</div>
     								<div className="em-team-content-subtitle-inner">
     									<div className="em-content-subtitle">TREASURER</div>
-    								</div>
-    								<div className="em-team-content-socials-inner">
-                      <div className="em-team-content-socials">
-                        <span>{'Treasurer' in this.officers ? this.officers['Treasurer'].church : ' '}</span>
-                      </div>
     								</div>
     							</div>
     						</div>

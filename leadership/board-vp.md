@@ -1,7 +1,5 @@
 ---
-title: Board VP
+title: VP-Edmonton
 name: Ben Barboza
-church: Edmonton Filipino
 type: Board VP
 ---
-

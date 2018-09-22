@@ -12,8 +12,7 @@ class ExecutiveList extends React.Component {
       let key = executives[i].id;
       let name = <li className="cat-item" key={key}>
                     <span className="executive-name">{executive.name}</span><br />
-                    <span className="em-content-subtitle">{executive.title}</span><br />
-                    <span className="executive-church">{executive.church}</span>
+                    <span className="em-content-subtitle">{executive.title}</span>
                 </li>
       elements.push(name);
     }

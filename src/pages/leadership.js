@@ -28,9 +28,9 @@ class LeadershipPage extends React.Component {
         boardVPs.push(node);
       } else if (type == 'Advisor') {
         advisors.push(node);
-      } else if (type == 'Committee Leader') {
+      } else if (type == 'Chair') {
         leaders.push(node);
-      } else if (type == 'FILCANAYA') {
+      } else if (type == 'Youthg') {
         youth.push(node);
       }
     }
@@ -57,10 +57,10 @@ class LeadershipPage extends React.Component {
               {advisors.length != -1 ? <ExecutiveList header='Board Advisors' type='Advisor' list={advisors} /> : null}
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
-              {leaders.length != -1 ? <ExecutiveList header='Committee Chairs' type='Committee Leader' list={leaders} /> : null}
+              {leaders.length != -1 ? <ExecutiveList header='Committee Chairs' type='Chair' list={leaders} /> : null}
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
-              {youth.length != -1 ? <ExecutiveList header='Youth Committee' type='FILCANAYA' list={youth} /> : null}
+              {youth.length != -1 ? <ExecutiveList header='Youth Committee' type='Youth' list={youth} /> : null}
             </div>
           </div>
         </div>
@@ -84,7 +84,6 @@ export const query = graphql`
           frontmatter {
             title
             name
-            church
             photo
             type
           }
@@ -104,7 +103,6 @@ export const query = graphql`
           id
           frontmatter {
             name
-            church
             title
             type
           }
