@@ -11,6 +11,7 @@ class Footer extends React.Component {
     return (
 
       <div>
+
         <div className="footer-middle">
           <div className="container">
     			   <div className="row">
@@ -67,6 +68,7 @@ class Footer extends React.Component {
               <div className="footer-menu">
     						 <ul className="text-right">
     							<li><a href="#">Contact</a></li>
+    							<li data-netlify-identity-button></li>
     						</ul>
     					</div>
     				</div>
