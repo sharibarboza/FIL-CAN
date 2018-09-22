@@ -1,6 +1,7 @@
 ---
 title: President
-name: Romulo Daquila
+position: President
+name: Benjamin Arias
 photo: /assets/officer2.jpg
 type: Officer
 ---

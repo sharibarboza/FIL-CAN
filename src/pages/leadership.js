@@ -26,11 +26,11 @@ class LeadershipPage extends React.Component {
       let type = node.frontmatter.type;
       if (type == 'Board VP') {
         boardVPs.push(node);
-      } else if (type == 'Advisor') {
+      } else if (type == 'Adviser') {
         advisors.push(node);
       } else if (type == 'Chair') {
         leaders.push(node);
-      } else if (type == 'Youthg') {
+      } else if (type == 'Youth') {
         youth.push(node);
       }
     }
@@ -54,7 +54,7 @@ class LeadershipPage extends React.Component {
           <div className="row officer-lists">
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
               {boardVPs.length != -1 ? <ExecutiveList header='Vice Presidents' type='Board VP' list={boardVPs} /> : null}
-              {advisors.length != -1 ? <ExecutiveList header='Board Advisors' type='Advisor' list={advisors} /> : null}
+              {advisors.length != -1 ? <ExecutiveList header='Board Advisers' type='Adviser' list={advisors} /> : null}
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
               {leaders.length != -1 ? <ExecutiveList header='Committee Chairs' type='Chair' list={leaders} /> : null}
@@ -82,7 +82,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            title
+            position
             name
             photo
             type
@@ -97,13 +97,16 @@ export const query = graphql`
           name: { ne:null }
         }
       }
+      sort: {
+        fields: [frontmatter___name], order: ASC
+      }
     ) {
       edges {
         node {
           id
           frontmatter {
             name
-            title
+            position
             type
           }
         }

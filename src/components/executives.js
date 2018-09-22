@@ -17,12 +17,12 @@ class Executives extends React.Component {
       const data = this.props.officers[i].node.frontmatter;
 
       if (data.photo != undefined) {
-        this.photos[data.title] = data.photo;
+        this.photos[data.position] = data.photo;
       } else {
-        this.photos[data.title] = defaultPhoto;
+        this.photos[data.position] = defaultPhoto;
       }
 
-      this.officers[data.title] = data;
+      this.officers[data.position] = data;
     }
   }
 

@@ -1,5 +1,6 @@
 ---
 title: Secretary
-name: Jeremiah Rodriguez
+position: Secretary
+name: Helina Perez
 type: Officer
 ---

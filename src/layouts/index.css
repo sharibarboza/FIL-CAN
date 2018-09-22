@@ -6267,6 +6267,7 @@ manhood WIDGET  CSS
 .blog-left-side .widget ul {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
 }
 .blog-left-side .widget ul li {
   margin: 0 0 5px;
@@ -6280,7 +6281,7 @@ manhood WIDGET  CSS
 }
 .blog-left-side .widget ul li:last-child {
 	padding-bottom: 0px;
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .blog-left-side .widget > ul > li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);

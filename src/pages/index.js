@@ -63,7 +63,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            title
+            position
             name
             photo
             type

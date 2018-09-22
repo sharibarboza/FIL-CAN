@@ -21,6 +21,7 @@ collections:
     create: true
     fields:
       - { label: Title, name: title, widget: string }
+      - { label: Executive Position, name: position, widget: string }
       - { label: Name, name: name, widget: string }
       - { label: Photo, name: photo, widget: image, required: false }
-      - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Advisor', 'Chair', 'Youth'] }
+      - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Adviser', 'Chair', 'Youth'] }
