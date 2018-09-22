@@ -7,13 +7,9 @@ import Features from '../components/features'
 import Counter from '../components/counter'
 import Executives from '../components/executives'
 
-import netlifyIdentity from 'netlify-identity-widget'
-
 class IndexPage extends React.Component {
 
   render() {
-    netlifyIdentity.init();
-
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
     const dateStr = date + 'T00:00:00';
