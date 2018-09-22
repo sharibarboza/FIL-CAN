@@ -11,6 +11,7 @@ class Executives extends React.Component {
     super(props);
     this.officers = {};
     this.photos = {};
+    this.index = props.index;
 
     for (var i = 0; i < this.props.officers.length; i++) {
       const data = this.props.officers[i].node.frontmatter;
@@ -26,24 +27,25 @@ class Executives extends React.Component {
   }
 
   render() {
+
     return (
       <div className="team_area" id="team">
     		<div className="container">
     			<div className="row">
     				<div className="col-md-12">
-    					<div className="section-title  t_center">
+    					<div className="section-title t_center">
 
     						<h2>Executive Officers</h2>
 
     							<div className="em-image">
     								<img src={divider} alt="divider" />
     							</div>
-
-                  <p>Click here to view all executive officers including Board VPs, Committee Leaders, and FILCANAYA officers.</p>
     					</div>
     				</div>
     			</div>
-    			<div className="row">
+    			<div className="row" style={{
+            marginTop: '40px'
+          }}>
 
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className="em-team">
@@ -55,7 +57,7 @@ class Executives extends React.Component {
                       }} alt="" />
                     </div>
                   </div>
-                  <div className="em-team-content-waraper">
+                  <div className="em-team-content-waraper" id="president-wrapper">
                     <div className="em-team-content-title-inner">
                       <div className="em-content-title"><h2>{'President' in this.officers ? this.officers['President'].name : ' '}</h2></div>
                     </div>
@@ -82,7 +84,7 @@ class Executives extends React.Component {
                       }} alt="" />
     								</div>
     							</div>
-    							<div className="em-team-content-waraper">
+    							<div className="em-team-content-waraper" id="secretary-wrapper">
     								<div className="em-team-content-title-inner">
     									<div className="em-content-title"><h2>{'Secretary' in this.officers ? this.officers['Secretary'].name : ' '}</h2></div>
     								</div>
@@ -109,7 +111,7 @@ class Executives extends React.Component {
                       }} alt="" />
                     </div>
     							</div>
-    							<div className="em-team-content-waraper">
+    							<div className="em-team-content-waraper" id="treasurer-wrapper">
     								<div className="em-team-content-title-inner">
     									<div className="em-content-title"><h2>{'Treasurer' in this.officers ? this.officers['Treasurer'].name : ' '}</h2></div>
     								</div>

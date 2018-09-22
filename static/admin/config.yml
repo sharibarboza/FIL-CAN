@@ -1,6 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: sharibarboza/FilcanJS #replace with your username/repo
+  branch: storage
 
 media_folder: static/assets
 public_folder: /assets
@@ -23,4 +24,4 @@ collections:
       - { label: Name, name: name, widget: string }
       - { label: Church, name: church, widget: string, required: false }
       - { label: Photo, name: photo, widget: image, required: false }
-      - { label: Officer, name: officer, widget: boolean }
+      - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Advisor', 'Committee Leader', 'FILCANAYA'] }

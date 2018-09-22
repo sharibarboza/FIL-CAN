@@ -35,6 +35,7 @@ class Header extends React.Component {
 
   render() {
     const title = this.props.siteTitle;
+    console.log(this.props.location);
 
     return (
     <div className="astute-main-menu one_page hidden-xs hidden-sm" style={{
@@ -42,28 +43,30 @@ class Header extends React.Component {
       zIndex: '9999',
       width: '100%'
     }}>
-  		<div className={this.state.scrollingLock ? 'nav_black' : 'astute_nav_area'}>
+  		<div className={this.state.scrollingLock || this.props.location != '/' ? 'nav_black' : 'astute_nav_area'}>
   			<div className="container">
   				<div className="row logo-left">
 
   					<div className="col-md-4 col-sm-3 col-xs-4">
   						<div className="logo">
-  							<a className="main_sticky_main_l">
+  							<Link to="/" className="main_sticky_main_l" style={{
+                  color: '#fff'
+                }}>
                   <img src={filcanLogo} alt={title} />
                   <span className="brand">FilCan</span>
-  							</a>
+  							</Link>
   						</div>
   	  			</div>
 
   					<div className="col-md-8 col-sm-9 col-xs-8">
   						<nav className="astute_menu main-search-menu">
   							<ul className="sub-menu">
-  								<li><a href="index.html">Home</a></li>
+  								<li><Link to="/">Home</Link></li>
   								<li><a href="about.html">About</a>
                     <ul className="sub-menu">
                       <li><a href="index-2.html">History</a></li>
-                      <li><a href="index-2.html">Churches</a></li>                      
-                      <li><a href="index-3.html">Leadership</a></li>
+                      <li><a href="index-3.html">Churches</a></li>
+                      <li><Link to="/leadership/">Leadership</Link></li>
                       <li><a href="index-onepage.html">Bylaws</a></li>
                       <li><a href="index-onepage.html">Financials</a></li>
                     </ul>

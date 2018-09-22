@@ -64,8 +64,10 @@ class Footer extends React.Component {
     					</div>
     				</div>
     				<div className="col-md-2 col-sm-6">
-    					<div className="footer-menu text-right">
-    						 Contact
+              <div className="footer-menu">
+    						 <ul className="text-right">
+    							<li><a href="#">Contact</a></li>
+    						</ul>
     					</div>
     				</div>
           </div>

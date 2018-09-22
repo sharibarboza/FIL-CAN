@@ -7,9 +7,12 @@ import Features from '../components/features'
 import Counter from '../components/counter'
 import Executives from '../components/executives'
 
+import netlifyIdentity from 'netlify-identity-widget'
+
 class IndexPage extends React.Component {
 
   render() {
+    netlifyIdentity.init();
 
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
@@ -20,10 +23,23 @@ class IndexPage extends React.Component {
 
     return (
       <div>
-      <Carousel />
-      <Features />
-      <Counter date={dateStr} />
-      <Executives officers={officers} />
+        <Carousel />
+        <Features />
+        <Counter date={dateStr} />
+        <Executives officers={officers} index={true} />
+        <div className="container" style={{
+          marginBottom: '100px'
+        }}>
+    			<div className="row">
+    				<div className="col-md-12">
+    					<div className="section-title t_center">
+                <div className="donate-btn-header">
+                  <Link to="/leadership/" className="red-on-white" href="#">See All Leadership</Link>
+                </div>
+    					</div>
+    				</div>
+    			</div>
+        </div>
       </div>
     )
   }
@@ -33,7 +49,7 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const query = graphql`
-  query DateQuery {
+  query IndexQuery {
     date: allMarkdownRemark(limit: 1) {
       edges {
         node {
@@ -45,7 +61,7 @@ export const query = graphql`
       }
     }
     officers: allMarkdownRemark(
-      filter: { frontmatter: { officer: { eq:true } } }
+      filter: { frontmatter: { type: { eq:"Officer" } } }
     ) {
       edges {
         node {
@@ -55,6 +71,7 @@ export const query = graphql`
             name
             church
             photo
+            type
           }
         }
       }
