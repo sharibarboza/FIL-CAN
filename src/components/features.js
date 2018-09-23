@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 
 import 'font-awesome/css/font-awesome.css';
 
+import divider from '../images/divider.png';
+
 class Features extends React.Component {
   render() {
 
