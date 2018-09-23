@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import divider from '../images/divider.png';
+import dividerImage from '../images/divider.png';
 
 class Divider extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class Divider extends React.Component {
           <div className="col-md-12">
             <div className="section-title t_center">
               <div className="em-image">
-                <img src={divider} alt="divider" />
+                <img src={dividerImage} alt="divider" />
               </div>
             </div>
           </div>
