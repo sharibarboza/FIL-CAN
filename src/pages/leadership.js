@@ -3,10 +3,9 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 import Banner from '../components/banner';
+import Divider from '../components/divider';
 import Executives from '../components/executives';
 import ExecutiveList from '../components/executivelist';
-
-import divider from '../images/divider.png';
 
 class LeadershipPage extends React.Component {
 
@@ -39,16 +38,7 @@ class LeadershipPage extends React.Component {
       <div>
         <Banner path="Leadership" />
         <Executives officers={officers} index={false} />
-
-        <div className="row">
-          <div className="col-md-12">
-            <div className="section-title t_center">
-              <div className="em-image">
-                <img src={divider} alt="divider" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Divider />
 
         <div className="container">
           <div className="row officer-lists">

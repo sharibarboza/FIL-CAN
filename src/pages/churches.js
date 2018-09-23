@@ -6,8 +6,7 @@ import geocoder from 'google-geocoder';
 import Scrollchor from 'react-scrollchor';
 
 import Banner from '../components/banner';
-
-import divider from '../images/divider.png';
+import Divider from '../components/divider';
 
 class ChurchesPage extends React.Component {
   constructor(props) {
@@ -44,6 +43,14 @@ class ChurchesPage extends React.Component {
           locations: newLocations
         });
       });
+    }
+  }
+
+  truncateTitle(title) {
+    if (title.length < 45) {
+      return title;
+    } else {
+      return title.substring(0, 40) + ' ... '
     }
   }
 
@@ -121,7 +128,7 @@ class ChurchesPage extends React.Component {
       let anchor = '#' + church.title;
 
       let element = <div className="col-md-4 col-xs-12 col-sm-6" key={key}>
-        <div className="single_event_adn  kc-elm kc-css-73682">
+        <div className="single_event_adn kc-elm kc-css-73682">
           <div className="astute-single-event_adn ">
 
             <div className="em-content-image astute-event-thumb_adn">
@@ -131,20 +138,27 @@ class ChurchesPage extends React.Component {
               <div className="readmore_icon_adn">
                 <Scrollchor to={anchor} animate={{offset: -150, duration: 300}}><i className="fa fa-info"></i></Scrollchor>
               </div>
+              <a href={church.website} target="_blank">
+              <div class="event_date">
+								<span className="fa fa-link"></span>
+              </div>
+              </a>
             </div>
             <div className="em-event-content-area_adn ">
 
               <div className="event-page-title_adn ">
-                <h2><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>{church.title}</Scrollchor></h2>
+                <h2><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>{this.truncateTitle(church.title)}</Scrollchor></h2>
                 <div className="astute-event-meta-left_adn">
                   <span><i className="fa fa-map-marker"></i>{church.city}</span>
+                </div>
+                <div className="astute-event-meta-right_adn">
+                  <span><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>See more info <i className="fa fa-info-circle"></i></Scrollchor></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       elements.push(element);
     }
 
@@ -165,15 +179,7 @@ class ChurchesPage extends React.Component {
       		</div>
       	</div>
 
-        <div className="row">
-          <div className="col-md-12">
-            <div className="section-title t_center">
-              <div className="em-image">
-                <img src={divider} alt="divider" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Divider />
 
         <div className="container" style={{
           padding: '30px 0 100px'

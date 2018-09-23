@@ -7,4 +7,3 @@ phone: (587) 917-7446
 website: 'https://calgarymetrofilipinoab.adventistchurch.org/'
 photo: /assets/southside.jpg
 ---
-

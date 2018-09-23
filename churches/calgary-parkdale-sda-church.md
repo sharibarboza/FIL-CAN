@@ -7,4 +7,3 @@ phone: (403) 614-9512
 website: 'https://calgaryparkdaleab.adventistchurch.org/'
 photo: /assets/sda-logo-blue.png
 ---
-

@@ -7,4 +7,3 @@ phone: (403) 239-1857
 website: 'https://calgarynorthwindsab.adventistchurch.org/'
 photo: /assets/northwinds.jpg
 ---
-

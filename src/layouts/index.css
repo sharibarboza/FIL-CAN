@@ -5845,6 +5845,8 @@ astute event AREA CSS
 }
 .event-page-title_adn h2 {
     margin-bottom: 6px;
+    height: 8vh;
+    font-size: 1.7em;
 }
 /* event POST META CSS */
 /* left style 1 */
@@ -5864,12 +5866,21 @@ h2.related-projects-title.text-left {
     margin-bottom: 12px;
 }
 .astute-event-meta-left_adn a, .astute-event-meta-left_adn span {
-    color: #333;
+    color: #2033AB;
     margin-right: 10px;
     font-size: 14px;
 }
 .astute-event-meta-left_adn i {
     margin-right: 5px;
+}
+.astute-event-meta-right_adn {
+    float: right;
+    position: relative;
+    line-height: 1;
+}
+.astute-event-meta-right_adn a, .astute-event-meta-right_adn span {
+    color: #2033AB;
+    font-size: 14px;
 }
 /* event hover */
 

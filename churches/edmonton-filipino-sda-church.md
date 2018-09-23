@@ -7,4 +7,3 @@ phone: (780) 988-5117
 website: 'https://edmontonfilipinoab.adventistchurch.org/'
 photo: /assets/edmonton-filipino.jpg
 ---
-
