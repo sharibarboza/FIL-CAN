@@ -9,28 +9,35 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'dates',
-        path: `dates/`
+        path: `${__dirname}/dates/`
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'officers',
-        path: `leadership/`
+        path: `${__dirname}/leadership/`
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'churches',
-        path: `churches/`
+        path: `${__dirname}/churches/`
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `content/`
+        path: `${__dirname}/content/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
       }
     },
     'gatsby-transformer-sharp',
@@ -38,8 +45,9 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: []
-      }
+        maxWidth: 1240,
+        wrapperStyle: 'z-index: 1'
+      },
     }
   ]
 }

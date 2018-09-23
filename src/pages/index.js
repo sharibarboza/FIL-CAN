@@ -10,6 +10,9 @@ import Executives from '../components/executives'
 class IndexPage extends React.Component {
 
   render() {
+    // Get carousel image
+    const headerImage = get(this, 'props.data.headerImage');
+
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
     const dateStr = date + 'T00:00:00';
@@ -19,7 +22,7 @@ class IndexPage extends React.Component {
 
     return (
       <div>
-        <Carousel />
+        <Carousel headerImage={headerImage} />
         <Features />
         <Counter date={dateStr} />
         <Executives officers={officers} index={true} />
@@ -69,6 +72,11 @@ export const query = graphql`
             type
           }
         }
+      }
+    }
+    headerImage: imageSharp(id: { regex: "/alberta/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
       }
     }
   }
