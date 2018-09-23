@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-import geocoder from 'google-geocoder';
+import Geocode from "react-geocode";
 import Scrollchor from 'react-scrollchor';
 
 import Banner from '../components/banner';
@@ -19,9 +19,7 @@ class ChurchesPage extends React.Component {
   }
 
   componentDidMount() {
-    this.geo = geocoder({
-      key: 'AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk'
-    });
+    Geocode.setApiKey("AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk");
     this.getGeocodes();
   }
 
@@ -32,17 +30,27 @@ class ChurchesPage extends React.Component {
       let church = node.frontmatter;
       let address = church.address;
 
-      this.geo.find(address, function(err, res){
-        let newLocations = self.state.locations.slice();
-        newLocations.push(res);
+      Geocode.fromAddress(address).then(
+        response => {
+          const { lat, lng } = response.results[0].geometry.location;
+          let res = {
+            'lat': lat,
+            'lng': lng
+          }
+          let newLocations = self.state.locations.slice();
+          newLocations.push(res);
 
-        let geoKey = res[0].location.lat + res[0].location.lng;
-        self.data[geoKey] = node;
+          let geoKey = res.lat + res.lng;
+          self.data[geoKey] = node;
 
-        self.setState({
-          locations: newLocations
-        });
-      });
+          self.setState({
+            locations: newLocations
+          });
+        },
+        error => {
+          console.error(error);
+        }
+      );
     }
   }
 
@@ -55,10 +63,9 @@ class ChurchesPage extends React.Component {
   }
 
   initializeChurchPanels() {
-
     let panels = [];
     this.state.locations.forEach(mapping => {
-      let location = mapping[0].location;
+      let location = mapping;
       let geoKey = location.lat + location.lng;
 
       let data = this.data[geoKey];
@@ -139,7 +146,7 @@ class ChurchesPage extends React.Component {
                 <Scrollchor to={anchor} animate={{offset: -150, duration: 300}}><i className="fa fa-info"></i></Scrollchor>
               </div>
               <a href={church.website} target="_blank">
-              <div class="event_date">
+              <div className="event_date">
 								<span className="fa fa-link"></span>
               </div>
               </a>
