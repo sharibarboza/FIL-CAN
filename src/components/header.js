@@ -35,7 +35,6 @@ class Header extends React.Component {
 
   render() {
     const title = this.props.siteTitle;
-    console.log(this.props.location);
 
     return (
     <div className="astute-main-menu one_page hidden-xs hidden-sm" style={{
@@ -65,7 +64,7 @@ class Header extends React.Component {
   								<li><a href="about.html">About</a>
                     <ul className="sub-menu">
                       <li><a href="index-2.html">History</a></li>
-                      <li><a href="index-3.html">Churches</a></li>
+                      <li><Link to="/churches">Churches</Link></li>
                       <li><Link to="/leadership/">Leadership</Link></li>
                       <li><a href="index-onepage.html">Bylaws</a></li>
                       <li><a href="index-onepage.html">Financials</a></li>

@@ -3424,7 +3424,7 @@ EM40 TEAM CSS
     bottom: 0px;
 }
 .em-team:hover #secretary-wrapper {
-  background-color: rgba(0, 6, 186, 0.8);
+  background-color: rgba(32, 51, 171, 0.8);
   bottom: 0px;
 }
 .em-team:hover #treasurer-wrapper {
@@ -4888,7 +4888,7 @@ astute adn blog css
 }
 .astute-blog-thumb_adn {
     overflow: hidden;
-	position:relative;
+	   position:relative;
 }
 .astute-blog-thumb_adn a {
     position: relative;
@@ -5765,7 +5765,7 @@ astute event AREA CSS
 	padding: 100px 0 70px;
 }
 .astute-event-thumb_adn:hover::before{
-	opacity:1;
+	opacity:0;
 }
 .astute-single-event_adn {
     margin-bottom:30px;
@@ -5776,30 +5776,22 @@ astute event AREA CSS
 /* event THUMB CSS */
 
 .astute-event-thumb_adn {
-    overflow: hidden;
+    width: 100% !important;
+    height: 200px !important;
     position: relative;
-}
-.astute-event-thumb_adn:before {
-    content: "";
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: #f00;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0, 0, 0, .7);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    z-index: 999;
-    -webkit-transition: .5s;
-    transition: .5s;
+    overflow:hidden;
+    margin: 0 auto;
 }
 .astute-event-thumb_adn img {
     -webkit-transition: .5s;
     transition: .5s;
     display: block;
+    background-size: cover;
+    background-position: 50% 0;
+}
+.astute-event-thumb_adn .default-church {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
 }
 .readmore_icon_adn {
     left: 50%;
@@ -6250,7 +6242,7 @@ manhood WIDGET  CSS
   text-transform: capitalize;
 }
 .blog-left-side .widget h2::before {
-  background: #eb1b2b none repeat scroll 0 0;
+  background: #2033AB none repeat scroll 0 0;
   bottom: -1px;
   content: "";
   height: 1px;
@@ -6398,4 +6390,8 @@ table#wp-calendar td#today{
 .executive-church {
   font-size: 14px;
   color: #8F8F8F;
+}
+
+.church-panel {
+  margin-bottom: 25px;
 }

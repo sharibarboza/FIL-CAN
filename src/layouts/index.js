@@ -15,6 +15,7 @@ class Layout extends React.Component {
   render() {
     const { location, children, data } = this.props;
     const title = data.site.siteMetadata.title;
+    const churches = data.churches.edges;
 
     return (
       <div>
@@ -35,7 +36,7 @@ class Layout extends React.Component {
         >
         {children()}
         </div>
-        <Footer />
+        <Footer churches={churches} />
       </div>
     )
   }
@@ -52,6 +53,20 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    churches: allMarkdownRemark(
+  	   filter: { fileAbsolutePath: { regex: "/(churches)/.*\\.md$/" } }
+       sort: { fields: [frontmatter___title], order: ASC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            website
+          }
+        }
       }
     }
   }

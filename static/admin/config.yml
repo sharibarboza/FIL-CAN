@@ -12,7 +12,7 @@ collections:
     folder: dates
     create: true
     fields:
-      - { label: Title, name: title, widget: string }
+      - { label: Unique title to file this date (e.g. Camp Meeting 2019), name: title, widget: string }
       - { label: Date, name: date, widget: date }
 
   - name: leadership
@@ -20,8 +20,21 @@ collections:
     folder: leadership
     create: true
     fields:
-      - { label: Title, name: title, widget: string }
+      - { label: Unique title to file this executive (e.g. VP-Edmonton), name: title, widget: string }
       - { label: Executive Position, name: position, widget: string }
       - { label: Name, name: name, widget: string }
       - { label: Photo, name: photo, widget: image, required: false }
       - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Adviser', 'Chair', 'Youth'] }
+
+  - name: church
+    label: Church
+    folder: churches
+    create: true
+    fields:
+      - { label: Name of church, name: title }
+      - { label: City/Town, name: city, widget: string }
+      - { label: Current Pastor, name: pastor, widget: string }
+      - { label: Address, name: address, widget: string }
+      - { label: Phone, name: phone, widget: string, required: false }
+      - { label: Website, name: website, widget: string, required: false }
+      - { label: Photo, name: photo, widget: image, required: false, default: /assets/sda-logo-blue.png }

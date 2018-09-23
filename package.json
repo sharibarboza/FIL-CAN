@@ -16,10 +16,13 @@
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.28",
     "gatsby-transformer-sharp": "^1.6.22",
+    "google-geocoder": "^0.2.1",
     "netlify-cms": "^2.1.2",
     "netlify-identity-widget": "^1.4.14",
     "react-bootstrap": "^0.32.4",
-    "react-helmet": "^5.2.0"
+    "react-google-maps": "^9.4.5",
+    "react-helmet": "^5.2.0",
+    "react-scrollchor": "^6.0.0"
   },
   "keywords": [
     "gatsby"

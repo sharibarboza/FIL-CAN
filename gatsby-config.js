@@ -19,6 +19,13 @@ module.exports = {
         path: `leadership/`
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'churches',
+        path: `churches/`
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

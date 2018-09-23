@@ -6,6 +6,23 @@ import 'font-awesome/css/font-awesome.css';
 import sdaLogo from '../images/sda-logo.png';
 
 class Footer extends React.Component {
+
+  displayChurches() {
+    let elements = [];
+    const churches = this.props.churches;
+
+    for (var i = 0; i < churches.length; i++) {
+      let node = churches[i].node;
+      let key = node.id;
+      let church = node.frontmatter;
+
+      let element = <li key={key}><a href={church.website} target="_blank">{church.title}</a></li>
+      elements.push(element);
+    }
+
+    return elements;
+  }
+
   render() {
 
     return (
@@ -24,7 +41,7 @@ class Footer extends React.Component {
                     </div>
                   </div>
                </div>
-               <div className=" col-md-3 col-sm-6">
+               <div className=" col-md-2 col-sm-6">
                  <div className="widget widget_nav_menu">
                    <h2 className="widget-title">Quick Links</h2>
                      <div className="menu-quick-link-container">
@@ -41,9 +58,14 @@ class Footer extends React.Component {
                    </div>
                  </div>
                </div>
-               <div className=" col-md-3 col-sm-6">
+               <div className=" col-md-4 col-sm-6">
                  <div className="widget">
                    <h2 className="widget-title">Churches</h2>
+                   <div className="menu-quick-link-container">
+                     <ul id="menu-quick-link" className="menu">
+                      {this.displayChurches()}
+                    </ul>
+                 </div>
                  </div>
                </div>
                <div className="col-md-2 col-sm-6 text-right">
