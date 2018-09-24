@@ -36,7 +36,6 @@ class LeadershipPage extends React.Component {
 
     return (
       <div>
-        <Banner path="Leadership" />
         <Executives officers={officers} index={false} />
         <Divider />
 
@@ -64,7 +63,7 @@ class LeadershipPage extends React.Component {
 export default LeadershipPage
 
 export const query = graphql`
-  query LeadershipQuery {
+  query LeadershipPageQuery {
     officers: allMarkdownRemark(
       filter: { frontmatter: { type: { eq:"Officer" } } }
     ) {

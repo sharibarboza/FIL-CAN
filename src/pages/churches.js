@@ -4,8 +4,8 @@ import get from 'lodash/get'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Geocode from "react-geocode";
 import Scrollchor from 'react-scrollchor';
+import Img from 'gatsby-image'
 
-import Banner from '../components/banner';
 import Divider from '../components/divider';
 
 class ChurchesPage extends React.Component {
@@ -139,9 +139,13 @@ class ChurchesPage extends React.Component {
           <div className="astute-single-event_adn ">
 
             <div className="em-content-image astute-event-thumb_adn">
-              <img className={this.getImageClass(church.photo)} alt="" style={{
-                backgroundImage: 'url("' + church.photo + '")'
-              }} />
+              <Img style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%"
+                }} className={this.getImageClass(church.photo)} alt="" sizes={church.photo.childImageSharp.sizes} />
               <div className="readmore_icon_adn">
                 <Scrollchor to={anchor} animate={{offset: -150, duration: 300}}><i className="fa fa-info"></i></Scrollchor>
               </div>
@@ -173,11 +177,10 @@ class ChurchesPage extends React.Component {
   }
 
   render() {
+    console.log(this.props);
 
     return (
       <div>
-        <Banner path="Churches" />
-
         <div className="event_area">
       		<div className="container">
       			<div className="row">
@@ -217,7 +220,13 @@ export const query = graphql`
             pastor
             phone
             website
-            photo
+            photo {
+              childImageSharp {
+                  sizes(maxWidth: 630) {
+                      ...GatsbyImageSharpSizes
+                  }
+              }
+            }
           }
         }
       }

@@ -108,7 +108,7 @@ astute HEADING TOP AREA CSS
   height: 100%;
   overflow: hidden;
 }
-#counter-overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;

@@ -5,6 +5,7 @@ import get from 'lodash/get'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Banner from '../components/banner'
 
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -16,6 +17,8 @@ class Layout extends React.Component {
     const { location, children, data } = this.props;
     const title = data.site.siteMetadata.title;
     const churches = data.churches.edges;
+    const bannerImage = data.bannerImage;
+    const bannerTitle = (location.pathname).replace(/\//g, '');
 
     return (
       <div>
@@ -34,6 +37,8 @@ class Layout extends React.Component {
             paddingTop: location.pathname == '/' ? '0' : '100px',
           }}
         >
+
+        {location.pathname != '/' ? <Banner bgImage={bannerImage} path={bannerTitle} /> : null}
         {children()}
         </div>
         <Footer churches={churches} />
@@ -67,6 +72,11 @@ export const query = graphql`
             website
           }
         }
+      }
+    }
+    bannerImage: imageSharp(id: { regex: "/banner/" }) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

@@ -103,7 +103,7 @@ class Counter extends React.Component {
           }}
           sizes={this.props.bgImage.sizes}
         />
-        <div id="counter-overlay"></div>
+        <div className="overlay"></div>
     		<div className="container" style={{
           padding: '100px 0 100px'
         }}>
