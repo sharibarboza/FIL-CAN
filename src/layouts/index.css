@@ -5777,17 +5777,14 @@ astute event AREA CSS
     position: relative;
     overflow:hidden;
     margin: 0 auto;
+    border: 1px solid #ddd;
 }
-.astute-event-thumb_adn img {
-    -webkit-transition: .5s;
-    transition: .5s;
-    display: block;
-    background-size: cover;
-    background-position: 50% 0;
-}
-.astute-event-thumb_adn .default-church {
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
+.church-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 .readmore_icon_adn {
     left: 50%;

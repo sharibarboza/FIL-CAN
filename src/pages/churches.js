@@ -118,14 +118,6 @@ class ChurchesPage extends React.Component {
     return panels;
   }
 
-  getImageClass(photo) {
-    if (photo == '/assets/sda-logo-blue.png') {
-      return "default-church";
-    } else {
-      return "wp-post-image";
-    }
-  }
-
   initializeChurchPhotos() {
     let elements = [];
     for (var i = 0; i < this.churches.length; i++) {
@@ -139,13 +131,7 @@ class ChurchesPage extends React.Component {
           <div className="astute-single-event_adn ">
 
             <div className="em-content-image astute-event-thumb_adn">
-              <Img style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  width: "100%",
-                  height: "100%"
-                }} className={this.getImageClass(church.photo)} alt="" sizes={church.photo.childImageSharp.sizes} />
+              <Img className="church-image" alt="" sizes={church.photo.childImageSharp.sizes} />
               <div className="readmore_icon_adn">
                 <Scrollchor to={anchor} animate={{offset: -150, duration: 300}}><i className="fa fa-info"></i></Scrollchor>
               </div>
@@ -177,8 +163,6 @@ class ChurchesPage extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-
     return (
       <div>
         <div className="event_area">
