@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from "gatsby-image";
 
 import 'font-awesome/css/font-awesome.css';
 
 import divider from '../images/divider.png';
-import defaultPhoto from '../images/default.jpg';
 
 class Executives extends React.Component {
   constructor(props) {
@@ -15,13 +15,7 @@ class Executives extends React.Component {
 
     for (var i = 0; i < this.props.officers.length; i++) {
       const data = this.props.officers[i].node.frontmatter;
-
-      if (data.photo != undefined) {
-        this.photos[data.position] = data.photo;
-      } else {
-        this.photos[data.position] = defaultPhoto;
-      }
-
+      this.photos[data.position] = data.photo.childImageSharp.sizes;
       this.officers[data.position] = data;
     }
   }
@@ -52,9 +46,13 @@ class Executives extends React.Component {
                 <div className="em-team-one">
                   <div className="em-team-content-image-inner">
                     <div className="em-content-image">
-                      <img className="img-circle" style={{
-                        backgroundImage: 'url("' + this.photos['President'] + '")'
-                      }} alt="" />
+                      <Img style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 0,
+                        width: "100%",
+                        height: "100%"
+                      }} sizes={this.photos['President']} alt="" />
                     </div>
                   </div>
                   <div className="em-team-content-waraper" id="president-wrapper">
@@ -74,9 +72,13 @@ class Executives extends React.Component {
     						<div className="em-team-one">
     							<div className="em-team-content-image-inner">
     								<div className="em-content-image">
-                      <img className="img-circle" style={{
-                        backgroundImage: 'url("' + this.photos['Secretary'] + '")'
-                      }} alt="" />
+                      <Img style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 0,
+                        width: "100%",
+                        height: "100%"
+                      }} sizes={this.photos['Secretary']} alt="" />
     								</div>
     							</div>
     							<div className="em-team-content-waraper" id="secretary-wrapper">
@@ -96,9 +98,13 @@ class Executives extends React.Component {
     						<div className="em-team-one">
     							<div className="em-team-content-image-inner">
                     <div className="em-content-image">
-                      <img className="img-circle" style={{
-                        backgroundImage: 'url("' + this.photos['Treasurer'] + '")'
-                      }} alt="" />
+                      <Img style={{
+                        position: "absolute",
+                        left: 0,
+                        top: 0,
+                        width: "100%",
+                        height: "100%"
+                      }} sizes={this.photos['Treasurer']} alt="" />
                     </div>
     							</div>
     							<div className="em-team-content-waraper" id="treasurer-wrapper">

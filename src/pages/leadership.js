@@ -73,8 +73,14 @@ export const query = graphql`
           frontmatter {
             position
             name
-            photo
             type
+            photo {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }
