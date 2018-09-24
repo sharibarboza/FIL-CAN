@@ -4,8 +4,6 @@ import Img from "gatsby-image";
 
 class Carousel extends React.Component {
   render() {
-    console.log(this.props.headerImage.sizes);
-
     return (
       <div className="main-slider-area">
         <Img alt="" sizes={this.props.headerImage.sizes} title="#htmlcaption1"/>

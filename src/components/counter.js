@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from "gatsby-image";
 
 import counterBg from '../images/campmeeting.jpg';
 import divider from '../images/divider-white.png';
@@ -91,10 +92,21 @@ class Counter extends React.Component {
     const countDown = this.state;
 
     return (
-      <div className="count_down_area" style={{
-        backgroundImage: 'url("' + counterBg + '")'
-      }}>
-    		<div className="container">
+      <div className="count_down_area">
+        <Img
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            width: "100%",
+            height: "100%"
+          }}
+          sizes={this.props.bgImage.sizes}
+        />
+        <div id="counter-overlay"></div>
+    		<div className="container" style={{
+          padding: '100px 0 100px'
+        }}>
     			<div className="row">
     				<div className="col-md-12">
     					<div className="section-title1 t_center">
@@ -160,7 +172,7 @@ class Counter extends React.Component {
     				</div>
     			</div>
     		</div>
-    	</div>
+      </div>
     )
   }
 }

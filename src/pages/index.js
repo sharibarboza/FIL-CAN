@@ -12,6 +12,7 @@ class IndexPage extends React.Component {
   render() {
     // Get carousel image
     const headerImage = get(this, 'props.data.headerImage');
+    const counterImage = get(this, 'props.data.counterImage');
 
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
@@ -24,7 +25,7 @@ class IndexPage extends React.Component {
       <div>
         <Carousel headerImage={headerImage} />
         <Features />
-        <Counter date={dateStr} />
+        <Counter date={dateStr} bgImage={counterImage} />
         <Executives officers={officers} index={true} />
         <div className="container" style={{
           marginBottom: '100px'
@@ -75,6 +76,11 @@ export const query = graphql`
       }
     }
     headerImage: imageSharp(id: { regex: "/alberta/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    counterImage: imageSharp(id: { regex: "/campmeeting/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }
