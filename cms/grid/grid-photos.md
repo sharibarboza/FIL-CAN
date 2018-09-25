@@ -1,8 +1,8 @@
 ---
 title: Grid Photos
-photo:
+block:
   - caption: Youth groups during Friday Vespers
     event: Camp Meeting 2018
-    photo: /assets/photo1.jpeg
+    photo: /assets/photo1.jpg
 ---
 
