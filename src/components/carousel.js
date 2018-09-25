@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
 import Carousel from 'nuka-carousel';
-import WOW from 'wowjs';
 
 var createReactClass = require('create-react-class');
 
@@ -11,10 +10,9 @@ import '../layouts/animate.css'
 class Slider extends React.Component {
 
   componentDidMount() {
-    try {
+    const WOW = require('wowjs/dist/wow.js');
+    if (typeof window !== `undefined`) {
       new WOW.WOW().init();
-    } catch(e) {
-      console.log(e)
     }
   }
 
@@ -22,7 +20,7 @@ class Slider extends React.Component {
     let elements = [];
     const images = this.props.images;
     for (let i = 0; i < images.length; i++) {
-      let element = <Img alt="" sizes={images[i].sizes} className="carousel-image" />
+      let element = <Img key={i} alt="" sizes={images[i].sizes} className="carousel-image" />
       elements.push(element);
     }
     return elements;
