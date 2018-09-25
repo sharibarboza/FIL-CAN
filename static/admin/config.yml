@@ -42,10 +42,10 @@ collections:
   - name: pages
     label: Pages
     files:
-      label: History Page
-      name: history
-      file: content/history.yaml
-      fields:
-        - { label: Title of Page, name: title, widget: string }
-        - { label: Text Content, name: content, widget: markdown }
-        - { label: Photo, name: photo, widget: image }
+      - label: History Page
+        name: history
+        file: content/history.md
+        fields:
+          - { label: Title of Page, name: title, widget: string }
+          - { label: Photo, name: photo, widget: image }
+          - { label: Text Content, name: content, widget: markdown }
