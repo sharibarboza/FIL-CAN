@@ -4,6 +4,8 @@ import get from 'lodash/get'
 
 import pdf from '../images/pdf-icon.png'
 
+import FileIcon from '../components/fileicon'
+
 class BylawsPage extends React.Component {
 
   displayFiles() {
@@ -15,11 +17,9 @@ class BylawsPage extends React.Component {
       let key = node.id;
       let bylaw = node.frontmatter;
 
-      let element = <div className="row bylaws">
+      let element = <div className="row bylaws" key={key}>
         <div className="col-sm-1 col-xs-4">
-          <img src={pdf} style={{
-            width: '50px'
-          }} />
+          <FileIcon media={bylaw.file.internal.mediaType} />
         </div>
         <div className="col-sm-8 col-xs-8">
           <strong>{bylaw.title}</strong><br />
@@ -77,6 +77,9 @@ export const query = graphql`
             file {
               relativePath
               publicURL
+              internal {
+                mediaType
+              }
             }
           }
         }

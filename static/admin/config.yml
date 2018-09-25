@@ -56,4 +56,12 @@ collections:
     create: true
     fields:
       - { label: Title of Bylaw File, name: title, widget: string }
-      - { label: PDF File, name: file, widget: file }
+      - { label: File, name: file, widget: file }
+
+  - name: reports
+    label: Annual Reports
+    folder: cms/files/reports
+    create: true
+    fields:
+      - { label: Title of Report, name: title, widget: string }
+      - { label: File, name: file, widget: file }

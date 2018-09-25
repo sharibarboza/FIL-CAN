@@ -67,7 +67,7 @@ class Header extends React.Component {
                       <li><Link to="/churches">Churches</Link></li>
                       <li><Link to="/leadership/">Leadership</Link></li>
                       <li><Link to="/bylaws/">Bylaws</Link></li>
-                      <li><a href="index-onepage.html">Annual Reports</a></li>
+                      <li><Link to="/reports/">Annual Reports</Link></li>
                     </ul>
                   </li>
   								<li><a href="project.html">Events</a>
