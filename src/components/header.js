@@ -61,9 +61,9 @@ class Header extends React.Component {
   						<nav className="astute_menu main-search-menu">
   							<ul className="sub-menu">
   								<li><Link to="/">Home</Link></li>
-  								<li><a href="about.html">About</a>
+  								<li><a>About</a>
                     <ul className="sub-menu">
-                      <li><a href="index-2.html">History</a></li>
+                      <li><Link to="/about/">History</Link></li>
                       <li><Link to="/churches">Churches</Link></li>
                       <li><Link to="/leadership/">Leadership</Link></li>
                       <li><a href="index-onepage.html">Bylaws</a></li>

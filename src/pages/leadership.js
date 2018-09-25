@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import Banner from '../components/banner';
 import Divider from '../components/divider';
 import Executives from '../components/executives';
 import ExecutiveList from '../components/executivelist';

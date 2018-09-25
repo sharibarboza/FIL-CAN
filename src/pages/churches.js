@@ -135,11 +135,16 @@ class ChurchesPage extends React.Component {
               <div className="readmore_icon_adn">
                 <Scrollchor to={anchor} animate={{offset: -150, duration: 300}}><i className="fa fa-info"></i></Scrollchor>
               </div>
-              <a href={church.website} target="_blank">
-              <div className="event_date">
-								<span className="fa fa-link"></span>
-              </div>
-              </a>
+              {church.website != null
+                ?
+                <a href={church.website} target="_blank">
+                <div className="event_date">
+  								<span className="fa fa-link"></span>
+                </div>
+                </a>
+                :
+                <div></div>
+              }
             </div>
             <div className="em-event-content-area_adn ">
 
