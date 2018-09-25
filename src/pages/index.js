@@ -50,7 +50,10 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
-    date: allMarkdownRemark(limit: 1) {
+    date: allMarkdownRemark(
+      limit: 1
+    	filter: { fileAbsolutePath: { regex: "/(dates)/.*\\.md$/" } }
+    ) {
       edges {
         node {
           id
