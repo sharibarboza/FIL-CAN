@@ -22,13 +22,16 @@ class Portfolio extends React.Component {
     }
 
     this.images = [];
-    for (var i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++) {
       let src = {
         'src': defaultImage
       };
       if (i < numImages) {
-        let block = props.images[i].node.frontmatter.block[0];
-        src['src'] = block.photo;
+        let image = props.images[i].node.frontmatter;
+        let photo = image.photo.childImageSharp.sizes;
+        src['src'] = photo.src;
+        src['srcSet'] = photo.srcSet;
+        src['caption'] = image.caption;
       }
       this.images.push(src);
     }
@@ -65,14 +68,28 @@ class Portfolio extends React.Component {
 
   displayPhotos() {
     let elements = [];
+    const numImages = this.props.images.length;
+    const defaultPhoto = this.props.default.sizes;
 
     for (let i = 0; i < 8; i++) {
+      let photo = defaultPhoto;
+      let eventTitle = '';
+      let caption = '';
+
+      if (i < numImages) {
+        let node = this.props.images[i].node.frontmatter;
+        photo = node.photo.childImageSharp.sizes;
+        eventTitle = node.event;
+        caption = node.caption;
+      }
 
       let element = <div className="col-md-4 col-sm-6 col-lg-3 col-xs-12 grid-item c d" key={i}>
         <div className="single_portfolio">
           <div className="single_portfolio_inner">
             <div className="single_portfolio_thumb">
-              <img src={defaultImage} />
+              <Img sizes={photo} style={{
+                height: '280px'
+              }} />
             </div>
             <div className="single_portfolio_icon">
               <a
@@ -83,8 +100,8 @@ class Portfolio extends React.Component {
             </div>
             <div className="portfolio_content">
               <div className="portfolio_content_inner">
-                <h3><a href="single-blog.html">Demo Media Title 1</a></h3>
-                <p><span>campaign , event</span></p>
+                <h3>{eventTitle}</h3>
+                <p><span>{caption}</span></p>
               </div>
             </div>
           </div>

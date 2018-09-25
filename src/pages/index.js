@@ -11,16 +11,17 @@ import Portfolio from '../components/portfolio'
 class IndexPage extends React.Component {
 
   render() {
-    // Get carousel image
+    // Get sharp images
     const headerImage = get(this, 'props.data.headerImage');
     const counterImage = get(this, 'props.data.counterImage');
+    const defaultImage = get(this, 'props.data.defaultImage');
 
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
     const dateStr = date + 'T00:00:00';
 
     // Get grid images
-    const grid = get(this, 'props.data.gridPhotos.edges');
+    const grid = get(this, 'props.data.gridImages.edges');
 
     // Get the officers data
     const officers = get(this, 'props.data.officers.edges');
@@ -30,7 +31,7 @@ class IndexPage extends React.Component {
         <Carousel headerImage={headerImage} />
         <Features />
         <Counter date={dateStr} bgImage={counterImage} />
-        <Portfolio images={grid} />
+        <Portfolio images={grid} default={defaultImage} />
         <Executives officers={officers} index={true} />
         <div className="container" style={{
           marginBottom: '100px'
@@ -99,18 +100,27 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    gridPhotos: allMarkdownRemark(
-      limit: 1
+    defaultImage: imageSharp(id: { regex: "/default-image/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    gridImages: allMarkdownRemark(
+      limit: 8
   	  filter: { fileAbsolutePath: { regex: "/(grid)/.*\\.md$/" } }
     ) {
       edges {
         node {
           id
           frontmatter {
-            block {
-              event
-              caption
-              photo
+            event
+            caption
+            photo {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
             }
           }
         }
