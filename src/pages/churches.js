@@ -25,6 +25,11 @@ class ChurchesPage extends React.Component {
 
   getGeocodes() {
     const self = this;
+
+    if (this.churches == undefined) {
+      return;
+    }
+
     for (var i = 0; i < this.churches.length; i++) {
       let node = this.churches[i].node;
       let church = node.frontmatter;
@@ -120,6 +125,11 @@ class ChurchesPage extends React.Component {
 
   initializeChurchPhotos() {
     let elements = [];
+
+    if (this.churches == undefined) {
+      return;
+    }
+
     for (var i = 0; i < this.churches.length; i++) {
       let node = this.churches[i].node;
       let church = node.frontmatter;

@@ -19,17 +19,19 @@ class LeadershipPage extends React.Component {
     let leaders = [];
     let youth = [];
 
-    for (var i = 0; i < executives.length; i++) {
-      let node = executives[i].node;
-      let type = node.frontmatter.type;
-      if (type == 'Board VP') {
-        boardVPs.push(node);
-      } else if (type == 'Adviser') {
-        advisors.push(node);
-      } else if (type == 'Chair') {
-        leaders.push(node);
-      } else if (type == 'Youth') {
-        youth.push(node);
+    if (executives) {
+      for (var i = 0; i < executives.length; i++) {
+        let node = executives[i].node;
+        let type = node.frontmatter.type;
+        if (type == 'Board VP') {
+          boardVPs.push(node);
+        } else if (type == 'Adviser') {
+          advisors.push(node);
+        } else if (type == 'Chair') {
+          leaders.push(node);
+        } else if (type == 'Youth') {
+          youth.push(node);
+        }
       }
     }
 

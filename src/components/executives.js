@@ -13,10 +13,12 @@ class Executives extends React.Component {
     this.photos = {};
     this.index = props.index;
 
-    for (var i = 0; i < this.props.officers.length; i++) {
-      const data = this.props.officers[i].node.frontmatter;
-      this.photos[data.position] = data.photo.childImageSharp.sizes;
-      this.officers[data.position] = data;
+    if (this.props.officers) {
+      for (var i = 0; i < this.props.officers.length; i++) {
+        const data = this.props.officers[i].node.frontmatter;
+        this.photos[data.position] = data.photo.childImageSharp.sizes;
+        this.officers[data.position] = data;
+      }
     }
   }
 

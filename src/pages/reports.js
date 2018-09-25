@@ -4,10 +4,25 @@ import get from 'lodash/get'
 
 import pdf from '../images/pdf-icon.png'
 
+import FileDownload from '../components/filedownload'
+
 class ReportsPage extends React.Component {
 
   displayFiles() {
     let elements = [];
+    const reports = get(this, 'props.data.reports.edges');
+
+    if (reports) {
+      for (var i = 0; i < reports.length; i++) {
+        let node = bylaws[i].node;
+        let element = <FileDownload node={node} />
+        elements.push(element);
+      }
+    } else {
+      let element = <span>There are currently no files to display.</span>
+      elements.push(element);
+    }
+
     return elements;
   }
 
@@ -35,3 +50,27 @@ class ReportsPage extends React.Component {
 }
 
 export default ReportsPage
+
+export const query = graphql`
+  query ReportsQuery {
+    reports: allMarkdownRemark(
+  	   filter: { fileAbsolutePath: { regex: "/(reports)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            file {
+              relativePath
+              publicURL
+              internal {
+                mediaType
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
