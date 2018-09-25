@@ -8,7 +8,7 @@ class ExecutiveList extends React.Component {
     const executives = this.props.list;
     let higher_ranks = [];
 
-    for (var i = 0; i < executives.length; i++) {
+    for (let i = 0; i < executives.length; i++) {
       let executive = executives[i].frontmatter;
 
       let key = executives[i].id;

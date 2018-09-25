@@ -11,7 +11,7 @@ class Footer extends React.Component {
     let elements = [];
     const churches = this.props.churches;
 
-    for (var i = 0; i < churches.length; i++) {
+    for (let i = 0; i < churches.length; i++) {
       let node = churches[i].node;
       let key = node.id;
       let church = node.frontmatter;

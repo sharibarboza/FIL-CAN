@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 import 'font-awesome/css/font-awesome.css';
 
-import divider from '../images/divider.png';
+import Divider from './divider';
 
 class Features extends React.Component {
   render() {
@@ -15,10 +15,7 @@ class Features extends React.Component {
           <div className="col-md-12">
   					<div className="section-title t_center">
   						<h2>Our Community</h2>
-
-              <div className="em-image">
-                <img src={divider} alt="divider" />
-              </div>
+              <Divider />
   					</div>
   				</div>
         </div>

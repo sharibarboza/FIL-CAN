@@ -13,7 +13,7 @@ class BylawsPage extends React.Component {
     const bylaws = get(this, 'props.data.bylaws.edges');
 
     if (bylaws) {
-      for (var i = 0; i < bylaws.length; i++) {
+      for (let i = 0; i < bylaws.length; i++) {
         let node = bylaws[i].node;
         let element = <FileDownload node={node} />
         elements.push(element);

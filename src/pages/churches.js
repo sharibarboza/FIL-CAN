@@ -30,7 +30,7 @@ class ChurchesPage extends React.Component {
       return;
     }
 
-    for (var i = 0; i < this.churches.length; i++) {
+    for (let i = 0; i < this.churches.length; i++) {
       let node = this.churches[i].node;
       let church = node.frontmatter;
       let address = church.address;
@@ -130,7 +130,7 @@ class ChurchesPage extends React.Component {
       return;
     }
 
-    for (var i = 0; i < this.churches.length; i++) {
+    for (let i = 0; i < this.churches.length; i++) {
       let node = this.churches[i].node;
       let church = node.frontmatter;
       let key = node.id;

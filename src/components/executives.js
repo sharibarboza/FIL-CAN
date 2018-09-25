@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 import 'font-awesome/css/font-awesome.css';
 
-import divider from '../images/divider.png';
+import Divider from './divider';
 
 class Executives extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Executives extends React.Component {
     this.index = props.index;
 
     if (this.props.officers) {
-      for (var i = 0; i < this.props.officers.length; i++) {
+      for (let i = 0; i < this.props.officers.length; i++) {
         const data = this.props.officers[i].node.frontmatter;
         this.photos[data.position] = data.photo.childImageSharp.sizes;
         this.officers[data.position] = data;
@@ -32,10 +32,7 @@ class Executives extends React.Component {
     					<div className="section-title t_center">
 
     						<h2>Executive Officers</h2>
-
-    							<div className="em-image">
-    								<img src={divider} alt="divider" />
-    							</div>
+                <Divider />
     					</div>
     				</div>
     			</div>

@@ -65,3 +65,13 @@ collections:
     fields:
       - { label: Title of Report, name: title, widget: string }
       - { label: File, name: file, widget: file }
+
+  - name: grid
+    label: Grid Images
+    folder: cms/grid
+    create: true
+    fields:
+      - { label: Photo Number (e.g. Photo 1), name: title, widget: string }
+      - { label: Event, name: event, widget: string }
+      - { label: Caption, name: caption, widget: string }
+      - { label: Photo, name: photo, widget: image }

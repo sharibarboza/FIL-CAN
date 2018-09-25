@@ -20,7 +20,7 @@ class LeadershipPage extends React.Component {
     let youth = [];
 
     if (executives) {
-      for (var i = 0; i < executives.length; i++) {
+      for (let i = 0; i < executives.length; i++) {
         let node = executives[i].node;
         let type = node.frontmatter.type;
         if (type == 'Board VP') {
