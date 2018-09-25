@@ -2,10 +2,21 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
 import Carousel from 'nuka-carousel';
+import WOW from 'wowjs';
 
 var createReactClass = require('create-react-class');
 
+import '../layouts/animate.css'
+
 class Slider extends React.Component {
+
+  componentDidMount() {
+    try {
+      new WOW.WOW().init();
+    } catch(e) {
+      console.log(e)
+    }
+  }
 
   getImages() {
     let elements = [];
