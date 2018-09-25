@@ -9,7 +9,7 @@ public_folder: /assets
 collections:
   - name: campmeeting_date
     label: Campmeeting Date
-    folder: dates
+    folder: cms/dates
     create: true
     fields:
       - { label: Unique title to file this date (e.g. Camp Meeting 2019), name: title, widget: string }
@@ -17,18 +17,18 @@ collections:
 
   - name: leadership
     label: Leadership
-    folder: leadership
+    folder: cms/leadership
     create: true
     fields:
       - { label: Unique title to file this executive (e.g. VP-Edmonton), name: title, widget: string }
       - { label: Executive Position, name: position, widget: string }
       - { label: Name, name: name, widget: string }
-      - { label: Photo, name: photo, widget: image, required: false, default: ../static/assets/default.jpg }
+      - { label: Photo, name: photo, widget: image, required: false, default: assets/default.jpg }
       - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Adviser', 'Chair', 'Youth'] }
 
   - name: church
     label: Church
-    folder: churches
+    folder: cms/churches
     create: true
     fields:
       - { label: Name of church, name: title }
@@ -44,8 +44,16 @@ collections:
     files:
       - label: History Page
         name: history
-        file: content/history.md
+        file: cms/pages/history/history.md
         fields:
           - { label: Title of Page, name: title, widget: string }
           - { label: Photo, name: photo, widget: image }
           - { label: Text Content, name: content, widget: markdown }
+
+  - name: bylaws
+    label: Bylaws
+    folder: cms/files/bylaws
+    create: true
+    fields:
+      - { label: Title of Bylaw File, name: title, widget: string }
+      - { label: PDF File, name: file, widget: file }

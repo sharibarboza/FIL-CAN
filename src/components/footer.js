@@ -50,7 +50,7 @@ class Footer extends React.Component {
                          <li><Link to="/about/">History</Link></li>
                          <li><a href="#">Churches</a></li>
                          <li><Link to="/leadership/">Leadership</Link></li>
-                         <li><a href="#">Bylaws</a></li>
+                         <li><Link to="/bylaws/">Bylaws</Link></li>
                          <li><a href="#">Financials</a></li>
                          <li><a href="#">Events</a></li>
                          <li><a href="#">Meetings</a></li>

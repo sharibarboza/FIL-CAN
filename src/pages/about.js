@@ -21,9 +21,6 @@ class AboutPage extends React.Component {
       					<div className="about_text">
                   <p>{history.content}</p>
       					</div>
-      					<div className="about_singnature">
-      						<img src="assets/images/sing.png" alt="" />
-      					</div>
       				</div>
       				<div className="col-md-6 col-sm-6 col-xs-12">
       					<div className=" single_image">
@@ -44,7 +41,7 @@ export default AboutPage
 export const query = graphql`
   query HistoryQuery {
     history: allMarkdownRemark(
-  	   filter: { fileAbsolutePath: { regex: "/(content)/.*\\.md$/" } }
+  	   filter: { fileAbsolutePath: { regex: "/(history)/.*\\.md$/" } }
     ) {
       edges {
         node {

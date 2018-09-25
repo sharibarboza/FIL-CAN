@@ -60,6 +60,20 @@ img {
 a {
   text-decoration: none !important;
 }
+
+.download-btn {
+  background-color: #2033AB !important;
+  letter-spacing: 1px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+
+.bylaws .download-btn {
+  vertical-align: middle;
+  line-height: 30px;
+}
+
 /*=====================
 astute HEADING TOP AREA CSS
 =========================*/
