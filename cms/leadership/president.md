@@ -2,7 +2,6 @@
 title: President
 position: President
 name: Benjamin Arias
-photo: ''
+photo: /assets/default.jpg
 type: Officer
 ---
-

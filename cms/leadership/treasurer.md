@@ -2,7 +2,6 @@
 title: Treasurer
 position: Treasurer
 name: Lilia Roque
-photo: ''
+photo: /assets/default.jpg
 type: Officer
 ---
-

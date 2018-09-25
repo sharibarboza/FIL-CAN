@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from "gatsby-image";
 
 import 'font-awesome/css/font-awesome.css';
 
@@ -22,6 +23,18 @@ class Features extends React.Component {
         <div className="row feature_blocks">
           <div className="col-md-4 col-sm-6 col-xm-6">
             <div className="em-feature">
+              <Img
+                className="breatcome_area"
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+                sizes={this.props.images[0].sizes}
+              />
+              <div className="overlay" id="feature1_overlay"></div>
               <div className="feature_inner_box">
                 <div className="feature_inner">
                   <div className="em_feature-icon">
@@ -48,6 +61,18 @@ class Features extends React.Component {
 
           <div className="col-md-4 col-sm-6 col-xm-6">
             <div className="em-feature">
+              <Img
+                className="breatcome_area"
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+                sizes={this.props.images[1].sizes}
+              />
+              <div className="overlay" id="feature2_overlay"></div>
               <div className="feature_inner_box">
                 <div className="feature_inner">
                   <div className="em_feature-icon">
@@ -74,6 +99,18 @@ class Features extends React.Component {
 
           <div className="col-md-4 col-sm-6 col-xm-6">
             <div className="em-feature">
+              <Img
+                className="breatcome_area"
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+                sizes={this.props.images[2].sizes}
+              />
+              <div className="overlay" id="feature3_overlay"></div>
               <div className="feature_inner_box">
                 <div className="feature_inner">
                   <div className="em_feature-icon">
@@ -85,7 +122,7 @@ class Features extends React.Component {
                 </div>
                 <div className="em_content_text">
                   <div className="em-feature-desc">
-                    <p>Are you planning on attending the next annual Filipino-Canadian camp meeting?</p>
+                    <p>Are you planning on attending the next annual Filipino-Canadian Camp Meeting?</p>
                   </div>
                 </div>
                 <div className="f-readmore">

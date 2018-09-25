@@ -42,7 +42,7 @@ class Header extends React.Component {
       zIndex: '9999',
       width: '100%'
     }}>
-  		<div className={this.state.scrollingLock || this.props.location != '/' ? 'nav_black' : 'astute_nav_area'}>
+  		<div className="nav_black">
   			<div className="container">
   				<div className="row logo-left">
 

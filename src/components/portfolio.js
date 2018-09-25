@@ -15,7 +15,6 @@ class Portfolio extends React.Component {
 			currentImage: 0,
 		};
 
-
     let numImages = 0;
     if (props.images) {
       numImages = props.images.length;

@@ -28,7 +28,7 @@ class Mission extends React.Component {
     								<span><i className="fa fa-calendar"></i></span>
     							</div>
     							<div className="single_service_content">
-    								<h2>Organize Events</h2>
+    								<h2>Annual Events</h2>
     								<p>To organize and facilitate the annual summer Filipino camp meeting.</p>
     							</div>
     						</div>

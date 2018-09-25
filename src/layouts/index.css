@@ -74,6 +74,27 @@ a {
   line-height: 30px;
 }
 
+.carousel-control {
+  color: #B51D29;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.carousel-control .fa {
+  font-size: 35px;
+}
+
+.carousel-image {
+  height: 700px;
+}
+
+.main-slider-area .overlay {
+  z-index: 0;
+}
+
+.slider-control-centerleft, .slider-control-centerright, .slider-control-bottomcenter {
+  z-index: 100 !important;
+}
+
 /*=====================
 astute HEADING TOP AREA CSS
 =========================*/
@@ -131,6 +152,16 @@ astute HEADING TOP AREA CSS
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+#feature1_overlay {
+  background-color: rgba(181, 29, 41, 0.7);
+}
+#feature2_overlay {
+  background-color: rgba(32, 51, 171, 0.7);
+}
+#feature3_overlay {
+  background-color: rgba(156, 132, 0, 0.7);
+}
+
 .single_counter1{
     background: rgba(240, 30, 74, 0.85);
     position: relative;
