@@ -7,6 +7,7 @@ import Features from '../components/features'
 import Counter from '../components/counter'
 import Executives from '../components/executives'
 import Portfolio from '../components/portfolio'
+import Mission from '../components/mission'
 
 class IndexPage extends React.Component {
 
@@ -31,8 +32,10 @@ class IndexPage extends React.Component {
         <Carousel headerImage={headerImage} />
         <Features />
         <Counter date={dateStr} bgImage={counterImage} />
+        <Mission />
         <Portfolio images={grid} default={defaultImage} />
         <Executives officers={officers} index={true} />
+
         <div className="container" style={{
           marginBottom: '100px'
         }}>
@@ -46,6 +49,7 @@ class IndexPage extends React.Component {
     				</div>
     			</div>
         </div>
+
       </div>
     )
   }

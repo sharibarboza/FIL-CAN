@@ -87,7 +87,7 @@ class Portfolio extends React.Component {
         <div className="single_portfolio">
           <div className="single_portfolio_inner">
             <div className="single_portfolio_thumb">
-              <Img sizes={photo} style={{
+              <Img className="img" sizes={photo} style={{
                 height: '280px'
               }} />
             </div>

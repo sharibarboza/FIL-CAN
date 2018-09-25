@@ -28,20 +28,20 @@ class Features extends React.Component {
                     <span><i className="fa fa-book"></i></span>
                   </div>
                   <div className="em-feature-title">
-                    <h2>Our History</h2>
+                    <h2>About Us</h2>
                   </div>
                 </div>
                 <div className="em_content_text">
                   <div className="em-feature-desc">
-                    <p>Lorem ipsum dolor sit amet, cata adipisicing elit, sed do eiusmod temapor incididunt utn labore et dolore magna</p>
+                    <p>The Association was founded in 2002 to establish an organized Filipino SDA congregation.</p>
                   </div>
                 </div>
                 <div className="f-readmore">
-                  <div className="feature_button">
-                    <a href="#">Read More<span><i className="fa fa-long-arrow-right"></i></span>
-                    </a>
-                  </div>
-                </div>
+									<div className="feature_button">
+										<a href="#">Read More<span><i className="fa fa-long-arrow-right"></i></span>
+										</a>
+									</div>
+								</div>
               </div>
             </div>
           </div>
@@ -54,20 +54,20 @@ class Features extends React.Component {
                     <span><i className="fa fa-location-arrow"></i></span>
                   </div>
                   <div className="em-feature-title">
-                    <h2>Our Churches</h2>
+                    <h2>Churches</h2>
                   </div>
                 </div>
                 <div className="em_content_text">
                   <div className="em-feature-desc">
-                    <p>Lorem ipsum dolor sit amet, cata adipisicing elit, sed do eiusmod temapor incididunt utn labore et dolore magna</p>
+                    <p>See which Seventh-day Adventist churches in Alberta are part of the Association.</p>
                   </div>
                 </div>
                 <div className="f-readmore">
-                  <div className="feature_button">
-                    <a href="#">Read More<span><i className="fa fa-long-arrow-right"></i></span>
-                    </a>
-                  </div>
-                </div>
+									<div className="feature_button">
+										<a href="#">View Churches<span><i className="fa fa-long-arrow-right"></i></span>
+										</a>
+									</div>
+								</div>
               </div>
             </div>
           </div>
@@ -77,23 +77,23 @@ class Features extends React.Component {
               <div className="feature_inner_box">
                 <div className="feature_inner">
                   <div className="em_feature-icon">
-                    <span><i className="fa fa-calendar"></i></span>
+                    <span><i className="fa fa-fire"></i></span>
                   </div>
                   <div className="em-feature-title">
-                    <h2>Our Events</h2>
+                    <h2>Camp Meeting</h2>
                   </div>
                 </div>
                 <div className="em_content_text">
                   <div className="em-feature-desc">
-                    <p>Lorem ipsum dolor sit amet, cata adipisicing elit, sed do eiusmod temapor incididunt utn labore et dolore magna</p>
+                    <p>Are you planning on attending the next annual Filipino-Canadian camp meeting?</p>
                   </div>
                 </div>
                 <div className="f-readmore">
-                  <div className="feature_button">
-                    <a href="#">Read More<span><i className="fa fa-long-arrow-right"></i></span>
-                    </a>
-                  </div>
-                </div>
+									<div className="feature_button">
+										<a href="#">Learn more <span><i className="fa fa-long-arrow-right"></i></span>
+										</a>
+									</div>
+								</div>
               </div>
             </div>
           </div>

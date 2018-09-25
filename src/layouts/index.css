@@ -224,6 +224,9 @@ position: absolute;
     margin-top: 15px;
 
 }
+.single_service_content p {
+  height: 50px;
+}
 .single_service_content1{
     margin-right: 100px;
     margin-top: -68px;
@@ -431,12 +434,12 @@ position: absolute;
     z-index: 1;
 }
 
-.single_portfolio_thumb img{
+.single_portfolio_thumb .img{
 	width:100%;
 	transform:scale(1);
 	transition: .5s;
 }
-.single_portfolio:hover .single_portfolio_thumb img{
+.single_portfolio:hover .single_portfolio_thumb .img{
     transform:scale(1.2);
 }
 .single_portfolio_icon{
@@ -3210,6 +3213,10 @@ font-size: 18px;
  {
 color:#fff;
 }
+
+.em-feature-desc p {
+  height: 80px;
+}
 /*=====================
  END astute About  CSS
 =========================*/
@@ -3510,6 +3517,7 @@ EM40 TEAM CSS
     margin: 0 auto;
     display: block;
     filter: grayscale(100%);
+	  transition: .5s;
 }
 .em-content-image img:hover {
   filter: grayscale(0);
