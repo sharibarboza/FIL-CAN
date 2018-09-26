@@ -3,8 +3,6 @@ import Link from 'gatsby-link';
 import Img from "gatsby-image";
 import Carousel from 'nuka-carousel';
 
-var createReactClass = require('create-react-class');
-
 import '../layouts/animate.css'
 
 class Slider extends React.Component {
@@ -46,9 +44,7 @@ class Slider extends React.Component {
 
     return (
       <div>
-        <div className="main-slider-area" style={{
-          paddingTop: '100px'
-        }}>
+        <div className="main-slider-area">
           <Carousel
             renderCenterLeftControls={({ previousSlide }) => (
               <div className="carousel-control" onClick={previousSlide}><i className="fa fa-chevron-left"></i></div>

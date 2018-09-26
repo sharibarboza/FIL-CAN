@@ -51,8 +51,8 @@ class Features extends React.Component {
                 </div>
                 <div className="f-readmore">
 									<div className="feature_button">
-										<a href="#">Read More<span><i className="fa fa-long-arrow-right"></i></span>
-										</a>
+										<Link to="/about/">Read More<span><i className="fa fa-long-arrow-right"></i></span>
+										</Link>
 									</div>
 								</div>
               </div>
@@ -89,8 +89,8 @@ class Features extends React.Component {
                 </div>
                 <div className="f-readmore">
 									<div className="feature_button">
-										<a href="#">View Churches<span><i className="fa fa-long-arrow-right"></i></span>
-										</a>
+										<Link to="/churches/">View Churches<span><i className="fa fa-long-arrow-right"></i></span>
+										</Link>
 									</div>
 								</div>
               </div>
@@ -127,8 +127,8 @@ class Features extends React.Component {
                 </div>
                 <div className="f-readmore">
 									<div className="feature_button">
-										<a href="#">Learn more <span><i className="fa fa-long-arrow-right"></i></span>
-										</a>
+										<Link to="/campmeeting/">Learn more <span><i className="fa fa-long-arrow-right"></i></span>
+										</Link>
 									</div>
 								</div>
               </div>

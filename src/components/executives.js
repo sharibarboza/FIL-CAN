@@ -31,7 +31,7 @@ class Executives extends React.Component {
     				<div className="col-md-12">
     					<div className="section-title t_center">
 
-    						<h2>Executive Officers</h2>
+    						<h2>{this.props.title}</h2>
                 <Divider />
     					</div>
     				</div>

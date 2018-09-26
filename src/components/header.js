@@ -42,7 +42,7 @@ class Header extends React.Component {
       zIndex: '9999',
       width: '100%'
     }}>
-  		<div className="nav_black">
+  		<div className={this.state.scrollingLock || this.props.location != '/' ? 'nav_black' : 'astute_nav_area'}>
   			<div className="container">
   				<div className="row logo-left">
 
@@ -61,7 +61,7 @@ class Header extends React.Component {
   						<nav className="astute_menu main-search-menu">
   							<ul className="sub-menu">
   								<li><Link to="/">Home</Link></li>
-  								<li><a>About</a>
+  								<li><Link to="/about/">About</Link>
                     <ul className="sub-menu">
                       <li><Link to="/about/">History</Link></li>
                       <li><Link to="/churches">Churches</Link></li>
@@ -70,9 +70,9 @@ class Header extends React.Component {
                       <li><Link to="/reports/">Annual Reports</Link></li>
                     </ul>
                   </li>
-  								<li><a href="project.html">Events</a>
+  								<li><Link to="/campmeeting/">Events</Link>
                     <ul className="sub-menu">
-                      <li><a href="index-2.html">Camp Meeting</a></li>
+                      <li><Link to="/campmeeting/">Camp Meeting</Link></li>
                     </ul>
                   </li>
   								<li><a href="service.html">Meetings</a></li>

@@ -75,3 +75,21 @@ collections:
       - { label: Event, name: event, widget: string }
       - { label: Caption, name: caption, widget: string }
       - { label: Photo, name: photo, widget: image }
+
+  - name: theme
+    label: Camp Meeting Theme
+    folder: cms/theme
+    fields:
+      - { label: Theme Slogan, name: title, widget: string }
+      - { label: Bible Verse Text, name: versetext, widget: string }
+      - { label: Bible Verse (e.g. Luke 14:23), name: verse, widget: string }
+
+  - name: speakers
+    label: Camp Meeting Speakers
+    folder: cms/speakers
+    create: true
+    fields:
+      - { label: Name of speaker, name: title, widget: string }
+      - { label: Type of speaker (e.g. Youth Speaker), name: type, widget: string }
+      - { label: City, name: city, widget: string }
+      - { label: Photo, name: photo, widget: image, required: false, default: assets/default.jpg }

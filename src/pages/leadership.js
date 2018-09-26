@@ -37,7 +37,10 @@ class LeadershipPage extends React.Component {
 
     return (
       <div>
-        <Executives officers={officers} index={false} />
+        <Executives
+            title='Executive Officers'
+            officers={officers}
+            index={false} />
         <Divider />
 
         <div className="container">

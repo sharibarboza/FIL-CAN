@@ -84,7 +84,7 @@ a {
 }
 
 .carousel-image {
-  height: 700px;
+  height: 800px;
 }
 
 .main-slider-area .overlay {
@@ -93,6 +93,71 @@ a {
 
 .slider-control-centerleft, .slider-control-centerright, .slider-control-bottomcenter {
   z-index: 100 !important;
+}
+
+blockquote{
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 65px;
+  margin: 0 0 20px;
+  position: relative;
+  overflow: hidden;
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #666;
+  text-align: justify;
+
+  /*Borders - (Optional)*/
+  border-left: 15px solid #B51D29;
+  border-right: 2px solid #B51D29;
+
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #B51D29;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
+.camp-info {
+  padding: 50px;
 }
 
 /*=====================

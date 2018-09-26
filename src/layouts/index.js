@@ -38,7 +38,7 @@ class Layout extends React.Component {
           }}
         >
 
-        {location.pathname != '/' ? <Banner bgImage={bannerImage} path={bannerTitle} /> : null}
+        {location.pathname != '/' && location.pathname != '/campmeeting/' ? <Banner bgImage={bannerImage} path={bannerTitle} /> : null}
         {children()}
         </div>
         <Footer churches={churches} />

@@ -16,8 +16,7 @@ class IndexPage extends React.Component {
     const headerImage1 = get(this, 'props.data.headerImage1');
     const headerImage2 = get(this, 'props.data.headerImage2');
     const headerImage3 = get(this, 'props.data.headerImage3');
-    const headerImage4 = get(this, 'props.data.headerImage4');
-    const headerImages = [headerImage1, headerImage2, headerImage3, headerImage4];
+    const headerImages = [headerImage1, headerImage2, headerImage3];
     const counterImage = get(this, 'props.data.counterImage');
     const defaultImage = get(this, 'props.data.defaultImage');
 
@@ -43,7 +42,11 @@ class IndexPage extends React.Component {
         <Counter date={dateStr} bgImage={counterImage} />
         <Mission />
         <Portfolio images={grid} default={defaultImage} />
-        <Executives officers={officers} index={true} />
+        <Executives
+            title='Executive Officers'
+            officers={officers}
+            index={true}
+        />
 
         <div className="container" style={{
           marginBottom: '100px'
@@ -108,17 +111,12 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    headerImage2: imageSharp(id: { regex: "/carousel4/" }) {
+    headerImage2: imageSharp(id: { regex: "/alberta/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }
     }
-    headerImage3: imageSharp(id: { regex: "/alberta/" }) {
-      sizes(maxWidth: 1240 ) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    headerImage4: imageSharp(id: { regex: "/filipinoflag/" }) {
+    headerImage3: imageSharp(id: { regex: "/filipinoflag/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }
