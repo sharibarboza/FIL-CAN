@@ -11,6 +11,7 @@ import Divider from '../components/divider'
 import Contact from '../components/contact'
 
 import '../layouts/animate.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 class IndexPage extends React.Component {
   constructor(props) {
