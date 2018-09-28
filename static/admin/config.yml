@@ -100,7 +100,7 @@ collections:
     create: true
     fields:
       - { label: Question, name: title, widget: string }
-      - { label: Answer, name: answer, widget: string }
+      - { label: Answer, name: answer, widget: text }
 
   - name: contact
     label: Contact Information
