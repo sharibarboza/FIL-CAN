@@ -9,6 +9,7 @@ import Banner from '../components/banner'
 
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 
 class Layout extends React.Component {

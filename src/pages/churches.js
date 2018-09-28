@@ -138,7 +138,7 @@ class ChurchesPage extends React.Component {
 
       let element = <div className="col-md-4 col-xs-12 col-sm-6" key={key}>
         <div className="single_event_adn kc-elm kc-css-73682">
-          <div className="astute-single-event_adn ">
+          <div className="astute-single-event_adn">
 
             <div className="em-content-image astute-event-thumb_adn">
               <Img className="church-image" alt="" sizes={church.photo.childImageSharp.sizes} />

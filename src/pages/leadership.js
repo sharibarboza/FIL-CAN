@@ -37,13 +37,26 @@ class LeadershipPage extends React.Component {
 
     return (
       <div>
+        <div style={{
+          paddingBottom: '100px'
+        }}>
         <Executives
             title='Executive Officers'
             officers={officers}
-            index={false} />
-        <Divider />
+            index={false}
+        />
+        </div>
 
         <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="section-title t_center">
+
+                <h2>Other Leadership</h2>
+                <Divider />
+              </div>
+            </div>
+          </div>
           <div className="row officer-lists">
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
               {boardVPs.length != -1 ? <ExecutiveList header='Vice Presidents' type='Board VP' list={boardVPs} /> : null}

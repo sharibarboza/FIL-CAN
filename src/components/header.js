@@ -75,8 +75,8 @@ class Header extends React.Component {
                       <li><Link to="/campmeeting/">Camp Meeting</Link></li>
                     </ul>
                   </li>
-  								<li><a href="service.html">Meetings</a></li>
-  								<li><a href="contact.html">Contact</a></li>
+  								<li><Link to="/meetings/">Meetings</Link></li>
+  								<li><Link to="/contact/">Contact</Link></li>
   							</ul>
   							<div className="donate-btn-header">
   								<a className="dtbtn" href="#">Donate Now</a>

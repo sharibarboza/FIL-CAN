@@ -1,17 +1,30 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-import Img from "gatsby-image";
+import Img from "gatsby-image"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import Scrollchor from 'react-scrollchor';
 
-var dateFormat = require('dateformat');
+var dateFormat = require('dateformat')
 
-import Divider from '../components/divider';
+import Divider from '../components/divider'
+import Contact from '../components/contact'
+import Panel from 'react-bootstrap/lib/panel'
+import PanelGroup from 'react-bootstrap/lib/panelgroup'
 
 import '../layouts/animate.css'
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
+
+    this.headerImage = props.data.headerImage;
+    this.campImage1 = props.data.campImage1;
+    this.contactImage = props.data.contactImage;
+    this.souvenirImage = props.data.souvenirImage;
+    this.fullPage = props.data.fullPage;
+    this.halfPage = props.data.halfPage;
+    this.quarterPage = props.data.quarterPage;
 
     // Get date for the next camp meeting
     this.dateStr = props.data.date.edges[0].node.frontmatter.date + 'T00:00:00';
@@ -20,6 +33,16 @@ class IndexPage extends React.Component {
 
     this.theme = props.data.theme.edges[0].node.frontmatter;
     this.speakers = props.data.speakers.edges;
+    this.faq = props.data.faq.edges;
+    this.contact = props.data.contact.edges[0].node.frontmatter;
+
+    this.lat = 51.913339;
+    this.lng = -114.2923226;
+    this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&libraries=geometry,drawing,places";
+
+    this.state = {
+      accordion: null
+    }
   }
 
   componentDidMount() {
@@ -51,15 +74,35 @@ class IndexPage extends React.Component {
     return end;
   }
 
+  getRow(numSpeakers) {
+    let row = 'col-xs-12 col-sm-6 ';
+    if (numSpeakers == 2) {
+      row += 'col-md-6';
+    } else if (numSpeakers == 3) {
+      row += 'col-md-4';
+    }
+    return row;
+  }
+
+  getMargin(numSpeakers) {
+    if (numSpeakers == 2) {
+      return '0 23%';
+    } else {
+      return '0 7%';
+    }
+  }
+
   displaySpeakers() {
     let elements = [];
-    for (let i = 0; i < this.speakers.length; i++) {
+    const numSpeakers = this.speakers.length;
+    const margin = this.getMargin(numSpeakers);
+
+    for (let i = 0; i < numSpeakers; i++) {
       let node = this.speakers[i].node;
       let key = node.id;
       let speaker = node.frontmatter;
-      console.log(speaker);
-      /*
-      let element = <div className="col-md-4 col-sm-6 col-xs-12">
+
+      let element = <div className={this.getRow(numSpeakers)} key={key}>
         <div className="em-team">
           <div className="em-team-one">
             <div className="em-team-content-image-inner">
@@ -70,78 +113,141 @@ class IndexPage extends React.Component {
                   top: 0,
                   width: "100%",
                   height: "100%"
-                }} sizes={this.photos['President']} alt="" />
+                }} sizes={speaker.photo.childImageSharp.sizes} alt="" />
               </div>
             </div>
-            <div className="em-team-content-waraper" id="president-wrapper">
+            <div className="em-team-content-waraper" id="president-wrapper" style={{
+              margin: margin
+            }}>
               <div className="em-team-content-title-inner">
-                <div className="em-content-title"><h2>{'President' in this.officers ? this.officers['President'].name : ' '}</h2></div>
+                <div className="em-content-title"><h2>{speaker.title}</h2></div>
+
               </div>
               <div className="em-team-content-subtitle-inner">
-                <div className="em-content-subtitle">PRESIDENT</div>
+                <div className="em-content-subtitle">{speaker.type}</div>
+              </div>
+							<div className="em-team-content-socials-inner">
+              	<div className="em-team-content-socials">
+                  <span>{speaker.city}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      */
+      elements.push(element);
+
+    }
+    return elements;
+  }
+
+  toggle(i, e) {
+    console.log(i);
+    let index = i;
+    if (this.state.accordion == i) {
+      index = null;
+    }
+    this.setState({accordion: index});
+  }
+
+  getAccordionClass = (i) => {
+    if (this.state.accordion == i) {
+      return "card-header panel-heading1 active";
+    } else {
+      return "card-header panel-heading1";
+    }
+  }
+
+  displayFAQ() {
+    let elements = [];
+    for (let i = 0; i < this.faq.length; i++) {
+      let node = this.faq[i].node;
+      let key = node.id;
+      let faq = node.frontmatter;
+
+      let element = <div className="card" key={key}>
+        <div className={this.getAccordionClass(i)}>
+          <a className="card-link" data-toggle="collapse" href="#collapseOne" onClick={(e) => this.toggle(i, e)}>
+            <i className="fa fa-check"></i> {faq.title}
+          </a>
+        </div>
+        <div id="collapseOne" className="collapse" data-parent="#accordion">
+          <div className="card-body">
+            {faq.answer}
+          </div>
+        </div>
+      </div>
+      elements.push(element);
     }
 
     return elements;
   }
 
   render() {
-    // Get sharp images
-    const headerImage1 = get(this, 'props.data.headerImage1');
-    const campImage1 = get(this, 'props.data.campImage1');
+
+    let MyMapComponent = withScriptjs(withGoogleMap((props) =>
+      <GoogleMap
+        defaultZoom={7}
+        defaultCenter={{ lat: this.lat, lng: this.lng }}
+      >
+        {props.isMarkerShown && <Marker position={{ lat: this.lat, lng: this.lng }} />}
+      </GoogleMap>
+    ))
 
     return (
       <div>
 
         <div className="main-slider-area" style={{
-          height: '700px'
+          height: '90vh'
         }}>
-          <Img alt="" sizes={headerImage1.sizes} className="carousel-image" />
+          <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>
         </div>
 
         <div className="container-fluid">
           <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
-            <div className="em_slider_inner container  text-center">
+            <div className="em_slider_inner container text-center" style={{
+              marginTop: '60px'
+            }}>
               <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
                 <h2 className="em-slider-title">{this.year} Annual Filipino-Canadian </h2>
               </div>
               <div className="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0s">
                 <h1 className="em-slider-sub-title">Camp Meeting </h1>
               </div>
-              <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s">
-                <p  className="em-slider-descript"> Join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
+              <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
+                paddingTop: '20px'
+              }}>
+                <p  className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
               </div>
               <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
-                <a className="em-active-button" href="#">contact us</a>
+                <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor>
               </div>
             </div>
           </div>
         </div>
 
         <div className="row" style={{ margin: 0 }}>
-        <div className="col-sm-6 col-xs-12" style={{
+        <div className="col-md-6 col-sm-12" style={{
           backgroundColor: 'black'
         }}>
-          <div className="camp-info">
+          <div className="camp-info" style={{
+            paddingLeft: '35%'
+          }}>
             <div className="row">
-              <div className="col-md-9">
+              <div className="col-md-8 col-sm-12">
                 <div className="section_title_lefts" style={{
                   color: 'white'
                 }}>
-                  <h2><u>WHEN IS IT</u></h2>
+                  <h2><u>WHEN</u></h2>
                   <h1 style={{
+                    fontSize: '30px',
                     textTransform: 'uppercase'
                   }}>{this.getDate()}</h1>
-                  See schedule of events <i className="fa fa-long-arrow-right"></i>
+                  Thursday - Sunday
                 </div>
               </div>
-              <div className="col-md-3" style={{
+              <div className="col-md-4 col-sm-12" style={{
                 textAlign: 'center',
               }}>
                 <div>
@@ -160,21 +266,14 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-          <div className="col-sm-6 col-xs-12" style={{
-            backgroundColor: '#D6B340'
+          <div className="col-md-6 col-sm-12" style={{
+              backgroundImage: 'linear-gradient(to top right, #ead500, #e6c900, #e2bd00, #ddb100, #d8a600)'
           }}>
-            <div className="camp-info">
+            <div className="camp-info" style={{
+              paddingRight: '35%'
+            }}>
               <div className="row">
-                <div className="col-md-9">
-                  <div className="section_title_lefts" style={{
-                    color: 'white'
-                  }}>
-                    <h2><u>WHERE IS IT</u></h2>
-                    <h1>FOOTHILLS CAMP</h1>
-                    Get map directions <i className="fa fa-long-arrow-right"></i>
-                  </div>
-                </div>
-                <div className="col-md-3" style={{
+                <div className="col-md-4 col-sm-12" style={{
                   textAlign: 'center',
                 }}>
                   <div>
@@ -190,14 +289,47 @@ class IndexPage extends React.Component {
                     }}></i></span>
                   </div>
                 </div>
+                <div className="col-md-8 col-sm-12">
+                  <div className="section_title_lefts" style={{
+                    color: 'white',
+                    textAlign: 'right'
+                  }}>
+                    <h2><u>WHERE</u></h2>
+                    <h1 style={{
+                      fontSize: '30px',
+                    }}>FOOTHILLS CAMP</h1>
+                    3032 Township Rd 342, Bowden, AB
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        {this.speakers.length > 0 ?
+        <div className="team_area" id="team">
+      		<div className="container">
+      			<div className="row">
+      				<div className="col-md-12">
+      					<div className="section-title t_center">
+
+      						<h2>Speakers</h2>
+                  <Divider />
+      					</div>
+      				</div>
+      			</div>
+            <div className="row" style={{
+              paddingTop: '30px'
+            }}>
+              {this.displaySpeakers()}
+            </div>
+          </div>
+        </div>
+        : null}
+
         <div className="row" style={{ margin: 0 }}>
           <div className="col-sm-6 col-xs-12" style={{
-            backgroundColor: '#e5e5e5'
+            backgroundColor: '#f5f5f5'
           }}>
             <div style={{
               padding: '12% 50px 50px 35%',
@@ -219,25 +351,173 @@ class IndexPage extends React.Component {
             </div>
           </div>
           <div className="col-sm-6 col-xs-12" style={{ padding: 0 }}>
-            <Img sizes={campImage1.sizes} />
+            <Img sizes={this.campImage1.sizes} />
           </div>
         </div>
 
-        <div className="team_area" id="team">
-      		<div className="container">
-      			<div className="row">
-      				<div className="col-md-12">
-      					<div className="section-title t_center">
+        <div className="container" style={{
+          padding: '100px 0 100px'
+        }}>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="section-title t_center">
 
-      						<h2>Speakers</h2>
-                  <Divider />
-      					</div>
-      				</div>
-      			</div>
-            <div className="row">
-              {this.displaySpeakers()}
+                <h2>Accommodations</h2>
+                <Divider />
+              </div>
             </div>
           </div>
+          <div style={{
+            padding: '50px 0 0'
+          }}>
+            <p>Attending camp meeting is free but you must pay for accomodations. Foothills Camp offers reservations for lodge rooms (maximum 4 people), cabins (maximum 10 people), tent lots, and RV lots. Once
+            you have made a reservation, you can keep that reservation for the next camp meeting by renewing your payment before the <strong>April 30th</strong> deadline.</p>
+            <br />
+            <p><strong>All reservations come with an additional $30 registration fee. You can become exempt from this fee by purchasing a greeting in our Souvenir Program instead.</strong> See the next section to learn more.
+            </p>
+            <br />
+            Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> for availability and pricing to reserve your accommodations at the next Camp Meeting.
+          </div>
+        </div>
+
+        <div style={{
+          backgroundColor: '#f5f5f5'
+        }}>
+          <div className="container" style={{
+            padding: '100px 0 100px'
+          }}>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="section-title t_center">
+
+                  <h2>Souvenir Program</h2>
+                  <Divider />
+                </div>
+              </div>
+            </div>
+            <div style={{
+              padding: '50px 0'
+            }}>
+              <div className="row">
+                <div className="col-md-10">
+                  <p>The Souvenir Program is a booklet that will be handed out in the next camp meeting to guests containing information on speakers, the camp meeting schedule, family greetings from the members, and more. </p>
+                  <br />
+                  <p>Become a sponsor for the next camp meeting by purchasing a family greeting! A <strong>family greeting</strong> is a page or partial page with a picture of your family and/or your business advertisement. You can show your support for this event by purchasing a family greeting and in return your family/advertisement will be showcased in our souvenir booklet.</p>
+                </div>
+                <div className="col-md-2">
+                  <Img sizes={this.souvenirImage.sizes} />
+                </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-4 col-xs-12 col-sm-6">
+                <div className="single_event_adn kc-elm kc-css-73682 souvenir-box">
+                  <div className="astute-single-event_adn ">
+
+                    <div className="em-content-image astute-event-thumb_adn souvenir-thumb">
+                      <Img sizes={this.fullPage.sizes} />
+                    </div>
+                    <div className="em-event-content-area_adn ">
+
+                      <div className="event-page-title_adn souvenir-title">
+                        <h2 style={{
+                          float: 'left'
+                        }}>Full Page</h2>
+                        <h2 style={{
+                          float: 'right',
+                          color: '#0E2C87'
+                        }}>$200 <i className="fa fa-tag"></i></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 col-xs-12 col-sm-6">
+                <div className="single_event_adn kc-elm kc-css-73682 souvenir-box">
+                  <div className="astute-single-event_adn ">
+
+                    <div className="em-content-image astute-event-thumb_adn souvenir-thumb">
+                      <Img sizes={this.halfPage.sizes} />
+                    </div>
+                    <div className="em-event-content-area_adn ">
+
+                      <div className="event-page-title_adn souvenir-title">
+                        <h2 style={{
+                          float: 'left'
+                        }}>Half Page</h2>
+                        <h2 style={{
+                          float: 'right',
+                          color: '#0E2C87'
+                        }}>$100 <i className="fa fa-tag"></i></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 col-xs-12 col-sm-6">
+                <div className="single_event_adn kc-elm kc-css-73682 souvenir-box">
+                  <div className="astute-single-event_adn ">
+
+                    <div className="em-content-image astute-event-thumb_adn souvenir-thumb">
+                      <Img sizes={this.quarterPage.sizes} />
+                    </div>
+                    <div className="em-event-content-area_adn ">
+
+                      <div className="event-page-title_adn souvenir-title">
+                        <h2 style={{
+                          float: 'left'
+                        }}>Quarter Page</h2>
+                        <h2 style={{
+                          float: 'right',
+                          color: '#0E2C87'
+                        }}>$60 <i className="fa fa-tag"></i></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <p>By purchasing one of the above souvenir family greetings, you can <strong>waive your $30 registration accommodation fee.</strong> However, you do not need to have accommodations or even attend the event in order to purchase a family greeting.</p>
+            <br />
+            Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> if you are interested in having your family picture in the next Souvenir Program.
+
+          </div>
+        </div>
+
+        <div className="container" style={{
+          padding: '100px 0 100px'
+        }}>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="section-title t_center">
+
+                <h2>FAQ</h2>
+                <Divider />
+              </div>
+            </div>
+          </div>
+          <div style={{ padding: '50px 0' }}>
+
+          <div id="accordion">
+            {this.displayFAQ()}
+          </div>
+
+          </div>
+        </div>
+
+        <Contact id="contact" phone={this.contact.phone} email={this.contact.title} />
+
+        <div>
+          <MyMapComponent
+            isMarkerShown
+            googleMapURL={this.mapKey}
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `500px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+          />
         </div>
 
       </div>
@@ -263,12 +543,59 @@ export const query = graphql`
         }
       }
     }
-    headerImage1: imageSharp(id: { regex: "/carousel4/" }) {
+    faq: allMarkdownRemark(
+    	filter: { fileAbsolutePath: { regex: "/(faq)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            answer
+          }
+        }
+      }
+    }
+    contact: allMarkdownRemark(
+      limit: 1
+    	filter: { fileAbsolutePath: { regex: "/(contact)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            phone
+          }
+        }
+      }
+    }
+    headerImage: imageSharp(id: { regex: "/carousel4/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }
     }
     campImage1: imageSharp(id: { regex: "/canada/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    souvenirImage: imageSharp(id: { regex: "/souvenir/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    fullPage: imageSharp(id: { regex: "/fullpage/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    halfPage: imageSharp(id: { regex: "/halfpage/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    quarterPage: imageSharp(id: { regex: "/quarterpage/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }

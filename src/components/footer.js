@@ -46,14 +46,14 @@ class Footer extends React.Component {
                    <h2 className="widget-title">Quick Links</h2>
                      <div className="menu-quick-link-container">
                        <ul id="menu-quick-link" className="menu">
-                         <li><a href="#">Home</a></li>
+                         <li><Link to="/">Home</Link></li>
+                         <li><Link to="/campmeeting/">Camp Meeting</Link></li>
                          <li><Link to="/about/">History</Link></li>
-                         <li><a href="#">Churches</a></li>
+                         <li><Link to="/churches/">Churches</Link></li>
                          <li><Link to="/leadership/">Leadership</Link></li>
                          <li><Link to="/bylaws/">Bylaws</Link></li>
-                         <li><a href="#">Financials</a></li>
-                         <li><a href="#">Events</a></li>
-                         <li><a href="#">Meetings</a></li>
+                         <li><Link to="/reports/">Annual Reports</Link></li>
+                         <li><Link to="/meetings/">Meetings</Link></li>
                       </ul>
                    </div>
                  </div>
@@ -89,7 +89,7 @@ class Footer extends React.Component {
     				<div className="col-md-2 col-sm-6">
               <div className="footer-menu">
     						 <ul className="text-right">
-    							<li><a href="#">Contact</a></li>
+    							<li><Link to="/contact/">Contact</Link></li>
     							<li data-netlify-identity-button></li>
     						</ul>
     					</div>

@@ -84,7 +84,7 @@ a {
 }
 
 .carousel-image {
-  height: 800px;
+  height: 100vh;
 }
 
 .main-slider-area .overlay {
@@ -157,7 +157,7 @@ blockquote em{
 }
 
 .camp-info {
-  padding: 50px;
+  padding: 30px;
 }
 
 /*=====================
@@ -169,7 +169,7 @@ astute HEADING TOP AREA CSS
 /* count down area css */
 
 .countdown {
-  margin: 10px auto;
+  margin: 50px auto;
   padding-bottom: 20px;
 }
 
@@ -205,7 +205,7 @@ astute HEADING TOP AREA CSS
  }
 .count_down_area {
   position: relative;
-  height: 100%;
+  height: 90vh;
   overflow: hidden;
 }
 .overlay {
@@ -709,7 +709,9 @@ position: absolute;
 }
 
 /* ac css */
-.panel-title{}
+.panel-title{
+  margin: 0
+}
 .panel-title a{}
 .panel-heading1 a i{
 	background: #333;
@@ -725,6 +727,20 @@ position: absolute;
 .panel-heading1{
     padding: 11px 15px;
 }
+.card-header {
+  background-color: white !important;
+}
+.panel-heading1 a {
+    color: black;
+    display:block;
+}
+.panel-heading1 a:hover {
+  color: inherit !important;
+}
+.panel-heading1.active a i{
+	background:#fff;
+	color:#333;
+}
 .panel-body{}
 .panel-body ul{
 	padding-left: 15px;
@@ -733,7 +749,8 @@ position: absolute;
 
 }
 .panel-heading1.active{
-	background:#B51D29;
+  color: white !important;
+	background:#B51D29 !important;
 }
 .panel-heading1{
 	position:relative;
@@ -762,14 +779,6 @@ position: absolute;
 	color: #fff;
 	font-size: 16px;
 	font-weight: 500;
-}
-
-.panel-heading1 a {
-    display:block;
-}
-.panel-heading1.active a i{
-	background:#fff;
-	color:#333;
 }
 
 /* single video css */
@@ -1125,13 +1134,13 @@ position: absolute;
 
 
 /* contact area css */
-/*
 .contact_area {
-	background: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)), transparent url(assets/images/cn.jpg) 0% 0%/cover repeat scroll;
+	background: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87));
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 78px 0 99px;
 }
+/*
 .contact_area1 {
 	background: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)), transparent url(assets/images/contact.jpg) 0% 0%/cover repeat scroll;
 	background-repeat: no-repeat;
@@ -1186,13 +1195,13 @@ position: absolute;
 .form_field_inner input,
 .form_field_inner input, .field_comment_inner textarea {
     background: transparent;
-    border: 0px solid #ddd;
+    border: 1px solid #fff;
+    padding: 10px 15px;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
     height: 50px;
     -webkit-transition: all 0.3s ease 0s;
-    border-bottom: 1px solid #fff;
     transition: all 0.3s ease 0s;
     width: 100%;
     outline: none;
@@ -1210,7 +1219,7 @@ position: absolute;
 .field_comment_inner{}
 
 .field_comment_inner textarea{
-	 height: 42px;
+	 height: 100px;
 }
 
 .contact_bnt {
@@ -3237,6 +3246,9 @@ astute ABOUT SECTION
 	box-shadow: 0px 10px 40px 0px rgba(148,146,245,0.2);
 	/* box-shadow: 0px 10px 40px 0px rgba(235,27,43,0.2); */
 }
+.souvenir-box {
+  box-shadow: 0px 10px 40px 0px rgba(148,146,245,0.2);
+}
 .em-feature:hover .feature_inner_box {
     background: transparent;
 }
@@ -3503,7 +3515,7 @@ EM40 TEAM CSS
     background-color: #fff;
     bottom: -20px;
     left: 0;
-    margin: 0 2vw;
+    margin: 0 7%;
     padding: 30px 0;
     position: absolute;
     right: 0;
@@ -3535,7 +3547,7 @@ EM40 TEAM CSS
 	  transition:.5s;
 }
 .em-team:hover #president-wrapper {
-    background-color: rgba(235, 27, 43, 0.8);
+    background-color: rgba(181, 29, 41, 0.8);
     bottom: 0px;
 }
 .em-team:hover #secretary-wrapper {
@@ -4585,7 +4597,7 @@ astute TESTIMONIAL AREA CSS
 .em-slider-descript {
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 43px;
+    margin-bottom: 25px;
     width: 61%;
 }
 .text-left .em-slider-descript {
@@ -5892,12 +5904,19 @@ astute event AREA CSS
 /* event THUMB CSS */
 
 .astute-event-thumb_adn {
-    width: 100% !important;
-    height: 200px !important;
+    width: 100%;
+    height: 200px;
     position: relative;
     overflow:hidden;
     margin: 0 auto;
     border: 1px solid #ddd;
+}
+.souvenir-thumb {
+    width: 330px;
+    height: 460px;
+}
+.souvenir-thumb img {
+  filter: grayscale(0);
 }
 .church-image {
     position: absolute;
@@ -5961,6 +5980,9 @@ astute event AREA CSS
     height: 8vh;
     font-size: 1.7em;
 }
+.souvenir-title h2 {
+  height: auto;
+}
 /* event POST META CSS */
 /* left style 1 */
 .astute-event-singlea {
@@ -6004,6 +6026,8 @@ h2.related-projects-title.text-left {
 .astute-single-event_adn:hover .astute-event-thumb_adn img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    transition: 0.5s !important;
+    -webkit-transition: .5s !important;
 }
 .event_nospace_adn.col-xs-12 {
     padding: 0px;
@@ -6027,14 +6051,6 @@ h2.related-projects-title.text-left {
     margin: 0;
     border-top: 1px solid #ddd;
 }
-
-
-
-
-
-
-
-
 .event_date {
 	position: absolute;
 	left: 0;

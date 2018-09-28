@@ -26,15 +26,17 @@ class Slider extends React.Component {
 
   displayText() {
     return <div id="htmlcaption1" className="nivo-html-caption em-slider-content-nivo">
-      <div className="em_slider_inner container text-left">
+      <div className="em_slider_inner container text-left" style={{
+        marginTop: '-20px'
+      }}>
         <div className="wow slideInRight" data-wow-duration="2s" data-wow-delay="0s">
-          <h1 className="em-slider-sub-title">Uniting Filipino Canadians </h1>
+          <h1 className="em-slider-sub-title">Uniting Filipino-Canadians </h1>
         </div>
         <div className="wow slideInRight" data-wow-duration="3s" data-wow-delay="0s">
           <p  className="em-slider-descript">Welcome to the Filipino-Canadian Seventh-Day Adventist Assocation of Alberta</p>
         </div>
         <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
-          <a className="withput-active" href="#">Contact Us</a>
+          <Link to="/campmeeting/">Annual camp meeting</Link>
         </div>
       </div>
     </div>

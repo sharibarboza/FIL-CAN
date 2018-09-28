@@ -3,7 +3,8 @@ import Link from 'gatsby-link';
 import Img from "gatsby-image";
 
 import counterBg from '../images/campmeeting.jpg';
-import divider from '../images/divider-white.png';
+
+import Divider from './divider';
 
 var dateFormat = require('dateformat');
 
@@ -110,11 +111,9 @@ class Counter extends React.Component {
     			<div className="row">
     				<div className="col-md-12">
     					<div className="section-title1 t_center">
-    						<h2>Filipino-Canadian Annual Camp Meeting</h2>
+    						<h2>The Annual Filipino-Canadian Camp Meeting</h2>
 
-  							<div className="em-image1">
-                  <img src={divider} alt="divider" />
-  							</div>
+  							<Divider white={true} />
   							<p className="text-alignm1">Join us at Foothills Camp on {this.getDateString()} - {this.getLastDate()}  </p>
     					</div>
     				</div>
@@ -167,7 +166,7 @@ class Counter extends React.Component {
     				</div>
     				<div className="col-md-12">
     					<div className="counter_bnt">
-    						<a href="#">Explore More</a>
+    						<Link to="/campmeeting/">Learn More</Link>
     					</div>
     				</div>
     			</div>

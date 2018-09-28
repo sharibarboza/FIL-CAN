@@ -16,7 +16,7 @@ class Mission extends React.Component {
     					<div className="section-title  t_center">
     						<h2>Our Mission</h2>
     							<Divider />
-    							<p className=" text-alignm">The goals and purposes of the association.  </p>
+    							<p className=" text-alignm">The goals and purposes of the Association.  </p>
     					</div>
     				</div>
     			</div>
@@ -29,7 +29,7 @@ class Mission extends React.Component {
     							</div>
     							<div className="single_service_content">
     								<h2>Annual Events</h2>
-    								<p>To organize and facilitate the annual summer Filipino camp meeting.</p>
+    								<p>To organize and facilitate the annual summer Filipino-Canadian Camp Meeting.</p>
     							</div>
     						</div>
     					</div>
@@ -54,8 +54,8 @@ class Mission extends React.Component {
     								<span><i className="fa fa-bullhorn"></i></span>
     							</div>
     							<div className="single_service_content">
-    								<h2>Embracing Culture</h2>
-    								<p>To unite Filipino-Canadian Seventh-day Adventist members within Alberta.</p>
+    								<h2>Honoring Culture</h2>
+    								<p>To unite Filipino-Canadians around Alberta and celebrate our unique heritages.</p>
 
     							</div>
     						</div>
@@ -68,7 +68,7 @@ class Mission extends React.Component {
     							</div>
     							<div className="single_service_content">
     								<h2>Spiritualism</h2>
-    								<p>To combine resources for promoting spiritual growth and evangelism.</p>
+    								<p>To combine resources for promoting spiritual growth and evangelism within the Seventh-Day Adventist Church.</p>
 
     							</div>
     						</div>
