@@ -164,14 +164,18 @@ class IndexPage extends React.Component {
       let node = this.faq[i].node;
       let key = node.id;
       let faq = node.frontmatter;
+      let id = "collapse" + i;
+      let href = "#" + id;
 
-      let element = <div className="card" key={key}>
+      let element = <div className="card" key={key} style={{
+        marginBottom: '30px'
+      }}>
         <div className={this.getAccordionClass(i)}>
-          <a className="card-link" data-toggle="collapse" href="#collapseOne" onClick={(e) => this.toggle(i, e)}>
-            <i className="fa fa-check"></i> {faq.title}
+          <a className="card-link" data-toggle="collapse" href={href} onClick={(e) => this.toggle(i, e)}>
+            <i className="fa fa-info"></i> {faq.title}
           </a>
         </div>
-        <div id="collapseOne" className="collapse" data-parent="#accordion">
+        <div id={id} className="collapse" data-parent="#accordion">
           <div className="card-body">
             {faq.answer}
           </div>
