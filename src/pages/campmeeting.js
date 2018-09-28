@@ -9,9 +9,9 @@ var dateFormat = require('dateformat')
 
 import Divider from '../components/divider'
 import Contact from '../components/contact'
+import AccordionGroup from '../components/accordiongroup'
 
 import '../layouts/animate.css'
-import 'bootstrap/dist/js/bootstrap.js'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -140,50 +140,14 @@ class IndexPage extends React.Component {
     return elements;
   }
 
-  toggle(i, e) {
-    console.log(i);
-    let index = i;
-    if (this.state.accordion == i) {
-      index = null;
-    }
-    this.setState({accordion: index});
-  }
-
-  getAccordionClass = (i) => {
-    if (this.state.accordion == i) {
-      return "card-header panel-heading1 active";
-    } else {
-      return "card-header panel-heading1";
-    }
-  }
-
   displayFAQ() {
-    let elements = [];
+    let faqs = [];
     for (let i = 0; i < this.faq.length; i++) {
       let node = this.faq[i].node;
       let key = node.id;
-      let faq = node.frontmatter;
-      let id = "collapse" + i;
-      let href = "#" + id;
-
-      let element = <div className="card" key={key} style={{
-        marginBottom: '30px'
-      }}>
-        <div className={this.getAccordionClass(i)}>
-          <a className="card-link" data-toggle="collapse" href={href} onClick={(e) => this.toggle(i, e)}>
-            <i className="fa fa-info"></i> {faq.title}
-          </a>
-        </div>
-        <div id={id} className="collapse" data-parent="#accordion">
-          <div className="card-body">
-            {faq.answer}
-          </div>
-        </div>
-      </div>
-      elements.push(element);
+      faqs.push(node);
     }
-
-    return elements;
+    return <AccordionGroup elements={faqs} />
   }
 
   render() {
