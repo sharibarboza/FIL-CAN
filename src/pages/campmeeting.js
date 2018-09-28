@@ -9,8 +9,6 @@ var dateFormat = require('dateformat')
 
 import Divider from '../components/divider'
 import Contact from '../components/contact'
-import Panel from 'react-bootstrap/lib/panel'
-import PanelGroup from 'react-bootstrap/lib/panelgroup'
 
 import '../layouts/animate.css'
 
