@@ -61,6 +61,10 @@ a {
   text-decoration: none !important;
 }
 
+button {
+  cursor: pointer;
+}
+
 .download-btn {
   background-color: #2033AB !important;
   letter-spacing: 1px !important;
