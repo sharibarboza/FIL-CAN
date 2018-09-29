@@ -50,7 +50,7 @@ class Contact extends React.Component {
     			<div className="row">
     				<div className="col-md-12">
     					<div className="em_contact_form">
-    					<form action="#" method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+    					<form method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
     						<div className="contact_form_inner">
     							<div className="form_field">
     								<div className="form_field_inner">
@@ -68,7 +68,7 @@ class Contact extends React.Component {
     							</div>
     						</div>
     						<div className="contact_bnt">
-    							<button name="submit">submit</button>
+    							<button type="submit">submit</button>
     						</div>
     					</form>
     					</div>
