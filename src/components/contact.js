@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
+import { Button, Form, Input } from 'reactstrap';
 
 import Divider from './divider';
 
@@ -80,8 +81,8 @@ class Contact extends React.Component {
     			<div className="row">
     				<div className="col-md-12">
     					<div className="em_contact_form">
-    					<form method="POST" action="/submitted/" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact" />
+    					<Form method="POST" action="/submitted/" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+                <Input type="hidden" name="form-name" value="contact" />
                 <p hidden>
                   <label>
                     Don’t fill this out:{" "}
@@ -91,15 +92,15 @@ class Contact extends React.Component {
     						<div className="contact_form_inner">
     							<div className="form_field">
     								<div className="form_field_inner">
-    									<input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
+    									<Input type="text" name="name" placeholder="Name" required="true" onChange={this.handleChange} />
     								</div>
     								<div className="form_field_inner">
-    									<input type="email" name="email" placeholder="Email" onChange={this.handleChange} />
+    									<Input type="email" name="email" placeholder="Email" required="true" onChange={this.handleChange} />
     								</div>
 
     								<div className="form_field_comment">
     									<div className="field_comment_inner">
-    										<textarea name="message" placeholder="Message" cols="30" rows="10" onChange={this.handleChange} />
+    										<Input type="textarea" name="message" placeholder="Message" required="true" cols="30" rows="10" onChange={this.handleChange} />
     									</div>
     								</div>
     							</div>
@@ -107,7 +108,7 @@ class Contact extends React.Component {
     						<div className="contact_bnt">
     							<button type="submit">submit</button>
     						</div>
-    					</form>
+    					</Form>
     					</div>
     				</div>
     			</div>
