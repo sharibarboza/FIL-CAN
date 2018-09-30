@@ -19,6 +19,7 @@ class Layout extends React.Component {
     const churches = data.churches.edges;
     const bannerImage = data.bannerImage;
     const bannerTitle = (location.pathname).replace(/\//g, '');
+    const noBanner = ['/', '/campmeeting/', '/meetings/'];
 
     return (
       <div>
@@ -38,7 +39,7 @@ class Layout extends React.Component {
           }}
         >
 
-        {location.pathname != '/' && location.pathname != '/campmeeting/' ? <Banner bgImage={bannerImage} path={bannerTitle} /> : null}
+        {noBanner.indexOf(location.pathname) < 0 ? <Banner bgImage={bannerImage} path={bannerTitle} /> : null}
         {children()}
         </div>
         <Footer churches={churches} />

@@ -176,6 +176,10 @@ astute HEADING TOP AREA CSS
   margin: 50px auto;
   padding-bottom: 20px;
 }
+#meeting-timer .countdown {
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
 
 .countdown-col {
   display: inline-block;
@@ -184,6 +188,12 @@ astute HEADING TOP AREA CSS
   padding: 30px 20px 0 20px;
   width: 175px;
   height: 175px;
+}
+#meeting-timer .countdown-col {
+  margin: 0 15px;
+  padding: 15px 5px 0 5px;
+  width: 120px;
+  height: 120px;
 }
 
 .countdown-col-element {
@@ -203,6 +213,9 @@ astute HEADING TOP AREA CSS
 
 .countdown-col-element strong {
   font-size: 50px;
+}
+#meeting-timer .countdown-col-element strong {
+  font-size: 40px;
 }
  .row.sg {
 	 margin-top: 38px;
