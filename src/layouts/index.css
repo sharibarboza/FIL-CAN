@@ -56,6 +56,9 @@ img {
 .clear_both {
     clear: both;
 }
+.right-text {
+  text-align: right;
+}
 
 a {
   text-decoration: none !important;
@@ -917,7 +920,9 @@ position: absolute;
 .about_area3 {
 	padding: 94px 0 80px;
 }
-.section_title_lefts{}
+.section_title_lefts{
+  font-weight: 700;
+}
 .section_title_lefts h2{
 	margin-top: 0;
     font-size: 18px;
@@ -2018,6 +2023,12 @@ nav.astute_menu.main-search-menu {
     top: 59px;
 }
 /* has menu icon */
+
+.astute-main-menu {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
 
 .astute-main-menu .menu-item-has-children > a:after {
     margin-left: 5px;
@@ -4578,7 +4589,9 @@ astute TESTIMONIAL AREA CSS
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-.em-slider-content-nivo {} .em_slider_right {} .em_slider_inner {
+.em-slider-content-nivo {
+
+  } .em_slider_right {} .em_slider_inner {
     margin: auto;
     /* width: 60%; */
 
@@ -5254,6 +5267,166 @@ astute adn blog css
         padding: 19px 20px 18px;
     }
 }
+
+.navbar-toggler {
+  border: 1px solid white !important;
+  float: right;
+  display: none;
+}
+.nav-link {
+  padding: 0.6rem 0 !important;
+}
+.navbar-list {
+  list-style: none;
+  padding: 0;
+}
+.nav-item, .sub-nav-item {
+  padding: 5px 0;
+}
+.nav-item, .sub-nav-item {
+  font-size: 12px !important;
+  font-weight: 600;
+  color: white !important;
+}
+.sub-nav-item {
+  padding-left: 10%;
+}
+.navbar-nav {
+  padding-bottom: 10px !important;
+}
+.theme-container {
+  padding: 12% 50px 50px 35%;
+}
+.camp-info-right {
+  padding-right: 35%;
+}
+.camp-info-left {
+  padding-left: 35%;
+}
+.cat-item span {
+  word-wrap: break-word;
+}
+
+@media (max-width: 1000px) {
+  .astute_menu, .colon {
+    display: none;
+  }
+  .navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .mr-2, .navbar-toggler {
+    visibility: visible;
+    display: block;
+  }
+  .em-slider-sub-title, .em-slider-title {
+    font-size: 2.5em;
+  }
+  .astute-main-menu {
+    position: relative;
+    background-color: black;
+  }
+  .carousel-image, .main-slider-area {
+    height: 50vh !important;
+  }
+  .count_down_area {
+    height: auto;
+  }
+  .countdown-col {
+    margin: 10px;
+    width: 140px;
+    height: 140px;
+  }
+  .countdown-col-element strong {
+    font-size: 30px;
+  }
+  .souvenir-thumb {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .em_slider_inner {
+    width: 80% !important;
+    margin-top: 0 !important;
+  }
+  .em-slider-sub-title, .em-slider-descript, .em-slider-button {
+    text-align: center !important;
+  }
+  .em-slider-sub-title, .em-slider-title {
+    font-size: 1.5em;
+  }
+  .em-slider-descript {
+    width: 100%;
+  }
+  .em-button-button-area a {
+    font-size: 0.8em;
+    padding: 10px 15px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .carousel-control .fa {
+    font-size: 20px;
+  }
+  .text-right {
+    text-align: left !important;
+  }
+  .banner-container {
+    padding-top: 0 !important;
+  }
+  .section_title_lefts h1 {
+    font-size: 25px;
+  }
+  .about_area3 {
+    padding: 50px 0;
+  }
+  .footer-bottom, .footer-bottom .right-text {
+    text-align: center !important;
+  }
+  .section-title h2, .section-title1 h2 {
+    font-size: 25px;
+  }
+  .feature_blocks [class*=' col-'] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .bylaws img {
+    display: none;
+  }
+  .bylaws .download-btn {
+    width: 100%;
+  }
+  .theme-container {
+    padding: 100px 15px;
+  }
+  .camp-info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .camp-info-right, .camp-info-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .camp-info .fa {
+    display: none;
+  }
+  .camp-info h1 {
+    font-size: 20px !important;
+  }
+  .camp-info .section_title_lefts {
+    text-align: center !important;
+  }
+  .em-team-content-waraper {
+    margin: 0 12% !important;
+  }
+  .blog-left-side .widget h2 {
+    font-size: 18px !important;
+    line-height: 20px;
+  }
+}
+
 /* responsive 320 end */
 
 .btn {
@@ -6326,9 +6499,6 @@ manhood WIDGET  CSS
  border: 1px solid #eeeeee;
     box-shadow: 1px 1px 5px #eeeeee;
 }
-.blog-left-side > div:last-child {
-    margin-bottom: 0px;
-}
 .blog-left-side h2 {
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -6338,9 +6508,6 @@ manhood WIDGET  CSS
 }
 .blog-left-side .push-bottom-large {
     margin-bottom: 0;
-}
-.blog-left-side > div:last-child {
-    margin-bottom: 0px;
 }
 .blog-left-side > aside:last-child {
     margin-bottom: 0px !important;
@@ -6434,9 +6601,6 @@ manhood WIDGET  CSS
 }
 .blog-left-side .widget > ul > li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-.blog-left-side .widget ul li a {
-    color: #333;
 }
 .blog-left-side .widget ul li::before {
   color: #333;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 import filcanLogo from '../images/logo.gif';
 
@@ -7,9 +8,12 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrollingLock: false
+      scrollingLock: false,
+      collapsed: true,
+      selected: null
     }
 
+    this.toggleNavbar = this.toggleNavbar.bind(this);
     this.scrollListener = this.scrollListener.bind(this);
   }
 
@@ -25,6 +29,20 @@ class Header extends React.Component {
     }
   }
 
+  onClickItem(item) {
+    if (this.state.selected == item) {
+      item = null;
+    }
+
+    this.setState({
+      selected: item
+    });
+  }
+
+  isOpen(item) {
+    return this.state.selected != null && this.state.selected == item;
+  }
+
   componentDidMount() {
     window.addEventListener('scroll', this.scrollListener);
   }
@@ -33,60 +51,91 @@ class Header extends React.Component {
     window.removeEventListener('scroll', this.scrollListener);
   }
 
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
+
   render() {
     const title = this.props.siteTitle;
 
     return (
-    <div className="astute-main-menu one_page hidden-xs hidden-sm" style={{
-      position: 'fixed',
-      zIndex: '9999',
-      width: '100%'
-    }}>
-  		<div className={this.state.scrollingLock || this.props.location != '/' ? 'nav_black' : 'astute_nav_area'}>
-  			<div className="container">
-  				<div className="row logo-left">
+      <div>
+        <div className="astute-main-menu one_page hidden-xs hidden-sm">
+      		<div className={this.state.scrollingLock || this.props.location != '/' ? 'nav_black' : 'astute_nav_area'}>
+      			<div className="container">
+      				<Navbar className="row logo-left" dark>
 
-  					<div className="col-md-4 col-sm-3 col-xs-4">
-  						<div className="logo">
-  							<Link to="/" className="main_sticky_main_l" style={{
-                  color: '#fff'
-                }}>
-                  <img src={filcanLogo} alt={title} />
-                  <span className="brand">FilCan</span>
-  							</Link>
-  						</div>
-  	  			</div>
+      					<div className="col-xs-6">
+      						<div className="logo">
+      							<Link to="/" className="main_sticky_main_l" style={{
+                      color: '#fff'
+                    }}>
+                      <img src={filcanLogo} alt={title} />
+                      <span className="brand">FilCan</span>
+      							</Link>
+      						</div>
+      	  			</div>
 
-  					<div className="col-md-8 col-sm-9 col-xs-8">
-  						<nav className="astute_menu main-search-menu">
-  							<ul className="sub-menu">
-  								<li><Link to="/">Home</Link></li>
-  								<li><Link to="/about/">About</Link>
-                    <ul className="sub-menu">
-                      <li><Link to="/about/">History</Link></li>
-                      <li><Link to="/churches">Churches</Link></li>
-                      <li><Link to="/leadership/">Leadership</Link></li>
-                      <li><Link to="/bylaws/">Bylaws</Link></li>
-                      <li><Link to="/reports/">Annual Reports</Link></li>
-                    </ul>
-                  </li>
-  								<li><Link to="/campmeeting/">Events</Link>
-                    <ul className="sub-menu">
-                      <li><Link to="/campmeeting/">Camp Meeting</Link></li>
-                    </ul>
-                  </li>
-  								<li><Link to="/meetings/">Meetings</Link></li>
-  							</ul>
-  							<div className="donate-btn-header">
-  								<Link className="dtbtn" to="/contact/">Contact Us</Link>
-  							</div>
-  						</nav>
-  					</div>
+      					<div className="col-xs-6">
+      						<nav className="astute_menu main-search-menu">
+      							<ul className="sub-menu">
+      								<li><Link to="/">Home</Link></li>
+      								<li><Link to="/about/">About</Link>
+                        <ul className="sub-menu">
+                          <li><Link to="/about/">History</Link></li>
+                          <li><Link to="/churches">Churches</Link></li>
+                          <li><Link to="/leadership/">Leadership</Link></li>
+                          <li><Link to="/bylaws/">Bylaws</Link></li>
+                          <li><Link to="/reports/">Annual Reports</Link></li>
+                        </ul>
+                      </li>
+      								<li><Link to="/campmeeting/">Events</Link>
+                        <ul className="sub-menu">
+                          <li><Link to="/campmeeting/">Camp Meeting</Link></li>
+                        </ul>
+                      </li>
+      								<li><Link to="/meetings/">Meetings</Link></li>
+      							</ul>
+      							<div className="donate-btn-header">
+      								<Link className="dtbtn" to="/contact/">Contact Us</Link>
+      							</div>
+      						</nav>
 
-  				</div>
-  			</div>
-  		</div>
-  	</div>
+                  <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+      					</div>
+
+      				</Navbar>
+
+              <Collapse isOpen={!this.state.collapsed} navbar>
+                <Nav navbar>
+                  <ul className="navbar-list">
+                    <Link to="/"><span style={{ display:'block' }}><li className="nav-item" key="home">HOME</li></span></Link>
+                    <li className="nav-item" key="about" onClick={this.onClickItem.bind(this, 'events')}>
+                      <a>ABOUT</a>
+                      <i className="fa fa-plus" style={{
+                        float: 'right'
+                      }}></i>
+                      <Collapse isOpen={this.isOpen('events')}>
+                        <Link to="/about/"><span style={{ display:'block' }} className="sub-nav-item" key="history">HISTORY</span></Link>
+                        <Link to="/churches/"><span style={{ display:'block' }} className="sub-nav-item" key="churches">CHURCHES</span></Link>
+                        <Link to="/leadership/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">LEADERSHIP</span></Link>
+                        <Link to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
+                        <Link to="/reports/"><span style={{ display:'block' }} className="sub-nav-item" key="reports">REPORTS</span></Link>
+                      </Collapse>
+                    </li>
+                    <Link to="/campmeeting/"><span style={{ display:'block' }} className="nav-item" key="campmeeting">CAMP MEETING</span></Link>
+                    <Link to="/meetings/"><span style={{ display:'block' }} className="nav-item" key="meetings">MEETINGS</span></Link>
+                    <Link to="/contact/"><span style={{ display:'block' }} className="nav-item" key="contact">CONTACT</span></Link>
+                  </ul>
+                </Nav>
+              </Collapse>
+
+      			</div>
+      		</div>
+      	</div>
+      </div>
     )
   }
 }

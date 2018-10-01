@@ -33,6 +33,7 @@ class Layout extends React.Component {
         <Header siteTitle={title} location={location.pathname} />
 
         <div
+          className="banner-container"
           style={{
             margin: '0 auto',
             paddingTop: location.pathname == '/' ? '0' : '100px',

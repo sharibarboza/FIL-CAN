@@ -215,22 +215,23 @@ class MeetingsPage extends React.Component {
         }}>
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>
-        </div>
 
-        <div className="container-fluid">
-          <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
-            <div className="em_slider_inner container text-center" style={{
-              marginTop: '-50px'
-            }}>
-              <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
-                <h2 className="em-slider-title">{this.getHeading()}</h2>
+          <div className="container-fluid">
+            <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
+              <div className="em_slider_inner container text-center" style={{
+                marginTop: '-50px'
+              }}>
+                <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
+                  <h2 className="em-slider-title">{this.getHeading()}</h2>
+                </div>
+                {this.numMeetings > 0 ? this.displayCounter(countDown) : null}
               </div>
-              {this.numMeetings > 0 ? this.displayCounter(countDown) : null}
             </div>
           </div>
         </div>
+
         <div className="container" style={{
-          padding: '100px 0 100px'
+          padding: '100px 15px 100px'
         }}>
           <br />
           {this.initializeMeetingPanels()}

@@ -68,7 +68,7 @@ class Footer extends React.Component {
                  </div>
                  </div>
                </div>
-               <div className="col-md-2 col-sm-6 text-right">
+               <div className="col-md-2 col-sm-6">
                  <div className="widget">
                    <h2 className="widget-title">Connect</h2>
                    <i className="fa fa-2x fa-facebook-square"></i>
@@ -88,7 +88,7 @@ class Footer extends React.Component {
     				</div>
     				<div className="col-md-2 col-sm-6">
               <div className="footer-menu">
-    						 <ul className="text-right">
+    						 <ul className="right-text">
     							<li><Link to="/contact/">Contact</Link></li>
     							<li data-netlify-identity-button></li>
     						</ul>

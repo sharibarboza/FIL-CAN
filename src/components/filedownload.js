@@ -11,16 +11,16 @@ class FileDownload extends React.Component {
 
     return (
       <div className="row bylaws" key={key}>
-        <div className="col-sm-1 col-xs-4">
+        <div className="col-sm-1 hidden-xs-down">
           <FileIcon media={bylaw.file.internal.mediaType} />
         </div>
-        <div className="col-sm-8 col-xs-8">
+        <div className="col-sm-8 col-xs-12">
           <strong>{bylaw.title}</strong><br />
           <span>{bylaw.file.relativePath}</span>
         </div>
         <div className="col-sm-3 col-xs-12" style={{
           textAlign: 'right',
-          paddingTop: '2px'
+          paddingTop: '5px'
         }}>
           <a href={bylaw.file.publicURL} download><div className="btn download-btn"><i className="fa fa-download"></i> Download</div></a>
         </div>

@@ -169,26 +169,26 @@ class IndexPage extends React.Component {
         }}>
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>
-        </div>
 
-        <div className="container-fluid">
-          <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
-            <div className="em_slider_inner container text-center" style={{
-              marginTop: '60px'
-            }}>
-              <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
-                <h2 className="em-slider-title">{this.year} Annual Filipino-Canadian </h2>
-              </div>
-              <div className="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0s">
-                <h1 className="em-slider-sub-title">Camp Meeting </h1>
-              </div>
-              <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
-                paddingTop: '20px'
+          <div className="container-fluid">
+            <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
+              <div className="em_slider_inner container text-center" style={{
+                marginTop: '60px'
               }}>
-                <p  className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
-              </div>
-              <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
-                <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor>
+                <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
+                  <h2 className="em-slider-title">{this.year} Annual Filipino-Canadian </h2>
+                </div>
+                <div className="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0s">
+                  <h1 className="em-slider-sub-title">Camp Meeting </h1>
+                </div>
+                <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
+                  paddingTop: '20px'
+                }}>
+                  <p  className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
+                </div>
+                <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
+                  <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor>
+                </div>
               </div>
             </div>
           </div>
@@ -198,9 +198,7 @@ class IndexPage extends React.Component {
         <div className="col-md-6 col-sm-12" style={{
           backgroundColor: 'black'
         }}>
-          <div className="camp-info" style={{
-            paddingLeft: '35%'
-          }}>
+          <div className="camp-info camp-info-left">
             <div className="row">
               <div className="col-md-8 col-sm-12">
                 <div className="section_title_lefts" style={{
@@ -236,9 +234,7 @@ class IndexPage extends React.Component {
           <div className="col-md-6 col-sm-12" style={{
               backgroundImage: 'linear-gradient(to top right, #ead500, #e6c900, #e2bd00, #ddb100, #d8a600)'
           }}>
-            <div className="camp-info" style={{
-              paddingRight: '35%'
-            }}>
+            <div className="camp-info camp-info-right">
               <div className="row">
                 <div className="col-md-4 col-sm-12" style={{
                   textAlign: 'center',
@@ -298,9 +294,7 @@ class IndexPage extends React.Component {
           <div className="col-sm-6 col-xs-12" style={{
             backgroundColor: '#f5f5f5'
           }}>
-            <div style={{
-              padding: '12% 50px 50px 35%',
-            }}>
+            <div className="theme-container">
               <div className="section_title_lefts">
                 <h2>OUR THEME</h2>
                 <h1 style={{
@@ -335,7 +329,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
           <div style={{
-            padding: '50px 0 0'
+            padding: '50px 15px 0'
           }}>
             <p>Attending camp meeting is free but you must pay for accomodations. Foothills Camp offers reservations for lodge rooms (maximum 4 people), cabins (maximum 10 people), tent lots, and RV lots. Once
             you have made a reservation, you can keep that reservation for the next camp meeting by renewing your payment before the <strong>April 30th</strong> deadline.</p>
@@ -351,7 +345,7 @@ class IndexPage extends React.Component {
           backgroundColor: '#f5f5f5'
         }}>
           <div className="container" style={{
-            padding: '100px 0 100px'
+            padding: '100px 15px 100px'
           }}>
             <div className="row">
               <div className="col-md-12">

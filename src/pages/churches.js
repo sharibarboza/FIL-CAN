@@ -113,7 +113,7 @@ class ChurchesPage extends React.Component {
         <Divider />
 
         <div className="container" style={{
-          padding: '30px 0 100px'
+          padding: '30px 15px 100px'
         }}>
           {this.initializeChurchPanels()}
         </div>

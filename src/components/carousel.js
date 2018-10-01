@@ -61,11 +61,12 @@ class Slider extends React.Component {
             {this.getImages()}
           </Carousel>
           <div className="overlay"></div>
+
+          <div className="container-fluid">
+            {this.displayText()}
+          </div>
         </div>
 
-        <div className="container-fluid">
-          {this.displayText()}
-        </div>
       </div>
     )
   }
