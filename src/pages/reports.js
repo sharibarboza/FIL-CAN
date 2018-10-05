@@ -15,11 +15,11 @@ class ReportsPage extends React.Component {
     if (reports) {
       for (let i = 0; i < reports.length; i++) {
         let node = bylaws[i].node;
-        let element = <FileDownload node={node} />
+        let element = <FileDownload node={node} key={i} />
         elements.push(element);
       }
     } else {
-      let element = <span>There are currently no files to display.</span>
+      let element = <span key={0}>There are currently no files to display.</span>
       elements.push(element);
     }
 

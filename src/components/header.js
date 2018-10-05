@@ -57,6 +57,12 @@ class Header extends React.Component {
     });
   }
 
+  closeNav() {
+    this.setState({
+      collapsed: true
+    });
+  }
+
   render() {
     const title = this.props.siteTitle;
 
@@ -111,23 +117,23 @@ class Header extends React.Component {
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
                   <ul className="navbar-list">
-                    <Link to="/"><span style={{ display:'block' }}><li className="nav-item" key="home">HOME</li></span></Link>
+                    <Link to="/" onClick={this.closeNav}><span style={{ display:'block' }}><li className="nav-item" key="home">HOME</li></span></Link>
                     <li className="nav-item" key="about" onClick={this.onClickItem.bind(this, 'events')}>
                       <a>ABOUT</a>
                       <i className="fa fa-plus" style={{
                         float: 'right'
                       }}></i>
                       <Collapse isOpen={this.isOpen('events')}>
-                        <Link to="/about/"><span style={{ display:'block' }} className="sub-nav-item" key="history">HISTORY</span></Link>
-                        <Link to="/churches/"><span style={{ display:'block' }} className="sub-nav-item" key="churches">CHURCHES</span></Link>
-                        <Link to="/leadership/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">LEADERSHIP</span></Link>
-                        <Link to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
-                        <Link to="/reports/"><span style={{ display:'block' }} className="sub-nav-item" key="reports">REPORTS</span></Link>
+                        <Link onClick={this.closeNav} to="/about/"><span style={{ display:'block' }} className="sub-nav-item" key="history">HISTORY</span></Link>
+                        <Link onClick={this.closeNav} to="/churches/"><span style={{ display:'block' }} className="sub-nav-item" key="churches">CHURCHES</span></Link>
+                        <Link onClick={this.closeNav} to="/leadership/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">LEADERSHIP</span></Link>
+                        <Link onClick={this.closeNav} to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
+                        <Link onClick={this.closeNav} to="/reports/"><span style={{ display:'block' }} className="sub-nav-item" key="reports">REPORTS</span></Link>
                       </Collapse>
                     </li>
-                    <Link to="/campmeeting/"><span style={{ display:'block' }} className="nav-item" key="campmeeting">CAMP MEETING</span></Link>
-                    <Link to="/meetings/"><span style={{ display:'block' }} className="nav-item" key="meetings">MEETINGS</span></Link>
-                    <Link to="/contact/"><span style={{ display:'block' }} className="nav-item" key="contact">CONTACT</span></Link>
+                    <Link onClick={this.closeNav} to="/campmeeting/"><span style={{ display:'block' }} className="nav-item" key="campmeeting">CAMP MEETING</span></Link>
+                    <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="nav-item" key="meetings">MEETINGS</span></Link>
+                    <Link onClick={this.closeNav} to="/contact/"><span style={{ display:'block' }} className="nav-item" key="contact">CONTACT</span></Link>
                   </ul>
                 </Nav>
               </Collapse>

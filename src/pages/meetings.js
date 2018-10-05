@@ -136,7 +136,7 @@ class MeetingsPage extends React.Component {
         panels.push(element);
       }
     } else {
-      let element = <div className="alert alert-secondary">There are currently no upcoming meetings.</div>;
+      let element = <div key={0} className="alert alert-secondary">There are currently no upcoming meetings.</div>;
       panels.push(element);
     }
 

@@ -92,15 +92,15 @@ class Contact extends React.Component {
     						<div className="contact_form_inner">
     							<div className="form_field">
     								<div className="form_field_inner">
-    									<Input type="text" name="name" placeholder="Name" required="true" onChange={this.handleChange} />
+    									<Input type="text" name="name" placeholder="Name" required={true} onChange={this.handleChange} />
     								</div>
     								<div className="form_field_inner">
-    									<Input type="email" name="email" placeholder="Email" required="true" onChange={this.handleChange} />
+    									<Input type="email" name="email" placeholder="Email" required={true} onChange={this.handleChange} />
     								</div>
 
     								<div className="form_field_comment">
     									<div className="field_comment_inner">
-    										<Input type="textarea" name="message" placeholder="Message" required="true" cols="30" rows="10" onChange={this.handleChange} />
+    										<Input type="textarea" name="message" placeholder="Message" required={true} cols="30" rows="10" onChange={this.handleChange} />
     									</div>
     								</div>
     							</div>

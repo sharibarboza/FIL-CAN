@@ -5368,7 +5368,7 @@ astute adn blog css
     position: relative;
     background-color: black;
   }
-  .carousel-image, .main-slider-area {
+  .main-slider-area {
     height: 50vh;
   }
   .count_down_area {
@@ -6696,6 +6696,9 @@ table#wp-calendar td#today{
     width: 80%;
     margin-top: 0;
   }
+  .carousel-image {
+    height: 50vh;
+  }
   .em-slider-sub-title, .em-slider-descript, .em-slider-button {
     text-align: center;
   }
@@ -6788,7 +6791,7 @@ table#wp-calendar td#today{
   .souvenir-container [class*='col-'] {
     padding: 0 !important;
   }
-  .carousel-image {
+  .main-slider-area {
     height: 50vh;
   }
 }
@@ -6810,9 +6813,6 @@ table#wp-calendar td#today{
   }
   .em_slider_inner {
     margin-top: 5vh;
-  }
-  .carousel-image {
-    height: 100vh;
   }
 }
 
