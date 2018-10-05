@@ -326,9 +326,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-          <div style={{
-            padding: '20px 15px 0'
-          }}>
+          <div className="accommodations-container">
             <p>Attending camp meeting is free but you must pay for accomodations. Foothills Camp offers reservations for lodge rooms (maximum 4 people), cabins (maximum 10 people), tent lots, and RV lots. Once
             you have made a reservation, you can keep that reservation for the next camp meeting by renewing your payment before the <strong>April 30th</strong> deadline.</p>
             <br />
@@ -436,10 +434,13 @@ class IndexPage extends React.Component {
               </div>
             </div>
 
-            <br />
-            <p>By purchasing one of the above souvenir family greetings, you can <strong>waive your $30 registration accommodation fee.</strong> However, you do not need to have accommodations or even attend the event in order to purchase a family greeting.</p>
-            <br />
-            <p>Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> if you are interested in having your family picture in the next Souvenir Program.</p>
+            <div className="row">
+              <div className="col-md-12">
+                <p>By purchasing one of the above souvenir family greetings, you can <strong>waive your $30 registration accommodation fee.</strong> However, you do not need to have accommodations or even attend the event in order to purchase a family greeting.</p>
+                <br />
+                <p>Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> if you are interested in having your family picture in the next Souvenir Program.</p>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -454,12 +455,10 @@ class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-          <div style={{ padding: '50px 0' }}>
-
-          <div id="accordion">
-            {this.displayFAQ()}
-          </div>
-
+          <div className="faq-container">
+            <div id="accordion">
+              {this.displayFAQ()}
+            </div>
           </div>
         </div>
 

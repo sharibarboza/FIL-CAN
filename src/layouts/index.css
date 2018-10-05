@@ -108,7 +108,7 @@ button {
   padding-top: 100px;
 }
 .area-padding {
-  padding: 80px 15px 60px;
+  padding: 80px 0 60px;
 }
 
 blockquote{
@@ -3553,14 +3553,17 @@ EM40 TEAM CSS
 .em-team-content-image {
 }
 .em-team-content-waraper {
-    background-color: #fff;
-    bottom: -20px;
-    left: 0;
-    margin: 0 7%;
-    padding: 30px 0;
-    position: absolute;
-    right: 0;
-    transition: all 0.3s ease 0s;
+  background-color: #fff;
+  bottom: -20px;
+  left: 0;
+  margin: 0 8%;
+  padding: 30px 0;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease 0s;
+}
+#speakers .em-team-content-waraper {
+  bottom: -60px;
 }
 .em-team-content-title h2 {
   margin-bottom: 5px;
@@ -6694,6 +6697,13 @@ table#wp-calendar td#today{
   margin-bottom: 25px;
 }
 
+.faq-container {
+  padding: 80px 15px 60px;
+}
+.accommodations-container {
+  padding: 20px 15px 0;
+}
+
 @media (max-width: 1024px) {
   .theme-container {
     padding-left: 7%;
@@ -6753,13 +6763,13 @@ table#wp-calendar td#today{
     width: 100%;
   }
   .theme-container {
-    padding: 100px 15px;
+    padding: 80px 0;
   }
   .camp-info {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  .camp-info-right, .camp-info-left {
+  .camp-info-right, .camp-info-left, .faq-container, .accommodations-container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -6777,7 +6787,7 @@ table#wp-calendar td#today{
     margin-bottom: 2vh;
   }
   .em-team-content-waraper {
-    margin: 0 8% !important;
+    margin: 0 9% !important;
   }
   .blog-left-side .widget h2 {
     font-size: 18px;
@@ -6797,9 +6807,6 @@ table#wp-calendar td#today{
   blockquote {
     font-size: 1em !important;
   }
-  .souvenir-container [class*='col-'] {
-    padding: 0 !important;
-  }
   .main-slider-area, .carousel-image {
     height: 60vh;
   }
@@ -6808,6 +6815,9 @@ table#wp-calendar td#today{
   }
   .footer-menu a {
     font-size: 0.9em;
+  }
+  .container [class*='col-'] {
+    padding: 0 !important;
   }
 }
 
