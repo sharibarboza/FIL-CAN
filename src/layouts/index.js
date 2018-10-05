@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button"
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -43,6 +44,13 @@ class Layout extends React.Component {
         {noBanner.indexOf(location.pathname) < 0 ? <Banner bgImage={bannerImage} path={bannerTitle} /> : null}
         {children()}
         </div>
+        <ScrollUpButton style={{
+          background: '#B51D29 none repeat scroll 0 0',
+          fill: 'white',
+          padding: '5px 10px',
+          width: '40px',
+          height: '40px'
+        }} />
         <Footer churches={churches} />
       </div>
     )
