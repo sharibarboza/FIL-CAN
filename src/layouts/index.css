@@ -6728,7 +6728,7 @@ table#wp-calendar td#today{
     text-align: left;
   }
   .banner-container {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
   .section_title_lefts h1 {
     font-size: 25px;
