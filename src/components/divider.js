@@ -26,7 +26,9 @@ class Divider extends React.Component {
           <div className="col-md-12">
             <div className="section-title t_center">
               <div className="em-image">
-                <img src={this.image} alt="divider" />
+                <img src={this.image} alt="divider" style={{
+                  marginBottom: '10px'
+                }} />
               </div>
             </div>
           </div>

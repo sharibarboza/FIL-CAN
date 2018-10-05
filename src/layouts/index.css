@@ -107,6 +107,9 @@ button {
 .banner-container {
   padding-top: 100px;
 }
+.area-padding {
+  padding: 80px 15px 60px;
+}
 
 blockquote{
   display:block;
@@ -337,7 +340,7 @@ position: absolute;
 }
 /* single service 1*/
 .service_area {
-	padding: 83px 0 34px;
+	padding: 80px 0;
 }
 .service_section {
     margin-top: 38px;
@@ -624,7 +627,7 @@ position: absolute;
 /* team area css */
 
 .team_area {
-	padding: 100px 0 50px;
+	padding: 80px 0 50px;
 }
 .team_area2 {
 	padding-bottom: 99px;
@@ -3258,7 +3261,7 @@ astute ABOUT SECTION
 }
 
 .feature_area {
-	padding: 81px 0 100px;
+	padding: 80px 0 100px;
 }
 .feature_area1 {
 	padding: 0 0 100px;
@@ -6800,6 +6803,12 @@ table#wp-calendar td#today{
   .main-slider-area, .carousel-image {
     height: 60vh;
   }
+  .text-alignm1 {
+    font-size: 0.9em;
+  }
+  .footer-menu a {
+    font-size: 0.9em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -6834,7 +6843,7 @@ table#wp-calendar td#today{
     font-size: 1.2em;
   }
   p {
-    font-size: 0.9em;
+    font-size: 0.9em !important;
   }
   .em-team-content-waraper div {
     font-size: 0.8em;

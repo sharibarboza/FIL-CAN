@@ -316,9 +316,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
-        <div className="container" style={{
-          padding: '100px 0 100px'
-        }}>
+        <div className="container area-padding">
           <div className="row">
             <div className="col-md-12">
               <div className="section-title t_center">
@@ -329,7 +327,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
           <div style={{
-            padding: '50px 15px 0'
+            padding: '20px 15px 0'
           }}>
             <p>Attending camp meeting is free but you must pay for accomodations. Foothills Camp offers reservations for lodge rooms (maximum 4 people), cabins (maximum 10 people), tent lots, and RV lots. Once
             you have made a reservation, you can keep that reservation for the next camp meeting by renewing your payment before the <strong>April 30th</strong> deadline.</p>
@@ -344,9 +342,7 @@ class IndexPage extends React.Component {
         <div style={{
           backgroundColor: '#f5f5f5'
         }}>
-          <div className="container souvenir-container" style={{
-            padding: '100px 15px 100px'
-          }}>
+          <div className="container souvenir-container area-padding">
             <div className="row">
               <div className="col-md-12">
                 <div className="section-title t_center">
@@ -357,7 +353,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div style={{
-              padding: '50px 0'
+              padding: '20px 0'
             }}>
               <div className="row">
                 <div className="col-md-10">
@@ -448,9 +444,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
-        <div className="container" style={{
-          padding: '100px 15px 100px'
-        }}>
+        <div className="container area-padding">
           <div className="row">
             <div className="col-md-12">
               <div className="section-title t_center">
