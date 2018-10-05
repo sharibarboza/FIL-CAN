@@ -11,14 +11,14 @@ class FileDownload extends React.Component {
 
     return (
       <div className="row bylaws" key={key}>
-        <div className="col-sm-1 hidden-xs-down">
+        <div className="col-lg-1 col-md-1 hidden-xs-down">
           <FileIcon media={bylaw.file.internal.mediaType} />
         </div>
-        <div className="col-sm-8 col-xs-12">
+        <div className="col-lg-8 col-md-7 col-xs-12">
           <strong>{bylaw.title}</strong><br />
           <span>{bylaw.file.relativePath}</span>
         </div>
-        <div className="col-sm-3 col-xs-12" style={{
+        <div className="col-lg-3 col-md-4 col-xs-12" style={{
           textAlign: 'right',
           paddingTop: '5px'
         }}>

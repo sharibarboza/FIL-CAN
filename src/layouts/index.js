@@ -35,8 +35,7 @@ class Layout extends React.Component {
         <div
           className="banner-container"
           style={{
-            margin: '0 auto',
-            paddingTop: location.pathname == '/' ? '0' : '100px',
+            margin: '0 auto'
           }}
         >
 

@@ -210,9 +210,7 @@ class MeetingsPage extends React.Component {
 
     return (
       <div>
-        <div className="main-slider-area" style={{
-          height: '60vh'
-        }}>
+        <div className="main-slider-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>
 

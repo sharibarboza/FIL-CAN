@@ -28,10 +28,10 @@ class ChurchesPage extends React.Component {
     for (let i = 0; i < this.churches.length; i++) {
       let node = this.churches[i].node;
       let church = node.frontmatter;
-      let body = <div><span>{church.address}</span><br />
-        <span>{church.pastor}</span><br /><br />
+      let body = <div style={{ marginBottom: '5px' }}><span>{church.address}</span><br />
+        <span>{church.pastor}</span><br /><hr />
         <span><i className="fa fa-phone"></i> {church.phone}</span><br />
-        <span><i className="fa fa-globe"></i> <a href={church.website} target="_blank">{church.website}</a></span></div>;
+        <span><i className="fa fa-globe"></i> <a href={church.website} target="_blank">Church Website</a></span></div>;
 
       let element = <div id={church.title} key={node.id}><MapPanel
         heading={church.title}

@@ -99,7 +99,7 @@ class Header extends React.Component {
       								<li><Link to="/meetings/">Meetings</Link></li>
       							</ul>
       							<div className="donate-btn-header">
-      								<Link className="dtbtn" to="/contact/">Contact Us</Link>
+      								<Link className="dtbtn" to="/contact/" style={{ marginLeft: '30px' }}>Contact Us</Link>
       							</div>
       						</nav>
 

@@ -53,6 +53,9 @@ img {
 .fix {
     overflow: hidden;
 }
+.row {
+  margin: 0 !important;
+}
 .clear_both {
     clear: both;
 }
@@ -140,6 +143,10 @@ blockquote::before{
   position: absolute;
   left: 10px;
   top:5px;
+}
+
+.fa-facebook-square {
+  color: white;
 }
 
 blockquote::after{
@@ -1307,6 +1314,7 @@ position: absolute;
 .breatcome_content{}
 .breatcome_content ul{
 	text-align: center;
+  padding-left: 0;
 }
 .breatcome_content ul li {
 	list-style: none;
@@ -2053,7 +2061,6 @@ a.dtbtn, a.red-on-white {
     border: none;
     display: block;
     font-size: 14px;
-    margin-left: 30px;
     font-weight: 500;
     text-transform: uppercase;
     background-color: #B51D29;
@@ -3639,11 +3646,43 @@ EM40 TEAM CSS
     transition:.5s;
 }
 .em-content-image {
-    width: 320px;
-    height: 320px;
+    width: 18vw;
+    height: 18vw;
     position: relative;
     overflow:hidden;
     margin: 0 auto;
+}
+.speakers-image {
+  width: 18vw;
+  height: 18vw;
+}
+@media screen and (max-width:1450px) {
+  .speakers-image {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+@media screen and (max-width:1024px) {
+  .speakers-image {
+    width: 25vw;
+    height: 25vw;
+  }
+  .em-content-image {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+@media screen and (max-width:700px) {
+  .em-team .em-content-image {
+    width: 80vw !important;
+    height: 80vw !important;
+  }
+}
+@media screen and (max-width:800px) {
+  .speakers-image {
+    width: 38vw;
+    height: 38vw;
+  }
 }
 .em-content-image img {
     width: 100%;
@@ -4583,6 +4622,9 @@ astute TESTIMONIAL AREA CSS
     display: block;
     position: relative;
 }
+.camp-meeting-area {
+  height: 90vh;
+}
 .nivo-caption {
     background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
     height: 100%;
@@ -4628,14 +4670,14 @@ astute TESTIMONIAL AREA CSS
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 25px;
-    width: 61%;
+    width: 100%;
 }
 .text-left .em-slider-descript {
     margin-left: 0;
     margin-right: auto;
 }
 .text-center .em-slider-descript {
-    margin: 0 auto 31px;
+    margin: 0 auto 2vw;
 }
 .text-right .em-slider-descript {
     margin-right: 0;
@@ -5307,7 +5349,7 @@ astute adn blog css
   word-wrap: break-word;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .astute_menu, .colon {
     display: none;
   }
@@ -5327,7 +5369,7 @@ astute adn blog css
     background-color: black;
   }
   .carousel-image, .main-slider-area {
-    height: 50vh !important;
+    height: 50vh;
   }
   .count_down_area {
     height: auto;
@@ -5340,90 +5382,11 @@ astute adn blog css
   .countdown-col-element strong {
     font-size: 30px;
   }
-  .souvenir-thumb {
-    height: 100% !important;
-    width: 100% !important;
+  .camp-info-right {
+    padding-right: 7%;
   }
-}
-
-@media (max-width: 650px) {
-  .em_slider_inner {
-    width: 80% !important;
-    margin-top: 0 !important;
-  }
-  .em-slider-sub-title, .em-slider-descript, .em-slider-button {
-    text-align: center !important;
-  }
-  .em-slider-sub-title, .em-slider-title {
-    font-size: 1.5em;
-  }
-  .em-slider-descript {
-    width: 100%;
-  }
-  .em-button-button-area a {
-    font-size: 0.8em;
-    padding: 10px 15px;
-  }
-  .logo img {
-    width: 80px;
-  }
-  .carousel-control .fa {
-    font-size: 20px;
-  }
-  .text-right {
-    text-align: left !important;
-  }
-  .banner-container {
-    padding-top: 0 !important;
-  }
-  .section_title_lefts h1 {
-    font-size: 25px;
-  }
-  .about_area3 {
-    padding: 50px 0;
-  }
-  .footer-bottom, .footer-bottom .right-text {
-    text-align: center !important;
-  }
-  .section-title h2, .section-title1 h2 {
-    font-size: 25px;
-  }
-  .feature_blocks [class*=' col-'] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  .bylaws img {
-    display: none;
-  }
-  .bylaws .download-btn {
-    width: 100%;
-  }
-  .theme-container {
-    padding: 100px 15px;
-  }
-  .camp-info {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .camp-info-right, .camp-info-left {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .camp-info .fa {
-    display: none;
-  }
-  .camp-info h1 {
-    font-size: 20px !important;
-  }
-  .camp-info .section_title_lefts {
-    text-align: center !important;
-  }
-  .em-team-content-waraper {
-    margin: 0 12% !important;
-  }
-  .blog-left-side .widget h2 {
-    font-size: 18px !important;
-    line-height: 20px;
+  .camp-info-left {
+    padding-left: 7%;
   }
 }
 
@@ -6170,6 +6133,11 @@ astute event AREA CSS
     height: 8vh;
     font-size: 1.7em;
 }
+@media screen and (max-width: 700px) {
+  .event-page-title_adn h2 {
+    margin-bottom: 12px;
+  }
+}
 .souvenir-title h2 {
   height: auto;
 }
@@ -6715,4 +6683,154 @@ table#wp-calendar td#today{
 
 .church-panel {
   margin-bottom: 25px;
+}
+
+@media (max-width: 1024px) {
+  .theme-container {
+    padding-left: 7%;
+  }
+}
+
+@media (max-width: 800px) {
+  .em_slider_inner {
+    width: 80%;
+    margin-top: 0;
+  }
+  .em-slider-sub-title, .em-slider-descript, .em-slider-button {
+    text-align: center;
+  }
+  .em-slider-sub-title, .em-slider-title {
+    font-size: 1.5em;
+  }
+  .em-slider-descript {
+    width: 100%;
+  }
+  .em-button-button-area a {
+    font-size: 0.8em;
+    padding: 10px 15px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .carousel-control .fa {
+    font-size: 20px;
+  }
+  .text-right {
+    text-align: left;
+  }
+  .banner-container {
+    padding-top: 0;
+  }
+  .section_title_lefts h1 {
+    font-size: 25px;
+  }
+  .about_area3 {
+    padding: 50px 0;
+  }
+  .footer-bottom, .footer-bottom .right-text {
+    text-align: center;
+  }
+  .section-title h2, .section-title1 h2 {
+    font-size: 25px;
+  }
+  .feature_blocks [class*=' col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .bylaws .download-btn {
+    width: 100%;
+  }
+  .theme-container {
+    padding: 100px 15px;
+  }
+  .camp-info {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .camp-info-right, .camp-info-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .camp-info .fa {
+    display: none;
+  }
+  .camp-info h1 {
+    font-size: 20px;
+  }
+  .camp-info .section_title_lefts {
+    text-align: center !important;
+  }
+  .section_title_lefts h1 {
+    font-size: 1em !important;
+    margin-bottom: 2vh;
+  }
+  .em-team-content-waraper {
+    margin: 0 8% !important;
+  }
+  .blog-left-side .widget h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .event-page-title_adn h2 {
+    font-size: 1em;
+    height: 4vh;
+  }
+  .astute-event-meta-right_adn {
+    float: left;
+  }
+  .souvenir-thumb {
+    height: 275px;
+    width: 200px;
+  }
+  blockquote {
+    font-size: 1em !important;
+  }
+  .souvenir-container [class*='col-'] {
+    padding: 0 !important;
+  }
+  .carousel-image {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .bylaws img {
+    display: none;
+  }
+  .souvenir-thumb {
+    height: 100%;
+    width: 100%;
+  }
+  .em-slider-sub-title, .em-slider-title {
+    font-size: 1.3em;
+  }
+  .text-center .em-slider-descript {
+    font-size: 0.8em;
+    margin-bottom: 4vh;
+  }
+  .em_slider_inner {
+    margin-top: 5vh;
+  }
+  .carousel-image {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 350px) {
+  .text-center .em-slider-descript {
+    font-size: 0.7em;
+  }
+  .section-title.t_center {
+    margin: 0;
+    width: 100%;
+  }
+  .section-title h2 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  .em-team-content-waraper div {
+    font-size: 0.8em;
+  }
 }

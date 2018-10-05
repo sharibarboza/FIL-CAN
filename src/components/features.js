@@ -21,7 +21,7 @@ class Features extends React.Component {
   				</div>
         </div>
         <div className="row feature_blocks">
-          <div className="col-md-4 col-sm-6 col-xm-6">
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="em-feature">
               <Img
                 className="breatcome_area"
@@ -59,7 +59,7 @@ class Features extends React.Component {
             </div>
           </div>
 
-          <div className="col-md-4 col-sm-6 col-xm-6">
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="em-feature">
               <Img
                 className="breatcome_area"
@@ -97,7 +97,7 @@ class Features extends React.Component {
             </div>
           </div>
 
-          <div className="col-md-4 col-sm-6 col-xm-6">
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="em-feature">
               <Img
                 className="breatcome_area"

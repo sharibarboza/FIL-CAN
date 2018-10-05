@@ -105,7 +105,7 @@ class IndexPage extends React.Component {
         <div className="em-team">
           <div className="em-team-one">
             <div className="em-team-content-image-inner">
-              <div className="em-content-image">
+              <div className="em-content-image speakers-image">
                 <Img style={{
                   position: "absolute",
                   left: 0,
@@ -164,16 +164,14 @@ class IndexPage extends React.Component {
     return (
       <div>
 
-        <div className="main-slider-area" style={{
-          height: '90vh'
-        }}>
+        <div className="main-slider-area camp-meeting-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>
 
           <div className="container-fluid">
             <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
               <div className="em_slider_inner container text-center" style={{
-                marginTop: '60px'
+                marginTop: '10px'
               }}>
                 <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
                   <h2 className="em-slider-title">{this.year} Annual Filipino-Canadian </h2>
@@ -200,7 +198,7 @@ class IndexPage extends React.Component {
         }}>
           <div className="camp-info camp-info-left">
             <div className="row">
-              <div className="col-md-8 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <div className="section_title_lefts" style={{
                   color: 'white'
                 }}>
@@ -209,10 +207,10 @@ class IndexPage extends React.Component {
                     fontSize: '30px',
                     textTransform: 'uppercase'
                   }}>{this.getDate()}</h1>
-                  Thursday - Sunday
+                  Occurs on Thursday - Sunday
                 </div>
               </div>
-              <div className="col-md-4 col-sm-12" style={{
+              <div className="col-lg-4 col-md-12 col-sm-12" style={{
                 textAlign: 'center',
               }}>
                 <div>
@@ -236,7 +234,7 @@ class IndexPage extends React.Component {
           }}>
             <div className="camp-info camp-info-right">
               <div className="row">
-                <div className="col-md-4 col-sm-12" style={{
+                <div className="col-lg-4 col-md-12 col-sm-12" style={{
                   textAlign: 'center',
                 }}>
                   <div>
@@ -252,7 +250,7 @@ class IndexPage extends React.Component {
                     }}></i></span>
                   </div>
                 </div>
-                <div className="col-md-8 col-sm-12">
+                <div className="col-lg-8 col-md-12 col-sm-12">
                   <div className="section_title_lefts" style={{
                     color: 'white',
                     textAlign: 'right'
@@ -270,7 +268,7 @@ class IndexPage extends React.Component {
         </div>
 
         {this.speakers.length > 0 ?
-        <div className="team_area" id="team">
+        <div className="team_area" id="speakers">
       		<div className="container">
       			<div className="row">
       				<div className="col-md-12">
@@ -291,7 +289,7 @@ class IndexPage extends React.Component {
         : null}
 
         <div className="row" style={{ margin: 0 }}>
-          <div className="col-sm-6 col-xs-12" style={{
+          <div className="col-lg-6 col-md-12 col-xs-12" style={{
             backgroundColor: '#f5f5f5'
           }}>
             <div className="theme-container">
@@ -311,8 +309,8 @@ class IndexPage extends React.Component {
               </blockquote>
             </div>
           </div>
-          <div className="col-sm-6 col-xs-12" style={{ padding: 0 }}>
-            <Img sizes={this.campImage1.sizes} />
+          <div className="col-lg-6 col-md-12 col-xs-12" style={{ padding: 0 }}>
+            <Img sizes={this.campImage1.sizes} style={{ height: '100%' }} />
           </div>
         </div>
 
@@ -337,14 +335,14 @@ class IndexPage extends React.Component {
             <p><strong>All reservations come with an additional $30 registration fee. You can become exempt from this fee by purchasing a greeting in our Souvenir Program instead.</strong> See the next section to learn more.
             </p>
             <br />
-            Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> for availability and pricing to reserve your accommodations at the next Camp Meeting.
+            <p>Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> for availability and pricing to reserve your accommodations at the next Camp Meeting.</p>
           </div>
         </div>
 
         <div style={{
           backgroundColor: '#f5f5f5'
         }}>
-          <div className="container" style={{
+          <div className="container souvenir-container" style={{
             padding: '100px 15px 100px'
           }}>
             <div className="row">
@@ -443,13 +441,13 @@ class IndexPage extends React.Component {
             <br />
             <p>By purchasing one of the above souvenir family greetings, you can <strong>waive your $30 registration accommodation fee.</strong> However, you do not need to have accommodations or even attend the event in order to purchase a family greeting.</p>
             <br />
-            Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> if you are interested in having your family picture in the next Souvenir Program.
+            <p>Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> if you are interested in having your family picture in the next Souvenir Program.</p>
 
           </div>
         </div>
 
         <div className="container" style={{
-          padding: '100px 0 100px'
+          padding: '100px 15px 100px'
         }}>
           <div className="row">
             <div className="col-md-12">

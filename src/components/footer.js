@@ -71,7 +71,7 @@ class Footer extends React.Component {
                <div className="col-md-2 col-sm-6">
                  <div className="widget">
                    <h2 className="widget-title">Connect</h2>
-                   <i className="fa fa-2x fa-facebook-square"></i>
+                   <a href="https://www.facebook.com/groups/filcamp/" target="_blank"><i className="fa fa-2x fa-facebook-square"></i></a>
                  </div>
                </div>
             </div>

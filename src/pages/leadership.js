@@ -38,7 +38,7 @@ class LeadershipPage extends React.Component {
     return (
       <div>
         <div style={{
-          paddingBottom: '100px'
+          paddingBottom: '50px'
         }}>
         <Executives
             title='Executive Officers'
