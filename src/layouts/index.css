@@ -6797,8 +6797,8 @@ table#wp-calendar td#today{
   .souvenir-container [class*='col-'] {
     padding: 0 !important;
   }
-  .main-slider-area {
-    height: 50vh;
+  .main-slider-area, .carousel-image {
+    height: 60vh;
   }
 }
 
