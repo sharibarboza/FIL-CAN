@@ -15,6 +15,7 @@ class Header extends React.Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.scrollListener = this.scrollListener.bind(this);
+    this.closeNav = this.closeNav.bind(this);
   }
 
   scrollListener() {

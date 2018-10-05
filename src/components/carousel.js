@@ -10,7 +10,9 @@ class Slider extends React.Component {
   componentDidMount() {
     const WOW = require('wowjs/dist/wow.js');
     if (typeof window !== `undefined`) {
-      new WOW.WOW().init();
+      new WOW.WOW({
+          live: false
+      }).init();
     }
   }
 

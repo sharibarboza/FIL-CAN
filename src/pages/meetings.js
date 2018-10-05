@@ -29,7 +29,9 @@ class MeetingsPage extends React.Component {
   componentDidMount() {
     const WOW = require('wowjs/dist/wow.js');
     if (typeof window !== `undefined`) {
-      new WOW.WOW().init();
+      new WOW.WOW({
+          live: false
+      }).init();
     }
 
     if (this.numMeetings > 0) {
@@ -209,7 +211,7 @@ class MeetingsPage extends React.Component {
     const countDown = this.state;
 
     return (
-      <div>
+      <div id="meetings_area">
         <div className="main-slider-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>
@@ -217,7 +219,7 @@ class MeetingsPage extends React.Component {
           <div className="container-fluid">
             <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
               <div className="em_slider_inner container text-center" style={{
-                marginTop: '-50px'
+                marginTop: this.numMeetings == 0 ? 0 : '-50px'
               }}>
                 <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
                   <h2 className="em-slider-title">{this.getHeading()}</h2>
@@ -229,7 +231,7 @@ class MeetingsPage extends React.Component {
         </div>
 
         <div className="container" style={{
-          padding: '100px 15px 100px'
+          padding: '50px 15px'
         }}>
           <br />
           {this.initializeMeetingPanels()}

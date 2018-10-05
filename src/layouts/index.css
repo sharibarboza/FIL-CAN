@@ -104,6 +104,9 @@ button {
 .slider-control-centerleft, .slider-control-centerright, .slider-control-bottomcenter {
   z-index: 100 !important;
 }
+.banner-container {
+  padding-top: 100px;
+}
 
 blockquote{
   display:block;
@@ -3140,7 +3143,7 @@ END EM40 SCROLL TOP CSS
 .section-title.t_center {
     margin: auto;
     text-align: center;
-    width: 63%;
+    width: 100%;
 }
 .section-title.t_left {
     margin: auto auto auto 0;
@@ -4622,6 +4625,9 @@ astute TESTIMONIAL AREA CSS
     display: block;
     position: relative;
 }
+#meetings_area .main-slider-area, #meetings_area .carousel-image {
+  height: 50vh !important;
+}
 .camp-meeting-area {
   height: 90vh;
 }
@@ -5323,7 +5329,7 @@ astute adn blog css
   padding: 0;
 }
 .nav-item, .sub-nav-item {
-  padding: 5px 0;
+  padding: 10px 0;
 }
 .nav-item, .sub-nav-item {
   font-size: 12px !important;
@@ -6809,7 +6815,7 @@ table#wp-calendar td#today{
   }
   .text-center .em-slider-descript {
     font-size: 0.8em;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
   }
   .em_slider_inner {
     margin-top: 5vh;

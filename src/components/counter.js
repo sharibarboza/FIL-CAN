@@ -30,6 +30,14 @@ class Counter extends React.Component {
     this.stop();
   }
 
+  componentWillUnmount() {
+    this.stop();
+  }
+
+  stop() {
+    clearInterval(this.interval);
+  }
+
   calculateCountdown(endDate) {
     let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
 
@@ -65,10 +73,6 @@ class Counter extends React.Component {
     timeLeft.sec = diff;
 
     return timeLeft;
-  }
-
-  stop() {
-    clearInterval(this.interval);
   }
 
   addLeadingZeros(value) {
