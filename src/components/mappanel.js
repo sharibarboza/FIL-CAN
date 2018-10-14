@@ -21,6 +21,24 @@ class MapPanel extends React.Component {
     return false;
   }
 
+  getComponent() {
+    let MyMapComponent = withScriptjs(withGoogleMap((props) =>
+      <GoogleMap
+        defaultZoom={11}
+        defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
+      >
+        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng:this.state.location.lng }} />}
+      </GoogleMap>
+      ));
+    return <MyMapComponent
+      isMarkerShown
+      googleMapURL={this.mapKey}
+      loadingElement={<div style={{ height: `100%` }} />}
+      containerElement={<div style={{ height: `200px` }} />}
+      mapElement={<div style={{ height: `100%` }} />}
+    />
+  }
+
   getGeocode() {
     const self = this;
 
@@ -47,14 +65,6 @@ class MapPanel extends React.Component {
   }
 
   render() {
-    let MyMapComponent = withScriptjs(withGoogleMap((props) =>
-      <GoogleMap
-        defaultZoom={11}
-        defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
-      >
-        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng:this.state.location.lng }} />}
-      </GoogleMap>
-    ))
 
     return (
       <div className="blog-left-side church-panel">
@@ -73,13 +83,7 @@ class MapPanel extends React.Component {
               </ul>
             </div>
             <div className="col-md-6">
-              <MyMapComponent
-                isMarkerShown
-                googleMapURL={this.mapKey}
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `200px` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-              />
+              {this.getComponent()}
             </div>
           </div>
         </div>

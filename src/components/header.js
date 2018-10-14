@@ -79,7 +79,9 @@ class Header extends React.Component {
       							<Link to="/" className="main_sticky_main_l" style={{
                       color: '#fff'
                     }}>
-                      <img src={filcanLogo} alt={title} />
+                      <img src={filcanLogo} alt={title} className={
+                        this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
+                      } />
                       <span className="brand">FilCan</span>
       							</Link>
       						</div>

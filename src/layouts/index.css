@@ -1781,9 +1781,12 @@ astute HEADING NAV AREA CSS
     display: inline-block;
     position: relative;
 }
+.sub-menu {
+  margin-bottom: 0 !important;
+}
 .astute_menu > ul > li > a {
     display: block;
-    margin: 45px 12px 25px;
+    margin: 10% 12px 10%;
     -webkit-transition: .5s;
     transition: .5s;
     position: relative;
@@ -1888,8 +1891,12 @@ astute HEADING NAV AREA CSS
 }
 /* LOGO LEFT RIGHT CSS */
 
-.logo img {
+.default-logo {
   width: 120px;
+}
+
+.smaller-logo {
+  width: 75px;
 }
 
 .logo-left {} .logo-right .logo {
