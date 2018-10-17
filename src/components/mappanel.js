@@ -7,36 +7,15 @@ class MapPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: null
+      location: []
     };
     this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&libraries=geometry,drawing,places";
-  }
-
-  componentDidMount() {
     Geocode.setApiKey("AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk");
     this.getGeocode();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return false;
-  }
-
-  getComponent() {
-    let MyMapComponent = withScriptjs(withGoogleMap((props) =>
-      <GoogleMap
-        defaultZoom={11}
-        defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
-      >
-        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng:this.state.location.lng }} />}
-      </GoogleMap>
-      ));
-    return <MyMapComponent
-      isMarkerShown
-      googleMapURL={this.mapKey}
-      loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div style={{ height: `200px` }} />}
-      mapElement={<div style={{ height: `100%` }} />}
-    />
   }
 
   getGeocode() {
@@ -66,6 +45,15 @@ class MapPanel extends React.Component {
 
   render() {
 
+    const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+      <GoogleMap
+        defaultZoom={11}
+        defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
+      >
+        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng:this.state.location.lng }} />}
+      </GoogleMap>
+    ));
+
     return (
       <div className="blog-left-side church-panel">
         <div className="widget widget_categories" style={{
@@ -83,7 +71,13 @@ class MapPanel extends React.Component {
               </ul>
             </div>
             <div className="col-md-6">
-              {this.getComponent()}
+              <MyMapComponent
+                isMarkerShown
+                googleMapURL={this.mapKey}
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `200px` }} />}
+                mapElement={<div style={{ height: `100%` }} />}
+              />
             </div>
           </div>
         </div>
