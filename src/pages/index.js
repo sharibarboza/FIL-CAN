@@ -147,7 +147,7 @@ export const query = graphql`
       }
     }
     gridImages: allMarkdownRemark(
-      limit: 8
+      limit: 12
   	  filter: { fileAbsolutePath: { regex: "/(grid)/.*\\.md$/" } }
     ) {
       edges {
