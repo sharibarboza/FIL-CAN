@@ -48,7 +48,7 @@ class Footer extends React.Component {
                        <ul id="menu-quick-link" className="menu">
                          <li><Link to="/">Home</Link></li>
                          <li><Link to="/campmeeting/">Camp Meeting</Link></li>
-                         <li><Link to="/about/">History</Link></li>
+                         <li><Link to="/about/">About Us</Link></li>
                          <li><Link to="/churches/">Churches</Link></li>
                          <li><Link to="/leadership/">Leadership</Link></li>
                          <li><Link to="/bylaws/">Bylaws</Link></li>

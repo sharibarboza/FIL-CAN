@@ -19,6 +19,7 @@ class IndexPage extends React.Component {
 
     this.headerImage = props.data.headerImage;
     this.campImage1 = props.data.campImage1;
+    this.campImage2 = props.data.campImage2;
     this.contactImage = props.data.contactImage;
     this.souvenirImage = props.data.souvenirImage;
     this.fullPage = props.data.fullPage;
@@ -176,10 +177,10 @@ class IndexPage extends React.Component {
                 marginTop: '10px'
               }}>
                 <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
-                  <h2 className="em-slider-title">{this.year} Annual Filipino-Canadian </h2>
+                  <h2 className="em-slider-title">Filipino-Canadian Camp Meeting </h2>
                 </div>
                 <div className="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0s">
-                  <h1 className="em-slider-sub-title">Camp Meeting </h1>
+                  <h1 className="em-slider-sub-title">{this.getDate()} </h1>
                 </div>
                 <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
                   paddingTop: '20px'
@@ -193,102 +194,6 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-
-        <div className="row" style={{ margin: 0 }}>
-        <div className="col-md-6 col-sm-12" style={{
-          backgroundColor: 'black'
-        }}>
-          <div className="camp-info camp-info-left">
-            <div className="row">
-              <div className="col-lg-8 col-md-12 col-sm-12">
-                <div className="section_title_lefts" style={{
-                  color: 'white'
-                }}>
-                  <h2><u>WHEN</u></h2>
-                  <h1 style={{
-                    fontSize: '30px',
-                    textTransform: 'uppercase'
-                  }}>{this.getDate()}</h1>
-                  Occurs on Thursday - Sunday
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-12 col-sm-12" style={{
-                textAlign: 'center',
-              }}>
-                <div>
-                  <span><i className="fa fa-calendar" style={{
-                    color: '#0E2C87',
-                    fontSize: '60px',
-                    verticalAlign: 'middle',
-                    lineHeight: '120px',
-                    background: 'white',
-                    borderRadius: '50%',
-                    height: '120px',
-                    width: '120px'
-                  }}></i></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div className="col-md-6 col-sm-12" style={{
-              backgroundImage: 'linear-gradient(to top right, #ead500, #e6c900, #e2bd00, #ddb100, #d8a600)'
-          }}>
-            <div className="camp-info camp-info-right">
-              <div className="row">
-                <div className="col-lg-4 col-md-12 col-sm-12" style={{
-                  textAlign: 'center',
-                }}>
-                  <div>
-                    <span><i className="fa fa-map-marker" style={{
-                      color: '#0E2C87',
-                      fontSize: '60px',
-                      verticalAlign: 'middle',
-                      lineHeight: '120px',
-                      background: 'white',
-                      borderRadius: '50%',
-                      height: '120px',
-                      width: '120px'
-                    }}></i></span>
-                  </div>
-                </div>
-                <div className="col-lg-8 col-md-12 col-sm-12">
-                  <div className="section_title_lefts" style={{
-                    color: 'white',
-                    textAlign: 'right'
-                  }}>
-                    <h2><u>WHERE</u></h2>
-                    <h1 style={{
-                      fontSize: '30px',
-                    }}>FOOTHILLS CAMP</h1>
-                    3032 Township Rd 342, Bowden, AB
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {this.speakers.length > 0 ?
-        <div className="team_area" id="speakers">
-      		<div className="container">
-      			<div className="row">
-      				<div className="col-md-12">
-      					<div className="section-title t_center">
-
-      						<h2>Speakers</h2>
-                  <Divider />
-      					</div>
-      				</div>
-      			</div>
-            <div className="row" style={{
-              paddingTop: '30px'
-            }}>
-              {this.displaySpeakers()}
-            </div>
-          </div>
-        </div>
-        : null}
 
         <div className="row" style={{ margin: 0 }}>
           <div className="col-lg-6 col-md-12 col-xs-12" style={{
@@ -316,6 +221,61 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
+        {this.speakers.length > 0 ?
+        <div className="team_area" id="speakers">
+      		<div className="container">
+      			<div className="row">
+      				<div className="col-md-12">
+      					<div className="section-title t_center">
+
+      						<h2>Speakers</h2>
+                  <Divider />
+      					</div>
+      				</div>
+      			</div>
+            <div className="row" style={{
+              paddingTop: '30px'
+            }}>
+              {this.displaySpeakers()}
+            </div>
+          </div>
+        </div>
+        : null}
+
+        <div className="row" style={{ margin: 0 }}>
+        <div className="col-lg-6 col-md-12 col-xs-12" style={{ padding: 0 }}>
+          <div>
+            <MyMapComponent
+              isMarkerShown
+              googleMapURL={this.mapKey}
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `500px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
+          </div>
+        </div>
+          <div className="col-lg-6 col-md-12 col-xs-12" style={{
+            backgroundColor: '#f5f5f5'
+          }}>
+            <div className="theme-container-right">
+              <div className="section_title_lefts">
+                <h2>CAMP SITE</h2>
+                <h1 style={{
+                  textTransform: 'uppercase'
+                }}><span>FOOTHILLS</span> CAMP & RETREAT CENTRE</h1>
+              </div>
+              <br/>
+              <strong>Address:</strong><br/>
+              3032 Township Rd 342, Red Deer County, AB<br/>
+              T0M 0K0
+              <div style={{ marginTop: `40px` }}>
+                For directions to this location, visit the <a href="https://www.foothillscamp.ca/contact" target="_blank">Foothills Camp website</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="accommodations" class="anchor-pad"></div>
         <div className="container area-padding">
           <div className="row">
             <div className="col-md-12">
@@ -337,6 +297,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
+        <div id="souvenir" class="anchor-pad"></div>
         <div style={{
           backgroundColor: '#f5f5f5'
         }}>
@@ -445,6 +406,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
+        <div id="faq" class="anchor-pad"></div>
         <div className="container area-padding">
           <div className="row">
             <div className="col-md-12">
@@ -463,16 +425,6 @@ class IndexPage extends React.Component {
         </div>
 
         <Contact id="contact" phone={this.contact.phone} email={this.contact.title} />
-
-        <div>
-          <MyMapComponent
-            isMarkerShown
-            googleMapURL={this.mapKey}
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `500px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
-        </div>
 
       </div>
     )
@@ -530,6 +482,11 @@ export const query = graphql`
       }
     }
     campImage1: imageSharp(id: { regex: "/canada/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    campImage2: imageSharp(id: { regex: "/foothills/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }

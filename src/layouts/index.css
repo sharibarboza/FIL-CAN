@@ -180,6 +180,15 @@ blockquote em{
   padding: 30px;
 }
 
+.anchor-pad {
+  height: 80px;
+  margin-top: -80px;
+}
+
+.collapse-menu {
+  margin-top: 15px;
+}
+
 /*=====================
 astute HEADING TOP AREA CSS
 =========================*/
@@ -1324,9 +1333,9 @@ position: absolute;
 }
 .breatcome_content ul li {
 	list-style: none;
-	color: #B51D29;
-	font-size: 15px;
-	font-weight: 500;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
 	text-transform: capitalize;
 }
 .breatcome_content ul li a {
@@ -1786,7 +1795,7 @@ astute HEADING NAV AREA CSS
 }
 .astute_menu > ul > li > a {
     display: block;
-    margin: 10% 12px 10%;
+    margin: 10% 40px 10% 40px;
     -webkit-transition: .5s;
     transition: .5s;
     position: relative;
@@ -5358,6 +5367,9 @@ astute adn blog css
 .theme-container {
   padding: 12% 50px 50px 35%;
 }
+.theme-container-right {
+  padding: 12% 50px 50px 5%;
+}
 .camp-info-right {
   padding-right: 35%;
 }
@@ -6301,6 +6313,10 @@ astute Single Event CSS
 
 .mean-container .mean-bar::before {
     text-transform: uppercase;
+}
+
+.widget-title .fa {
+  color: #B51D29;
 }
 
 .footer-middle .widget.widget_archive .widget-title {

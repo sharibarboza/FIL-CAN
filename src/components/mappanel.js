@@ -59,7 +59,7 @@ class MapPanel extends React.Component {
         <div className="widget widget_categories" style={{
           width: '100%'
         }}>
-          <h2 className="widget-title"><i className="fa fa-calendar"></i> {this.props.heading}</h2>
+          <h2 className="widget-title"><i className="fa fa-bookmark"></i>&nbsp; {this.props.heading}</h2>
           <div className="row">
             <div className="col-md-6">
               <ul>

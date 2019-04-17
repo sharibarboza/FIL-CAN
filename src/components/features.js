@@ -127,7 +127,7 @@ class Features extends React.Component {
                 </div>
                 <div className="f-readmore">
 									<div className="feature_button">
-										<Link to="/campmeeting/">Learn more <span><i className="fa fa-long-arrow-right"></i></span>
+										<Link to="/campmeeting/">Learn More <span><i className="fa fa-long-arrow-right"></i></span>
 										</Link>
 									</div>
 								</div>

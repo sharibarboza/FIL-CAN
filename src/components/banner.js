@@ -31,7 +31,7 @@ class Banner extends React.Component {
               <div className="breatcome_title_inner">
                 <div className="breatcome_content">
                   <ul>
-                    <li><Link to="/">home<i className="fa fa-angle-right"></i></Link>{this.props.path}</li>
+                    <li>{this.props.path}</li>
                   </ul>
 
                 </div>

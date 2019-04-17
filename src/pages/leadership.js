@@ -7,33 +7,45 @@ import Executives from '../components/executives';
 import ExecutiveList from '../components/executivelist';
 
 class LeadershipPage extends React.Component {
-
-  render() {
+  constructor(props) {
+    super(props);
 
     // Get the officers data
-    const officers = get(this, 'props.data.officers.edges');
-    const executives = get(this, 'props.data.executives.edges');
+    try {
+      this.officers = props.data.officers.edges;
+    } catch(e) {
+      this.officers = [];
+    }
 
-    let boardVPs = [];
-    let advisors = [];
-    let leaders = [];
-    let youth = [];
+    try {
+      this.executives = props.data.executives.edges;
+    } catch(e) {
+      this.executives = [];
+    }
 
-    if (executives) {
-      for (let i = 0; i < executives.length; i++) {
-        let node = executives[i].node;
+    this.boardVPs = [];
+    this.advisors = [];
+    this.leaders = [];
+    this.youth = [];
+
+    if (this.executives) {
+      for (let i = 0; i < this.executives.length; i++) {
+        let node = this.executives[i].node;
         let type = node.frontmatter.type;
         if (type == 'Board VP') {
-          boardVPs.push(node);
+          this.boardVPs.push(node);
         } else if (type == 'Adviser') {
-          advisors.push(node);
+          this.advisors.push(node);
         } else if (type == 'Chair') {
-          leaders.push(node);
+          this.leaders.push(node);
         } else if (type == 'Youth') {
-          youth.push(node);
+          this.youth.push(node);
         }
       }
     }
+  }
+
+  render() {
 
     return (
       <div>
@@ -42,7 +54,7 @@ class LeadershipPage extends React.Component {
         }}>
         <Executives
             title='Executive Officers'
-            officers={officers}
+            officers={this.officers}
             index={false}
         />
         </div>
@@ -59,14 +71,14 @@ class LeadershipPage extends React.Component {
           </div>
           <div className="row officer-lists">
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
-              {boardVPs.length != -1 ? <ExecutiveList header='Vice Presidents' type='Board VP' list={boardVPs} /> : null}
-              {advisors.length != -1 ? <ExecutiveList header='Board Advisers' type='Adviser' list={advisors} /> : null}
+              {this.boardVPs.length != -1 ? <ExecutiveList header='Vice Presidents' type='Board VP' list={this.boardVPs} /> : null}
+              {this.advisors.length != -1 ? <ExecutiveList header='Board Advisers' type='Adviser' list={this.advisors} /> : null}
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
-              {leaders.length != -1 ? <ExecutiveList header='Committee Chairs' type='Chair' list={leaders} /> : null}
+              {this.leaders.length != -1 ? <ExecutiveList header='Committee Chairs' type='Chair' list={this.leaders} /> : null}
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 blog-left-side">
-              {youth.length != -1 ? <ExecutiveList header='Youth Committee' type='Youth' list={youth} /> : null}
+              {this.youth.length != -1 ? <ExecutiveList header='Youth Committee' type='Youth' list={this.youth} /> : null}
             </div>
           </div>
         </div>

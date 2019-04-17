@@ -35,7 +35,7 @@ class BylawsPage extends React.Component {
               <div className="widget widget_categories" style={{
                 width: '100%'
               }}>
-                <h2 className="widget-title">Our Bylaws</h2>
+                <h2 className="widget-title"><i className="fa fa-institution"></i>&nbsp; Our Bylaws</h2>
                 <ul>
                   {this.displayFiles()}
                 </ul>

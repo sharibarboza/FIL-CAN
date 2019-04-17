@@ -10,7 +10,12 @@ import MapPanel from '../components/mappanel';
 class ChurchesPage extends React.Component {
   constructor(props) {
     super(props);
-    this.churches = props.data.churches.edges;
+
+    try {
+      this.churches = props.data.churches.edges;
+    } catch(e) {
+      this.churches = [];
+    }
     this.panels = [];
   }
 
@@ -30,8 +35,8 @@ class ChurchesPage extends React.Component {
       let church = node.frontmatter;
       let body = <div style={{ marginBottom: '5px' }}><span>{church.address}</span><br />
         <span>{church.pastor}</span><br /><hr />
-        <span><i className="fa fa-phone"></i> {church.phone}</span><br />
-        <span><i className="fa fa-globe"></i> <a href={church.website} target="_blank">Church Website</a></span></div>;
+        <span><i className="fa fa-phone"></i>&nbsp; {church.phone}</span><br />
+        <span><i className="fa fa-globe"></i>&nbsp; <a href={church.website} target="_blank">Church Website</a></span></div>;
 
       let element = <div id={church.title} key={node.id}><MapPanel
         heading={church.title}

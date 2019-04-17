@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { HashLink as AnchorLink } from 'react-router-hash-link';
 
 import filcanLogo from '../images/logo.gif';
 
@@ -93,22 +94,26 @@ class Header extends React.Component {
       								<li><Link to="/">Home</Link></li>
       								<li><Link to="/about/">About</Link>
                         <ul className="sub-menu">
-                          <li><Link to="/about/">History</Link></li>
+                          <li><Link to="/about/">About Us</Link></li>
                           <li><Link to="/churches">Churches</Link></li>
                           <li><Link to="/leadership/">Leadership</Link></li>
                           <li><Link to="/bylaws/">Bylaws</Link></li>
                           <li><Link to="/reports/">Annual Reports</Link></li>
                         </ul>
                       </li>
-      								<li><Link to="/campmeeting/">Events</Link>
+      								<li><Link to="/campmeeting/">Campmeeting</Link>
                         <ul className="sub-menu">
-                          <li><Link to="/campmeeting/">Camp Meeting</Link></li>
+                          <li><Link to="/campmeeting/">General Info</Link></li>
+                          <li><AnchorLink to="/campmeeting/#accommodations">Accommodations</AnchorLink></li>
+                          <li><AnchorLink to="/campmeeting/#souvenir">Souvenir Program</AnchorLink></li>
+                          <li><AnchorLink to="/campmeeting/#faq">FAQ</AnchorLink></li>
+                          <li><Link to="/resources/">Resources</Link></li>
+                          <li><Link to="/meetings/">Meetings</Link></li>
                         </ul>
                       </li>
-      								<li><Link to="/meetings/">Meetings</Link></li>
       							</ul>
       							<div className="donate-btn-header">
-      								<Link className="dtbtn" to="/contact/" style={{ marginLeft: '30px' }}>Contact Us</Link>
+      								<Link className="dtbtn" to="/contact/" style={{ marginLeft: '50px' }}>Contact Us</Link>
       							</div>
       						</nav>
 
@@ -121,21 +126,34 @@ class Header extends React.Component {
                 <Nav navbar>
                   <ul className="navbar-list">
                     <Link to="/" onClick={this.closeNav}><span style={{ display:'block' }}><li className="nav-item" key="home">HOME</li></span></Link>
-                    <li className="nav-item" key="about" onClick={this.onClickItem.bind(this, 'events')}>
+                    <li className="nav-item" key="about" onClick={this.onClickItem.bind(this, 'about')}>
                       <a>ABOUT</a>
                       <i className="fa fa-plus" style={{
                         float: 'right'
                       }}></i>
-                      <Collapse isOpen={this.isOpen('events')}>
-                        <Link onClick={this.closeNav} to="/about/"><span style={{ display:'block' }} className="sub-nav-item" key="history">HISTORY</span></Link>
+                      <Collapse isOpen={this.isOpen('about')} className="collapse-menu">
+                        <Link onClick={this.closeNav} to="/about/"><span style={{ display:'block' }} className="sub-nav-item" key="history">ABOUT US</span></Link>
                         <Link onClick={this.closeNav} to="/churches/"><span style={{ display:'block' }} className="sub-nav-item" key="churches">CHURCHES</span></Link>
                         <Link onClick={this.closeNav} to="/leadership/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">LEADERSHIP</span></Link>
                         <Link onClick={this.closeNav} to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
                         <Link onClick={this.closeNav} to="/reports/"><span style={{ display:'block' }} className="sub-nav-item" key="reports">REPORTS</span></Link>
                       </Collapse>
                     </li>
-                    <Link onClick={this.closeNav} to="/campmeeting/"><span style={{ display:'block' }} className="nav-item" key="campmeeting">CAMP MEETING</span></Link>
-                    <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="nav-item" key="meetings">MEETINGS</span></Link>
+
+                    <li className="nav-item" key="camp" onClick={this.onClickItem.bind(this, 'camp')}>
+                      <a>CAMPMEETING</a>
+                      <i className="fa fa-plus" style={{
+                        float: 'right'
+                      }}></i>
+                      <Collapse isOpen={this.isOpen('camp')} className="collapse-menu">
+                        <Link onClick={this.closeNav} to="/campmeeting/"><span style={{ display:'block' }} className="sub-nav-item" key="info">GENERAL INFO</span></Link>
+                        <AnchorLink onClick={this.closeNav} to="/campmeeting/#accommodations"><span style={{ display:'block' }} className="sub-nav-item" key="accommodations">ACCOMMODATIONS</span></AnchorLink>
+                        <AnchorLink onClick={this.closeNav} to="/campmeeting/#souvenir"><span style={{ display:'block' }} className="sub-nav-item" key="souvenir">SOUVENIR PROGRAM</span></AnchorLink>
+                        <Link onClick={this.closeNav} to="/resources/"><span style={{ display:'block' }} className="sub-nav-item" key="resources">RESOURCES</span></Link>
+                        <AnchorLink onClick={this.closeNav} to="/campmeeting/#faq"><span style={{ display:'block' }} className="sub-nav-item" key="faq">FAQ</span></AnchorLink>
+                        <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="sub-nav-item" key="meetings">MEETINGS</span></Link>
+                      </Collapse>
+                    </li>
                     <Link onClick={this.closeNav} to="/contact/"><span style={{ display:'block' }} className="nav-item" key="contact">CONTACT</span></Link>
                   </ul>
                 </Nav>
