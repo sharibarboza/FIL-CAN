@@ -61,14 +61,8 @@ class MapPanel extends React.Component {
         }}>
           <h2 className="widget-title"><i className="fa fa-bookmark"></i>&nbsp; {this.props.heading}</h2>
           <div className="row">
-            <div className="col-md-6">
-              <ul>
-                <li className="cat-item" style={{
-                  lineHeight: '30px'
-                }}>
-                  {this.props.body}
-                </li>
-              </ul>
+            <div className="col-md-6" style={{ marginBottom: '15px' }}>
+              {this.props.body}
             </div>
             <div className="col-md-6">
               <MyMapComponent

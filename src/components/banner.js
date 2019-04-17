@@ -23,9 +23,7 @@ class Banner extends React.Component {
           sizes={this.props.bgImage.sizes}
         />
         <div className="overlay"></div>
-        <div className="container-fluid" style={{
-          padding: '100px 0 100px'
-        }}>
+        <div className="container-fluid banner-text">
           <div className="col-md-12">
             <div className="breatcome_title">
               <div className="breatcome_title_inner">

@@ -173,6 +173,10 @@ blockquote em{
   text-transform: uppercase;
 }
 
+.banner-text {
+  padding: 90px 0;
+}
+
 /*=====================
 astute HEADING TOP AREA CSS
 =========================*/
@@ -198,8 +202,8 @@ astute HEADING TOP AREA CSS
   height: 175px;
 }
 #meeting-timer .countdown-col {
-  margin: 0 15px;
-  padding: 15px 5px 0 5px;
+  margin: 10px;
+  padding: 15px 5px;
   width: 120px;
   height: 120px;
 }
@@ -4637,7 +4641,7 @@ astute TESTIMONIAL AREA CSS
     position: relative;
 }
 #meetings_area .main-slider-area, #meetings_area .carousel-image {
-  height: 450px !important;
+  height: 450px;
 }
 .nivo-caption {
     background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
@@ -5390,7 +5394,7 @@ astute adn blog css
   .main-slider-area {
     height: 70vh;
   }
-  .count_down_area {
+  .count_down_area, #meetings_area {
     height: auto;
   }
   .countdown-col {
@@ -6824,6 +6828,9 @@ table#wp-calendar td#today{
   .main-slider-area, .carousel-image {
     height: 80vh;
   }
+  #meetings_area .main-slider-area, #meetings_area .carousel-image {
+    height: 90vh !important;
+  }
   .text-alignm1 {
     font-size: 0.9em;
   }
@@ -6832,6 +6839,9 @@ table#wp-calendar td#today{
   }
   .container [class*='col-'] {
     padding: 0 !important;
+  }
+  .banner-text {
+    padding: 120px 0;
   }
 }
 
