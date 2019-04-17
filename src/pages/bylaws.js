@@ -4,6 +4,8 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import pdf from '../images/pdf-icon.png'
+import remark from 'remark';
+import remarkHtml from 'remark-html';
 
 import FileDownload from '../components/filedownload'
 
@@ -13,6 +15,9 @@ class BylawsPage extends React.Component {
 
     this.bylaws = props.data.bylaws.edges;
     this.content = this.bylaws[0].node.frontmatter.body;
+    this.body = remark()
+      .use(remarkHtml)
+      .processSync(this.content).toString();
   }
 
   displayFiles() {
@@ -39,9 +44,8 @@ class BylawsPage extends React.Component {
 
         <div className="about_area3">
           <div className="container">
-            <div>
-              <p>{this.content}</p>
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: this.body }}></div>
+            <br/>
 
             <div className="blog-left-side">
               <div className="widget widget_categories" style={{
