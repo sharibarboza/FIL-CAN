@@ -1,10 +1,10 @@
 ---
 title: History
 photo: /assets/cross.jpg
-content: >-
+body: >-
   The formation of the Filipino-Canadian Seventh-Day Adventists of Alberta
   started way back when Edmonton Central SDA Church started celebrating
-  Independence Day under the encouragement of Pastor John Wesley. 
+  Independence Day under the encouragement of Pastor John Wesley.
 
 
   In early 2002, this became a reality when Pastor Romulo Daquila accepted a
@@ -15,4 +15,3 @@ content: >-
   first secretary, and Ben Barboza as the first treasurer. The very first FILCAN
   Camp Meeting was on August 22, 2003 led by the Edmonton group.
 ---
-

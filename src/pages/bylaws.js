@@ -12,6 +12,7 @@ class BylawsPage extends React.Component {
     super(props);
 
     this.bylaws = props.data.bylaws.edges;
+    this.content = this.bylaws[0].node.frontmatter.body;
   }
 
   displayFiles() {
@@ -38,6 +39,9 @@ class BylawsPage extends React.Component {
 
         <div className="about_area3">
           <div className="container">
+            <div>
+              <p>{this.content}</p>
+            </div>
 
             <div className="blog-left-side">
               <div className="widget widget_categories" style={{
@@ -69,6 +73,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            body
             file {
               relativePath
               publicURL

@@ -2,7 +2,7 @@
 title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
-content: >-
+body: >-
   **Article 1 – Name **
 
 
@@ -127,7 +127,7 @@ content: >-
 
   * Prayer Committee
 
-  * Souvenir & Fund Raising Committee 
+  * Souvenir & Fund Raising Committee
 
   * Music Committee
 
@@ -193,7 +193,7 @@ content: >-
   the Conference.
 
 
-  **11.03.** Voting Rights: 
+  **11.03.** Voting Rights:
 
 
   * All elected officers and ex-officio officers have voice and voting rights.
@@ -262,7 +262,7 @@ content: >-
   * To assist the Secretary when requested.
 
 
-  **12.06.** Duties of the Treasurer: 
+  **12.06.** Duties of the Treasurer:
 
 
   * To provide a printed copies of the Financial Statement to all members of the
@@ -326,4 +326,3 @@ content: >-
   **13.4.** Audit: The finances of the Association maybe audited by the
   Conference Auditor.
 ---
-

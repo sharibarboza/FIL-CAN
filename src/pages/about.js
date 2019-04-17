@@ -22,7 +22,7 @@ class AboutPage extends React.Component {
       						<h1>HOW WE <span>STARTED.</span></h1>
       					</div>
       					<div className="about_text">
-                  <p>{history.content}</p>
+                  <p>{history.body}</p>
       					</div>
       				</div>
       				<div className="col-md-6 col-sm-6 col-xs-12">
@@ -50,7 +50,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            content
+            body
             photo {
               childImageSharp {
                 sizes {
