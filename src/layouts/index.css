@@ -220,7 +220,7 @@ astute HEADING TOP AREA CSS
 }
 
 .countdown-col-element strong {
-  font-size: 50px;
+  font-size: 3em;
 }
 #meeting-timer .countdown-col-element strong {
   font-size: 40px;
@@ -6873,5 +6873,13 @@ table#wp-calendar td#today{
   }
   .main-slider-area {
     height: 60vh;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .countdown-col {
+    padding: 30px 20px 0 20px;
+    width: 160px;
+    height: 160px;
   }
 }
