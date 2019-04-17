@@ -71,7 +71,7 @@ class Header extends React.Component {
     return (
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
-      		<div className={this.state.scrollingLock || this.props.location != '/' ? 'nav_black' : 'astute_nav_area'}>
+      		<div className='nav_black'>
       			<div className="container">
       				<Navbar className="row logo-left" dark>
 

@@ -94,7 +94,7 @@ button {
 }
 
 .carousel-image {
-  height: 100vh;
+  height: 70vh;
 }
 
 .main-slider-area .overlay {
@@ -1901,7 +1901,7 @@ astute HEADING NAV AREA CSS
 /* LOGO LEFT RIGHT CSS */
 
 .default-logo {
-  width: 120px;
+  width: 110px;
 }
 
 .smaller-logo {
@@ -4646,9 +4646,10 @@ astute TESTIMONIAL AREA CSS
     overflow: hidden;
     display: block;
     position: relative;
+    padding-top: 100px;
 }
 #meetings_area .main-slider-area, #meetings_area .carousel-image {
-  height: 600px !important;
+  height: 450px !important;
 }
 .camp-meeting-area {
   height: 90vh;
@@ -5337,7 +5338,9 @@ astute adn blog css
         padding: 19px 20px 18px;
     }
 }
-
+.navbar {
+  padding: 0 !important;
+}
 .navbar-toggler {
   border: 1px solid white !important;
   float: right;
@@ -5396,11 +5399,10 @@ astute adn blog css
     font-size: 2.5em;
   }
   .astute-main-menu {
-    position: relative;
     background-color: black;
   }
   .main-slider-area {
-    height: 50vh;
+    height: 70vh;
   }
   .count_down_area {
     height: auto;
@@ -6741,6 +6743,9 @@ table#wp-calendar td#today{
   .carousel-image {
     height: 50vh;
   }
+  .main-slider-area {
+    padding-top: 70px;
+  }
   .em-slider-sub-title, .em-slider-descript, .em-slider-button {
     text-align: center;
   }
@@ -6880,5 +6885,8 @@ table#wp-calendar td#today{
   }
   .em-team-content-waraper div {
     font-size: 0.8em;
+  }
+  .main-slider-area {
+    height: 70vh;
   }
 }

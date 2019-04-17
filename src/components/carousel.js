@@ -29,7 +29,9 @@ class Slider extends React.Component {
   displayText() {
     return <div id="htmlcaption1" className="nivo-html-caption em-slider-content-nivo">
       <div className="em_slider_inner container text-left" style={{
-        marginTop: '-20px'
+        marginTop: '20px',
+        paddingLeft: '20px',
+        paddingRight: '20px'
       }}>
         <div className="wow slideInRight" data-wow-duration="2s" data-wow-delay="0s">
           <h1 className="em-slider-sub-title">Uniting Filipino-Canadians </h1>
