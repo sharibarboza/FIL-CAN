@@ -129,7 +129,7 @@ class MeetingsPage extends React.Component {
         let meeting = node.frontmatter;
         let address = meeting.address;
         let datetime = this.getDate(meeting.datetime);
-        let body = <div><span>{address}</span><br /><span>Description: {meeting.description}</span></div>
+        let body = <div><span>{address}</span><br /><br /><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div>
 
         let element = <div id={i} key={node.id}><MapPanel
           heading={datetime}
@@ -221,9 +221,7 @@ class MeetingsPage extends React.Component {
 
           <div className="container-fluid">
             <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
-              <div className="em_slider_inner container text-center" style={{
-                marginTop: this.numMeetings == 0 ? 0 : '-50px'
-              }}>
+              <div className="em_slider_inner container text-center">
                 <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
                   <h2 className="em-slider-title">{this.getHeading()}</h2>
                 </div>
@@ -259,7 +257,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(meetings)/.*\\.md$/" }
       }
     	sort: {
-        fields: [frontmatter___name], order: DESC
+        fields: [frontmatter___datetime], order: ASC
       }
     ) {
       edges {

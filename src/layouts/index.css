@@ -257,7 +257,7 @@ astute HEADING TOP AREA CSS
   clear: float;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #feature1_overlay {
   background-color: rgba(181, 29, 41, 0.7);
@@ -4648,7 +4648,7 @@ astute TESTIMONIAL AREA CSS
     position: relative;
 }
 #meetings_area .main-slider-area, #meetings_area .carousel-image {
-  height: 50vh !important;
+  height: 600px !important;
 }
 .camp-meeting-area {
   height: 90vh;

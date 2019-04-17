@@ -37,7 +37,7 @@ class Executives extends React.Component {
     				</div>
     			</div>
     			<div className="row" style={{
-            marginTop: '40px'
+            paddingTop: '20px'
           }}>
 
             <div className="col-md-4 col-sm-6 col-xs-12">

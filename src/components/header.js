@@ -99,6 +99,7 @@ class Header extends React.Component {
                           <li><Link to="/leadership/">Leadership</Link></li>
                           <li><Link to="/bylaws/">Bylaws</Link></li>
                           <li><Link to="/reports/">Annual Reports</Link></li>
+                          <li><Link to="/meetings/">Meetings</Link></li>
                         </ul>
                       </li>
       								<li><Link to="/campmeeting/">Campmeeting</Link>
@@ -108,7 +109,6 @@ class Header extends React.Component {
                           <li><AnchorLink to="/campmeeting/#souvenir">Souvenir Program</AnchorLink></li>
                           <li><AnchorLink to="/campmeeting/#faq">FAQ</AnchorLink></li>
                           <li><Link to="/resources/">Resources</Link></li>
-                          <li><Link to="/meetings/">Meetings</Link></li>
                         </ul>
                       </li>
       							</ul>
@@ -137,6 +137,7 @@ class Header extends React.Component {
                         <Link onClick={this.closeNav} to="/leadership/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">LEADERSHIP</span></Link>
                         <Link onClick={this.closeNav} to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
                         <Link onClick={this.closeNav} to="/reports/"><span style={{ display:'block' }} className="sub-nav-item" key="reports">REPORTS</span></Link>
+                        <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="sub-nav-item" key="meetings">MEETINGS</span></Link>
                       </Collapse>
                     </li>
 
@@ -151,7 +152,6 @@ class Header extends React.Component {
                         <AnchorLink onClick={this.closeNav} to="/campmeeting/#souvenir"><span style={{ display:'block' }} className="sub-nav-item" key="souvenir">SOUVENIR PROGRAM</span></AnchorLink>
                         <Link onClick={this.closeNav} to="/resources/"><span style={{ display:'block' }} className="sub-nav-item" key="resources">RESOURCES</span></Link>
                         <AnchorLink onClick={this.closeNav} to="/campmeeting/#faq"><span style={{ display:'block' }} className="sub-nav-item" key="faq">FAQ</span></AnchorLink>
-                        <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="sub-nav-item" key="meetings">MEETINGS</span></Link>
                       </Collapse>
                     </li>
                     <Link onClick={this.closeNav} to="/contact/"><span style={{ display:'block' }} className="nav-item" key="contact">CONTACT</span></Link>
