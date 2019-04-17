@@ -8,14 +8,18 @@ import pdf from '../images/pdf-icon.png'
 import FileDownload from '../components/filedownload'
 
 class BylawsPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.bylaws = props.data.bylaws.edges;
+  }
 
   displayFiles() {
     let elements = [];
-    const bylaws = get(this, 'props.data.bylaws.edges');
 
-    if (bylaws) {
-      for (let i = 0; i < bylaws.length; i++) {
-        let node = bylaws[i].node;
+    if (this.bylaws) {
+      for (let i = 0; i < this.bylaws.length; i++) {
+        let node = this.bylaws[i].node;
         let element = <FileDownload node={node} key={i} />
         elements.push(element);
       }
@@ -34,6 +38,7 @@ class BylawsPage extends React.Component {
 
         <div className="about_area3">
           <div className="container">
+
             <div className="blog-left-side">
               <div className="widget widget_categories" style={{
                 width: '100%'

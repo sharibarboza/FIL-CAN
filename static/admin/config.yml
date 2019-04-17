@@ -53,10 +53,11 @@ collections:
   - name: bylaws
     label: Bylaws
     folder: cms/files/bylaws
-    create: true
+    create: false
     fields:
       - { label: Title of Bylaw File, name: title, widget: string }
       - { label: File, name: file, widget: file }
+      - { label: Text Content, name: content, widget: markdown }
 
   - name: reports
     label: Annual Reports
