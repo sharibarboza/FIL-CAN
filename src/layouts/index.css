@@ -114,7 +114,7 @@ button {
 blockquote{
   display:block;
   background: #fff;
-  padding: 15px 20px 15px 65px;
+  padding: 15px 20px 15px 40px;
   margin: 0 0 20px;
   position: relative;
   overflow: hidden;
@@ -136,28 +136,8 @@ blockquote{
   box-shadow: 2px 2px 15px #ccc;
 }
 
-blockquote::before{
-  content: "\201C"; /*Unicode for Left Double Quote*/
-
-  /*Font*/
-  font-family: Georgia, serif;
-  font-size: 80px;
-  font-weight: bold;
-  color: #999;
-
-  /*Positioning*/
-  position: absolute;
-  left: 10px;
-  top:5px;
-}
-
 .fa-facebook-square {
   color: white;
-}
-
-blockquote::after{
-  /*Reset to make sure*/
-  content: "";
 }
 
 blockquote a{
@@ -187,6 +167,10 @@ blockquote em{
 
 .collapse-menu {
   margin-top: 15px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /*=====================

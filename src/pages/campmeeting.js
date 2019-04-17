@@ -204,11 +204,9 @@ class IndexPage extends React.Component {
             <div className="theme-container">
               <div className="section_title_lefts">
                 <h2>OUR THEME</h2>
-                <h1 style={{
-                  textTransform: 'uppercase'
-                }}>{this.getThemeText()} <span>{this.getLastWord()}</span></h1>
+                <h1 className="uppercase">{this.getThemeText()} <span>{this.getLastWord()}</span></h1>
               </div>
-              <i></i>
+              <i className="uppercase">{this.theme.filipino}</i>
               <br/><br/>
               <blockquote>
                 {this.theme.versetext}
@@ -524,6 +522,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            filipino
             versetext
             verse
           }
