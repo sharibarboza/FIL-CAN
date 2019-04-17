@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 
 class AboutPage extends React.Component {
 
@@ -10,6 +11,8 @@ class AboutPage extends React.Component {
 
     return (
       <div>
+        <Helmet title="Filcan | About Us"/>
+
         <div className="about_area3">
       		<div className="container">
       			<div className="row">

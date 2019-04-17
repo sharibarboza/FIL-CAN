@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Scrollchor from 'react-scrollchor';
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 
 var dateFormat = require('dateformat');
 import '../layouts/animate.css'
@@ -212,6 +213,8 @@ class MeetingsPage extends React.Component {
 
     return (
       <div id="meetings_area">
+        <Helmet title="Filcan | Meetings"/>
+
         <div className="main-slider-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />
           <div className="overlay"></div>

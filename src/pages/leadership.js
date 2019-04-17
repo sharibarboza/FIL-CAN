@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
 import Divider from '../components/divider';
 import Executives from '../components/executives';
@@ -49,6 +50,8 @@ class LeadershipPage extends React.Component {
 
     return (
       <div>
+        <Helmet title="Filcan | Leadership"/>
+
         <div style={{
           paddingBottom: '50px'
         }}>

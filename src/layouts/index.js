@@ -11,6 +11,8 @@ import Banner from '../components/banner'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
+import favicon64 from '../images/favicon64.gif'
+
 
 class Layout extends React.Component {
 
@@ -29,6 +31,9 @@ class Layout extends React.Component {
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
+          ]}
+          link={[
+            { rel: "icon", type: "image/png", sizes: '64x64', href: `${favicon64}` }
           ]}
         />
         <Header siteTitle={title} location={location.pathname} />

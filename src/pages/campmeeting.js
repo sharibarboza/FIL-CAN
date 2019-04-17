@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Img from "gatsby-image"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Scrollchor from 'react-scrollchor';
+import Helmet from 'react-helmet'
 
 var dateFormat = require('dateformat')
 
@@ -166,6 +167,7 @@ class IndexPage extends React.Component {
 
     return (
       <div>
+        <Helmet title="Filcan | Campmeeting"/>
 
         <div className="main-slider-area camp-meeting-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />

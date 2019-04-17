@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
 import Slider from '../components/carousel'
 import Features from '../components/features'
@@ -37,6 +38,8 @@ class IndexPage extends React.Component {
 
     return (
       <div>
+        <Helmet title="Filcan | Home" />
+
         <Slider images={headerImages} />
         <Features images={featureImages} />
         <Counter date={dateStr} bgImage={counterImage} />

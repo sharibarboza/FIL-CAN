@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
 import pdf from '../images/pdf-icon.png'
 
@@ -29,6 +30,8 @@ class ReportsPage extends React.Component {
   render() {
     return (
       <div>
+        <Helmet title="Filcan | Reports"/>
+
         <div className="about_area3">
           <div className="container">
             <div className="blog-left-side">

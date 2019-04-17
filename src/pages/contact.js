@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
 import Contact from '../components/contact'
 
@@ -11,6 +12,8 @@ class ContactPage extends React.Component {
 
     return (
       <div>
+        <Helmet title="Filcan | Contact Us"/>
+
         <Contact phone={contact.phone} email={contact.title} />
       </div>
     )

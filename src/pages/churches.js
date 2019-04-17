@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Scrollchor from 'react-scrollchor';
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 
 import Divider from '../components/divider';
 import MapPanel from '../components/mappanel';
@@ -107,6 +108,8 @@ class ChurchesPage extends React.Component {
   render() {
     return (
       <div>
+        <Helmet title="Filcan | Churches"/>
+
         <div className="event_area">
       		<div className="container">
       			<div className="row">
