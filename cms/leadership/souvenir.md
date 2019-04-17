@@ -1,6 +1,7 @@
 ---
 title: Souvenir
-position: Souvenir & Fundraising/Sports
-name: Roger Rodriguez
+position: Souvenir & Fundraising
+name: Ben Barboza
 type: Chair
 ---
+

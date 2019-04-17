@@ -1,5 +1,8 @@
 ---
-title: Go Forth and Share
-versetext: Then the master told his servant, go to the roads and paths! Urge the people to come to my house. I want it to be full.
-verse: Luke 14:23
+title: That They May All Be One
+versetext: >-
+  That they all may be one; as thou, Father, art in me, and I in thee, that they
+  also may be one in us: that the world may believe that thou hast sent me.
+verse: 'John 17:21'
 ---
+
