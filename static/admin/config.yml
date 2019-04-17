@@ -81,6 +81,7 @@ collections:
     folder: cms/theme
     fields:
       - { label: Theme Slogan, name: title, widget: string }
+      - { label: Filipino Translation, name: filipino, widget: string }
       - { label: Bible Verse Text, name: versetext, widget: string }
       - { label: Bible Verse (e.g. Luke 14:23), name: verse, widget: string }
 

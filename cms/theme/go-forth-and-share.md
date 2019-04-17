@@ -5,4 +5,3 @@ versetext: >-
   also may be one in us: that the world may believe that thou hast sent me.
 verse: 'John 17:21'
 ---
-

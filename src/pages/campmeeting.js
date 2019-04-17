@@ -208,6 +208,8 @@ class IndexPage extends React.Component {
                   textTransform: 'uppercase'
                 }}>{this.getThemeText()} <span>{this.getLastWord()}</span></h1>
               </div>
+              <i></i>
+              <br/><br/>
               <blockquote>
                 {this.theme.versetext}
                 <br />

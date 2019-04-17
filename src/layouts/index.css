@@ -198,8 +198,7 @@ astute HEADING TOP AREA CSS
 /* count down area css */
 
 .countdown {
-  margin: 50px auto;
-  padding-bottom: 20px;
+  margin: 20px auto;
 }
 #meeting-timer .countdown {
   margin: 0 auto;
@@ -247,7 +246,7 @@ astute HEADING TOP AREA CSS
  }
 .count_down_area {
   position: relative;
-  height: 90vh;
+  height: 70vh;
   overflow: hidden;
 }
 .overlay {
@@ -952,7 +951,7 @@ position: absolute;
 }
 .section_title_lefts h1{
 	margin-top: 1px;
-    margin-bottom: 26px;
+  margin-bottom: 5px;
 	font-size:35px;
 }
 .section_title_lefts h1 span{
@@ -5370,7 +5369,7 @@ astute adn blog css
   padding-bottom: 10px !important;
 }
 .theme-container {
-  padding: 12% 50px 50px 35%;
+  padding: 12% 50px 50px 23%;
 }
 .theme-container-right {
   padding: 12% 50px 50px 5%;
