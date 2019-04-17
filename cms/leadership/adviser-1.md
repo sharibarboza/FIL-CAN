@@ -1,7 +1,7 @@
 ---
 title: Adviser 1
 position: Adviser
-name: Pastor Norman Cid
+name: Pastor Romulo Daquila
 type: Adviser
 ---
 
