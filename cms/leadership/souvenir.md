@@ -1,6 +1,6 @@
 ---
 title: Souvenir
-position: Souvenir & Fundraising/Sports
+position: Souvenir & Fundraising
 name: Ben Barboza
 type: Chair
 ---
