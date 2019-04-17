@@ -15,14 +15,15 @@ class Portfolio extends React.Component {
 			currentImage: 0,
 		};
 
-    let maxImages = 12;
+    this.maxImages = 12;
+
     let numImages = 0;
     if (props.images) {
       numImages = props.images.length;
     }
 
     this.images = [];
-    for (let i = 0; i < maxImages; i++) {
+    for (let i = 0; i < this.maxImages; i++) {
       let src = {
         'src': defaultImage
       };
@@ -71,7 +72,7 @@ class Portfolio extends React.Component {
     const numImages = this.props.images.length;
     const defaultPhoto = this.props.default.sizes;
 
-    for (let i = 0; i < maxImages; i++) {
+    for (let i = 0; i < this.maxImages; i++) {
       let photo = defaultPhoto;
       let eventTitle = '';
       let caption = '';
