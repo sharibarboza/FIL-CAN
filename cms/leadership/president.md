@@ -1,7 +1,8 @@
 ---
 title: President
 position: President
-name: Benjamin Arias
-photo: /assets/default.jpg
+name: Jib Labinghisa
+photo: /assets/jib-labinghisa-president.jpg
 type: Officer
 ---
+
