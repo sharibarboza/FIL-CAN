@@ -1,7 +1,8 @@
 ---
 title: Secretary
 position: Secretary
-name: Helina Perez
-photo: /assets/default.jpg
+name: Japhet Cordero
+photo: /assets/japhet-cordero-secretary.jpg
 type: Officer
 ---
+
