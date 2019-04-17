@@ -1,7 +1,8 @@
 ---
 title: Treasurer
 position: Treasurer
-name: Lilia Roque
-photo: /assets/default.jpg
+name: Lady Dianne Bondoc
+photo: /assets/lady-dianne-bondoc-treasurer.jpg
 type: Officer
 ---
+
