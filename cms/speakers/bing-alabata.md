@@ -1,6 +1,7 @@
 ---
-title: Bing Alabata
+title: Dr. VicLouis Arreola III
 type: Adult Speaker
-city: Chicago, Illinois
-photo: /assets/default.jpg
+city: 'Westlake Village, California'
+photo: /assets/pastor-vic-arreola.jpg
 ---
+
