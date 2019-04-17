@@ -72,7 +72,7 @@ class Header extends React.Component {
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
       		<div className={
-            this.state.scrollingLock ? 'nav_black' : 'nav_white'
+            this.state.scrollingLock || !this.state.collapsed ? 'nav_black' : 'nav_white'
           }>
       			<div className="container">
       				<Navbar className="row logo-left" dark>
@@ -80,7 +80,7 @@ class Header extends React.Component {
       					<div className="col-xs-6">
       						<div className="logo">
       							<Link to="/" className="main_sticky_main_l" style={{
-                      color: this.state.scrollingLock ? 'white' : 'black'
+                      color: this.state.scrollingLock || !this.state.collapsed ? 'white' : 'black'
                     }}>
                       <img src={filcanLogo} alt={title} className={
                         this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
@@ -124,7 +124,7 @@ class Header extends React.Component {
 
       				</Navbar>
 
-              <Collapse isOpen={!this.state.collapsed} navbar>
+              <Collapse isOpen={!this.state.collapsed}>
                 <Nav navbar>
                   <ul className="navbar-list">
                     <Link to="/" onClick={this.closeNav}><span style={{ display:'block' }}><li className="nav-item" key="home">HOME</li></span></Link>

@@ -230,7 +230,7 @@ astute HEADING TOP AREA CSS
  }
 .count_down_area {
   position: relative;
-  height: 70vh;
+  height: 650px;
   overflow: hidden;
 }
 .overlay {
@@ -5330,6 +5330,7 @@ astute adn blog css
   border: 1px solid white !important;
   float: right;
   display: none;
+  background: black !important;
 }
 .nav-link {
   padding: 0.6rem 0 !important;
@@ -6821,7 +6822,7 @@ table#wp-calendar td#today{
     font-size: 1em !important;
   }
   .main-slider-area, .carousel-image {
-    height: 60vh;
+    height: 80vh;
   }
   .text-alignm1 {
     font-size: 0.9em;
