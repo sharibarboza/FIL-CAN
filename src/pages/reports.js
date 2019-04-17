@@ -14,7 +14,7 @@ class ReportsPage extends React.Component {
 
     if (reports) {
       for (let i = 0; i < reports.length; i++) {
-        let node = bylaws[i].node;
+        let node = reports[i].node;
         let element = <FileDownload node={node} key={i} />
         elements.push(element);
       }
