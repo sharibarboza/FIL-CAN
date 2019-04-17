@@ -1764,8 +1764,14 @@ astute HEADING NAV AREA CSS
     background-color: rgb(0,0,0,0);
     color: white;
 }
+.nav_white {
+    background-color: white;
+    color: black;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
 .nav_black {
-    background-color: rgb(0,0,0);
+    background-color: black;
     color: white;
     -webkit-transition: .5s;
     transition: .5s;
@@ -1796,10 +1802,10 @@ astute HEADING NAV AREA CSS
 .astute_menu > ul > li > a {
     display: block;
     margin: 10% 40px 10% 40px;
-    -webkit-transition: .5s;
-    transition: .5s;
+    -webkit-transition: .1s;
+    transition: .1s;
     position: relative;
-    color: white;
+    color: inherit;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -2095,7 +2101,7 @@ a.dtbtn, a.red-on-white {
 }
 a.dtbtn:hover {
     color: white;
-    background-color: transparent;
+    background-color: black;
     border: 1px solid white;
 }
 a.red-on-white:hover {
@@ -4646,13 +4652,9 @@ astute TESTIMONIAL AREA CSS
     overflow: hidden;
     display: block;
     position: relative;
-    padding-top: 100px;
 }
 #meetings_area .main-slider-area, #meetings_area .carousel-image {
   height: 450px !important;
-}
-.camp-meeting-area {
-  height: 90vh;
 }
 .nivo-caption {
     background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
@@ -6744,7 +6746,7 @@ table#wp-calendar td#today{
     height: 50vh;
   }
   .main-slider-area {
-    padding-top: 70px;
+    padding-top: 0 !important;
   }
   .em-slider-sub-title, .em-slider-descript, .em-slider-button {
     text-align: center;
@@ -6887,6 +6889,6 @@ table#wp-calendar td#today{
     font-size: 0.8em;
   }
   .main-slider-area {
-    height: 70vh;
+    height: 60vh;
   }
 }

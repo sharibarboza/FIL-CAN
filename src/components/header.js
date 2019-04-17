@@ -71,14 +71,16 @@ class Header extends React.Component {
     return (
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
-      		<div className='nav_black'>
+      		<div className={
+            this.state.scrollingLock ? 'nav_black' : 'nav_white'
+          }>
       			<div className="container">
       				<Navbar className="row logo-left" dark>
 
       					<div className="col-xs-6">
       						<div className="logo">
       							<Link to="/" className="main_sticky_main_l" style={{
-                      color: '#fff'
+                      color: this.state.scrollingLock ? 'white' : 'black'
                     }}>
                       <img src={filcanLogo} alt={title} className={
                         this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
