@@ -37,7 +37,7 @@ class MeetingsPage extends React.Component {
 
     if (this.numMeetings > 0) {
       this.interval = setInterval(() => {
-        const date = this.calculateCountdown(this.meetings[0].frontmatter.title);
+        const date = this.calculateCountdown(this.meetings[0].frontmatter.datetime);
         date ? this.setState(date) : this.stop();
       }, 1000);
     }
@@ -54,7 +54,7 @@ class MeetingsPage extends React.Component {
     if (meetings != undefined) {
       for (let i = 0; i < meetings.length; i++) {
         let node = meetings[i].node;
-        if (this.futureDate(node.frontmatter.title)) {
+        if (this.futureDate(node.frontmatter.datetime)) {
           futureMeetings.push(node);
         }
       }
@@ -128,7 +128,7 @@ class MeetingsPage extends React.Component {
         let node = this.meetings[i];
         let meeting = node.frontmatter;
         let address = meeting.address;
-        let datetime = this.getDate(meeting.title);
+        let datetime = this.getDate(meeting.datetime);
         let body = <div><span>{address}</span><br /><br /><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div>
 
         let element = <div id={i} key={node.id}><MapPanel
@@ -279,7 +279,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(meetings)/.*\\.md$/" }
       }
     	sort: {
-        fields: [frontmatter___title], order: ASC
+        fields: [frontmatter___datetime], order: ASC
       }
     ) {
       edges {
@@ -287,6 +287,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            datetime
             address
             description
           }

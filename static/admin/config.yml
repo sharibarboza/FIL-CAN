@@ -117,8 +117,8 @@ collections:
     folder: cms/meetings
     create: true
     fields:
-      - { label: Date and time, name: title, widget: datetime }
-      - { label: Name of location (e.g. Foothills Camp), name: location, widget: string }
+      - { label: Title of meeting (must be unique), name: title, widget: string }
+      - { label: Date and time, name: datetime, widget: datetime }
       - { label: Address, name: address, widget: string }
       - { label: Description (additional information), name: description, widget: string, required: false, default: '' }
 
