@@ -3,7 +3,10 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  ### Article 1 – Name
+  * [Article I. Name](#Article-I-.-Name)
+
+
+  ### Article I. Name
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
@@ -193,7 +196,7 @@ content: >
   <br>
 
 
-  ### Article X1 – Executive Committee
+  ### Article XI – Executive Committee
 
 
   **11.01.** The Executive Committee, (Hereafter shall be known as “EXCOM”),
