@@ -6,6 +6,10 @@ content: >
   _Revised and adopted August 21, 2016_
 
 
+
+  [Article IV. Territory](#article4)
+
+
   <br>
 
 
@@ -61,7 +65,7 @@ content: >
   <br>
 
 
-  ### Article IV. Territory
+  ### <span id="article4">Article IV. Territory</span>
 
 
   **4.01.** The territory of the Association shall be the territory of the
