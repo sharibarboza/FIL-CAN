@@ -9,7 +9,7 @@ content: >
 
   [Article III. Purpose](#article-iii)<br>
 
-  [Article IV. Territory](#article-iv)<br>
+  [Article IV. Territory](#territory)<br>
 
 
   <br>
@@ -75,7 +75,7 @@ content: >
 
   ## ARTICLE IV
 
-  ### Territory
+  # Territory
 
 
   **4.01.** The territory of the Association shall be the territory of the
