@@ -165,7 +165,7 @@ and thus develop friendship and unity to work together towards evangelism.
 * From the souvenir advertisements and family greetings
 * Registrations fees
 
-**13.2** Bank Accounts: 
+**13.2** Bank Accounts:
 
 Whereas the Association has no bank account at the present time, monies collected annually shall be deposited in the bank account of the church where the Treasurer of the Association is a member of. When a new Treasurer is elected all of the balance will be transferred to the church where the new Treasurer is a member of.
 
