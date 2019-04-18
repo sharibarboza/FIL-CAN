@@ -57,7 +57,7 @@ collections:
     fields:
       - { label: Title of Bylaw File, name: title, widget: string }
       - { label: File, name: file, widget: file }
-      - { label: Text Content, name: body, widget: markdown }
+      - { label: Text Content, name: content, widget: markdown }
 
   - name: reports
     label: Annual Reports
