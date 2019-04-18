@@ -47,7 +47,7 @@ class MapPanel extends React.Component {
 
     const MyMapComponent = withScriptjs(withGoogleMap((props) =>
       <GoogleMap
-        defaultZoom={11}
+        defaultZoom={13}
         defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
       >
         {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng:this.state.location.lng }} />}
