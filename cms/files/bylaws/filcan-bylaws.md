@@ -3,14 +3,17 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  ## Article 1 – Name
+  ### Article 1 – Name
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
   Association of Alberta. (herein after known as **“Association”**)
 
 
-  ## Article II – Relationships
+  <br>
+
+
+  ### Article II – Relationships
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
@@ -21,7 +24,10 @@ content: >
   in harmony with the purposes, policies, and procedures of the Conference.
 
 
-  ## Article III – Purpose
+  <br>
+
+
+  ### Article III – Purpose
 
 
   **3:01.** The purposes of the Association are as follows:
@@ -46,14 +52,20 @@ content: >
   Conference.
 
 
-  ## Article IV – Territory
+  <br>
+
+
+  ### Article IV – Territory
 
 
   **4.01.** The territory of the Association shall be the territory of the
   Conference.
 
 
-  ## Article V – Principal Office
+  <br>
+
+
+  ### Article V – Principal Office
 
 
   **5.01.** Whereas the Association does not own any property designated as the
@@ -61,7 +73,10 @@ content: >
   current President of the Association is a member of.
 
 
-  ## Article VI – Membership
+  <br>
+
+
+  ### Article VI – Membership
 
 
   **6.01.** All Filipino Seventh-day Adventist members within the territory of
@@ -74,7 +89,10 @@ content: >
   sending a letter requesting membership.
 
 
-  ## Article VII – Bylaws and Amendments
+  <br>
+
+
+  ### Article VII – Bylaws and Amendments
 
 
   **7.01.** Amendments to the Bylaws shall be submitted to the Bylaws Committee
@@ -82,10 +100,13 @@ content: >
   shall be ratified in a duly called business meeting.
 
 
-  ## Article VIII – Meetings
+  <br>
 
 
-  **1. Regular Meeting:**
+  ### Article VIII – Meetings
+
+
+  _1. Regular Meeting:_
 
 
   * There shall be at least two duly called meetings of the Executive Committee
@@ -94,7 +115,7 @@ content: >
   * These meetings shall be called for by the President of the Association.
 
 
-  **2. Special Meeting:**
+  _2. Special Meeting:_
 
 
   * Special meetings shall be called for upon request of at least two (2)
@@ -102,14 +123,17 @@ content: >
   members of the Association.
 
 
-  **3. Regular Business Meeting:**
+  _3. Regular Business Meeting:_
 
 
   * There shall be a duly called business meeting during the Annual Camp Meeting
   of the Association.
 
 
-  ## Article X – Committees
+  <br>
+
+
+  ### Article X – Committees
 
 
   **10.01.** Whereas the Annual Camp Meeting shall be the main function of the
@@ -117,7 +141,7 @@ content: >
   established which could be changed from time to time.
 
 
-  **10.02.** Standing Committees:
+  **10.02. Standing Committees:**
 
 
   * Program Committee
@@ -166,7 +190,10 @@ content: >
   Youth Federation.
 
 
-  ## Article X1 – Executive Committee
+  <br>
+
+
+  ### Article X1 – Executive Committee
 
 
   **11.01.** The Executive Committee, (Hereafter shall be known as “EXCOM”),
@@ -176,7 +203,7 @@ content: >
   companies of the Conference.
 
 
-  **11.02.** Function of the Executive Committee Includes:
+  **11.02. Function of the Executive Committee Includes:**
 
 
   * To make plans for the annual camp meeting of the association.
@@ -194,7 +221,7 @@ content: >
   the Conference.
 
 
-  **11.03.** Voting Rights:
+  **11.03. Voting Rights:**
 
 
   * All elected officers and ex-officio officers have voice and voting rights.
@@ -203,10 +230,13 @@ content: >
   beginning of a duly called meeting to have voice and vote privileges.
 
 
-  ## Article XII – Officers
+  <br>
 
 
-  **12.01.** Elected Officers:
+  ### Article XII – Officers
+
+
+  **12.01. Elected Officers:**
 
 
   * President
@@ -220,7 +250,7 @@ content: >
   * Associate Treasurer
 
 
-  **12.02.** Ex-Officio Offers:
+  **12.02. Ex-Officio Offers:**
 
 
   * Filipino pastors that are currently employed by the Conference.
@@ -230,7 +260,7 @@ content: >
   * Retired pastors residing in the territory of the Conference
 
 
-  **12.03.** Duties of the President:
+  **12.03. Duties of the President:**
 
 
   * To serve as the chairperson in all duly called meetings of the Association.
@@ -242,7 +272,7 @@ content: >
   * To serve as the main contact person for the Association.
 
 
-  **12.04.** Duties of the Secretary:
+  **12.04. Duties of the Secretary:**
 
 
   * To record the minutes of all duly called meetings of the Association and to
@@ -255,7 +285,7 @@ content: >
   Association.
 
 
-  **12.05.** Duties of the Associate Secretary:
+  **12.05. Duties of the Associate Secretary:**
 
 
   * To function as the secretary when the Secretary is not available.
@@ -263,7 +293,7 @@ content: >
   * To assist the Secretary when requested.
 
 
-  **12.06.** Duties of the Treasurer:
+  **12.06. Duties of the Treasurer:**
 
 
   * To provide a printed copies of the Financial Statement to all members of the
@@ -276,7 +306,7 @@ content: >
   Association.
 
 
-  **12.07.** Duties of the Associate Treasurer:
+  **12.07. Duties of the Associate Treasurer:**
 
 
   * To function as the Treasurer in the absence of the Treasurer,
@@ -286,7 +316,7 @@ content: >
   * To assist the treasurer when requested.
 
 
-  **12.08.** Term of Office:
+  **12.08. Term of Office:**
 
 
   * The term of office for elected officers shall be two (2) years.
@@ -294,11 +324,13 @@ content: >
   * An elected officer cannot serve more than two (2) consecutive terms.
 
 
+  <br>
 
-  ## Article XIII – Finances
+
+  ### Article XIII – Finances
 
 
-  **13.1.** Source of Income: The main source of income shall be:
+  **13.1. Source of Income:** The main source of income shall be:
 
 
   * Donations
@@ -310,22 +342,19 @@ content: >
   * Registrations fees
 
 
-  **13.2** Bank Accounts:
+  **13.2 Bank Accounts:** Whereas the Association has no bank account at the
+  present time, monies collected annually shall be deposited in the bank account
+  of the church where the Treasurer of the Association is a member of. When a
+  new Treasurer is elected all of the balance will be transferred to the church
+  where the new Treasurer is a member of.
 
 
-  Whereas the Association has no bank account at the present time, monies
-  collected annually shall be deposited in the bank account of the church where
-  the Treasurer of the Association is a member of. When a new Treasurer is
-  elected all of the balance will be transferred to the church where the new
-  Treasurer is a member of.
-
-
-  **13.3.** Annual Residue: The residue of funds at the end of each annual camp
+  **13.3. Annual Residue:** The residue of funds at the end of each annual camp
   meeting maybe kept in the bank account of the church or the Association may
   use the balance for a project voted at the duly called business meeting.
 
 
-  **13.4.** Audit: The finances of the Association maybe audited by the
+  **13.4. Audit:** The finances of the Association maybe audited by the
   Conference Auditor.
 ---
 
