@@ -43,7 +43,7 @@ class BylawsPage extends React.Component {
         <Helmet title="Filcan | Bylaws"/>
 
         <div className="about_area3">
-          <div className="container">
+          <div className="container" id="bylaws">
             <div dangerouslySetInnerHTML={{ __html: this.body }}></div>
             <br/>
 

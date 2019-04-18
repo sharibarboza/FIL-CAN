@@ -165,6 +165,11 @@ blockquote em{
   margin-top: -80px;
 }
 
+span[id^="article"] {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
 .collapse-menu {
   margin-top: 15px;
 }

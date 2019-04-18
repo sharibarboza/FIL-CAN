@@ -11,16 +11,17 @@ class AboutPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | About Us"/>
+        <Helmet title="Filcan | History"/>
 
         <div className="about_area3">
       		<div className="container">
       			<div className="row">
       				<div className="col-md-6 col-sm-6 col-xs-12">
       					<div className="section_title_lefts">
-      						<h2>ABOUT US</h2>
-      						<h1>HOW WE <span>STARTED.</span></h1>
+      						<h2>History of the Association</h2>
+      						<h1>HOW WE <span>STARTED</span></h1>
       					</div>
+                <br/>
       					<div className="about_text">
                   <p>{history.body}</p>
       					</div>
