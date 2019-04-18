@@ -64,6 +64,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            date
             file {
               relativePath
               publicURL

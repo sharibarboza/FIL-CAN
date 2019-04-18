@@ -66,7 +66,7 @@ collections:
     fields:
       - { label: Title of Report, name: title, widget: string }
       - { label: File, name: file, widget: file }
-      - { label: Upload date, name: date, widget: hidden, default: date }
+      - { label: Upload date, name: date, widget: date, default: "", hint: This will be the upload date for this file. Do not change }
 
   - name: grid
     label: Grid Images
