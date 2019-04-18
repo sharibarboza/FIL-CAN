@@ -6,14 +6,35 @@ content: >
   _Revised and adopted August 21, 2016_
 
 
+  [Article I. Name](#article1)<br>
 
-  [Article IV. Territory](#article4)
+  [Article II. Relationships](#article2)<br>
+
+  [Article III. Purpose](#article3)<br>
+
+  [Article IV. Territory](#article4)<br>
+
+  [Article V. Principal Office](#article5)<br>
+
+  [Article VI. Membership](#article6)<br>
+
+  [Article VII. Bylaws and Amendments](#article7)<br>
+
+  [Article VIII. Meetings](#article8)<br>
+
+  [Article X. Committees](#article10)<br>
+
+  [Article XI. Executive Committee](#article11)<br>
+
+  [Article XII. Officers](#article12)<br>
+
+  [Article XIII. Finances](#article13)
 
 
   <br>
 
 
-  ### Article I. Name
+  ### <span id="article1">Article I. Name</span>
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
@@ -23,7 +44,7 @@ content: >
   <br>
 
 
-  ### Article II. Relationships
+  ### <span id="article2">Article II. Relationships</span>
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
@@ -37,7 +58,7 @@ content: >
   <br>
 
 
-  ### Article III. Purpose
+  ### <span id="article3">Article III. Purpose</span>
 
 
   **3:01.** The purposes of the Association are as follows:
@@ -75,7 +96,7 @@ content: >
   <br>
 
 
-  ### Article V. Principal Office
+  ### <span id="article5">Article V. Principal Office</span>
 
 
   **5.01.** Whereas the Association does not own any property designated as the
@@ -86,7 +107,7 @@ content: >
   <br>
 
 
-  ### Article VI. Membership
+  ### <span id="article6">Article VI. Membership</span>
 
 
   **6.01.** All Filipino Seventh-day Adventist members within the territory of
@@ -102,7 +123,7 @@ content: >
   <br>
 
 
-  ### Article VII. Bylaws and Amendments
+  ### <span id="article7">Article VII. Bylaws and Amendments</span>
 
 
   **7.01.** Amendments to the Bylaws shall be submitted to the Bylaws Committee
@@ -113,7 +134,7 @@ content: >
   <br>
 
 
-  ### Article VIII. Meetings
+  ### <span id="article8">Article VIII. Meetings</span>
 
 
   _1. Regular Meeting:_
@@ -143,7 +164,7 @@ content: >
   <br>
 
 
-  ### Article X. Committees
+  ### <span id="article10">Article X. Committees</span>
 
 
   **10.01.** Whereas the Annual Camp Meeting shall be the main function of the
@@ -203,7 +224,7 @@ content: >
   <br>
 
 
-  ### Article XI. Executive Committee
+  ### <span id="article11">Article XI. Executive Committee</span>
 
 
   **11.01.** The Executive Committee, (Hereafter shall be known as “EXCOM”),
@@ -243,7 +264,7 @@ content: >
   <br>
 
 
-  ### Article XII. Officers
+  ### <span id="article12">Article XII. Officers</span>
 
 
   **12.01. Elected Officers:**
@@ -337,7 +358,7 @@ content: >
   <br>
 
 
-  ### Article XIII. Finances
+  ### <span id="article13">Article XIII. Finances</span>
 
 
   **13.1. Source of Income:** The main source of income shall be:
