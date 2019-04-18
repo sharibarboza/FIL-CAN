@@ -3,10 +3,15 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  * [Article I. Name](#Article-I-.-Name)
+  [Article I. Name](#article-i)
 
 
-  ### Article I. Name
+  <br>
+
+
+  ## ARTICLE I
+
+  ### NAME
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
