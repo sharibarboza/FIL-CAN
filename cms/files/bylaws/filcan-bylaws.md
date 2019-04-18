@@ -3,11 +3,13 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  [Article I. Name](#article-i)
+  [Article I. Name](#article-i)<br>
 
-  [Article II. Relationships](#article-ii)
+  [Article II. Relationships](#article-ii)<br>
 
-  [Article III. Purpose](#article-iii)
+  [Article III. Purpose](#article-iii)<br>
+
+  [Article IV. Territory](#article-iv)<br>
 
 
   <br>
@@ -15,7 +17,7 @@ content: >
 
   ## ARTICLE I
 
-  #### NAME
+  ### Name
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
@@ -27,7 +29,7 @@ content: >
 
   ## ARTICLE II
 
-  #### RELATIONSHIPS
+  ### Relationships
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
@@ -43,7 +45,7 @@ content: >
 
   ## ARTICLE III
 
-  #### PURPOSE
+  ### Purpose
 
 
   **3:01.** The purposes of the Association are as follows:
@@ -71,7 +73,9 @@ content: >
   <br>
 
 
-  ### Article IV – Territory
+  ## ARTICLE IV
+
+  ### Territory
 
 
   **4.01.** The territory of the Association shall be the territory of the
