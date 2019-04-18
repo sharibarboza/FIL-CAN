@@ -3,21 +3,13 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  [Article I. Name](#article-i)<br>
-
-  [Article II. Relationships](#article-ii)<br>
-
-  [Article III. Purpose](#article-iii)<br>
-
-  [Article IV. Territory](#territory)<br>
+  _Revised and adopted August 21, 2016_
 
 
   <br>
 
 
-  ## ARTICLE I
-
-  ### Name
+  ### Article I. Name
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
@@ -27,9 +19,7 @@ content: >
   <br>
 
 
-  ## ARTICLE II
-
-  ### Relationships
+  ### Article II. Relationships
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
@@ -43,9 +33,7 @@ content: >
   <br>
 
 
-  ## ARTICLE III
-
-  ### Purpose
+  ### Article III. Purpose
 
 
   **3:01.** The purposes of the Association are as follows:
@@ -73,9 +61,7 @@ content: >
   <br>
 
 
-  ## ARTICLE IV
-
-  # Territory
+  ### Article IV. Territory
 
 
   **4.01.** The territory of the Association shall be the territory of the
@@ -85,7 +71,7 @@ content: >
   <br>
 
 
-  ### Article V – Principal Office
+  ### Article V. Principal Office
 
 
   **5.01.** Whereas the Association does not own any property designated as the
@@ -96,7 +82,7 @@ content: >
   <br>
 
 
-  ### Article VI – Membership
+  ### Article VI. Membership
 
 
   **6.01.** All Filipino Seventh-day Adventist members within the territory of
@@ -112,7 +98,7 @@ content: >
   <br>
 
 
-  ### Article VII – Bylaws and Amendments
+  ### Article VII. Bylaws and Amendments
 
 
   **7.01.** Amendments to the Bylaws shall be submitted to the Bylaws Committee
@@ -123,7 +109,7 @@ content: >
   <br>
 
 
-  ### Article VIII – Meetings
+  ### Article VIII. Meetings
 
 
   _1. Regular Meeting:_
@@ -153,7 +139,7 @@ content: >
   <br>
 
 
-  ### Article X – Committees
+  ### Article X. Committees
 
 
   **10.01.** Whereas the Annual Camp Meeting shall be the main function of the
@@ -213,7 +199,7 @@ content: >
   <br>
 
 
-  ### Article XI – Executive Committee
+  ### Article XI. Executive Committee
 
 
   **11.01.** The Executive Committee, (Hereafter shall be known as “EXCOM”),
@@ -253,7 +239,7 @@ content: >
   <br>
 
 
-  ### Article XII – Officers
+  ### Article XII. Officers
 
 
   **12.01. Elected Officers:**
@@ -347,7 +333,7 @@ content: >
   <br>
 
 
-  ### Article XIII – Finances
+  ### Article XIII. Finances
 
 
   **13.1. Source of Income:** The main source of income shall be:
