@@ -279,7 +279,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(meetings)/.*\\.md$/" }
       }
     	sort: {
-        fields: [frontmatter___datetime], order: ASC
+        fields: [frontmatter___title], order: ASC
       }
     ) {
       edges {
@@ -287,9 +287,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            datetime
-            address
-            description
           }
         }
       }
