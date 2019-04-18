@@ -48,7 +48,12 @@ class MeetingsPage extends React.Component {
   }
 
   getFutureMeetings(props) {
-    const meetings = props.data.meetings.edges;
+    let meetings;
+    try {
+      meetings = props.data.meetings.edges;
+    } catch(e) {
+      meetings = [];
+    }
     let futureMeetings = [];
 
     if (meetings != undefined) {
