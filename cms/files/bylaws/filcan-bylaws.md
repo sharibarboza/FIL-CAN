@@ -5,13 +5,17 @@ file: >-
 content: >
   [Article I. Name](#article-i)
 
+  [Article II. Relationships](#article-ii)
+
+  [Article III. Purpose](#article-iii)
+
 
   <br>
 
 
   ## ARTICLE I
 
-  ### NAME
+  #### NAME
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
@@ -21,7 +25,9 @@ content: >
   <br>
 
 
-  ### Article II – Relationships
+  ## ARTICLE II
+
+  #### RELATIONSHIPS
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
@@ -35,7 +41,9 @@ content: >
   <br>
 
 
-  ### Article III – Purpose
+  ## ARTICLE III
+
+  #### PURPOSE
 
 
   **3:01.** The purposes of the Association are as follows:
