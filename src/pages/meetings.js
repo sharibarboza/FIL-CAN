@@ -25,6 +25,7 @@ class MeetingsPage extends React.Component {
     };
     this.data = {};
     this.headerImage = props.data.headerImage;
+    this.months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
   }
 
   componentDidMount() {
@@ -37,7 +38,7 @@ class MeetingsPage extends React.Component {
 
     if (this.numMeetings > 0) {
       this.interval = setInterval(() => {
-        const date = this.calculateCountdown(this.meetings[0].frontmatter.datetime);
+        const date = this.calculateCountdown(this.meetings[0].frontmatter.title);
         date ? this.setState(date) : this.stop();
       }, 1000);
     }
@@ -59,7 +60,7 @@ class MeetingsPage extends React.Component {
     if (meetings != undefined) {
       for (let i = 0; i < meetings.length; i++) {
         let node = meetings[i].node;
-        if (this.futureDate(node.frontmatter.datetime)) {
+        if (this.futureDate(node.frontmatter.title)) {
           futureMeetings.push(node);
         }
       }
@@ -132,9 +133,13 @@ class MeetingsPage extends React.Component {
       for (let i = 0; i < this.numMeetings; i++) {
         let node = this.meetings[i];
         let meeting = node.frontmatter;
+        let location = meeting.location;
         let address = meeting.address;
-        let datetime = this.getDate(meeting.datetime);
-        let body = <div><span>{address}</span><br /><br /><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div>
+        let datetime = this.getDate(meeting.title);
+        let date = new Date(meeting.title);
+        let month = this.months[date.getMonth()];
+
+        let body = <div className="row"><div className="col-md-3 no-left-pad"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">13</div></div></div><div className="col-md-9 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
 
         let element = <div id={i} key={node.id}><MapPanel
           heading={datetime}
@@ -305,6 +310,9 @@ export const query = graphql`
           id
           frontmatter {
             title
+            location
+            address
+            description
           }
         }
       }
