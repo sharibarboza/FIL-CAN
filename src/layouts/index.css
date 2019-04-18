@@ -3399,8 +3399,8 @@ font-size: 18px;
     padding-top: 7px;
 }
 .feature_button a{
-	color:#333;
-    display: inline-block;
+  font-weight: 600;
+  display: inline-block;
 }
 .feature_button a span i {
     margin-left: 10px;
