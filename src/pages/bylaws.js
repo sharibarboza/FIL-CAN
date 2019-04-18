@@ -14,10 +14,14 @@ class BylawsPage extends React.Component {
     super(props);
 
     this.bylaws = props.data.bylaws.edges;
+
+    /*
     this.content = this.bylaws[0].node.frontmatter.content;
     this.body = remark()
       .use(remarkHtml)
       .processSync(this.content).toString();
+    */
+    this.body = '';
   }
 
   displayFiles() {
@@ -77,7 +81,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            content
             file {
               relativePath
               publicURL
