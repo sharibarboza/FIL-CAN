@@ -287,7 +287,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            location
             address
             description
           }
