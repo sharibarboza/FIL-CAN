@@ -151,6 +151,15 @@ class MeetingsPage extends React.Component {
     return panels;
   }
 
+  initializeMeetingMinutes() {
+    let minutes = [];
+
+    let element = <div key={0} className="alert alert-secondary">There are currently no meeting minutes.</div>;
+    minutes.push(element);
+
+    return minutes;
+  }
+
   displayCounter(countDown) {
     return <div><div className="row">
       <div className="col-md-12">
@@ -263,6 +272,10 @@ class MeetingsPage extends React.Component {
               </div>
             </div>
           </div>
+
+          <br />
+          {this.initializeMeetingMinutes()}
+          <br />
         </div>
       </div>
     )

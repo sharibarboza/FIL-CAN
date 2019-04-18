@@ -130,3 +130,11 @@ collections:
       - { label: Title of File, name: title, widget: string }
       - { label: Category, name: type, widget: select, options: ['General', 'Sports Tournaments/Parlor Games', 'Social & Cultural Activities', 'Worship Services'] }
       - { label: File, name: file, widget: file }
+
+  - name: minutes
+    label: Meeting Minutes
+    folder: cms/files/minutes
+    create: true
+    fields:
+      - { label: Date of meeting, name: title, widget: date }
+      - { label: File, name: file, widget: file }
