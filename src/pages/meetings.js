@@ -139,7 +139,7 @@ class MeetingsPage extends React.Component {
         let date = new Date(meeting.title);
         let month = this.months[date.getMonth()];
 
-        let body = <div className="row"><div className="col-md-3 no-left-pad"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">13</div></div></div><div className="col-md-9 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
+        let body = <div className="row"><div className="col-md-3 no-left-pad"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-md-9 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
 
         let element = <div id={i} key={node.id}><MapPanel
           heading={datetime}
