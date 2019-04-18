@@ -3,44 +3,13 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  [Article I. Name](#article1)<br>
-
-  [Article II. Relationships](#article2)<br>
-
-  [Article III. Purpose](#article3)<br>
-
-  [Article IV. Territory](#article4)<br>
-
-  [Article V. Principal Office](#article5)<br>
-
-  [Article VI. Membership](#article6)<br>
-
-  [Article VII. Bylaws and Amendments](#article7)<br>
-
-  [Article VIII. Meetings](#article8)<br>
-
-  [Article X. Committees](#article10)<br>
-
-  [Article XI. Executive Committee](#article11)<br>
-
-  [Article XII. Officers](#article12)<br>
-
-  [Article XIII. Finances](#article13)
-
-
-  <br>
-
-
   _Revised and adopted August 21, 2016_
 
 
   <br>
 
 
-  ---
-
-
-  ### <span id="article1">Article I. Name</span>
+  ### Article I. Name
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
@@ -50,7 +19,7 @@ content: >
   <br>
 
 
-  ### <span id="article2">Article II. Relationships</span>
+  ### Article II. Relationships
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
@@ -64,7 +33,7 @@ content: >
   <br>
 
 
-  ### <span id="article3">Article III. Purpose</span>
+  ### Article III. Purpose
 
 
   **3:01.** The purposes of the Association are as follows:
@@ -92,7 +61,7 @@ content: >
   <br>
 
 
-  ### <span id="article4">Article IV. Territory</span>
+  ### Article IV. Territory
 
 
   **4.01.** The territory of the Association shall be the territory of the
@@ -102,7 +71,7 @@ content: >
   <br>
 
 
-  ### <span id="article5">Article V. Principal Office</span>
+  ### Article V. Principal Office
 
 
   **5.01.** Whereas the Association does not own any property designated as the
@@ -113,7 +82,7 @@ content: >
   <br>
 
 
-  ### <span id="article6">Article VI. Membership</span>
+  ### Article VI. Membership
 
 
   **6.01.** All Filipino Seventh-day Adventist members within the territory of
@@ -129,7 +98,7 @@ content: >
   <br>
 
 
-  ### <span id="article7">Article VII. Bylaws and Amendments</span>
+  ### Article VII. Bylaws and Amendments
 
 
   **7.01.** Amendments to the Bylaws shall be submitted to the Bylaws Committee
@@ -140,7 +109,7 @@ content: >
   <br>
 
 
-  ### <span id="article8">Article VIII. Meetings</span>
+  ### Article VIII. Meetings
 
 
   _1. Regular Meeting:_
@@ -170,7 +139,7 @@ content: >
   <br>
 
 
-  ### <span id="article10">Article X. Committees</span>
+  ### Article X. Committees
 
 
   **10.01.** Whereas the Annual Camp Meeting shall be the main function of the
@@ -230,7 +199,7 @@ content: >
   <br>
 
 
-  ### <span id="article11">Article XI. Executive Committee</span>
+  ### Article XI. Executive Committee
 
 
   **11.01.** The Executive Committee, (Hereafter shall be known as “EXCOM”),
@@ -270,7 +239,7 @@ content: >
   <br>
 
 
-  ### <span id="article12">Article XII. Officers</span>
+  ### Article XII. Officers
 
 
   **12.01. Elected Officers:**
@@ -364,7 +333,7 @@ content: >
   <br>
 
 
-  ### <span id="article13">Article XIII. Finances</span>
+  ### Article XIII. Finances
 
 
   **13.1. Source of Income:** The main source of income shall be:
