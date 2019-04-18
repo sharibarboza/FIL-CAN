@@ -13,7 +13,7 @@ content: >
 
 
   **1:01.** The name of this association is the Filipino-Canadian Adventist
-  Association of Alberta. (herein after known as **“Association”**)
+  Association of Alberta. (herein after known as **“Association”**).
 
 
   <br>
@@ -23,7 +23,7 @@ content: >
 
 
   **2:01.** The Association is part of the Alberta Conference of the Seventh-day
-  Adventist Church (herein after known as the **“Conference”**)
+  Adventist Church (herein after known as the **“Conference”**).
 
 
   **2:02.** All purposes, policies, and procedures of the Association shall be
@@ -261,9 +261,9 @@ content: >
 
   * Filipino pastors that are currently employed by the Conference.
 
-  * Non-Filipino pastors serving Filipino-Canadian churches of the Conference
+  * Non-Filipino pastors serving Filipino-Canadian churches of the Conference.
 
-  * Retired pastors residing in the territory of the Conference
+  * Retired pastors residing in the territory of the Conference.
 
 
   **12.03. Duties of the President:**
@@ -315,7 +315,7 @@ content: >
   **12.07. Duties of the Associate Treasurer:**
 
 
-  * To function as the Treasurer in the absence of the Treasurer,
+  * To function as the Treasurer in the absence of the Treasurer.
 
   * To be familiar with the financial status of the Association.
 
