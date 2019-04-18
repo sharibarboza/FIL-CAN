@@ -3,9 +3,6 @@ title: FILCAN Bylaws
 file: >-
   /assets/bylaws-of-the-filipino-canadian-adventist-association-of-alberta-final-draft.pdf
 content: >
-  _Revised and adopted August 21, 2016_
-
-
   [Article I. Name](#article1)<br>
 
   [Article II. Relationships](#article2)<br>
@@ -32,6 +29,15 @@ content: >
 
 
   <br>
+
+
+  _Revised and adopted August 21, 2016_
+
+
+  <br>
+
+
+  ---
 
 
   ### <span id="article1">Article I. Name</span>
