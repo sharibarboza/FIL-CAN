@@ -39,7 +39,7 @@ and thus develop friendship and unity to work together towards evangelism.
 
 **6.02.** Filipino Seventh-day Adventist members who belong to other Seventh-day Adventist Conferences who want to become members may do so by sending a letter requesting membership.
 
-## Article VII –Bylaws and Amendments
+## Article VII – Bylaws and Amendments
 
 **7.01.** Amendments to the Bylaws shall be submitted to the Bylaws Committee and will be voted during a duly called meeting of the Executive Committee and shall be ratified in a duly called business meeting.
 
