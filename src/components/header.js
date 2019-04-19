@@ -11,13 +11,13 @@ class Header extends React.Component {
     this.state = {
       scrollingLock: false,
       collapsed: true,
-      selected: null
+      selected: null,
+      mobileWindow: false
     }
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.scrollListener = this.scrollListener.bind(this);
     this.closeNav = this.closeNav.bind(this);
-    this.mobileWindow = this.mobileWindow.bind(this);
   }
 
   scrollListener() {
@@ -50,6 +50,17 @@ class Header extends React.Component {
     window.addEventListener('scroll', this.scrollListener);
   }
 
+  componentWillMount() {
+    let mobile = false;
+    if (window.innerWidth < 1200) {
+      mobile = true;
+    }
+
+    this.setState({
+      mobileWindow: mobile
+    })
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scrollListener);
   }
@@ -69,7 +80,7 @@ class Header extends React.Component {
   getBrand() {
     let element;
 
-    if (this.state.scrollingLock || this.mobileWindow()) {
+    if (this.state.scrollingLock || this.state.mobileWindow) {
       element = <span></span>;
     } else {
       element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventist Assocation of Alberta</span>;
@@ -81,21 +92,13 @@ class Header extends React.Component {
   getShortBrand() {
     let element;
 
-    if (this.state.scrollingLock || this.mobileWindow()) {
+    if (this.state.scrollingLock || this.state.mobileWindow) {
       element = <span className="short-brand">FilCan</span>;
     } else {
       element = <span></span>
     }
 
     return element;
-  }
-
-  mobileWindow() {
-    if (window.innerWidth < 1200) {
-      return true;
-    } else {
-      return false;
-    }
   }
 
   render() {
@@ -105,7 +108,7 @@ class Header extends React.Component {
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
       		<div className={
-            this.state.scrollingLock || !this.state.collapsed || this.mobileWindow() ? 'nav_black' : 'nav_white'
+            this.state.scrollingLock || !this.state.collapsed || this.state.mobileWindow ? 'nav_black' : 'nav_white'
           }>
       			<div className="container">
       				<Navbar className="row logo-left" dark>
@@ -113,7 +116,7 @@ class Header extends React.Component {
       					<div className="col-xs-1">
       						<div className="logo">
       							<Link to="/" className="main_sticky_main_l" style={{
-                      color: this.state.scrollingLock || !this.state.collapsed || this.mobileWindow() ? 'white' : 'black'
+                      color: this.state.scrollingLock || !this.state.collapsed || this.state.mobileWindow ? 'white' : 'black'
                     }}>
                       <img src={filcanLogo} alt={title} className={
                         this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
@@ -130,7 +133,7 @@ class Header extends React.Component {
       					<div className="col-xs-9" align="right" style={{ paddingLeft: '70px' }}>
                   <div className="row" style={{
                     float: this.state.scrollingLock ? 'right' : 'none',
-                    display: this.mobileWindow() ? 'none' : 'inline-flex',
+                    display: this.state.mobileWindow ? 'none' : 'inline-flex',
                     paddingTop: this.state.scrollingLock ? '12px' : '0',
                     paddingBottom: '5px'
                   }}>
@@ -143,8 +146,8 @@ class Header extends React.Component {
                     </div>
                   </div>
                   <div className="row" id={ this.state.scrollingLock ? 'small-nav' : 'large-nav' } style={{
-                    borderTop: this.state.scrollingLock || this.mobileWindow() ? 'none' : '1px solid #ddd',
-                    borderBottom: this.state.scrollingLock || this.mobileWindow() ? 'none' : '1px solid #ddd'
+                    borderTop: this.state.scrollingLock || this.state.mobileWindow ? 'none' : '1px solid #ddd',
+                    borderBottom: this.state.scrollingLock || this.state.mobileWindow ? 'none' : '1px solid #ddd'
                   }}>
         						<nav className="astute_menu main-search-menu">
         							<ul className="sub-menu">
