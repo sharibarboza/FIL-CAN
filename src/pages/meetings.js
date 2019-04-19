@@ -149,20 +149,29 @@ class MeetingsPage extends React.Component {
         panels.push(element);
       }
     } else {
-      let element = <div key={0} className="alert alert-secondary">There are currently no upcoming meetings.</div>;
+      let element = <div className="blog-left-side"><div key={0}>There are currently no upcoming meetings to display.</div></div>;
       panels.push(element);
     }
 
     return panels;
   }
 
-  initializeMeetingMinutes() {
-    let minutes = [];
+  displayMinutes() {
+    let elements = [];
+    const minutes = get(this, 'props.data.minutes.edges');
 
-    let element = <div key={0} className="alert alert-secondary">There are currently no meeting minutes.</div>;
-    minutes.push(element);
+    if (minutes) {
+      for (let i = 0; i < minutes.length; i++) {
+        let node = minutes[i].node;
+        let element = <FileDownload node={node} key={i} />
+        elements.push(element);
+      }
+    } else {
+      let element = <span key={0}>There are currently no meeting minutes to display.</span>
+      elements.push(element);
+    }
 
-    return minutes;
+    return elements;
   }
 
   displayCounter(countDown) {
@@ -279,8 +288,13 @@ class MeetingsPage extends React.Component {
           </div>
 
           <br />
-          {this.initializeMeetingMinutes()}
-          <br />
+          <div className="blog-left-side">
+            <div className="widget widget_categories" style={{
+              width: '100%'
+            }}>
+              {this.displayMinutes()}
+            </div>
+          </div>
         </div>
       </div>
     )

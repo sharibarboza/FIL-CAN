@@ -38,7 +38,6 @@ class ReportsPage extends React.Component {
               <div className="widget widget_categories" style={{
                 width: '100%'
               }}>
-                <h2 className="widget-title"><i className="fa fa-table"></i>&nbsp; Annual Reports</h2>
                 <ul>
                   {this.displayFiles()}
                 </ul>

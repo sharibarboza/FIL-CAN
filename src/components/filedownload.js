@@ -16,7 +16,7 @@ class FileDownload extends React.Component {
         </div>
         <div className="col-lg-6 col-md-7 col-xs-12">
           <strong><a href={bylaw.file.publicURL} target="_blank">{bylaw.title}</a></strong><br />
-          <span>{bylaw.file.relativePath}</span>
+          <span className="file-text">{bylaw.file.relativePath}</span>
         </div>
         <div className="col-lg-5 col-md-4 col-xs-12" style={{
           textAlign: 'right',
