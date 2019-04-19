@@ -1,0 +1,99 @@
+import React from 'react'
+import Link from 'gatsby-link'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
+
+import Divider from '../components/divider';
+import ExecutiveGrid from '../components/executivegrid';
+
+class BoardPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // Get the officers data
+    let officers;
+    try {
+      officers = props.data.officers.edges;
+    } catch(e) {
+      officers = [];
+    }
+
+    let vps;
+    try {
+      vps = props.data.vps.edges;
+    } catch(e) {
+      vps = [];
+    }
+
+    this.board = officers;
+  }
+
+  render() {
+
+    return (
+      <div>
+        <Helmet title="Filcan | Board"/>
+
+        <ExecutiveGrid executives={this.board} columns={4} />
+      </div>
+    )
+  }
+
+}
+
+export default BoardPage
+
+export const query = graphql`
+  query BoardPageQuery {
+    officers: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq:"Officer" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            position
+            name
+            type
+            photo {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    vps: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          type: { eq:"Board VP" }
+          name: { ne:null }
+        }
+      }
+      sort: {
+        fields: [frontmatter___name], order: ASC
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            position
+            type
+            photo {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

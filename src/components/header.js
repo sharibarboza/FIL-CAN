@@ -160,7 +160,7 @@ class Header extends React.Component {
                         </li>
         								<li><Link to="/leadership/">Governance</Link>
                           <ul className="sub-menu">
-                            <li><Link>Executive Board</Link></li>
+                            <li><Link to="/board/">Executive Board</Link></li>
                             <li><Link>Committees</Link></li>
                             <li><Link to="/meetings/">Executive Meetings</Link></li>
                             <li><AnchorLink to="/meetings/#minutes">Meeting Minutes</AnchorLink></li>
@@ -195,7 +195,7 @@ class Header extends React.Component {
                       }}></i>
                       <Collapse isOpen={this.isOpen('about')} className="collapse-menu">
                         <Link onClick={this.closeNav} to="/history/"><span style={{ display:'block' }} className="sub-nav-item" key="history">HISTORY</span></Link>
-                        <Link onClick={this.closeNav} to="/leadership/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">LEADERSHIP</span></Link>
+                        <Link onClick={this.closeNav} to="/board/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">EXECUTIVE BOARD</span></Link>
                         <Link onClick={this.closeNav} to="/churches/"><span style={{ display:'block' }} className="sub-nav-item" key="churches">CHURCHES</span></Link>
                         <Link onClick={this.closeNav} to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
                         <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="sub-nav-item" key="meetings">EXECUTIVE MEETINGS</span></Link>

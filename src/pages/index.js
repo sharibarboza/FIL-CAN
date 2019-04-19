@@ -6,9 +6,11 @@ import Helmet from 'react-helmet'
 import Slider from '../components/carousel'
 import Features from '../components/features'
 import Counter from '../components/counter'
-import Executives from '../components/executives'
+import Executive from '../components/executive'
+import ExecutiveGrid from '../components/executivegrid'
 import Portfolio from '../components/portfolio'
 import Mission from '../components/mission'
+import Divider from '../components/divider'
 
 class IndexPage extends React.Component {
 
@@ -45,11 +47,22 @@ class IndexPage extends React.Component {
         <Counter date={dateStr} bgImage={counterImage} />
         <Mission />
         <Portfolio images={grid} default={defaultImage} />
-        <Executives
-            title='Executive Officers'
-            officers={officers}
-            index={true}
-        />
+
+        <div className="team_area" id="team">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="section-title t_center">
+    						  <h2>Executive Officers</h2>
+                  <Divider />
+    					  </div>
+              </div>
+            </div>
+
+            <ExecutiveGrid columns={3} executives={officers} />
+
+          </div>
+        </div>
 
         <div className="container" style={{
           marginBottom: '100px'
@@ -58,7 +71,7 @@ class IndexPage extends React.Component {
     				<div className="col-md-12">
     					<div className="section-title t_center">
                 <div className="donate-btn-header">
-                  <Link to="/leadership/" className="red-on-white" href="#">See All Leadership</Link>
+                  <Link to="/leadership/" className="red-on-white" href="#">View Executive Board</Link>
                 </div>
     					</div>
     				</div>
