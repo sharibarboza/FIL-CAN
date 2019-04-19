@@ -10,6 +10,7 @@ import '../layouts/animate.css'
 
 import Divider from '../components/divider';
 import MapPanel from '../components/mappanel';
+import FileDownload from '../components/filedownload'
 
 class MeetingsPage extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class MeetingsPage extends React.Component {
     this.data = {};
     this.headerImage = props.data.headerImage;
     this.months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+    this.minutes = props.data.minutes.edges;
   }
 
   componentDidMount() {
@@ -158,12 +161,11 @@ class MeetingsPage extends React.Component {
 
   displayMinutes() {
     let elements = [];
-    const minutes = get(this, 'props.data.minutes.edges');
 
-    if (minutes) {
-      for (let i = 0; i < minutes.length; i++) {
-        let node = minutes[i].node;
-        let element = <FileDownload node={node} key={i} />
+    if (this.minutes) {
+      for (let i = 0; i < this.minutes.length; i++) {
+        let node = this.minutes[i].node;
+        let element = <FileDownload node={node} key={i} minutes="true" />
         elements.push(element);
       }
     } else {
@@ -327,6 +329,30 @@ export const query = graphql`
             location
             address
             description
+          }
+        }
+      }
+    }
+    minutes: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/(minutes)/.*\\.md$/" }
+      }
+      sort: {
+        fields: [frontmatter___title], order: ASC
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            file {
+              relativePath
+              publicURL
+              internal {
+                mediaType
+              }
+            }
           }
         }
       }
