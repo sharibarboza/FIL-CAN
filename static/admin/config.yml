@@ -66,7 +66,6 @@ collections:
     fields:
       - { label: Title of Report, name: title, widget: string }
       - { label: File, name: file, widget: file }
-      - { label: Current Date (Do not change), name: date, widget: date }
 
   - name: grid
     label: Grid Images
@@ -129,7 +128,7 @@ collections:
     create: true
     fields:
       - { label: Title of File, name: title, widget: string }
-      - { label: Category, name: type, widget: select, options: ['General', 'Sports Tournaments/Parlor Games', 'Social & Cultural Activities', 'Worship Services'] }
+      - { label: Category, name: type, widget: select, options: ['General', 'Sports Tournaments/Parlor Games', 'Social & Cultural Activities', 'Worship Services'], default='General' }
       - { label: File, name: file, widget: file }
 
   - name: minutes

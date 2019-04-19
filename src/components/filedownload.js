@@ -10,7 +10,7 @@ class FileDownload extends React.Component {
 
     this.key = props.node.id;
     this.file = props.node.frontmatter;
-    console.log(new Date(this.file.title));
+
     if (props.minutes) {
       this.title = dateFormat(this.file.title, 'mmmm d, yyyy');
     } else {

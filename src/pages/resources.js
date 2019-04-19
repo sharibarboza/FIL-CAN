@@ -12,11 +12,10 @@ class ResourcesPage extends React.Component {
     super(props);
 
     try {
-      this.resources = props.data.resources;
+      this.resources = props.data.resources.edges;
     } catch(e) {
       this.resources = [];
     }
-
     this.files = {};
 
     if (this.resources) {
@@ -24,14 +23,12 @@ class ResourcesPage extends React.Component {
         let node = this.resources[i].node;
         let type = node.frontmatter.type;
 
-        if (type in this.files) {
-          this.files[type].push(node);
-        } else {
+        if (!(type in this.files)) {
           this.files[type] = [];
         }
+        this.files[type].push(node);
       }
     }
-
   }
 
   displayFiles(category) {
@@ -123,6 +120,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            type
             file {
               relativePath
               publicURL
