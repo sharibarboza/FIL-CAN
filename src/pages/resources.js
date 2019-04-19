@@ -70,7 +70,7 @@ class ResourcesPage extends React.Component {
               <div className="widget widget_categories" style={{
                 width: '100%'
               }}>
-                <h2 className="widget-title"><i className="fa fa-archive"></i>&nbsp; General</h2>
+                <h2 className="widget-title"><i className="fa fa-archive"></i>&nbsp; General & Miscellaneous</h2>
                 <ul>
                   {this.displayFiles('General')}
                 </ul>
@@ -79,18 +79,9 @@ class ResourcesPage extends React.Component {
               <div className="widget widget_categories" style={{
                 width: '100%'
               }}>
-                <h2 className="widget-title"><i className="fa fa-trophy"></i>&nbsp; Sports Tournaments/Parlor Games</h2>
+                <h2 className="widget-title"><i className="fa fa-soccer-ball-o"></i>&nbsp; Sports Tournaments & Parlor Games</h2>
                 <ul>
                   {this.displayFiles('Sports Tournaments/Parlor Games')}
-                </ul>
-              </div>
-
-              <div className="widget widget_categories" style={{
-                width: '100%'
-              }}>
-                <h2 className="widget-title"><i className="fa fa-music"></i>&nbsp; Social & Cultural Activities</h2>
-                <ul>
-                  {this.displayFiles('Social & Cultural Activities')}
                 </ul>
               </div>
 
@@ -100,6 +91,15 @@ class ResourcesPage extends React.Component {
                 <h2 className="widget-title"><i className="fa fa-book"></i>&nbsp; Worship Services</h2>
                 <ul>
                   {this.displayFiles('Worship Services')}
+                </ul>
+              </div>
+
+              <div className="widget widget_categories" style={{
+                width: '100%'
+              }}>
+                <h2 className="widget-title"><i className="fa fa-music"></i>&nbsp; Social & Cultural Activities</h2>
+                <ul>
+                  {this.displayFiles('Social & Cultural Activities')}
                 </ul>
               </div>
             </div>
