@@ -66,7 +66,6 @@ collections:
     fields:
       - { label: Title of Report, name: title, widget: string }
       - { label: File, name: file, widget: file }
-      - { label: Current date (do not change), name: date,  widget: date, required: false, default="" }
 
   - name: grid
     label: Grid Images
