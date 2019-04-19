@@ -22,14 +22,11 @@ class FileDownload extends React.Component {
 
     return (
       <div className="row files" key={this.key}>
-        <div className="col-lg-1 col-md-1 hidden-xs-down">
-          <FileIcon media={this.file.file.internal.mediaType} />
-        </div>
-        <div className="col-lg-6 col-md-7 col-xs-12">
+        <div className="col-md-10 col-xs-12">
           <strong><a href={this.file.file.publicURL} target="_blank">{this.title}</a></strong><br />
           <span className="file-text">{this.file.file.relativePath}</span>
         </div>
-        <div className="col-lg-5 col-md-4 col-xs-12" style={{
+        <div className="col-md-2 col-xs-12" style={{
           textAlign: 'right',
           paddingTop: '5px'
         }}>

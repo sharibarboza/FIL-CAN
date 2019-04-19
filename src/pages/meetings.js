@@ -266,7 +266,7 @@ class MeetingsPage extends React.Component {
         </div>
 
         <div className="container" style={{
-          padding: '50px 15px'
+          padding: '100px 15px'
         }}>
 
           <div className="row">
@@ -283,7 +283,8 @@ class MeetingsPage extends React.Component {
           {this.initializeMeetingPanels()}
           <br />
 
-          <div className="row">
+          <div id="minutes" class="anchor-pad"></div>
+          <div className="row" style={{ paddingTop: '50px' }}>
             <div className="col-md-12">
               <div className="section-title t_center">
 

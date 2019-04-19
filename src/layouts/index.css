@@ -78,7 +78,7 @@ button {
   font-weight: 600 !important;
 }
 
-.bylaws .download-btn {
+.download-btn {
   vertical-align: middle;
   line-height: 30px;
 }
@@ -6830,7 +6830,7 @@ table#wp-calendar td#today{
     padding-left: 0;
     padding-right: 0;
   }
-  .bylaws .download-btn {
+  .download-btn {
     width: 100%;
   }
   .theme-container {
@@ -6915,6 +6915,9 @@ table#wp-calendar td#today{
   }
   .em_slider_inner {
     margin-top: 5vh;
+  }
+  .download-btn {
+    margin-top: 5px;
   }
 }
 
