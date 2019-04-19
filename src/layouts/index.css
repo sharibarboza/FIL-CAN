@@ -1315,7 +1315,7 @@ position: absolute;
     border-radius: 0;
     color: #fff;
     display: block;
-    letter-spacing: 2px;
+    font-size: 14px;
     padding: 13px 50px;
     margin: auto;
     margin-top: 25px;
@@ -2151,16 +2151,20 @@ nav.astute_menu.main-search-menu {
 a.dtbtn, a.red-on-white {
     border: none;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     background-color: #B51D29;
     border: 1px solid #B51D29;
     border-radius: 50px;
     color: #fff;
-    padding: 5px 15px;
+    padding: 10px 30px;
     font-family: 'Montserrat', sans-serif;
     transition: 1s;
+}
+.donate-btn-header .dtbtn {
+  padding: 5px 15px;
+  font-size: 12px;
 }
 a.dtbtn:hover {
     color: white;
