@@ -47,10 +47,6 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.scrollListener);
-  }
-
-  componentWillMount() {
     let mobile = false;
     if (window.innerWidth < 1200) {
       mobile = true;
@@ -59,6 +55,8 @@ class Header extends React.Component {
     this.setState({
       mobileWindow: mobile
     })
+
+    window.addEventListener('scroll', this.scrollListener);
   }
 
   componentWillUnmount() {
