@@ -66,6 +66,7 @@ collections:
     fields:
       - { label: Title of Report, name: title, widget: string }
       - { label: File, name: file, widget: file }
+      - { label: Current Date (Do not change), name: date, widget: date }
 
   - name: grid
     label: Grid Images
@@ -136,5 +137,6 @@ collections:
     folder: cms/files/minutes
     create: true
     fields:
-      - { label: Date of meeting, name: title, widget: date }
+      - { label: Title of Meeting Minutes (Must be unique), name: title, widget: string }
+      - { label: Date of Meeting, name: date, widget: date }
       - { label: File, name: file, widget: file }
