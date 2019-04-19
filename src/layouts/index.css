@@ -6995,7 +6995,7 @@ table#wp-calendar td#today{
   }
 }
 
-@media (min-width: 700px) and (max-width: 800px) {
+@media (min-width: 700px) and (max-width: 800px) and (min-height: 600px) {
   .countdown-col {
     padding: 15px 5px;
     width: 120px;
@@ -7004,13 +7004,5 @@ table#wp-calendar td#today{
   }
   .countdown-col-element strong {
     font-size: 2.5em;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 1200px) {
-  .countdown-col {
-    padding: 30px 20px 0 20px;
-    width: 160px;
-    height: 160px;
   }
 }
