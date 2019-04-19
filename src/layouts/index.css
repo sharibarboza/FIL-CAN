@@ -5450,14 +5450,6 @@ astute adn blog css
   .count_down_area, #meetings_area {
     height: auto;
   }
-  .countdown-col {
-    margin: 10px;
-    width: 140px;
-    height: 140px;
-  }
-  .countdown-col-element strong {
-    font-size: 30px;
-  }
   .camp-info-right {
     padding-right: 7%;
   }
@@ -6915,9 +6907,60 @@ table#wp-calendar td#today{
   }
   .em_slider_inner {
     margin-top: 5vh;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
   .download-btn {
     margin-top: 5px;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 500px) {
+  .main-slider-area, .carousel-image {
+    height: 90vh;
+  }
+}
+
+@media(min-width: 400px) and (max-width: 900px) and (max-height: 500px) {
+  .countdown-col {
+    padding: 15px 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  .countdown-col-element strong {
+    font-size: 1.5em;
+  }
+  .camp-meeting-area, .camp-meeting-area .carousel-image {
+    height: 100vh !important;
+  }
+  .camp-meeting-area .em_slider_inner {
+    margin-top: 30px !important;
+  }
+}
+
+@media (min-width: 800px) and (max-height: 500px) {
+  .main-slider-area, .carousel-image {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 600px) and (min-height: 500px) {
+  .countdown-col {
+    padding: 20px 5px;
+    width: 140px;
+    height: 140px;
+    margin: 10px;
+  }
+  .countdown-col-element strong {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .count_down_area .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
 
@@ -6941,9 +6984,30 @@ table#wp-calendar td#today{
   .main-slider-area {
     height: 60vh;
   }
+  .countdown-col {
+    padding: 20px 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  .countdown-col-element strong {
+    font-size: 1.5em;
+  }
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 700px) and (max-width: 800px) {
+  .countdown-col {
+    padding: 15px 5px;
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+  }
+  .countdown-col-element strong {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
   .countdown-col {
     padding: 30px 20px 0 20px;
     width: 160px;
