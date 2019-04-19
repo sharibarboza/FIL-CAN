@@ -65,6 +65,38 @@ class Header extends React.Component {
     });
   }
 
+  getBrand() {
+    let element;
+
+    if (this.state.scrollingLock || this.mobileWindow()) {
+      element = <span></span>;
+    } else {
+      element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventist Assocation of Alberta</span>;
+    }
+
+    return element;
+  }
+
+  getShortBrand() {
+    let element;
+
+    if (this.state.scrollingLock || this.mobileWindow()) {
+      element = <span className="short-brand">FilCan</span>;
+    } else {
+      element = <span></span>
+    }
+
+    return element;
+  }
+
+  mobileWindow() {
+    if (window.innerWidth < 1200) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   render() {
     const title = this.props.siteTitle;
 
@@ -72,53 +104,78 @@ class Header extends React.Component {
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
       		<div className={
-            this.state.scrollingLock || !this.state.collapsed ? 'nav_black' : 'nav_white'
+            this.state.scrollingLock || !this.state.collapsed || this.mobileWindow() ? 'nav_black' : 'nav_white'
           }>
       			<div className="container">
       				<Navbar className="row logo-left" dark>
 
-      					<div className="col-xs-6">
+      					<div className="col-xs-1">
       						<div className="logo">
       							<Link to="/" className="main_sticky_main_l" style={{
-                      color: this.state.scrollingLock || !this.state.collapsed ? 'white' : 'black'
+                      color: this.state.scrollingLock || !this.state.collapsed || this.mobileWindow() ? 'white' : 'black'
                     }}>
                       <img src={filcanLogo} alt={title} className={
                         this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
                       } />
-                      <span className="brand">FilCan</span>
+                      {this.getShortBrand()}
       							</Link>
       						</div>
       	  			</div>
 
-      					<div className="col-xs-6">
-      						<nav className="astute_menu main-search-menu">
-      							<ul className="sub-menu">
-      								<li><Link to="/">Home</Link></li>
-      								<li><Link to="/history/">About</Link>
-                        <ul className="sub-menu">
-                          <li><Link to="/history/">History</Link></li>
-                          <li><Link to="/leadership/">Leadership</Link></li>
-                          <li><Link to="/churches">Churches</Link></li>
-                          <li><Link to="/bylaws/">Bylaws</Link></li>
-                          <li><Link to="/meetings/">Executive Meetings</Link></li>
-                          <li><AnchorLink to="/meetings/#minutes">Meeting Minutes</AnchorLink></li>
-                          <li><Link to="/reports/">Annual Reports</Link></li>
-                        </ul>
-                      </li>
-      								<li><Link to="/campmeeting/">Campmeeting</Link>
-                        <ul className="sub-menu">
-                          <li><Link to="/campmeeting/">General Info</Link></li>
-                          <li><AnchorLink to="/campmeeting/#accommodations">Accommodations</AnchorLink></li>
-                          <li><AnchorLink to="/campmeeting/#souvenir">Souvenir Program</AnchorLink></li>
-                          <li><AnchorLink to="/campmeeting/#faq">FAQ</AnchorLink></li>
-                          <li><Link to="/resources/">Resources</Link></li>
-                        </ul>
-                      </li>
-      							</ul>
-      							<div className="donate-btn-header">
-      								<Link className="dtbtn" to="/contact/" style={{ marginLeft: '50px' }}>Contact Us</Link>
-      							</div>
-      						</nav>
+                <div className="col-xs-2" align="left">
+                  {this.getBrand()}
+                </div>
+
+      					<div className="col-xs-9" align="right" style={{ paddingLeft: '70px' }}>
+                  <div className="row" style={{
+                    float: this.state.scrollingLock ? 'right' : 'none',
+                    display: this.mobileWindow() ? 'none' : 'inline-flex',
+                    paddingTop: this.state.scrollingLock ? '12px' : '0',
+                    paddingBottom: '5px'
+                  }}>
+                    <i className="fa fa-facebook-square" style={{
+                      color: '#3C5A99',
+                      fontSize: '30px'
+                    }}></i>
+                    <div className="donate-btn-header">
+                      <Link className="dtbtn" to="/contact/" style={{ marginLeft: '10px' }}>Contact Us</Link>
+                    </div>
+                  </div>
+                  <div className="row" id={ this.state.scrollingLock ? 'small-nav' : 'large-nav' } style={{
+                    borderTop: this.state.scrollingLock || this.mobileWindow() ? 'none' : '1px solid #ddd',
+                    borderBottom: this.state.scrollingLock || this.mobileWindow() ? 'none' : '1px solid #ddd'
+                  }}>
+        						<nav className="astute_menu main-search-menu">
+        							<ul className="sub-menu">
+        								<li><Link to="/">Home</Link></li>
+        								<li><Link to="/history/">About</Link>
+                          <ul className="sub-menu">
+                            <li><Link to="/history/">History</Link></li>
+                            <li><Link to="/churches">Churches</Link></li>
+                            <li><Link to="/bylaws/">Bylaws</Link></li>
+                            <li><Link to="/reports/">Annual Reports</Link></li>
+                          </ul>
+                        </li>
+        								<li><Link to="/leadership/">Governance</Link>
+                          <ul className="sub-menu">
+                            <li><Link>Executive Board</Link></li>
+                            <li><Link>Committees</Link></li>
+                            <li><Link to="/meetings/">Executive Meetings</Link></li>
+                            <li><AnchorLink to="/meetings/#minutes">Meeting Minutes</AnchorLink></li>
+                          </ul>
+                        </li>
+        								<li><Link to="/campmeeting/">Campmeeting</Link>
+                          <ul className="sub-menu">
+                            <li><Link to="/campmeeting/">General Info</Link></li>
+                            <li><AnchorLink to="/campmeeting/#accommodations">Accommodations</AnchorLink></li>
+                            <li><AnchorLink to="/campmeeting/#souvenir">Souvenir Program</AnchorLink></li>
+                            <li><AnchorLink to="/campmeeting/#faq">FAQ</AnchorLink></li>
+                            <li><Link to="/resources/">Resources</Link></li>
+                          </ul>
+                        </li>
+        							</ul>
+        						</nav>
+                  </div>
 
                   <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
       					</div>
