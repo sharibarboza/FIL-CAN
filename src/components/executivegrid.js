@@ -21,7 +21,7 @@ class ExecutiveGrid extends React.Component {
         let node = this.executives[i].node;
         let officer = node.frontmatter;
 
-        let element = <div key={node.id} className={columnClass}><Executive executive={officer} /></div>;
+        let element = <div key={node.id} className={columnClass}><Executive executive={officer} columns={this.columns} /></div>;
         elements.push(element);
       }
     }
@@ -31,8 +31,6 @@ class ExecutiveGrid extends React.Component {
 
   setColumnClass() {
     const cols = {
-      1 : 'col-md-12 col-sm-12 col-xs-12',
-      2 : 'col-md-6 col-sm-6 col-xs-12',
       3 : 'col-md-4 col-sm-6 col-xs-12',
       4 : 'col-md-3 col-sm-6 col-xs-12'
     }

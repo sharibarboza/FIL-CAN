@@ -10,6 +10,23 @@ class Executive extends React.Component {
   constructor(props) {
     super(props);
     this.executive = props.executive;
+    this.columns = props.columns;
+  }
+
+  imageSize() {
+    const sizes = {
+      4 : 'em-content-image em-size-4',
+      3 : 'em-content-image em-size-3'
+    }
+
+    let classSize;
+    if (this.columns in sizes) {
+      classSize = sizes[this.columns];
+    } else {
+      classSize = sizes[4];
+    }
+
+    return classSize;
   }
 
   render() {
@@ -18,7 +35,7 @@ class Executive extends React.Component {
       <div className="em-team">
         <div className="em-team-one">
           <div className="em-team-content-image-inner">
-            <div className="em-content-image">
+            <div className={this.imageSize()}>
               <Img style={{
                 position: "absolute",
                 left: 0,

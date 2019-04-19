@@ -3617,6 +3617,7 @@ EM40 TEAM CSS
 	text-align:center;
 	position: relative;
 	transition:.5s;
+  margin-bottom: 40px;
 }
 .em-team1 {
 	text-align:center;
@@ -3645,7 +3646,7 @@ EM40 TEAM CSS
   background-color: #fff;
   bottom: -20px;
   left: 0;
-  margin: 0 9%;
+  margin: 0 9.5%;
   padding: 30px 0;
   position: absolute;
   right: 0;
@@ -3698,7 +3699,7 @@ EM40 TEAM CSS
 
 /* team content */
 .em-content-title h2 {
-  font-size: 18px;
+  font-size: 0.9em;
   font-weight: 500;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -3744,11 +3745,17 @@ EM40 TEAM CSS
     transition:.5s;
 }
 .em-content-image {
-    width: 18vw;
-    height: 18vw;
     position: relative;
     overflow:hidden;
     margin: 0 auto;
+}
+.em-size-4 {
+  width: 14vw;
+  height: 14vw;
+}
+.em-size-3 {
+  width: 18vw;
+  height: 18vw;
 }
 .speakers-image {
   width: 18vw;

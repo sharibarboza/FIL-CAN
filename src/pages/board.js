@@ -25,7 +25,14 @@ class BoardPage extends React.Component {
       vps = [];
     }
 
-    this.board = officers;
+    let advisers;
+    try {
+      advisers = props.data.advisers.edges;
+    } catch(e) {
+      advisers = [];
+    }
+
+    this.board = officers.concat(vps, advisers);
   }
 
   render() {
@@ -34,7 +41,9 @@ class BoardPage extends React.Component {
       <div>
         <Helmet title="Filcan | Board"/>
 
-        <ExecutiveGrid executives={this.board} columns={4} />
+        <div className="container" style={{ padding: '100px 0' }}>
+          <ExecutiveGrid executives={this.board} columns={4} />
+        </div>
       </div>
     )
   }
@@ -70,6 +79,35 @@ export const query = graphql`
       filter: {
         frontmatter: {
           type: { eq:"Board VP" }
+          name: { ne:null }
+        }
+      }
+      sort: {
+        fields: [frontmatter___name], order: ASC
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            position
+            type
+            photo {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    advisers: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          type: { eq:"Adviser" }
           name: { ne:null }
         }
       }
