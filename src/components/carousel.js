@@ -37,7 +37,7 @@ class Slider extends React.Component {
           <h1 className="em-slider-sub-title">Uniting Filipino-Canadians </h1>
         </div>
         <div className="wow slideInRight" data-wow-duration="3s" data-wow-delay="0s">
-          <p  className="em-slider-descript">Welcome to the Filipino-Canadian Seventh-Day Adventist Assocation of Alberta</p>
+          <p  className="em-slider-descript">Welcome to the Filipino-Canadian Seventh-Day Adventist Association of Alberta</p>
         </div>
         <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
           <Link to="/campmeeting/">Annual camp meeting</Link>

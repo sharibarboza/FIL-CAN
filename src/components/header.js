@@ -81,7 +81,7 @@ class Header extends React.Component {
     if (this.state.scrollingLock || this.state.mobileWindow) {
       element = <span></span>;
     } else {
-      element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventist Assocation of Alberta</span>;
+      element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventist Association of Alberta</span>;
     }
 
     return element;
@@ -128,7 +128,7 @@ class Header extends React.Component {
                   {this.getBrand()}
                 </div>
 
-      					<div className="col-xs-9" align="right" style={{ paddingLeft: '70px' }}>
+      					<div className="col-xs-9" align="right" style={{ paddingLeft: '60px' }}>
                   <div className="row" style={{
                     float: this.state.scrollingLock ? 'right' : 'none',
                     display: this.state.mobileWindow ? 'none' : 'inline-flex',
