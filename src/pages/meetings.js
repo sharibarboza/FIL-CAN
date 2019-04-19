@@ -28,7 +28,11 @@ class MeetingsPage extends React.Component {
     this.headerImage = props.data.headerImage;
     this.months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-    this.minutes = props.data.minutes.edges;
+    try {
+      this.minutes = props.data.minutes.edges;
+    } catch(e) {
+      this.minutes = null;
+    }
   }
 
   componentDidMount() {
