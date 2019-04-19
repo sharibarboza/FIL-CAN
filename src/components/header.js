@@ -135,10 +135,10 @@ class Header extends React.Component {
                     paddingTop: this.state.scrollingLock ? '12px' : '0',
                     paddingBottom: '5px'
                   }}>
-                    <i className="fa fa-facebook-square" style={{
+                    <a href="https://www.facebook.com/groups/filcamp/" target="_blank"><i className="fa fa-facebook-square" style={{
                       color: '#3C5A99',
                       fontSize: '30px'
-                    }}></i>
+                    }}></i></a>
                     <div className="donate-btn-header">
                       <Link className="dtbtn" to="/contact/" style={{ marginLeft: '10px' }}>Contact Us</Link>
                     </div>
