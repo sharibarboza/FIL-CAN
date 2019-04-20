@@ -158,10 +158,10 @@ class Header extends React.Component {
                             <li><Link to="/reports/">Annual Reports</Link></li>
                           </ul>
                         </li>
-        								<li><Link to="/leadership/">Governance</Link>
+        								<li><Link to="/leadership/">Leadership</Link>
                           <ul className="sub-menu">
                             <li><Link to="/board/">Executive Board</Link></li>
-                            <li><Link>Committees</Link></li>
+                            <li><Link to="/committees/">Committees</Link></li>
                             <li><Link to="/meetings/">Executive Meetings</Link></li>
                             <li><AnchorLink to="/meetings/#minutes">Meeting Minutes</AnchorLink></li>
                           </ul>

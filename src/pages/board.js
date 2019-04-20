@@ -83,7 +83,7 @@ export const query = graphql`
         }
       }
       sort: {
-        fields: [frontmatter___name], order: ASC
+        fields: [frontmatter___position], order: ASC
       }
     ) {
       edges {
