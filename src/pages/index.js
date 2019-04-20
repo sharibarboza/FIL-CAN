@@ -103,6 +103,9 @@ export const query = graphql`
     }
     officers: allMarkdownRemark(
       filter: { frontmatter: { type: { eq:"Officer" } } }
+      sort: {
+        fields: [frontmatter___position], order: ASC
+      }
     ) {
       edges {
         node {
