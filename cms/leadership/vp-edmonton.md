@@ -1,7 +1,8 @@
 ---
 title: VP-Edmonton
 position: VP-Edmonton
-name: Jocelyn Adante
-photo: /assets/default.jpg
+name: 'Rey Biton, Jr.'
+photo: /assets/vice-president-edmonton.jpg
 type: Board VP
 ---
+
