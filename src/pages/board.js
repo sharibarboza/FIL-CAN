@@ -55,7 +55,12 @@ export default BoardPage
 export const query = graphql`
   query BoardPageQuery {
     officers: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq:"Officer" } } }
+      filter: {
+        frontmatter: { type: { eq:"Officer" } }
+      }
+      sort: {
+        fields: [frontmatter___position], order: ASC
+      }
     ) {
       edges {
         node {

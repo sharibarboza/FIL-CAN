@@ -71,7 +71,7 @@ class IndexPage extends React.Component {
     				<div className="col-md-12">
     					<div className="section-title t_center">
                 <div className="donate-btn-header">
-                  <Link to="/leadership/" className="red-on-white" href="#">View Executive Board</Link>
+                  <Link to="/board/" className="red-on-white" href="#">View Executive Board</Link>
                 </div>
     					</div>
     				</div>
