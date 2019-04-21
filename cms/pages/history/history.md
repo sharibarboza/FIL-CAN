@@ -6,6 +6,7 @@ content: >
   started way back when Edmonton Central SDA Church started celebrating
   Independence Day under the encouragement of Pastor John Wesley.
 
+
   <br>
 
 
