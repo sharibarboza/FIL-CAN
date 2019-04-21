@@ -23,7 +23,7 @@ class AboutPage extends React.Component {
       					</div>
                 <br/>
       					<div className="about_text">
-                  <p>{history.body}</p>
+                  <p>{history.content}</p>
       					</div>
       				</div>
       				<div className="col-md-6 col-sm-6 col-xs-12">
