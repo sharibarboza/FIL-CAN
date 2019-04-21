@@ -7,9 +7,6 @@ content: >
   Independence Day under the encouragement of Pastor John Wesley.
 
 
-  <br>
-
-
   In early 2002, this became a reality when Pastor Romulo Daquila accepted a
   call to become the Executive Secretary of the Alberta Conference. At that time
   there was no organized Filipino SDA congregation. He called a meeting in
