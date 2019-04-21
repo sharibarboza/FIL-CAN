@@ -1,7 +1,7 @@
 ---
 title: VP-Lethbridge
 position: VP-Lethbridge
-name: John Lacanilao
+name: Franz Chavez
 photo: /assets/franz-chavez-vice-president-lethbridge.jpg
 type: Board VP
 ---
