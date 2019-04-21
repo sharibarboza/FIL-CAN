@@ -1,7 +1,8 @@
 ---
 title: Youth Edmonton
 position: VP-Edmonton
-name: Marc Brillon
-photo: /assets/default.jpg
+name: Moira Importante
+photo: /assets/moira-importne-vice-president-edmonton-filcanaya.jpg
 type: Youth
 ---
+
