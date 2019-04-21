@@ -1,7 +1,8 @@
 ---
 title: Youth Secretary
 position: Secretary
-name: Chillnee Dominguez
-photo: /assets/default.jpg
+name: Marjorie Paraiso
+photo: /assets/marjorie.jpg
 type: Youth
 ---
+
