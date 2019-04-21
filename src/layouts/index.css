@@ -100,6 +100,10 @@ button {
   z-index: 0;
 }
 
+.banner_area .overlay {
+  background-color: rgba(0, 0, 0, .3);
+}
+
 .slider-control-centerleft, .slider-control-centerright, .slider-control-bottomcenter {
   z-index: 100 !important;
 }
@@ -178,7 +182,7 @@ span[id^="article"] {
 }
 
 .banner-text {
-  padding: 90px 0;
+  padding: 120px 0;
 }
 
 .no-left-pad {
@@ -1374,15 +1378,13 @@ position: absolute;
 .breatcome_content ul li {
 	list-style: none;
 	color: white;
-	font-size: 20px;
-	font-weight: 600;
+	font-size: 17px;
+	font-weight: 500;
 	text-transform: capitalize;
 }
 .breatcome_content ul li a {
 	color: #fff;
 	text-transform: capitalize;
-	font-size: 15px;
-	font-weight: 500;
 	margin-right: 5px;
 }
 .breatcome_content ul li a i {
@@ -7027,6 +7029,12 @@ table#wp-calendar td#today{
   }
   .logo img {
     width: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner_area {
+    height: 220px !important;
   }
 }
 

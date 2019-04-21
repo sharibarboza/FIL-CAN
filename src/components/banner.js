@@ -2,14 +2,34 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
 
-import banner from '../images/banner.jpg';
-
 class Banner extends React.Component {
+
+  getParent() {
+    let about = ['history', 'churches', 'bylaws', 'reports'];
+    let leadership = ['board', 'committees', 'meetings'];
+    let camp = ['resources'];
+
+    let path = this.props.path;
+    let parent;
+
+    if (about.indexOf(path) >= 0) {
+      parent = 'about';
+    } else if (leadership.indexOf(path) >= 0) {
+      parent = 'leadership';
+    } else if (camp.indexOf(path) >= 0) {
+      parent = 'campmeeting';
+    } else {
+      parent = 'home';
+    }
+
+    return parent;
+  }
+
   render() {
 
     return (
       <div className="count_down_area banner_area" style={{
-        height: '200px'
+        height: '250px'
       }}>
         <Img
           className="breatcome_area"
@@ -18,7 +38,7 @@ class Banner extends React.Component {
             left: 0,
             top: 0,
             width: "100%",
-            height: "100%"
+            height: "100%",
           }}
           sizes={this.props.bgImage.sizes}
         />
@@ -29,7 +49,7 @@ class Banner extends React.Component {
               <div className="breatcome_title_inner">
                 <div className="breatcome_content">
                   <ul>
-                    <li>{this.props.path}</li>
+                    <li>{this.getParent()} <i className="fa fa-angle-right"></i> <span style={{ color: '#FF1F31' }}>{this.props.path}</span></li>
                   </ul>
 
                 </div>
