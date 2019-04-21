@@ -51,7 +51,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            body
+            content
             photo {
               childImageSharp {
                 sizes {

@@ -1,7 +1,7 @@
 ---
 title: History
 photo: /assets/cross.jpg
-body: >-
+content: >
   The formation of the Filipino-Canadian Seventh-Day Adventists of Alberta
   started way back when Edmonton Central SDA Church started celebrating
   Independence Day under the encouragement of Pastor John Wesley.

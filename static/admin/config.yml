@@ -48,7 +48,7 @@ collections:
         fields:
           - { label: Title of Page, name: title, widget: string }
           - { label: Photo, name: photo, widget: image }
-          - { label: Text Content, name: body, widget: markdown }
+          - { label: Text Content, name: content, widget: markdown }
 
   - name: bylaws
     label: Bylaws
