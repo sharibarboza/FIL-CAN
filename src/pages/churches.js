@@ -64,7 +64,7 @@ class ChurchesPage extends React.Component {
       let key = node.id;
       let anchor = '#' + church.title;
 
-      let element = <div className="col-md-4 col-xs-12 col-sm-6" key={key}>
+      let element = <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" key={key}>
         <div className="single_event_adn kc-elm kc-css-73682">
           <div className="astute-single-event_adn">
 
@@ -88,7 +88,7 @@ class ChurchesPage extends React.Component {
 
               <div className="event-page-title_adn ">
                 <h2><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>{this.truncateTitle(church.title)}</Scrollchor></h2>
-                <div style={{ paddingTop: '10px' }}>
+                <div style={{ marginTop: '30px' }}>
                   <div className="astute-event-meta-left_adn">
                     <span><i className="fa fa-map-marker"></i>{church.city}</span>
                   </div>

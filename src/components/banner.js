@@ -8,7 +8,7 @@ class Banner extends React.Component {
   render() {
 
     return (
-      <div className="count_down_area" style={{
+      <div className="count_down_area banner_area" style={{
         height: '200px'
       }}>
         <Img
