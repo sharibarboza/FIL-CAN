@@ -1,7 +1,8 @@
 ---
 title: Youth Red Deer
 position: VP-Red Deer
-name: Hersea Napod
-photo: /assets/default.jpg
+name: Shae Caponpon
+photo: /assets/shae-caponpon.jpg
 type: Youth
 ---
+
