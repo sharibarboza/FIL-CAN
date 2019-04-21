@@ -1,21 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { compose, withProps } from 'recompose'
 import Geocode from "react-geocode"
 
 class MapPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: []
+      location: {
+        'lat': 0,
+        'lng': 0
+      }
     };
     this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&libraries=geometry,drawing,places";
-    Geocode.setApiKey("AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk");
-    this.getGeocode();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return false;
+  }
+
+  componentDidMount() {
+    Geocode.setApiKey("AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk");
+    this.getGeocode()
   }
 
   getGeocode() {
@@ -50,7 +57,7 @@ class MapPanel extends React.Component {
         defaultZoom={13}
         defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
       >
-        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng:this.state.location.lng }} />}
+        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng: this.state.location.lng }} />}
       </GoogleMap>
     ));
 
@@ -66,12 +73,11 @@ class MapPanel extends React.Component {
             </div>
             <div className="col-md-6">
               <MyMapComponent
-                isMarkerShown
-                googleMapURL={this.mapKey}
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `200px` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-              />
+              isMarkerShown
+              googleMapURL={this.mapKey}
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `200px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}/>
             </div>
           </div>
         </div>

@@ -34,6 +34,7 @@
     "react-scroll-up-button": "^1.6.4",
     "react-scrollchor": "^6.0.0",
     "reactstrap": "^6.4.0",
+    "recompose": "^0.30.0",
     "remark": "^10.0.1",
     "remark-html": "^9.0.0",
     "remark-preset-lint-recommended": "^3.0.2",
