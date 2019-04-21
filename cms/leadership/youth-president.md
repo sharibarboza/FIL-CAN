@@ -1,7 +1,8 @@
 ---
 title: Youth President
 position: President
-name: Lady Dianne Bondoc
-photo: /assets/default.jpg
+name: Jun Jun Piedad
+photo: /assets/jun-jun-piedad.jpg
 type: Youth
 ---
+
