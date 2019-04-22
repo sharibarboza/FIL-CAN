@@ -1,7 +1,8 @@
 ---
 title: VP-Calgary Parkdale
 position: VP-Calgary Parkdale
-name: Lady Dianne Bondoc
-photo: /assets/default.jpg
+name: Katrin Masicampo
+photo: /assets/katrin-masicampo-vp-parkdale.jpg
 type: Board VP
 ---
+
