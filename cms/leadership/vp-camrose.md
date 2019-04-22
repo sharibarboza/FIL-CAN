@@ -1,7 +1,8 @@
 ---
-title: VP-Camrose
+title: VP-Wetaskiwin/Camrose
 position: VP-Camrose/Wetaskiwin
-name: Jib Labinghisa
-photo: /assets/default.jpg
+name: Elizer Noay
+photo: /assets/elizer-noay-vp-wetaskiwin-camrose.jpeg
 type: Board VP
 ---
+
