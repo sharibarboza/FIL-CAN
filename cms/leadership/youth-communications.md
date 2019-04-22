@@ -1,7 +1,8 @@
 ---
 title: Youth Communications
 position: Communications
-name: Jib Labinghisa
-photo: /assets/default.jpg
+name: Jan Garciano
+photo: /assets/jan-garciano.jpg
 type: Youth
 ---
+
