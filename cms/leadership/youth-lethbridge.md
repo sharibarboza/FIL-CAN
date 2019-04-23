@@ -1,7 +1,8 @@
 ---
 title: Youth Lethbridge
 position: VP-Lethbridge
-name: Franz Chavez
-photo: /assets/default.jpg
+name: Sofia Chavez
+photo: /assets/sofia-chavez.jpg
 type: Youth
 ---
+
