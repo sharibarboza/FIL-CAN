@@ -52,7 +52,7 @@ class ResourcesPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Filcan | Resources"/>
+        <Helmet title="FilCan | Resources"/>
 
         <div className="about_area3">
           <div className="container">

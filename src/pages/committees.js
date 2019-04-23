@@ -49,7 +49,7 @@ class CommitteesPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | Board"/>
+        <Helmet title="FilCan | Committees"/>
 
         <div className="container" style={{ padding: '100px 0' }}>
           <div className="row">

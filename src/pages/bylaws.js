@@ -40,7 +40,7 @@ class BylawsPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Filcan | Bylaws"/>
+        <Helmet title="FilCan | Bylaws"/>
 
         <div className="about_area3">
           <div className="container" id="bylaws">

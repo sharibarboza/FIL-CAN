@@ -167,7 +167,7 @@ class IndexPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | Campmeeting"/>
+        <Helmet title="FilCan | Campmeeting"/>
 
         <div className="main-slider-area camp-meeting-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />

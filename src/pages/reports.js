@@ -30,7 +30,7 @@ class ReportsPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Filcan | Reports"/>
+        <Helmet title="FilCan | Reports"/>
 
         <div className="about_area3">
           <div className="container">

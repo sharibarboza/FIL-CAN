@@ -39,7 +39,7 @@ class BoardPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | Board"/>
+        <Helmet title="FilCan | Board"/>
 
         <div className="container" style={{ padding: '100px 0' }}>
           <ExecutiveGrid executives={this.board} columns={4} />

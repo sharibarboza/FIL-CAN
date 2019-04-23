@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | Home" />
+        <Helmet title="FilCan | Home" />
 
         <Slider images={headerImages} />
         <Features images={featureImages} />

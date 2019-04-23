@@ -12,7 +12,7 @@ class ContactPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | Contact Us"/>
+        <Helmet title="FilCan | Contact Us"/>
 
         <Contact phone={contact.phone} email={contact.title} />
       </div>

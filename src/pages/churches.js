@@ -110,7 +110,7 @@ class ChurchesPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Filcan | Churches"/>
+        <Helmet title="FilCan | Churches"/>
 
         <div className="event_area">
       		<div className="container">

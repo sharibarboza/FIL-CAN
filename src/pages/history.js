@@ -11,7 +11,7 @@ class AboutPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Filcan | History"/>
+        <Helmet title="FilCan | History"/>
 
         <div className="about_area3">
       		<div className="container">
