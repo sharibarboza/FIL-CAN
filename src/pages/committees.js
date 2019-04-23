@@ -25,7 +25,7 @@ class CommitteesPage extends React.Component {
     } catch(e) {
       youth = [];
     }
-
+    console.log(youth);
     for (let i = 0; i < youth.length; i++) {
       let position = youth[i].node.frontmatter.position.toLowerCase();
       let node = youth[i];
