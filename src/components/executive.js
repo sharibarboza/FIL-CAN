@@ -6,6 +6,8 @@ import 'font-awesome/css/font-awesome.css';
 
 import Divider from './divider';
 
+import defaultPhoto from '../../static/assets/default.jpg';
+
 class Executive extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +31,23 @@ class Executive extends React.Component {
     return classSize;
   }
 
+  getImage() {
+    let element;
+    try {
+      element = <Img style={{
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%"
+      }} sizes={this.executive.photo.childImageSharp.sizes} alt="" />;
+    } catch(e) {
+      element = <img src={defaultPhoto} />
+    }
+
+    return element;
+  }
+
   render() {
 
     return (
@@ -36,13 +55,7 @@ class Executive extends React.Component {
         <div className="em-team-one">
           <div className="em-team-content-image-inner">
             <div className={this.imageSize()}>
-              <Img style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                width: "100%",
-                height: "100%"
-              }} sizes={this.executive.photo.childImageSharp.sizes} alt="" />
+              {this.getImage()}
             </div>
           </div>
           <div className="em-team-content-waraper" id="president-wrapper">
