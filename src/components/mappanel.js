@@ -27,7 +27,15 @@ class MapPanel extends React.Component {
       } else {
         this.getGeocode();
       }
-    }, 2000);
+    }, 1000);
+  }
+
+  componentWillMount() {
+    this.stop();
+  }
+
+  componentWillUnmount() {
+    this.stop();
   }
 
   stop() {
@@ -54,7 +62,13 @@ class MapPanel extends React.Component {
           </GoogleMap>
         ));
 
-        const component = <MyMapComponent isMarkerShown googleMapURL={this.mapKey} loadingElement={<div style={{ height: `100%` }} />} containerElement={<div style={{ height: `200px` }} />} mapElement={<div style={{ height: `100%` }} />}/>;
+        const component = <MyMapComponent
+          isMarkerShown
+          googleMapURL={this.mapKey}
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `200px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />;
 
         self.setState({
           lat: lat,
@@ -70,8 +84,6 @@ class MapPanel extends React.Component {
   }
 
   render() {
-    const map = this.state;
-
     return (
       <div className="blog-left-side church-panel">
         <div className="widget widget_categories" style={{
