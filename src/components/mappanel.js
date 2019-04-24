@@ -4,25 +4,34 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 import { compose, withProps } from 'recompose'
 import Geocode from "react-geocode"
 
+import loader from '../images/loading.gif';
+
 class MapPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: {
-        'lat': 0,
-        'lng': 0
-      }
+      lat: 0,
+      lng: 0,
+      component: <div className="map-loader"><img src={loader} /></div>,
+      loaded: false
     };
     this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&libraries=geometry,drawing,places";
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return false;
-  }
-
   componentDidMount() {
     Geocode.setApiKey("AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk");
-    this.getGeocode()
+
+    this.interval = setInterval(() => {
+      if (this.state.loaded) {
+        this.stop();
+      } else {
+        this.getGeocode();
+      }
+    }, 2000);
+  }
+
+  stop() {
+    clearInterval(this.interval);
   }
 
   getGeocode() {
@@ -35,13 +44,23 @@ class MapPanel extends React.Component {
     Geocode.fromAddress(this.props.address).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
-        let res = {
-          'lat': lat,
-          'lng': lng
-        }
+
+        const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+          <GoogleMap
+            defaultZoom={13}
+            defaultCenter={{ lat: this.state.lat, lng: this.state.lng }}
+          >
+            {props.isMarkerShown && <Marker position={{ lat: this.state.lat, lng: this.state.lng }} />}
+          </GoogleMap>
+        ));
+
+        const component = <MyMapComponent isMarkerShown googleMapURL={this.mapKey} loadingElement={<div style={{ height: `100%` }} />} containerElement={<div style={{ height: `200px` }} />} mapElement={<div style={{ height: `100%` }} />}/>;
 
         self.setState({
-          location: res
+          lat: lat,
+          lng: lng,
+          component: component,
+          loaded: true
         });
       },
       error => {
@@ -51,15 +70,7 @@ class MapPanel extends React.Component {
   }
 
   render() {
-
-    const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-      <GoogleMap
-        defaultZoom={13}
-        defaultCenter={{ lat: this.state.location.lat, lng: this.state.location.lng }}
-      >
-        {props.isMarkerShown && <Marker position={{ lat: this.state.location.lat, lng: this.state.location.lng }} />}
-      </GoogleMap>
-    ));
+    const map = this.state;
 
     return (
       <div className="blog-left-side church-panel">
@@ -72,12 +83,7 @@ class MapPanel extends React.Component {
               {this.props.body}
             </div>
             <div className="col-md-6">
-              <MyMapComponent
-              isMarkerShown
-              googleMapURL={this.mapKey}
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `200px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}/>
+              {this.state.component}
             </div>
           </div>
         </div>

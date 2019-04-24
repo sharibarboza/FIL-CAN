@@ -234,6 +234,10 @@ span[id^="article"] {
   font-size: 13px;
 }
 
+.map-loader {
+  text-align: center;
+}
+
 /*=====================
 astute HEADING TOP AREA CSS
 =========================*/

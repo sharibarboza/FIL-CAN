@@ -12,10 +12,11 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      years: 0,
       days: 0,
       hours: 0,
-      minutes: 0,
-      seconds: 0
+      min: 0,
+      sec: 0
     }
   }
 
