@@ -1,8 +1,8 @@
 ---
 title: Sports
 position: Sports
-name: Marc Brillon
-photo: /assets/default.jpg
+name: 'Rey Biton, Jr.'
+photo: /assets/vice-president-edmonton.jpg
 type: Chair
 ---
 
