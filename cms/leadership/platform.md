@@ -2,7 +2,7 @@
 title: Platform
 position: Platform Coordinator
 name: Helina Perez
-photo: /assets/default.jpg
+photo: /assets/executive.jpg
 type: Chair
 ---
 
