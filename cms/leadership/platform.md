@@ -1,7 +1,8 @@
 ---
 title: Platform
 position: Platform Coordinator
-name: Rodney Caponpon
+name: Helina Perez
 photo: /assets/default.jpg
 type: Chair
 ---
+
