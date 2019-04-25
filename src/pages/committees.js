@@ -51,7 +51,7 @@ class CommitteesPage extends React.Component {
       <div>
         <Helmet title="FilCan | Committees"/>
 
-        <div className="container" style={{ padding: '100px 0' }}>
+        <div className="container page-content" style={{ padding: '100px 0' }}>
           <div className="row">
             <div className="col-md-12">
               <div className="section-title t_center">

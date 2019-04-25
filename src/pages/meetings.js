@@ -146,7 +146,7 @@ class MeetingsPage extends React.Component {
         let date = new Date(meeting.title);
         let month = this.months[date.getMonth()];
 
-        let body = <div className="row"><div className="col-md-3 no-left-pad"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-md-9 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
+        let body = <div className="row"><div className="col-md-3 col-sm-12 no-left-pad calendar-col"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-md-9 col-sm-12 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
 
         let element = <div id={i} key={node.id}><MapPanel
           heading={datetime}
@@ -228,7 +228,7 @@ class MeetingsPage extends React.Component {
         </div>
       </div>
     </div>
-    <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
+    <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="1s" data-wow-delay="0s">
       <Scrollchor to="#0" animate={{offset: -150, duration: 300}}>see details</Scrollchor>
     </div>
     </div>
@@ -265,7 +265,7 @@ class MeetingsPage extends React.Component {
           </div>
         </div>
 
-        <div className="container" style={{
+        <div className="container page-content" style={{
           padding: '100px 15px'
         }}>
 
@@ -284,7 +284,7 @@ class MeetingsPage extends React.Component {
           <br />
 
           <div id="minutes" class="anchor-pad"></div>
-          <div className="row" style={{ paddingTop: '50px' }}>
+          <div className="row minutes-title" style={{ paddingTop: '50px' }}>
             <div className="col-md-12">
               <div className="section-title t_center">
 

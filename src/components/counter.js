@@ -119,7 +119,7 @@ class Counter extends React.Component {
     						<h2>The Annual Filipino-Canadian Camp Meeting</h2>
 
   							<Divider white={true} />
-  							<p className="text-alignm1">Join us at Foothills Camp on {this.getDateString()} - {this.getLastDate()}  </p>
+  							<p className="text-alignm1">{this.getDateString()} - {this.getLastDate()}</p>
     					</div>
     				</div>
     			</div>

@@ -4735,7 +4735,7 @@ astute TESTIMONIAL AREA CSS
     position: relative;
 }
 #meetings_area .main-slider-area, #meetings_area .carousel-image {
-  height: 450px;
+  height: 500px;
 }
 .nivo-caption {
     background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
@@ -6810,6 +6810,15 @@ table#wp-calendar td#today{
   .event_area {
     padding: 50px 0;
   }
+  .default-logo {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .banner-container {
+    padding-top: 100px !important;
+  }
 }
 
 @media (max-height: 800px) {
@@ -6924,9 +6933,6 @@ table#wp-calendar td#today{
   .main-slider-area, .carousel-image {
     height: 80vh;
   }
-  #meetings_area .main-slider-area, #meetings_area .carousel-image {
-    height: 90vh !important;
-  }
   .text-alignm1 {
     font-size: 0.9em;
   }
@@ -6938,6 +6944,9 @@ table#wp-calendar td#today{
   }
   .banner-text {
     padding: 120px 0;
+  }
+  .calendar-col {
+    display: none;
   }
 }
 
@@ -6964,10 +6973,34 @@ table#wp-calendar td#today{
   .download-btn {
     margin-top: 5px;
   }
+  .page-content {
+    padding: 50px 15px !important;
+  }
+  .feature_area, .service_area, .team_area, .about_area3 {
+    padding: 50px 0 !important;
+  }
 }
 
 @media (max-width: 600px) and (min-width: 500px) {
   .main-slider-area, .carousel-image {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 1000px) {
+  #meetings_area .carousel-image, #meetings_area .main-slider-area {
+    height: 70vh;
+  }
+  #meeting-timer .countdown {
+    padding-bottom: 5px;
+  }
+  #meetings_area .em-slider-title {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 700px) {
+  #meetings_area .carousel-image, #meetings_area .main-slider-area {
     height: 90vh;
   }
 }
@@ -6979,8 +7012,20 @@ table#wp-calendar td#today{
     height: 100px;
     margin: 10px;
   }
+  #meeting-timer .countdown-col {
+    margin: 10px;
+    padding: 15px 5px;
+    width: 90px;
+    height: 90px;
+  }
   .countdown-col-element strong {
     font-size: 1.5em;
+  }
+  #meeting-timer .countdown-col-element strong {
+    font-size: 1.4em;
+  }
+  #meeting-timer .countdown {
+    padding-bottom: 20px;
   }
   .camp-meeting-area, .camp-meeting-area .carousel-image {
     height: 100vh !important;
@@ -7006,6 +7051,15 @@ table#wp-calendar td#today{
   .banner_area {
     height: 100px !important;
   }
+  .page-content, .about_area3 {
+    padding: 50px 15px !important;
+  }
+  .download-btn {
+    font-size: 0.7em !important;
+  }
+  #meetings_area .carousel-image, #meetings_area .main-slider-area {
+    height: 85vh;
+  }
 }
 
 @media (min-width: 800px) and (max-height: 500px) {
@@ -7026,6 +7080,18 @@ table#wp-calendar td#today{
   }
 }
 
+@media (max-height: 350px) {
+  #meeting-timer .countdown {
+    padding-bottom: 5px !important;
+  }
+  #meetings_area .em-slider-title {
+    margin-bottom: 5px !important;
+  }
+  #meetings_area .em_slider_inner {
+    margin-top: 0 !important;
+  }
+}
+
 @media (max-width: 600px) {
   .count_down_area .container {
     padding-left: 10px !important;
@@ -7039,6 +7105,12 @@ table#wp-calendar td#today{
 @media (max-width: 500px) {
   .banner_area {
     height: 220px !important;
+  }
+  .download-btn {
+    font-size: 0.9em !important;
+  }
+  .minutes-title {
+    padding-top: 20px !important;
   }
 }
 
@@ -7071,6 +7143,15 @@ table#wp-calendar td#today{
   .countdown-col-element strong {
     font-size: 1.5em;
   }
+  #meeting-timer .countdown-col {
+    margin: 10px;
+    padding: 15px 5px;
+    width: 100px;
+    height: 100px;
+  }
+  #meeting-timer .countdown-col-element strong {
+    font-size: 1.6em;
+  }
 }
 
 @media (min-width: 700px) and (max-width: 800px) and (min-height: 600px) {
@@ -7082,5 +7163,8 @@ table#wp-calendar td#today{
   }
   .countdown-col-element strong {
     font-size: 2.5em;
+  }
+  #meetings_area .carousel-image, #meetings_area .main-slider-area {
+    height: 55vh;
   }
 }

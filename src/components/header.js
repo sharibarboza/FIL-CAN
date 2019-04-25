@@ -150,7 +150,7 @@ class Header extends React.Component {
         						<nav className="astute_menu main-search-menu">
         							<ul className="sub-menu">
         								<li><Link to="/">Home</Link></li>
-        								<li><Link to="/history/">About</Link>
+        								<li><Link>About</Link>
                           <ul className="sub-menu">
                             <li><Link to="/history/">History</Link></li>
                             <li><Link to="/churches">Churches</Link></li>
@@ -158,7 +158,7 @@ class Header extends React.Component {
                             <li><Link to="/reports/">Annual Reports</Link></li>
                           </ul>
                         </li>
-        								<li><Link to="/leadership/">Leadership</Link>
+        								<li><Link>Leadership</Link>
                           <ul className="sub-menu">
                             <li><Link to="/board/">Executive Board</Link></li>
                             <li><Link to="/committees/">Committees</Link></li>
@@ -196,6 +196,7 @@ class Header extends React.Component {
                       <Collapse isOpen={this.isOpen('about')} className="collapse-menu">
                         <Link onClick={this.closeNav} to="/history/"><span style={{ display:'block' }} className="sub-nav-item" key="history">HISTORY</span></Link>
                         <Link onClick={this.closeNav} to="/board/"><span style={{ display:'block' }} className="sub-nav-item" key="leadership">EXECUTIVE BOARD</span></Link>
+                        <Link onClick={this.closeNav} to="/committees/"><span style={{ display:'block' }} className="sub-nav-item" key="committees">COMMITTEES</span></Link>
                         <Link onClick={this.closeNav} to="/churches/"><span style={{ display:'block' }} className="sub-nav-item" key="churches">CHURCHES</span></Link>
                         <Link onClick={this.closeNav} to="/bylaws/"><span style={{ display:'block' }} className="sub-nav-item" key="bylaws">BYLAWS</span></Link>
                         <Link onClick={this.closeNav} to="/meetings/"><span style={{ display:'block' }} className="sub-nav-item" key="meetings">EXECUTIVE MEETINGS</span></Link>

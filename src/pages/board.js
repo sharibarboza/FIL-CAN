@@ -41,7 +41,7 @@ class BoardPage extends React.Component {
       <div>
         <Helmet title="FilCan | Board"/>
 
-        <div className="container" style={{ padding: '100px 0' }}>
+        <div className="container page-content" style={{ padding: '100px 0' }}>
           <ExecutiveGrid executives={this.board} columns={4} />
         </div>
       </div>
