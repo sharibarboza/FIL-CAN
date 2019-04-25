@@ -1,7 +1,8 @@
 ---
-title: Video
-position: Video/Photography
-name: Joel Mabilog
-photo: /assets/default.jpg
+title: Audio Visual
+position: Audio Visual
+name: Nehemiah Bautista
+photo: /assets/img_9083.jpg
 type: Chair
 ---
+
