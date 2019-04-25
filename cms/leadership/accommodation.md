@@ -2,7 +2,7 @@
 title: Accommodation
 position: Accommodation & Reception
 name: Ben Barboza
-photo: /assets/default.jpg
+photo: /assets/ben-barboza.png
 type: Chair
 ---
 
