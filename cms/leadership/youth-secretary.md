@@ -2,7 +2,7 @@
 title: Youth Secretary
 position: Secretary
 name: Marjorie Paraiso
-photo: /assets/marjorie.jpg
+photo: /assets/marjorie-1.jpg
 type: Youth
 ---
 
