@@ -1,8 +1,8 @@
 ---
 title: Decoration
 position: Decoration
-name: FILCANAYA
-photo: /assets/jun-jun-piedad.jpg
+name: Jun-Jun Piedad (FILCANAYA)
+photo: /assets/jun.jpg
 type: Chair
 ---
 
