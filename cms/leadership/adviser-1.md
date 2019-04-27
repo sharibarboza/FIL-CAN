@@ -2,6 +2,7 @@
 title: Adviser 1
 position: Adviser
 name: Pastor Romulo Daquila
-photo: /assets/default.jpg
+photo: /assets/romula-daquila.jpg
 type: Adviser
 ---
+
