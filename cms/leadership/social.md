@@ -1,8 +1,8 @@
 ---
 title: Social
 position: Social/Cultural
-name: Japhet Cordero
-photo: /assets/default.jpg
+name: Pastor Romulo Daquila
+photo: /assets/romula-daquila.jpg
 type: Chair
 ---
 
