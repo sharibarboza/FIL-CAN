@@ -90,7 +90,7 @@ export const query = graphql`
       }
     }
     bannerImage: imageSharp(id: { regex: "/aurora/" }) {
-      sizes(maxWidth: 1240) {
+      sizes {
         ...GatsbyImageSharpSizes
       }
     }
