@@ -3761,8 +3761,8 @@ EM40 TEAM CSS
   height: 230px;
 }
 .em-size-3 {
-  width: 18vw;
-  height: 18vw;
+  width: 320px;
+  height: 320px;
 }
 .speakers-image {
   width: 18vw;
@@ -6815,7 +6815,13 @@ table#wp-calendar td#today{
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
+  .banner-container {
+    padding-top: 100px !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
   .banner-container {
     padding-top: 100px !important;
   }
