@@ -2,7 +2,7 @@
 title: FILCANAYA
 position: FILCANAYA
 name: Jun-Jun Piedad
-photo: /assets/jun-jun-piedad.jpg
+photo: /assets/jun.jpg
 type: Chair
 ---
 
