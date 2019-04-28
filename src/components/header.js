@@ -81,7 +81,7 @@ class Header extends React.Component {
     if (this.state.scrollingLock || this.state.mobileWindow) {
       element = <span></span>;
     } else {
-      element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventist Association of Alberta</span>;
+      element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventists Association of Alberta</span>;
     }
 
     return element;
