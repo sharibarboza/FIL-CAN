@@ -3652,7 +3652,7 @@ EM40 TEAM CSS
   background-color: #fff;
   bottom: -20px;
   left: 0;
-  margin: 0 9%;
+  margin: 0 20px;
   padding: 30px 0;
   position: absolute;
   right: 0;
@@ -3757,8 +3757,8 @@ EM40 TEAM CSS
     margin: 0 auto;
 }
 .em-size-4 {
-  width: 14vw;
-  height: 14vw;
+  width: 230px;
+  height: 230px;
 }
 .em-size-3 {
   width: 18vw;
