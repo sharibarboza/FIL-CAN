@@ -2,7 +2,7 @@
 title: Prayer
 position: Prayer
 name: Benjie Arias
-photo: /assets/benjie-arias.jpg
+photo: /assets/arias.jpg
 type: Chair
 ---
 
