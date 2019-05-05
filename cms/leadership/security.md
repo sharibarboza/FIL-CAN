@@ -1,7 +1,8 @@
 ---
 title: Security
 position: Security
-name: Dennis Astillero
-photo: /assets/default.jpg
+name: 'Arsenio Sending, Jr.'
+photo: /assets/arsenio-sending-jr..jpg
 type: Chair
 ---
+
