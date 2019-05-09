@@ -1,7 +1,8 @@
 ---
 title: Prayer
 position: Prayer
-name: Zenaida Puedivan
-photo: /assets/default.jpg
+name: Benjie Arias
+photo: /assets/arias.jpg
 type: Chair
 ---
+
