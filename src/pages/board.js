@@ -71,7 +71,7 @@ export const query = graphql`
             type
             photo {
               childImageSharp {
-                sizes {
+                sizes(maxWidth: 500 ) {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -100,7 +100,7 @@ export const query = graphql`
             type
             photo {
               childImageSharp {
-                sizes {
+                sizes(maxWidth: 500 ) {
                   ...GatsbyImageSharpSizes
                 }
               }
