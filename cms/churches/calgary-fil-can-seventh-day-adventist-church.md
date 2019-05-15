@@ -2,7 +2,7 @@
 title: Calgary Fil-Can SDA Church
 city: Calgary
 pastor: Pastor Sam Cadiz
-address: 14640-6 Street S.W. T2Y OE1
+address: '14640 6 St SW, Calgary, AB T2Y 0E1'
 phone: 403-230-6025
 website: ''
 photo: /assets/adventist_logo.png
