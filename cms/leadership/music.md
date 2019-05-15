@@ -1,7 +1,8 @@
 ---
 title: Music
 position: Music
-name: Adeline Barboza
-photo: /assets/default.jpg
+name: Ken Pasayan
+photo: /assets/pasayan.jpg
 type: Chair
 ---
+
