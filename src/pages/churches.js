@@ -153,7 +153,7 @@ export const query = graphql`
             website
             photo {
               childImageSharp {
-                sizes(maxWidth: 300 ) {
+                sizes(maxWidth: 1024 ) {
                   ...GatsbyImageSharpSizes
                 }
               }
