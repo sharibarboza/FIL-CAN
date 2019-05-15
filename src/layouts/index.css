@@ -4780,7 +4780,7 @@ astute TESTIMONIAL AREA CSS
 }
 .em-slider-descript {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 25px;
     width: 100%;
 }
@@ -4798,29 +4798,30 @@ astute TESTIMONIAL AREA CSS
 /* button */
 
 .em-button-button-area a {
-    border: 1px solid #fff;
     color: #fff;
+    background-color: #B51D29;
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
     margin: 0 4px;
-	padding: 10px 36px;
+	  padding: 10px 36px;
     position: relative;
     text-transform: uppercase;
     border-radius: 30px;
     -webkit-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
     z-index: 1;
-   font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 a.em-active-button {
-    background: #B51D29;
-    border-color: #B51D29;
+    background: white;
+    border-color: white;
+    color: #B51D29;
 }
 .em-button-button-area a:hover {
-    color: #fff;
-    background: #B51D29;
-    border-color: #B51D29;
+  background: white;
+  border-color: white;
+  color: #B51D29;
 }
 a.em-active-button:hover {
     background: transparent;

@@ -29,7 +29,7 @@ class Slider extends React.Component {
   displayText() {
     return <div id="htmlcaption1" className="nivo-html-caption em-slider-content-nivo">
       <div className="em_slider_inner container text-left" style={{
-        marginTop: '20px',
+        marginTop: '0',
         paddingLeft: '20px',
         paddingRight: '20px'
       }}>

@@ -125,23 +125,23 @@ export const query = graphql`
         }
       }
     }
-    headerImage1: imageSharp(id: { regex: "/carousel3/" }) {
-      sizes {
+    headerImage1: imageSharp(id: { regex: "/foothills/" }) {
+      sizes(maxWidth: 4000) {
         ...GatsbyImageSharpSizes
       }
     }
     headerImage2: imageSharp(id: { regex: "/alberta/" }) {
-      sizes {
+      sizes(maxWidth: 2000) {
         ...GatsbyImageSharpSizes
       }
     }
     headerImage3: imageSharp(id: { regex: "/filipinoflag/" }) {
-      sizes {
+      sizes(maxWidth: 2000) {
         ...GatsbyImageSharpSizes
       }
     }
     counterImage: imageSharp(id: { regex: "/campmeeting/" }) {
-      sizes {
+      sizes(maxWidth: 2000) {
         ...GatsbyImageSharpSizes
       }
     }

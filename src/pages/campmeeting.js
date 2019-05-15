@@ -479,7 +479,7 @@ export const query = graphql`
       }
     }
     headerImage: imageSharp(id: { regex: "/carousel4/" }) {
-      sizes(maxWidth: 1240 ) {
+      sizes(maxWidth: 3000 ) {
         ...GatsbyImageSharpSizes
       }
     }
