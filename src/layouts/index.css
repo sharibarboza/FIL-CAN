@@ -6938,7 +6938,7 @@ table#wp-calendar td#today{
     font-size: 1em !important;
   }
   .main-slider-area, .carousel-image {
-    height: 80vh;
+    height: 60vh;
   }
   .text-alignm1 {
     font-size: 0.9em;
@@ -7045,6 +7045,9 @@ table#wp-calendar td#today{
   }
   .main-slider-area {
     padding: 0 !important;
+  }
+  .main-slider-area, .carousel-image {
+    height: 80vh;
   }
   .banner-container {
     padding-top: 60px !important;

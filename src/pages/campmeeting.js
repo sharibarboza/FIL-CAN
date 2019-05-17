@@ -175,9 +175,7 @@ class IndexPage extends React.Component {
 
           <div className="container-fluid">
             <div id="htmlcaption1_28" className="nivo-html-caption em-slider-content-nivo">
-              <div className="em_slider_inner container text-center" style={{
-                marginTop: '10px'
-              }}>
+              <div className="em_slider_inner container text-center">
                 <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
                   <h2 className="em-slider-title">Filipino-Canadian Camp Meeting </h2>
                 </div>
@@ -479,7 +477,7 @@ export const query = graphql`
       }
     }
     headerImage: imageSharp(id: { regex: "/carousel4/" }) {
-      sizes(maxWidth: 3000 ) {
+      sizes(maxWidth: 4000 ) {
         ...GatsbyImageSharpSizes
       }
     }
