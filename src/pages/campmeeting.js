@@ -11,6 +11,7 @@ var dateFormat = require('dateformat')
 import Divider from '../components/divider'
 import Contact from '../components/contact'
 import AccordionGroup from '../components/accordiongroup'
+import Email from '../components/email'
 
 import '../layouts/animate.css'
 
@@ -119,7 +120,7 @@ class IndexPage extends React.Component {
                 }} sizes={speaker.photo.childImageSharp.sizes} alt="" />
               </div>
             </div>
-            <div className="em-team-content-waraper camp-speaker" id="president-wrapper" style={{
+            <div className={this.getClass(speaker.email)} id="president-wrapper" style={{
               margin: margin
             }}>
               <div className="em-team-content-title-inner">
@@ -131,7 +132,7 @@ class IndexPage extends React.Component {
               </div>
 							<div className="em-team-content-socials-inner">
               	<div className="em-team-content-socials">
-                  <span>{speaker.city}</span>
+                  <Email addr={speaker.email} />
                 </div>
               </div>
             </div>
@@ -142,6 +143,16 @@ class IndexPage extends React.Component {
 
     }
     return elements;
+  }
+
+  getClass(email) {
+    var stdClass = "em-team-content-waraper";
+
+    if (email) {
+      stdClass += " email-content";
+    }
+
+    return stdClass;
   }
 
   displayFAQ() {
@@ -540,6 +551,7 @@ export const query = graphql`
             title
             type
             city
+            email
             photo {
               childImageSharp {
                 sizes {

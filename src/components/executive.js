@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import 'font-awesome/css/font-awesome.css';
 
 import Divider from './divider';
+import Email from './email';
 
 import defaultPhoto from '../../static/assets/default.jpg';
 
@@ -48,18 +49,6 @@ class Executive extends React.Component {
     return element;
   }
 
-  displayEmail() {
-    try {
-      if (this.executive.email) {
-        var href="mailto:" + this.executive.email;
-        return <a href={href}><i className="fa fa-envelope"></i></a>
-      }
-    } catch(e) {
-    }
-
-    return;
-  }
-
   getClass() {
     var stdClass = "em-team-content-waraper";
 
@@ -89,7 +78,7 @@ class Executive extends React.Component {
             </div>
             <div className="em-team-content-socials-inner">
               <div className="em-team-content-socials">
-                {this.displayEmail()}
+                <Email addr={this.executive.email} />
               </div>
             </div>
           </div>

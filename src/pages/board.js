@@ -69,6 +69,7 @@ export const query = graphql`
             position
             name
             type
+            email
             photo {
               childImageSharp {
                 sizes(maxWidth: 300 ) {
@@ -98,6 +99,7 @@ export const query = graphql`
             name
             position
             type
+            email
             photo {
               childImageSharp {
                 sizes(maxWidth: 300 ) {
@@ -127,6 +129,7 @@ export const query = graphql`
             name
             position
             type
+            email
             photo {
               childImageSharp {
                 sizes {
