@@ -23,6 +23,10 @@ class Footer extends React.Component {
     return elements;
   }
 
+  getYear() {
+    return new Date().getFullYear();
+  }
+
   render() {
 
     return (
@@ -73,7 +77,7 @@ class Footer extends React.Component {
                  <div className="widget">
                    <h2 className="widget-title">Connect</h2>
                    <a href="https://www.facebook.com/groups/filcamp/" target="_blank"><i className="fa fa-2x fa-facebook-square"></i></a>
-                   <a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank"><i className="fa fa-2x fa-youtube-square"></i></a>                   
+                   <a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank"><i className="fa fa-2x fa-youtube-square"></i></a>
                  </div>
                </div>
             </div>
@@ -85,7 +89,7 @@ class Footer extends React.Component {
           <div className="row">
     				<div className="col-md-10 col-sm-6">
     					<div className="copy-right-text">
-    							<p><i className="fa fa-copyright"></i> Copyright Filipino-Canadian Seventh-day Adventist Association of Alberta 2018. All Rights Reserved.	</p>
+    							<p><i className="fa fa-copyright"></i> Copyright Filipino-Canadian Seventh-day Adventist Association of Alberta {this.getYear()}. All Rights Reserved.	</p>
     					</div>
     				</div>
     				<div className="col-md-2 col-sm-6">
