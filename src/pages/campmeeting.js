@@ -542,7 +542,12 @@ export const query = graphql`
       }
     }
     speakers: allMarkdownRemark(
-    	filter: { fileAbsolutePath: { regex: "/(speakers)/.*\\.md$/" } }
+    	filter: {
+        fileAbsolutePath: { regex: "/(speakers)/.*\\.md$/" }
+      }
+      sort: {
+        fields: [frontmatter___title], order: ASC
+      }
     ) {
       edges {
         node {
@@ -550,7 +555,6 @@ export const query = graphql`
           frontmatter {
             title
             type
-            city
             email
             photo {
               childImageSharp {
