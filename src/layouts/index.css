@@ -377,6 +377,10 @@ position: absolute;
     margin-top: 5px;
     overflow: hidden;
     transition: .5s;
+    display: inline-block;
+}
+.counter_bnt:not(:last-child) {
+  margin-right: 30px;
 }
 .counter_bnt a{
     font-size: 14px;
@@ -4802,13 +4806,17 @@ astute TESTIMONIAL AREA CSS
 }
 /* button */
 
+.em-slider-button {
+  display: inline-block;
+}
+
 .em-button-button-area a {
     color: #fff;
     background-color: #B51D29;
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
-    margin: 0 4px;
+    margin: 0 15px;
 	  padding: 10px 36px;
     position: relative;
     text-transform: uppercase;

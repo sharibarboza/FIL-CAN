@@ -190,6 +190,9 @@ class IndexPage extends React.Component {
                 <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
                   <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor>
                 </div>
+                <div className="em-slider-button wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
+                  <Link to="/resources/">resources</Link>
+                </div>
               </div>
             </div>
           </div>

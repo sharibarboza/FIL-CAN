@@ -169,9 +169,12 @@ class Counter extends React.Component {
     						</div>
     					</div>
     				</div>
-    				<div className="col-md-12">
+    				<div className="col-md-12" align="center">
     					<div className="counter_bnt">
     						<Link to="/campmeeting/">Learn More</Link>
+    					</div>
+              <div className="counter_bnt">
+    						<Link to="/resources/">Resources</Link>
     					</div>
     				</div>
     			</div>
