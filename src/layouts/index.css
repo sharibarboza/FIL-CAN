@@ -3659,14 +3659,16 @@ EM40 TEAM CSS
 }
 .em-team-content-waraper {
   background-color: #fff;
-  bottom: -50px;
-  height: 140px;
+  bottom: 0px;
   left: 0;
   margin: 0 20px;
-  padding: 30px 0 20px 0;
+  padding: 20px 0 20px 0;
   position: absolute;
   right: 0;
   transition: all 0.3s ease 0s;
+}
+.email-content {
+  bottom: -55px;
 }
 #speakers .em-team-content-waraper {
   bottom: -60px;
@@ -3702,7 +3704,7 @@ EM40 TEAM CSS
   display: inline-block;
   height: 35px;
   line-height: 35px;
-  margin: 14px 3px 0;
+  margin: 20px 3px 0;
   text-align: center;
   width: 35px;
   color: #007bff;

@@ -48,6 +48,28 @@ class Executive extends React.Component {
     return element;
   }
 
+  displayEmail() {
+    try {
+      if (this.executive.email) {
+        var href="mailto:" + this.executive.email;
+        return <a href={href}><i className="fa fa-envelope"></i></a>
+      }
+    } catch(e) {
+    }
+
+    return;
+  }
+
+  getClass() {
+    var stdClass = "em-team-content-waraper";
+
+    if (this.executive.email) {
+      stdClass += " email-content";
+    }
+
+    return stdClass;
+  }
+
   render() {
 
     return (
@@ -58,7 +80,7 @@ class Executive extends React.Component {
               {this.getImage()}
             </div>
           </div>
-          <div className="em-team-content-waraper" id="president-wrapper">
+          <div className={this.getClass()} id="president-wrapper">
             <div className="em-team-content-title-inner">
               <div className="em-content-title"><h2>{this.executive.name}</h2></div>
             </div>
@@ -67,6 +89,7 @@ class Executive extends React.Component {
             </div>
             <div className="em-team-content-socials-inner">
               <div className="em-team-content-socials">
+                {this.displayEmail()}
               </div>
             </div>
           </div>
