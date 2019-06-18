@@ -151,7 +151,7 @@ class Counter extends React.Component {
                       <span className="countdown-col">
                         <span className="countdown-col-element">
                           <strong>{this.addLeadingZeros(countDown.min)}</strong>
-                          <span>Min</span>
+                          <span>Minutes</span>
                         </span>
                       </span>
 
@@ -160,7 +160,7 @@ class Counter extends React.Component {
                       <span className="countdown-col">
                         <span className="countdown-col-element">
                           <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-                          <span>Sec</span>
+                          <span>Seconds</span>
                         </span>
                       </span>
                     </div>

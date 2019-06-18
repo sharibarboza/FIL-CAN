@@ -209,7 +209,7 @@ class MeetingsPage extends React.Component {
                 <span className="countdown-col">
                   <span className="countdown-col-element">
                     <strong>{countDown.min != undefined ? this.addLeadingZeros(countDown.min) : '00'}</strong>
-                    <span>Min</span>
+                    <span>Minutes</span>
                   </span>
                 </span>
 
@@ -218,7 +218,7 @@ class MeetingsPage extends React.Component {
                 <span className="countdown-col">
                   <span className="countdown-col-element">
                     <strong>{countDown.sec != undefined ? this.addLeadingZeros(countDown.sec) : '00'}</strong>
-                    <span>Sec</span>
+                    <span>Seconds</span>
                   </span>
                 </span>
               </div>
