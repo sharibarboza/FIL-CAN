@@ -144,8 +144,8 @@ blockquote{
   color: white;
   margin-right: 10px;
 }
-.footer-middle .fa:hover {
-  color: #007bff;
+.footer-middle .fa:hover, .social-nav .fa:hover {
+  color: #007bff !important;
 }
 
 blockquote a{
@@ -2190,8 +2190,8 @@ a.dtbtn, a.red-on-white {
 }
 a.dtbtn:hover {
     color: white;
-    background-color: black;
-    border: 1px solid white;
+    background-color: #007bff;
+    border: 1px solid #007bff;
 }
 a.red-on-white:hover {
     color: #B51D29;
