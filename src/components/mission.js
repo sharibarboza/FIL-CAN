@@ -51,7 +51,7 @@ class Mission extends React.Component {
     					<div className="single_service">
     						<div className="single_service_inner">
     							<div className="service_icon_1">
-    								<span><i className="fa fa-bullhorn"></i></span>
+    								<span><i className="fa fa-globe"></i></span>
     							</div>
     							<div className="single_service_content">
     								<h2>Honoring Culture</h2>
