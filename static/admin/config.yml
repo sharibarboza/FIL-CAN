@@ -25,7 +25,6 @@ collections:
       - { label: Executive Position, name: position, widget: string }
       - { label: Name, name: name, widget: string }
       - { label: Email, name: email, widget: string }
-      - { label: Phone, name: phone, widget: string }
       - { label: Photo, name: photo, widget: image, default: /assets/default.jpg }
 
   - name: church
