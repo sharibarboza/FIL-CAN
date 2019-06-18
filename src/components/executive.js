@@ -65,6 +65,10 @@ class Executive extends React.Component {
             <div className="em-team-content-subtitle-inner">
               <div className="em-content-subtitle">{this.executive.position}</div>
             </div>
+            <div className="em-team-content-socials-inner">
+              <div className="em-team-content-socials">
+              </div>
+            </div>
           </div>
         </div>
       </div>

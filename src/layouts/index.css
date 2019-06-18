@@ -3659,10 +3659,11 @@ EM40 TEAM CSS
 }
 .em-team-content-waraper {
   background-color: #fff;
-  bottom: -20px;
+  bottom: -50px;
+  height: 140px;
   left: 0;
   margin: 0 20px;
-  padding: 30px 0;
+  padding: 30px 0 20px 0;
   position: absolute;
   right: 0;
   transition: all 0.3s ease 0s;
@@ -3687,13 +3688,28 @@ EM40 TEAM CSS
     color: white;
     height: 35px;
     line-height: 35px;
-    margin: 14px 3px 0;
+    margin: 0 3px 0;
     text-align: center;
     width: 100%;
 }
 .em-team-content-socials {
     position: relative;
 	  transition:.5s;
+}
+.em-team-content-socials i {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  margin: 14px 3px 0;
+  text-align: center;
+  width: 35px;
+  color: #007bff;
+}
+.em-team-content-socials i:hover {
+  background: #007bff;
+  color: white;
 }
 .em-team:hover #president-wrapper {
     background-color: rgba(181, 29, 41, 0.8);

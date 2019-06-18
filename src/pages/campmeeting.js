@@ -119,7 +119,7 @@ class IndexPage extends React.Component {
                 }} sizes={speaker.photo.childImageSharp.sizes} alt="" />
               </div>
             </div>
-            <div className="em-team-content-waraper" id="president-wrapper" style={{
+            <div className="em-team-content-waraper camp-speaker" id="president-wrapper" style={{
               margin: margin
             }}>
               <div className="em-team-content-title-inner">

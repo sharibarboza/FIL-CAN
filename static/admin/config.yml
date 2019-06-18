@@ -21,10 +21,12 @@ collections:
     create: true
     fields:
       - { label: Unique title to file this executive (e.g. VP-Edmonton), name: title, widget: string }
+      - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Adviser', 'Chair', 'Youth'] }
       - { label: Executive Position, name: position, widget: string }
       - { label: Name, name: name, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Phone, name: phone, widget: string }
       - { label: Photo, name: photo, widget: image, default: /assets/default.jpg }
-      - { label: Executive Type, name: type, widget: select, options: ['Officer', 'Board VP', 'Adviser', 'Chair', 'Youth'] }
 
   - name: church
     label: Church
