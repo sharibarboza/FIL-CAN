@@ -126,7 +126,7 @@ export const query = graphql`
       }
     }
     headerImage1: imageSharp(id: { regex: "/foothills/" }) {
-      sizes(maxWidth: 4000) {
+      sizes(maxWidth: 2000) {
         ...GatsbyImageSharpSizes
       }
     }

@@ -4821,7 +4821,7 @@ astute TESTIMONIAL AREA CSS
 }
 /* button */
 
-.em-slider-button {
+.camp-carousel {
   display: inline-block;
 }
 
@@ -4831,7 +4831,7 @@ astute TESTIMONIAL AREA CSS
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
-    margin: 0 15px;
+    margin: 0 15px 0 0;
 	  padding: 10px 36px;
     position: relative;
     text-transform: uppercase;
