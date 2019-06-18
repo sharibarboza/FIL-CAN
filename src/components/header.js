@@ -129,7 +129,7 @@ class Header extends React.Component {
                 </div>
 
       					<div className="col-xs-9" align="right" style={{ paddingLeft: '60px' }}>
-                  <div className="row" style={{
+                  <div className="row social-nav" style={{
                     float: this.state.scrollingLock ? 'right' : 'none',
                     display: this.state.mobileWindow ? 'none' : 'inline-flex',
                     paddingTop: this.state.scrollingLock ? '12px' : '0',
@@ -139,8 +139,12 @@ class Header extends React.Component {
                       color: '#3C5A99',
                       fontSize: '30px'
                     }}></i></a>
+                    <a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank"><i className="fa fa-youtube-square" style={{
+                      color: '#FF0000',
+                      fontSize: '30px'
+                    }}></i></a>
                     <div className="donate-btn-header">
-                      <Link className="dtbtn" to="/contact/" style={{ marginLeft: '10px' }}>Contact Us</Link>
+                      <Link className="dtbtn" to="/contact/">Contact Us</Link>
                     </div>
                   </div>
                   <div className="row" id={ this.state.scrollingLock ? 'small-nav' : 'large-nav' } style={{

@@ -140,8 +140,12 @@ blockquote{
   box-shadow: 2px 2px 15px #ccc;
 }
 
-.fa-facebook-square {
+.footer-middle .fa {
   color: white;
+  margin-right: 10px;
+}
+.footer-middle .fa:hover {
+  color: #007bff;
 }
 
 blockquote a{
@@ -2162,6 +2166,9 @@ nav.astute_menu.main-search-menu {
 
 .donate-btn-header {
     display: inline-block;
+}
+.social-nav .fa {
+  margin-right: 10px;
 }
 a.dtbtn, a.red-on-white {
     border: none;
