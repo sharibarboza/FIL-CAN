@@ -70,9 +70,6 @@ class ChurchesPage extends React.Component {
 
             <div className="em-content-image astute-event-thumb_adn">
               <Img className="church-image" alt="" sizes={church.photo.childImageSharp.sizes} />
-              <div className="readmore_icon_adn">
-                <Scrollchor to={anchor} animate={{offset: -150, duration: 300}}><i className="fa fa-info"></i></Scrollchor>
-              </div>
               {church.website != null
                 ?
                 <a href={church.website} target="_blank">
@@ -93,7 +90,7 @@ class ChurchesPage extends React.Component {
                     <span><i className="fa fa-map-marker"></i>{church.city}</span>
                   </div>
                   <div className="astute-event-meta-right_adn">
-                    <span><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>See more info <i className="fa fa-info-circle"></i></Scrollchor></span>
+                    <span><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>See info <i className="fa fa-info-circle"></i></Scrollchor></span>
                   </div>
                 </div>
               </div>
