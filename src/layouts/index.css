@@ -5328,14 +5328,15 @@ astute adn blog css
 	z-index: 9999;
 }
 .blog-page-title_adn2 h2{
-	margin:0px;
+  	margin:0px;
     background: rgba(0, 0, 0, 0.72);
     padding: 15px;
-	color:#fff;
-	transition:.5s;
+  	color:#fff;
+  	transition:.5s;
+    font-weight: 600;
 }
 .blog-page-title_adn2 h2 a{
-	color:#fff;
+	 color:#fff;
 }
 
 /* BLOG POST META CSS */

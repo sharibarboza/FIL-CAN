@@ -84,10 +84,10 @@ class ChurchesPage extends React.Component {
             <div className="em-event-content-area_adn ">
 
               <div className="event-page-title_adn ">
-                <h2><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>{this.truncateTitle(church.title)}</Scrollchor></h2>
+                <h2>{this.truncateTitle(church.title)}</h2>
                 <div style={{ marginTop: '30px' }}>
                   <div className="astute-event-meta-left_adn">
-                    <span><i className="fa fa-map-marker"></i>{church.city}</span>
+                    <span style={{ color: '#007bff' }}><i className="fa fa-map-marker"></i>{church.city}</span>
                   </div>
                   <div className="astute-event-meta-right_adn">
                     <span><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>See info <i className="fa fa-info-circle"></i></Scrollchor></span>
