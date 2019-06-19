@@ -187,7 +187,7 @@ span[id^="article"] {
 }
 
 .banner-text {
-  padding: 120px 0;
+  padding: 130px 0;
 }
 
 .no-left-pad {
@@ -1372,7 +1372,7 @@ position: absolute;
 .breatcome_area {
   background-size: cover !important;
   background-position: 0 50% !important;
-	padding: 100px 0 60px;
+	padding: 60px 0;
 }
 .breatcome_area::before {
   position: absolute;
@@ -6985,10 +6985,16 @@ table#wp-calendar td#today{
     padding: 0 !important;
   }
   .banner-text {
-    padding: 120px 0;
+    padding: 130px 0;
   }
   .calendar-col {
     display: none;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .banner-text {
+    padding: 160px 0;
   }
 }
 
