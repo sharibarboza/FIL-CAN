@@ -67,6 +67,11 @@ class Executive extends React.Component {
           <div className="em-team-content-image-inner">
             <div className={this.imageSize()}>
               {this.getImage()}
+              <div className="em-team-content-socials-inner" style={{ visibility: 'hidden' }}>
+                <div className="em-team-content-socials">
+                  <Email addr={this.executive.email} />
+                </div>
+              </div>
             </div>
           </div>
           <div className={this.getClass()} id="president-wrapper">
@@ -75,11 +80,6 @@ class Executive extends React.Component {
             </div>
             <div className="em-team-content-subtitle-inner">
               <div className="em-content-subtitle">{this.executive.position}</div>
-            </div>
-            <div className="em-team-content-socials-inner">
-              <div className="em-team-content-socials">
-                <Email addr={this.executive.email} />
-              </div>
             </div>
           </div>
         </div>

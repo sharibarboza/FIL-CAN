@@ -3639,43 +3639,31 @@ EM40 TEAM CSS
 	text-align:center;
 	position: relative;
 	transition:.5s;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .em-team1 {
 	text-align:center;
 	position: relative;
 	transition:.5s;
 }
-.em-team-one {
-    background-color: #ffffff;
-	  position: relative;
-    overflow: hidden;
-    padding-bottom: 55px;
-    border-bottom: 1px solid #f9f9f9;
+.em-team-one, .em-team1-one {
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f9f9f9;
 }
-
-.em-team1-one {
-    background-color: #ffffff;
-	  position: relative;
-    overflow: hidden;
-    padding-bottom: 55px;
-    border-bottom: 1px solid #f9f9f9;
+.em-team:hover .em-team-content-socials-inner {
+  visibility: visible !important;
 }
 /* team image css */
 .em-team-content-image {
+	position: relative;
 }
 .em-team-content-waraper {
   background-color: #fff;
-  bottom: 0px;
-  left: 0;
-  margin: 0 20px;
-  padding: 20px 0 20px 0;
-  position: absolute;
-  right: 0;
-  transition: all 0.3s ease 0s;
+  padding: 20px 0;
 }
-.email-content {
-  bottom: -55px;
+.em-team:hover .em-team-content-waraper {
+  color: rgb(179, 30, 43);
 }
 .em-team-content-title h2 {
   margin-bottom: 5px;
@@ -3699,38 +3687,24 @@ EM40 TEAM CSS
     width: 100%;
 }
 .em-team-content-socials {
-    position: relative;
-	  transition:.5s;
+    position: absolute;
+    top: 3%;
+    left: 3%;
 }
 .em-team-content-socials i {
-  background: #fff none repeat scroll 0 0;
-  border-radius: 50%;
-  display: inline-block;
-  height: 35px;
-  line-height: 35px;
-  margin: 20px 3px 0;
-  text-align: center;
-  width: 35px;
-  color: #007bff;
+    color: white;
+    border-radius: 50%;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    margin: 0 3px 0;
+    text-align: center;
+    width: 35px;
+    background-color: #007bff;
 }
 .em-team-content-socials i:hover {
-  background: #007bff;
-  color: white;
-}
-.em-team:hover #president-wrapper {
-    background-color: rgba(181, 29, 41, 0.8);
-    bottom: 0px;
-}
-.em-team:hover #secretary-wrapper {
-  background-color: rgba(32, 51, 171, 0.8);
-  bottom: 0px;
-}
-.em-team:hover #treasurer-wrapper {
-  background-color: rgba(209, 178, 0, 0.8);
-  bottom: 0px;
-}
-.em-team:hover .em-team-content-socials {
-
+    color: #007bff;
+    background-color: white;
 }
 
 
@@ -3750,10 +3724,6 @@ EM40 TEAM CSS
   text-transform: uppercase;
     transition:.5s;
 
-}
-.em-team:hover .em-content-title h2,
-.em-team:hover .em-content-subtitle {
-	color:#fff;
 }
 
 
@@ -3877,8 +3847,8 @@ EM40 TEAM CSS
 }
 .team-wrap:hover .team-front{
 	transform:scale(0);
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .team-style-2 .em-content-socials a {
     color: #fff;

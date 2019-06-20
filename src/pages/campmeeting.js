@@ -118,6 +118,11 @@ class IndexPage extends React.Component {
                   width: "100%",
                   height: "100%"
                 }} sizes={speaker.photo.childImageSharp.sizes} alt="" />
+                <div className="em-team-content-socials-inner" style={{ visibility: 'hidden' }}>
+                	<div className="em-team-content-socials">
+                    <Email addr={speaker.email} />
+                  </div>
+                </div>
               </div>
             </div>
             <div className={this.getClass(speaker.email)} id="president-wrapper" style={{
@@ -129,11 +134,6 @@ class IndexPage extends React.Component {
               </div>
               <div className="em-team-content-subtitle-inner">
                 <div className="em-content-subtitle">{speaker.type}</div>
-              </div>
-							<div className="em-team-content-socials-inner">
-              	<div className="em-team-content-socials">
-                  <Email addr={speaker.email} />
-                </div>
               </div>
             </div>
           </div>
