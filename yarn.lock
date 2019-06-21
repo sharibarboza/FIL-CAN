@@ -4389,13 +4389,12 @@ gatsby-plugin-sharp@^1.6.41:
     sharp "^0.20.0"
     svgo "^0.7.2"
 
-gatsby-plugin-sitemap@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.0.tgz#062197dfb2c5b3c61deb18294c97fb625901d45a"
+gatsby-plugin-sitemap@1.2.25:
+  version "1.2.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-1.2.25.tgz#175c82518316f9439df66343d213be2815e129b0"
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    babel-runtime "^6.26.0"
     minimatch "^3.0.4"
-    pify "^3.0.0"
     sitemap "^1.12.0"
 
 gatsby-react-router-scroll@^1.0.18:
