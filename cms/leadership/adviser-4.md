@@ -4,6 +4,6 @@ type: Adviser
 position: Adviser
 name: Pastor J. Batiancila
 email: jbatiancila@yahoo.com
-photo: /assets/joseph-batiancila-1.jpg
+photo: /assets/batiancila.jpg
 ---
 
