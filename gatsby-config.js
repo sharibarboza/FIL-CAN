@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Filcan',
+    siteUrl: 'https://www.filcanadventist.ca'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -28,6 +29,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
