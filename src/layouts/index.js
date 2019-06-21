@@ -29,8 +29,8 @@ class Layout extends React.Component {
         <Helmet
           title={title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'The Filipino-Canada Adventist Association of Alberta is a nonprofit organization that brings together various churches within the Filipino Seventh-day Adventist community.' },
+            { name: 'keywords', content: 'Filipino-Canada,Filipino-Canadian,Filipino,Canada,Canadian,Adventist,SDA,Seventh-day,Association,Alberta,Campmeeting,Camp,Meeting,Foothills,Edmonton,Calgary' },
           ]}
           link={[
             { rel: "icon", type: "image/png", sizes: '64x64', href: `${favicon64}` }
