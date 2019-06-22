@@ -72,16 +72,16 @@ button {
 }
 
 .download-btn {
-  background-color: #2033AB !important;
+  background-color: white;
   letter-spacing: 1px !important;
   font-family: 'Montserrat', sans-serif !important;
   font-weight: 600 !important;
   font-size: 0.8em !important;
-}
-
-.download-btn {
   vertical-align: middle;
   line-height: 30px;
+}
+.download-btn:hover {
+  color: white !important;
 }
 
 .carousel-control {
@@ -7127,9 +7127,6 @@ table#wp-calendar td#today{
 @media (max-width: 500px) {
   .banner_area {
     height: 220px !important;
-  }
-  .download-btn {
-    font-size: 0.9em !important;
   }
   .minutes-title {
     padding-top: 20px !important;
