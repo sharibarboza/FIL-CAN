@@ -3661,8 +3661,10 @@ EM40 TEAM CSS
   padding-bottom: 10px;
   border-bottom: 1px solid #f9f9f9;
 }
-.em-team:hover .em-team-content-socials-inner {
+.em-team:hover .em-team-content-socials {
   visibility: visible !important;
+  transition: 0.5s;
+  left: 3%;
 }
 /* team image css */
 .em-team-content-image {
@@ -3699,7 +3701,8 @@ EM40 TEAM CSS
 .em-team-content-socials {
     position: absolute;
     top: 3%;
-    left: 3%;
+    left: -50px;
+    transition: 0.5s;
 }
 .em-team-content-socials i {
     color: white;
