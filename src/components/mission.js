@@ -68,7 +68,7 @@ class Mission extends React.Component {
     							</div>
     							<div className="single_service_content">
     								<h2>Spiritualism</h2>
-    								<p>To combine resources for promoting spiritual growth and evangelism within the Seventh-Day Adventist Church.</p>
+    								<p>To promote spiritual growth and evangelism within the Seventh-Day Adventist Church.</p>
 
     							</div>
     						</div>
