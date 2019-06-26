@@ -307,7 +307,7 @@ class IndexPage extends React.Component {
             <p><strong>All reservations come with an additional $30 registration fee. You can become exempt from this fee by purchasing a greeting in our Souvenir Program instead.</strong> See the next section to learn more.
             </p>
             <br />
-            <p>Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> for availability and pricing to reserve your accommodations at the next Camp Meeting.</p>
+            <p>Please <Link to="/contact/">contact us</Link> for availability and pricing to reserve your accommodations at the next Camp Meeting.</p>
           </div>
         </div>
 
@@ -413,7 +413,7 @@ class IndexPage extends React.Component {
               <div className="col-md-12">
                 <p>By purchasing one of the above souvenir family greetings, you can <strong>waive your $30 registration accommodation fee.</strong> However, you do not need to have accommodations or even attend the event in order to purchase a family greeting.</p>
                 <br />
-                <p>Please <Scrollchor to="#contact" animate={{offset: -100, duration: 300}}>contact us</Scrollchor> if you are interested in having your family picture in the next Souvenir Program.</p>
+                <p>Please <Link to="/contact/">contact us</Link> if you are interested in having your family picture in the next Souvenir Program.</p>
               </div>
             </div>
 
@@ -437,8 +437,6 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-
-        <Contact id="contact" phone={this.contact.phone} email={this.contact.title} />
 
       </div>
     )

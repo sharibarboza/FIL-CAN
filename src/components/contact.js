@@ -36,6 +36,10 @@ class Contact extends React.Component {
       .catch(error => alert(error));
   };
 
+  getEmail() {
+    return "mailto:" + this.email;
+  }
+
   render() {
 
     return (
@@ -72,7 +76,7 @@ class Contact extends React.Component {
     								<i className="fa fa-envelope-o"></i>
     							</div>
     							<div className="plases_text">
-    								<p>{this.props.email}</p>
+    								<p><a href={this.getEmail()} className="email-span">{this.props.email}</a></p>
     							</div>
     						</div>
     					</div>

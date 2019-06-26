@@ -6,6 +6,11 @@ import 'font-awesome/css/font-awesome.css';
 import sdaLogo from '../images/sda-logo.png';
 
 class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.email = this.props.contact.node.frontmatter.title;
+    this.phone = this.props.contact.node.frontmatter.phone;
+  }
 
   displayChurches() {
     let elements = [];
@@ -25,6 +30,10 @@ class Footer extends React.Component {
 
   getYear() {
     return new Date().getFullYear();
+  }
+
+  getEmail() {
+    return "mailto:" + this.email;
   }
 
   render() {
@@ -82,9 +91,9 @@ class Footer extends React.Component {
                    <br />
                    <h2 className="widget-title">Contact Us</h2>
                    <i className="fa fa-envelope"></i> Email:<br />
-                   <span style={{ wordWrap: 'break-word' }}>{this.props.contact.node.frontmatter.title}</span><br /><br />
+                   <a href={this.getEmail()} className="email-span">{this.email}</a><br /><br />
                    <i className="fa fa-phone"></i> Phone:<br />
-                   {this.props.contact.node.frontmatter.phone}
+                   {this.phone}
                  </div>
                </div>
             </div>

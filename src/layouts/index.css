@@ -2929,6 +2929,9 @@ astute FOOTER TOP AREA CSS
 astute FOOTER TOP AREA CSS
 =========================*/
 
+.email-span {
+  color: white;
+}
 .footer-top {
     background: #1b1919 none repeat scroll 0 0;
     padding: 100px 0;
@@ -6833,6 +6836,15 @@ table#wp-calendar td#today{
 @media (min-width: 800px) and (max-width: 1200px) {
   .banner-container {
     padding-top: 100px !important;
+  }
+  .email-span {
+    word-wrap: break-word;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .email-span {
+    word-wrap: break-word;
   }
 }
 
