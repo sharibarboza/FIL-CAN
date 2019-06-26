@@ -21,6 +21,7 @@ class Layout extends React.Component {
     const title = data.site.siteMetadata.title;
     const churches = data.churches.edges;
     const bannerImage = data.bannerImage;
+    const contact = data.contact.edges[0];
     const bannerTitle = (location.pathname).replace(/\//g, '');
     const noBanner = ['/', '/campmeeting/', '/meetings/'];
 
@@ -56,7 +57,7 @@ class Layout extends React.Component {
           width: '40px',
           height: '40px'
         }} />
-        <Footer churches={churches} />
+        <Footer churches={churches} contact={contact} />
       </div>
     )
   }
@@ -92,6 +93,20 @@ export const query = graphql`
     bannerImage: imageSharp(id: { regex: "/filipinoflag/" }) {
       sizes(maxWidth: 2000) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    contact: allMarkdownRemark(
+      limit: 1
+    	filter: { fileAbsolutePath: { regex: "/(contact)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            phone
+          }
+        }
       }
     }
   }

@@ -78,6 +78,13 @@ class Footer extends React.Component {
                    <h2 className="widget-title">Connect</h2>
                    <a href="https://www.facebook.com/groups/filcamp/" target="_blank"><i className="fa fa-2x fa-facebook-square"></i></a>
                    <a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank"><i className="fa fa-2x fa-youtube-square"></i></a>
+
+                   <br />
+                   <h2 className="widget-title">Contact Us</h2>
+                   <i className="fa fa-envelope"></i> Email:<br />
+                   <span style={{ wordWrap: 'break-word' }}>{this.props.contact.node.frontmatter.title}</span><br /><br />
+                   <i className="fa fa-phone"></i> Phone:<br />
+                   {this.props.contact.node.frontmatter.phone}
                  </div>
                </div>
             </div>
@@ -92,10 +99,10 @@ class Footer extends React.Component {
     							<p><i className="fa fa-copyright"></i> Copyright Filipino-Canadian Seventh-day Adventist Association of Alberta {this.getYear()}. All Rights Reserved.	</p>
     					</div>
     				</div>
-    				<div className="col-md-2 col-sm-6">
+    				<div className="col-md-2 col-sm-6" style={{ paddingLeft: '2px' }}>
               <div className="footer-menu">
-    						 <ul className="right-text">
-    							<li><Link to="/contact/">Contact</Link></li>
+    						 <ul>
+    							<li><Link to="/admin/" target="_blank">Admin</Link></li>
     							<li data-netlify-identity-button></li>
     						</ul>
     					</div>

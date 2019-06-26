@@ -3783,11 +3783,17 @@ EM40 TEAM CSS
     height: 25vw;
   }
   .em-content-image {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+@media screen and (min-width: 575px) and (max-width: 800px) {
+  .em-content-image {
     width: 25vw;
     height: 25vw;
   }
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:575px) {
   .em-team .em-content-image {
     width: 80vw !important;
     height: 80vw !important;
