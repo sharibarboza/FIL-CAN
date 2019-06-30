@@ -701,7 +701,7 @@ position: absolute;
 /* team area css */
 
 .team_area {
-	padding: 80px 0 50px;
+	padding: 80px 0 10px;
 }
 .team_area2 {
 	padding-bottom: 99px;
@@ -7022,8 +7022,12 @@ table#wp-calendar td#today{
   .page-content {
     padding: 50px 15px !important;
   }
-  .feature_area, .service_area, .team_area, .about_area3 {
+  .feature_area, .service_area, .about_area3 {
     padding: 50px 0 !important;
+  }
+
+  .team_area {
+    padding: 50px 0 10px !important;
   }
 }
 
