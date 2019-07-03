@@ -36,7 +36,7 @@ class ResourcesPage extends React.Component {
     const files = this.files[category];
 
     if (files) {
-      for (let i = 0; i < files.length; i++) {
+      for (let i = (files.length - 1); i >= 0; i--) {
         let node = files[i];
         let element = <FileDownload node={node} key={i} />
         elements.push(element);
