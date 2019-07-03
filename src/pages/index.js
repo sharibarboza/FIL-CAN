@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="FilCan | Home" />
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Home" />
 
         <Slider images={headerImages} />
         <Features images={featureImages} />

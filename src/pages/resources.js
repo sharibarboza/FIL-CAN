@@ -52,7 +52,7 @@ class ResourcesPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="FilCan | Resources"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Resources"/>
 
         <div className="about_area3">
           <div className="container">

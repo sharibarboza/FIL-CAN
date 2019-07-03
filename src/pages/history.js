@@ -11,7 +11,7 @@ class AboutPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="FilCan | History"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - History"/>
 
         <div className="about_area3">
       		<div className="container">

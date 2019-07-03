@@ -30,7 +30,7 @@ class ReportsPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="FilCan | Reports"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Reports"/>
 
         <div className="about_area3">
           <div className="container">

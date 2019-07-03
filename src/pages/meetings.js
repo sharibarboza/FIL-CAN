@@ -247,7 +247,7 @@ class MeetingsPage extends React.Component {
 
     return (
       <div id="meetings_area">
-        <Helmet title="FilCan | Meetings"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Executive Meetings"/>
 
         <div className="main-slider-area">
           <Img alt="" sizes={this.headerImage.sizes} className="carousel-image" />

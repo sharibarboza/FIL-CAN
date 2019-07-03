@@ -107,7 +107,7 @@ class ChurchesPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="FilCan | Churches"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Churches"/>
 
         <div className="event_area">
       		<div className="container">

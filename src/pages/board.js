@@ -39,7 +39,7 @@ class BoardPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="FilCan | Board"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Board"/>
 
         <div className="container page-content" style={{ padding: '100px 0' }}>
           <ExecutiveGrid executives={this.board} columns={4} />

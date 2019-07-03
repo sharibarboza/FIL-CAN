@@ -40,7 +40,7 @@ class BylawsPage extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="FilCan | Bylaws"/>
+        <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Bylaws"/>
 
         <div className="about_area3">
           <div className="container" id="bylaws">
