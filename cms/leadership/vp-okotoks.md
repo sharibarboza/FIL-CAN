@@ -2,7 +2,7 @@
 title: VP-Okotoks
 type: Board VP
 position: VP-Okotoks
-name: Nimrod Loriezo
-photo: /assets/nimrod-loriezo.jpg
+name: Bethoven Laurente
+photo: /assets/beethoven-vp-okotoks.jpg
 ---
 
