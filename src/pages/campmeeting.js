@@ -541,7 +541,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(speakers)/.*\\.md$/" }
       }
       sort: {
-        fields: [frontmatter___title], order: ASC
+        fields: [frontmatter___type], order: ASC
       }
     ) {
       edges {

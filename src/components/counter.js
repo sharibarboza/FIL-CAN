@@ -18,6 +18,9 @@ class Counter extends React.Component {
       min: 0,
       sec: 0
     }
+
+    this.date = new Date(this.props.date);
+    this.year = this.date.getFullYear();
   }
 
   componentDidMount() {
@@ -84,14 +87,27 @@ class Counter extends React.Component {
     return value;
   }
 
-  getLastDate() {
-    var date = new Date(this.props.date);
-    date.setDate(date.getDate() + 3);
-    return dateFormat(date, "dddd, mmmm dS, yyyy");
+  getDate() {
+    let startDate = dateFormat(this.date, "mmmm d");
+    let endDate = this.date.getDate() + 3;
+    return startDate + '-' + endDate + ', ' + this.year;
   }
 
-  getDateString() {
-    return dateFormat(this.props.date, "dddd, mmmm dS, yyyy");
+  getYear() {
+    let num = this.year - 2002;
+    const lastNum = num.toString().split('').pop();
+
+    if (lastNum == 0 || lastNum >= 4) {
+      num += 'th';
+    } else if (lastNum == 1) {
+      num += 'st';
+    } else if (lastNum == 2) {
+      num += 'nd';
+    } else {
+      num += 'rd';
+    }
+
+    return num;
   }
 
   render() {
@@ -115,10 +131,10 @@ class Counter extends React.Component {
     			<div className="row">
     				<div className="col-md-12">
     					<div className="section-title1 t_center">
-    						<h2>The Annual Filipino-Canadian Camp Meeting</h2>
-
+                <h2>The {this.getYear()} Annual Filipino-Canadian Camp Meeting</h2>
+  							<h2 style={{ fontSize: '25px', marginTop: '10px' }}>{this.getDate()}</h2>
   							<Divider white={true} />
-  							<p className="text-alignm1"  style={{ fontWeight: '500' }}>{this.getDateString()} - {this.getLastDate()}</p>
+
     					</div>
     				</div>
     			</div>
@@ -171,9 +187,6 @@ class Counter extends React.Component {
     				<div className="col-md-12" align="center">
     					<div className="counter_bnt">
     						<Link to="/campmeeting/">Learn More</Link>
-    					</div>
-              <div className="counter_bnt">
-    						<Link to="/resources/">Resources</Link>
     					</div>
     				</div>
     			</div>

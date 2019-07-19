@@ -2,6 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Img from "gatsby-image"
+import { HashLink as AnchorLink } from 'react-router-hash-link';
+
+var dateFormat = require('dateformat')
 
 import Slider from '../components/carousel'
 import Features from '../components/features'
@@ -22,6 +26,8 @@ class IndexPage extends React.Component {
     const headerImages = [headerImage1, headerImage2, headerImage3];
     const counterImage = get(this, 'props.data.counterImage');
     const defaultImage = get(this, 'props.data.defaultImage');
+    const posterImage = get(this, 'props.data.posterImage');
+    const fireImage = get(this, 'props.data.fireImage');
 
     const featureImage1 = get(this, 'props.data.featureImage1');
     const featureImage2 = get(this, 'props.data.featureImage2');
@@ -31,6 +37,17 @@ class IndexPage extends React.Component {
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
     const dateStr = date + 'T00:00:00';
+    const dateObj = new Date(dateStr);
+    const startDate = dateFormat(dateStr, "mmmm d");
+    const endDate = dateObj.getDate() + 3;
+    const year = dateObj.getFullYear();
+    const campDate = startDate + '-' + endDate + ', ' + year;
+
+    // Get speakers
+    const speakers = get(this, 'props.data.speakers.edges');
+    const adultSpeaker = speakers[0].node.frontmatter.title;
+    const youthSpeaker = speakers[1].node.frontmatter.title;
+    const theme = get(this, 'props.data.theme.edges.0.node.frontmatter.title');
 
     // Get grid images
     const grid = get(this, 'props.data.gridImages.edges');
@@ -44,9 +61,51 @@ class IndexPage extends React.Component {
 
         <Slider images={headerImages} />
         <Features images={featureImages} />
+
         <Counter date={dateStr} bgImage={counterImage} />
-        <Mission />
-        <Portfolio images={grid} default={defaultImage} />
+        <div className="container area-padding">
+          <div className="row poster-container">
+            <div className="col-md-4 no-left-pad">
+              <div className="astute-single-event_adn ">
+                <a href={posterImage.sizes.src} target="_blank"><div className="em-content-image astute-event-thumb_adn poster-thumb">
+                  <Img sizes={posterImage.sizes} />
+                  <div className="posterView"><i className="fa fa-search"></i></div>
+                </div></a>
+              </div>
+            </div>
+            <div className="col-md-8">
+              <div className="eventContainer">
+                <div className="section_title_lefts" style={{
+                  textTransform: 'uppercase'
+                }}>
+                  <h2>{theme}</h2>
+                  <h1><span>Fil-Can</span> Camp Meeting {year}</h1>
+                </div>
+                <br />
+                <strong>WHEN:</strong> {campDate}<br />
+                <strong>WHERE:</strong> Foothills Camp, 3032 Township Rd 342, Red Deer County, Alberta<br />
+                <br />
+                <strong>ADULT SPEAKER:</strong> {adultSpeaker}<br />
+                <strong>YOUTH SPEAKER:</strong> {youthSpeaker}<br />
+                <br />
+                Useful Information:
+                <ul>
+                  <li><Link to="/resources/">Camp Meeting Resources - Rules, Schedules, Theme Songs ...</Link><br /></li>
+                  <li><AnchorLink to="/campmeeting/#accommodations">Accommodations</AnchorLink><br /></li>
+                  <li><AnchorLink to="/campmeeting/#souvenir">Souvenir Program</AnchorLink><br /></li>
+                  <li><AnchorLink to="/campmeeting/#faq">Frequently Asked Questions</AnchorLink><br /></li>
+                  <li><a href="https://www.foothillscamp.ca/contact">Directions to Foothills Camp & Retreat Centre</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style={{
+          backgroundColor: '#f5f5f5'
+        }}>
+          <Mission />
+        </div>
 
         <div className="team_area" id="team">
           <div className="container">
@@ -63,7 +122,6 @@ class IndexPage extends React.Component {
 
           </div>
         </div>
-
         <div className="container" style={{
           marginBottom: '100px'
         }}>
@@ -77,6 +135,8 @@ class IndexPage extends React.Component {
     				</div>
     			</div>
         </div>
+
+        <Portfolio images={grid} default={defaultImage} />
 
       </div>
     )
@@ -163,6 +223,58 @@ export const query = graphql`
     defaultImage: imageSharp(id: { regex: "/default-image/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    posterImage: imageSharp(id: { regex: "/poster/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    fireImage: imageSharp(id: { regex: "/campfire/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    speakers: allMarkdownRemark(
+    	filter: {
+        fileAbsolutePath: { regex: "/(speakers)/.*\\.md$/" }
+      }
+      sort: {
+        fields: [frontmatter___type], order: ASC
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            type
+            email
+            photo {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    theme: allMarkdownRemark(
+      limit: 1
+    	filter: { fileAbsolutePath: { regex: "/(theme)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            filipino
+            versetext
+            verse
+          }
+        }
       }
     }
     gridImages: allMarkdownRemark(

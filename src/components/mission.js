@@ -16,7 +16,6 @@ class Mission extends React.Component {
     					<div className="section-title  t_center">
     						<h2>Our Mission</h2>
     							<Divider />
-    							<p className=" text-alignm">The goals and purposes of the Association.  </p>
     					</div>
     				</div>
     			</div>
