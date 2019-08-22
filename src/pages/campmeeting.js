@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
 
     // Get date for the next camp meeting
     try {
-      this.dateStr = props.data.date.edges[0].node.frontmatter.date + 'T00:00:00';
+      this.dateStr = props.data.date.edges[0].node.frontmatter.date;
       this.dateObj = new Date(this.dateStr);
       this.year = this.dateObj.getFullYear();
     } catch(e) {
