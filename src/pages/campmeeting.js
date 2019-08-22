@@ -29,9 +29,13 @@ class IndexPage extends React.Component {
     this.quarterPage = props.data.quarterPage;
 
     // Get date for the next camp meeting
-    this.dateStr = props.data.date.edges[0].node.frontmatter.date + 'T00:00:00';
-    this.dateObj = new Date(this.dateStr);
-    this.year = this.dateObj.getFullYear();
+    try {
+      this.dateStr = props.data.date.edges[0].node.frontmatter.date + 'T00:00:00';
+      this.dateObj = new Date(this.dateStr);
+      this.year = this.dateObj.getFullYear();
+    } catch(e) {
+      this.dateStr = null;
+    }
 
     this.theme = props.data.theme.edges[0].node.frontmatter;
     this.speakers = props.data.speakers.edges;
@@ -57,9 +61,13 @@ class IndexPage extends React.Component {
   }
 
   getDate() {
-    let startDate = dateFormat(this.dateStr, "mmmm d");
-    let endDate = this.dateObj.getDate() + 3;
-    return startDate + '-' + endDate + ', ' + this.year;
+    if (this.dateStr) {
+      let startDate = dateFormat(this.dateStr, "mmmm d");
+      let endDate = this.dateObj.getDate() + 3;
+      return startDate + '-' + endDate + ', ' + this.year;
+    } else {
+      return '';
+    }
   }
 
   getThemeText() {
