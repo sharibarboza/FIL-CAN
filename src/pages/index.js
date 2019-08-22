@@ -18,6 +18,15 @@ import Divider from '../components/divider'
 
 class IndexPage extends React.Component {
 
+  getCounter(filcan, dateStr, counterImage) {
+    console.log(filcan);
+    if (filcan) {
+      return <Counter date={dateStr} bgImage={counterImage} />;
+    } else {
+      return '';
+    }
+  }
+
   render() {
     // Get sharp images
     const headerImage1 = get(this, 'props.data.headerImage1');
@@ -35,15 +44,19 @@ class IndexPage extends React.Component {
     const featureImages = [featureImage1, featureImage2, featureImage3];
 
     // Get date for the next camp meeting
-    const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
-    const dateStr = date;
-    
-    var dateObj = new Date();
-    try {
+    var filcan = true;
+    let dateObj;
+
+    var date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
+    var dateStr = date;
+    if (date) {
       dateObj = new Date(dateStr);
-    } catch(e) {
-      console.log(e);
+    } else {
+      date = new Date();
+      dateObj = date;
+      filcan = false;
     }
+
     const startDate = dateFormat(dateStr, "mmmm d");
     const endDate = dateObj.getDate() + 3;
     const year = dateObj.getFullYear();
@@ -68,7 +81,7 @@ class IndexPage extends React.Component {
         <Slider images={headerImages} />
         <Features images={featureImages} />
 
-        <Counter date={dateStr} bgImage={counterImage} />
+        {this.getCounter(filcan, dateStr, counterImage)}
         <div className="container area-padding">
           <div className="row poster-container">
             <div className="col-md-4 no-left-pad">
