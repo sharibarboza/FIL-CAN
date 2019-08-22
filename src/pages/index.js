@@ -15,13 +15,21 @@ import ExecutiveGrid from '../components/executivegrid'
 import Portfolio from '../components/portfolio'
 import Mission from '../components/mission'
 import Divider from '../components/divider'
+import Poster from '../components/poster'
 
 class IndexPage extends React.Component {
 
   getCounter(filcan, dateStr, counterImage) {
-    console.log(filcan);
     if (filcan) {
       return <Counter date={dateStr} bgImage={counterImage} />;
+    } else {
+      return '';
+    }
+  }
+
+  getPoster(filcan, posterImage, speakers, campDate, year, theme) {
+    if (filcan) {
+      return <Poster poster={posterImage} speakers={speakers} date={campDate} year={year} theme={theme} />;
     } else {
       return '';
     }
@@ -46,27 +54,34 @@ class IndexPage extends React.Component {
     // Get date for the next camp meeting
     var filcan = true;
     let dateObj;
+    let date;
 
-    var date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
+    try {
+      date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
+    } catch(e) {
+
+    }
+
     var dateStr = date;
     if (date) {
       dateObj = new Date(dateStr);
     } else {
-      date = new Date();
-      dateObj = date;
       filcan = false;
     }
 
-    const startDate = dateFormat(dateStr, "mmmm d");
-    const endDate = dateObj.getDate() + 3;
-    const year = dateObj.getFullYear();
-    const campDate = startDate + '-' + endDate + ', ' + year;
+    let startDate, endDate, year, campDate;
+    let speakers, theme;
 
-    // Get speakers
-    const speakers = get(this, 'props.data.speakers.edges');
-    const adultSpeaker = speakers[0].node.frontmatter.title;
-    const youthSpeaker = speakers[1].node.frontmatter.title;
-    const theme = get(this, 'props.data.theme.edges.0.node.frontmatter.title');
+    if (filcan) {
+      startDate = dateFormat(dateStr, "mmmm d");
+      endDate = dateObj.getDate() + 3;
+      year = dateObj.getFullYear();
+      campDate = startDate + '-' + endDate + ', ' + year;
+
+      // Get speakers
+      speakers = get(this, 'props.data.speakers.edges');
+      theme = get(this, 'props.data.theme.edges.0.node.frontmatter.title');
+    }
 
     // Get grid images
     const grid = get(this, 'props.data.gridImages.edges');
@@ -82,43 +97,7 @@ class IndexPage extends React.Component {
         <Features images={featureImages} />
 
         {this.getCounter(filcan, dateStr, counterImage)}
-        <div className="container area-padding">
-          <div className="row poster-container">
-            <div className="col-md-4 no-left-pad">
-              <div className="astute-single-event_adn ">
-                <a href={posterImage.sizes.src} target="_blank"><div className="em-content-image astute-event-thumb_adn poster-thumb">
-                  <Img sizes={posterImage.sizes} />
-                  <div className="posterView"><i className="fa fa-search"></i></div>
-                </div></a>
-              </div>
-            </div>
-            <div className="col-md-8">
-              <div className="eventContainer">
-                <div className="section_title_lefts" style={{
-                  textTransform: 'uppercase'
-                }}>
-                  <h2>{theme}</h2>
-                  <h1><span>Fil-Can</span> Camp Meeting {year}</h1>
-                </div>
-                <br />
-                <strong>WHEN:</strong> {campDate}<br />
-                <strong>WHERE:</strong> Foothills Camp, 3032 Township Rd 342, Red Deer County, Alberta<br />
-                <br />
-                <strong>ADULT SPEAKER:</strong> {adultSpeaker}<br />
-                <strong>YOUTH SPEAKER:</strong> {youthSpeaker}<br />
-                <br />
-                Useful Information:
-                <ul>
-                  <li><Link to="/resources/">Camp Meeting Resources - Rules, Schedules, Theme Songs ...</Link><br /></li>
-                  <li><AnchorLink to="/campmeeting/#accommodations">Accommodations</AnchorLink><br /></li>
-                  <li><AnchorLink to="/campmeeting/#souvenir">Souvenir Program</AnchorLink><br /></li>
-                  <li><AnchorLink to="/campmeeting/#faq">Frequently Asked Questions</AnchorLink><br /></li>
-                  <li><a href="https://www.foothillscamp.ca/contact">Directions to Foothills Camp & Retreat Centre</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        {this.getPoster(filcan, posterImage, speakers, campDate, year, theme)}
 
         <div style={{
           backgroundColor: '#f5f5f5'
