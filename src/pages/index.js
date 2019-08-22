@@ -37,7 +37,13 @@ class IndexPage extends React.Component {
     // Get date for the next camp meeting
     const date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
     const dateStr = date;
-    const dateObj = new Date(dateStr);
+    
+    var dateObj = new Date();
+    try {
+      dateObj = new Date(dateStr);
+    } catch(e) {
+      console.log(e);
+    }
     const startDate = dateFormat(dateStr, "mmmm d");
     const endDate = dateObj.getDate() + 3;
     const year = dateObj.getFullYear();
