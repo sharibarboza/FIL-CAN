@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
     const featureImages = [featureImage1, featureImage2, featureImage3];
 
     // Get date for the next camp meeting
-    var filcan = true;
+    var filcan = false;
     let dateObj;
     let date;
 
