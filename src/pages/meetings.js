@@ -169,8 +169,12 @@ class MeetingsPage extends React.Component {
     if (this.minutes) {
       for (let i = 0; i < this.minutes.length; i++) {
         let node = this.minutes[i].node;
+        try {
         let element = <FileDownload node={node} key={i} minutes="true" />
-        elements.push(element);
+          elements.push(element);
+        } catch(e) {
+          console.log(node);
+        }
       }
     } else {
       let element = <span key={0}>There are currently no meeting minutes to display.</span>

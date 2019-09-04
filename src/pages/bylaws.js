@@ -26,8 +26,12 @@ class BylawsPage extends React.Component {
     if (this.bylaws) {
       for (let i = 0; i < this.bylaws.length; i++) {
         let node = this.bylaws[i].node;
-        let element = <FileDownload node={node} key={i} />
-        elements.push(element);
+        try {
+          let element = <FileDownload node={node} key={i} />
+          elements.push(element);
+        } catch(e) {
+          console.log(node);
+        }
       }
     } else {
       let element = <span key={i}>There are currently no files to display.</span>

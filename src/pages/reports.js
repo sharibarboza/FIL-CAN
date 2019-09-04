@@ -16,8 +16,12 @@ class ReportsPage extends React.Component {
     if (reports) {
       for (let i = 0; i < reports.length; i++) {
         let node = reports[i].node;
-        let element = <FileDownload node={node} key={i} />
-        elements.push(element);
+        try {
+          let element = <FileDownload node={node} key={i} />
+          elements.push(element);
+        } catch(e) {
+          console.log(node);
+        }
       }
     } else {
       let element = <span key={0}>There are currently no files to display.</span>

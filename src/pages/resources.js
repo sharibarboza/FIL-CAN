@@ -38,8 +38,12 @@ class ResourcesPage extends React.Component {
     if (files) {
       for (let i = (files.length - 1); i >= 0; i--) {
         let node = files[i];
-        let element = <FileDownload node={node} key={i} />
-        elements.push(element);
+        try {
+          let element = <FileDownload node={node} key={i} />
+          elements.push(element);
+        } catch(e) {
+          console.log(node);
+        }
       }
     } else {
       let element = <span key={0}>There are currently no files to display.</span>

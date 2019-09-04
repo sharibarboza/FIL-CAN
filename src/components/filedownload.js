@@ -10,6 +10,7 @@ class FileDownload extends React.Component {
 
     this.key = props.node.id;
     this.file = props.node.frontmatter;
+    this.has_file = this.file.file != null;
 
     if (props.minutes) {
       this.title = dateFormat(this.file.title, 'mmmm d, yyyy');
@@ -19,6 +20,9 @@ class FileDownload extends React.Component {
   }
 
   render() {
+    if (!this.has_file) {
+      return '';
+    }
 
     return (
       <div className="row files" key={this.key}>
