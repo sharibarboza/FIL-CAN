@@ -15,6 +15,14 @@ collections:
       - { label: Unique title to file this date (e.g. Camp Meeting 2019), name: title, widget: string }
       - { label: Date, name: date, widget: datetime }
 
+  - name: poster
+    label: Campmeeting Poster
+    folder: cms/poster
+    create: true
+    fields:
+      - { label: Campmeeting Year, name: title, widget: number, valueType: int, min:2019 }
+      - { label: Poster, name: poster, widget: image }
+
   - name: leadership
     label: Leadership
     folder: cms/leadership
