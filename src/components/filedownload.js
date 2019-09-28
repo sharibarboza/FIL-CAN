@@ -27,7 +27,7 @@ class FileDownload extends React.Component {
     return (
       <div className="row files" key={this.key}>
         <div className="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-          <a style={{ fontWeight: '400' }} href={this.file.file.publicURL} target="_blank">{this.title}</a><br />
+          <a style={{ fontWeight: '600' }} href={this.file.file.publicURL} target="_blank">{this.title}</a><br />
           <span className="file-text">{this.file.file.relativePath}</span>
         </div>
         <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12" style={{

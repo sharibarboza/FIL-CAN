@@ -9,7 +9,6 @@ var dateFormat = require('dateformat');
 import '../layouts/animate.css'
 
 import Divider from '../components/divider';
-import MapPanel from '../components/mappanel';
 import FileDownload from '../components/filedownload'
 
 class MeetingsPage extends React.Component {
@@ -146,17 +145,11 @@ class MeetingsPage extends React.Component {
         let date = new Date(meeting.title);
         let month = this.months[date.getMonth()];
 
-        let body = <div className="row"><div className="col-md-3 col-sm-12 no-left-pad calendar-col"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-md-9 col-sm-12 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
-
-        let element = <div id={i} key={node.id}><MapPanel
-          heading={datetime}
-          address={address}
-          body={body}
-        /></div>;
+        let element = <div className="row" key={i}><div className="col-md-12 no-left-pad calendar-col"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-md-9 col-sm-12 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /></div><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div>;
         panels.push(element);
       }
     } else {
-      let element = <div className="blog-left-side"><div key={0}>There are currently no upcoming meetings to display.</div></div>;
+      let element = <div className="blog-left-side" key={0}><div>There are currently no upcoming meetings to display.</div></div>;
       panels.push(element);
     }
 
@@ -287,7 +280,7 @@ class MeetingsPage extends React.Component {
           {this.initializeMeetingPanels()}
           <br />
 
-          <div id="minutes" class="anchor-pad"></div>
+          <div id="minutes" className="anchor-pad"></div>
           <div className="row minutes-title" style={{ paddingTop: '50px' }}>
             <div className="col-md-12">
               <div className="section-title t_center">

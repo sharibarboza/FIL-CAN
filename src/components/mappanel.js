@@ -15,7 +15,7 @@ class MapPanel extends React.Component {
       component: <div className="map-loader"><img src={loader} /></div>,
       loaded: false
     };
-    this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&libraries=geometry,drawing,places";
+    this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&sensor=false&libraries=geometry,drawing,places";
   }
 
   componentDidMount() {
@@ -52,7 +52,6 @@ class MapPanel extends React.Component {
     Geocode.fromAddress(this.props.address).then(
       response => {
         const { lat, lng } = response.results[0].geometry.location;
-
         const MyMapComponent = withScriptjs(withGoogleMap((props) =>
           <GoogleMap
             defaultZoom={13}
@@ -78,6 +77,7 @@ class MapPanel extends React.Component {
         });
       },
       error => {
+        console.log(error);
         console.error(error);
       }
     );

@@ -447,7 +447,7 @@ position: absolute;
 }
 .single_service_content1 h2{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     color: #B51D29;
     margin-top: 0;
     margin-bottom: 10px;
@@ -537,7 +537,7 @@ position: absolute;
 }
 .single_service_content h2{
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     color: #333;
     margin-top: 0;
     margin-bottom: 10px;
@@ -3461,14 +3461,14 @@ background: #f9f9f9;
 
 }
 .em-feature-title h2 {
-font-size: 18px;
-    font-weight: 600;
-    padding-bottom: 3px;
-    text-transform: capitalize;
-    transition: all 0.5s ease 0s;
+  font-size: 18px;
+  font-weight: 800;
+  padding-bottom: 3px;
+  text-transform: capitalize;
+  transition: all 0.5s ease 0s;
 }
 .feature_inner {
-    overflow: hidden;
+  overflow: hidden;
 }
 .feature_icon {
   margin-top: 21px;
@@ -3738,10 +3738,9 @@ EM40 TEAM CSS
 
 /* team content */
 .em-content-title h2 {
-  font-size: 0.9em;
-  font-weight: 700;
+  font-size: 1.1em;
+  font-weight: 800;
   margin-bottom: 0;
-  text-transform: uppercase;
   transition:.5s;
 
 }
@@ -6292,10 +6291,21 @@ astute event AREA CSS
     font-weight: 600;
 }
 .event-page-title_adn h2 {
-    margin-bottom: 6px;
+    margin-bottom: 0;
     height: 25px;
     line-height: 25px;
     font-size: 17px;
+    font-weight: 800;
+}
+.event-page-title_adn i {
+  color: #2033ab;
+  font-weight: bold;
+}
+.church-info {
+  font-size: 0.9em;
+}
+.fixed-church-div {
+  height: 7vh;
 }
 @media screen and (max-width: 700px) {
   .event-page-title_adn h2 {

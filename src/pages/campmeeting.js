@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Img from "gatsby-image"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Scrollchor from 'react-scrollchor';
 import Helmet from 'react-helmet'
 
@@ -22,6 +21,7 @@ class IndexPage extends React.Component {
     this.headerImage = props.data.headerImage;
     this.campImage1 = props.data.campImage1;
     this.campImage2 = props.data.campImage2;
+    this.campImage3 = props.data.campImage3;
     this.contactImage = props.data.contactImage;
     this.souvenirImage = props.data.souvenirImage;
     this.fullPage = props.data.fullPage;
@@ -41,10 +41,6 @@ class IndexPage extends React.Component {
     this.speakers = props.data.speakers.edges;
     this.faq = props.data.faq.edges;
     this.contact = props.data.contact.edges[0].node.frontmatter;
-
-    this.lat = 51.913339;
-    this.lng = -114.2923226;
-    this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&libraries=geometry,drawing,places";
 
     this.state = {
       accordion: null
@@ -175,15 +171,6 @@ class IndexPage extends React.Component {
 
   render() {
 
-    let MyMapComponent = withScriptjs(withGoogleMap((props) =>
-      <GoogleMap
-        defaultZoom={7}
-        defaultCenter={{ lat: this.lat, lng: this.lng }}
-      >
-        {props.isMarkerShown && <Marker position={{ lat: this.lat, lng: this.lng }} />}
-      </GoogleMap>
-    ))
-
     return (
       <div>
         <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Camp Meeting"/>
@@ -264,13 +251,7 @@ class IndexPage extends React.Component {
         <div className="row" style={{ margin: 0 }}>
         <div className="col-lg-6 col-md-12 col-xs-12" style={{ padding: 0 }}>
           <div>
-            <MyMapComponent
-              isMarkerShown
-              googleMapURL={this.mapKey}
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `500px` }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
+            <Img sizes={this.campImage3.sizes} style={{ height: '100%' }} />
           </div>
         </div>
           <div className="col-lg-6 col-md-12 col-xs-12" style={{
@@ -287,9 +268,17 @@ class IndexPage extends React.Component {
               <strong>Address:</strong><br/>
               3032 Township Rd 342, Red Deer County, AB<br/>
               T0M 0K0
-              <div style={{ marginTop: `40px` }}>
-                For directions to this location, visit the <a href="https://www.foothillscamp.ca/contact" target="_blank">Foothills Camp website</a>.
+              <div style={{ marginTop: `20px` }}>
+                For directions to this location or to learn about its facilities, please visit the <a href="https://www.foothillscamp.ca/contact" target="_blank">Foothills Camp website</a>.
               </div>
+              <br /><br />
+              <strong>General Rules and Security Policy</strong>
+              <br />
+              1. Parents must know where your children are all the time.<br />
+              2. No parking on the grass in all areas in front of the auditorium.<br />
+              3. No open fire unless supervised by Foothills staff.<br />
+              4. Pets are allowed only in the lower ground portion of Foothills Camp.<br />
+              5. Quiet time is 11:00 p.m. (except Saturday night during social night).
             </div>
           </div>
         </div>
@@ -504,6 +493,11 @@ export const query = graphql`
       }
     }
     campImage2: imageSharp(id: { regex: "/foothills/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    campImage3: imageSharp(id: { regex: "/aerial/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }

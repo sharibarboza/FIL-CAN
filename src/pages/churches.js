@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-import Scrollchor from 'react-scrollchor';
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 
@@ -28,27 +27,16 @@ class ChurchesPage extends React.Component {
     }
   }
 
-  initializeChurchPanels() {
-    let panels = [];
+  displayPastor(church) {
+    let element;
+    const pastor = church.pastor;
 
-    for (let i = 0; i < this.churches.length; i++) {
-      let node = this.churches[i].node;
-      let church = node.frontmatter;
-      let body = <div style={{ marginBottom: '5px' }}><span>{church.address}</span><br />
-        <span>{church.pastor}</span><br /><hr />
-        <span><i className="fa fa-phone"></i>&nbsp; {church.phone}</span><br />
-        <span><i className="fa fa-link"></i>&nbsp; <a href={church.website} target="_blank">Church Website</a></span></div>;
-
-      let element = <div id={church.title} key={node.id}><MapPanel
-        heading={church.title}
-        address={church.address}
-        body={body}
-      /></div>;
-
-      panels.push(element);
+    if (church.pastor) {
+      element = <strong>{pastor}</strong>
+    } else {
+      element = '';
     }
-
-    return panels;
+    return element;
   }
 
   initializeChurchPhotos() {
@@ -85,13 +73,16 @@ class ChurchesPage extends React.Component {
 
               <div className="event-page-title_adn ">
                 <h2>{this.truncateTitle(church.title)}</h2>
-                <div style={{ marginTop: '30px' }}>
-                  <div className="astute-event-meta-left_adn">
-                    <span style={{ color: '#007bff' }}><i className="fa fa-map-marker"></i>{church.city}</span>
+                <br/>
+                <div className="church-info">
+                  <div className="fixed-church-div">
+                    <span><i className="fa fa-map-marker"></i> {church.address}</span><br/>
+                    <span><i className="fa fa-phone"></i> {church.phone}</span><br />
+                    <span>{this.displayPastor(church)}</span>
                   </div>
-                  <div className="astute-event-meta-right_adn">
-                    <span><Scrollchor to={anchor} animate={{offset: -150, duration: 300}}>See info <i className="fa fa-info-circle"></i></Scrollchor></span>
-                  </div>
+
+                  <br /><br />
+                  <span><i className="fa fa-globe"></i> <a href={church.website} target="_blank">Visit Website</a></span>
                 </div>
               </div>
             </div>
@@ -116,14 +107,6 @@ class ChurchesPage extends React.Component {
       			</div>
       		</div>
       	</div>
-
-        <Divider />
-
-        <div className="container" style={{
-          padding: '30px 15px 100px'
-        }}>
-          {this.initializeChurchPanels()}
-        </div>
       </div>
     )
   }
