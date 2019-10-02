@@ -137,7 +137,7 @@ collections:
     create: true
     fields:
       - { label: Title of File, name: title, widget: string }
-      - { label: Category, name: type, widget: select, options: ['General', 'Sports Tournaments/Parlor Games', 'Social & Cultural Activities', 'Worship Services'], default='General' }
+      - { label: Category, name: type, widget: select, options: ['General', 'Sports Tournaments/Parlor Games', 'Social & Cultural Activities', 'Worship Services', 'Souvenir Programs'], default='General' }
       - { label: File, name: file, widget: file }
 
   - name: minutes

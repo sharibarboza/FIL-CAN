@@ -80,6 +80,15 @@ class ResourcesPage extends React.Component {
               <div className="widget widget_categories" style={{
                 width: '100%'
               }}>
+                <h2 className="widget-title"><i className="fa fa-vcard"></i>&nbsp; Souvenir Programs</h2>
+                <ul>
+
+                </ul>
+              </div>
+
+              <div className="widget widget_categories" style={{
+                width: '100%'
+              }}>
                 <h2 className="widget-title"><i className="fa fa-soccer-ball-o"></i>&nbsp; Sports Tournaments & Parlor Games</h2>
                 <ul>
                   {this.displayFiles('Sports Tournaments/Parlor Games')}
