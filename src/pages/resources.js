@@ -82,7 +82,7 @@ class ResourcesPage extends React.Component {
               }}>
                 <h2 className="widget-title"><i className="fa fa-vcard"></i>&nbsp; Souvenir Programs</h2>
                 <ul>
-
+                  {this.displayFiles('Souvenir Programs')}
                 </ul>
               </div>
 
