@@ -1,6 +1,6 @@
 ---
 title: Fil-Can Program
-type: Souvenir Programs
+type: Worship Services
 file: /assets/2019-fil-can-program.pdf
 ---
 
