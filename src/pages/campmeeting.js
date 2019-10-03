@@ -297,7 +297,6 @@ class IndexPage extends React.Component {
           <div className="accommodations-container">
             <p>Attending camp meeting is free but you must pay for accomodations. Foothills Camp offers reservations for lodge rooms (maximum 4 people), cabins (maximum 10 people), tent lots, and RV lots. Once
             you have made a reservation, you can keep that reservation for the next camp meeting by renewing your payment before the <strong>April 30th</strong> deadline.</p>
-            <br />
             <p><strong>All reservations come with an additional $30 registration fee. You can become exempt from this fee by purchasing a greeting in our Souvenir Program instead.</strong> See the next section to learn more.
             </p>
             <br />
@@ -324,9 +323,10 @@ class IndexPage extends React.Component {
             }}>
               <div className="row">
                 <div className="col-md-10">
-                  <p>The Souvenir Program is a booklet that will be handed out in the next camp meeting to guests containing information on speakers, the camp meeting schedule, family greetings from the members, and more. </p>
-                  <br />
+                  <p>The Souvenir Program is a booklet that will be handed out in the next camp meeting to guests containing information on speakers, the camp meeting schedule, family greetings from the members, and more.</p>
                   <p>Become a sponsor for the next camp meeting by purchasing a family greeting! A <strong>family greeting</strong> is a page or partial page with a picture of your family and/or your business advertisement. You can show your support for this event by purchasing a family greeting and in return your family/advertisement will be showcased in our souvenir booklet.</p>
+                  <br />
+                  Go to the camp meeting <Link to="/resources/">resource files</Link> to view and download previous Souvenir Programs.
                 </div>
                 <div className="col-md-2">
                   <Img sizes={this.souvenirImage.sizes} />
