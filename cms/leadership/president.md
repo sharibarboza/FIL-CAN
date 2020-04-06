@@ -1,8 +1,8 @@
 ---
 title: President
-position: President
-name: Jib Labinghisa
-photo: /assets/jib-labinghisa.jpg
 type: Officer
+position: President
+name: Lady Dianne Bondoc
+photo: /assets/lady-dianne-copy.jpg
 ---
 
