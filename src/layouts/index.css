@@ -331,6 +331,15 @@ astute HEADING TOP AREA CSS
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
+.youtube-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clear: float;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 #feature1_overlay {
   background-color: rgba(181, 29, 41, 0.7);
 }
@@ -900,6 +909,7 @@ position: absolute;
 }
 
 /* single video css */
+
 .single_video {
     margin-top: 30px;
 }
@@ -3664,7 +3674,6 @@ EM40 TEAM CSS
 	text-align:center;
 	position: relative;
 	transition:.5s;
-  margin-bottom: 30px;
 }
 .em-team1 {
 	text-align:center;
@@ -3673,7 +3682,6 @@ EM40 TEAM CSS
 }
 .em-team-one, .em-team1-one {
   background-color: #ffffff;
-  padding-bottom: 10px;
   border-bottom: 1px solid #f9f9f9;
 }
 .em-team:hover .em-team-content-socials {
@@ -6234,11 +6242,10 @@ astute event AREA CSS
   filter: grayscale(0);
 }
 .church-image {
-    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100% !important;
 }
 .readmore_icon_adn {
     left: 50%;

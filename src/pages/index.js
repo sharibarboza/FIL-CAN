@@ -16,6 +16,7 @@ import Portfolio from '../components/portfolio'
 import Mission from '../components/mission'
 import Divider from '../components/divider'
 import Poster from '../components/poster'
+import Youtube from '../components/youtube'
 
 class IndexPage extends React.Component {
 
@@ -45,6 +46,7 @@ class IndexPage extends React.Component {
     const defaultImage = get(this, 'props.data.defaultImage');
     const posterImage = get(this, 'props.data.posterImage');
     const fireImage = get(this, 'props.data.fireImage');
+    const youtubeImage = get(this, 'props.data.youtubeImage');
 
     const featureImage1 = get(this, 'props.data.featureImage1');
     const featureImage2 = get(this, 'props.data.featureImage2');
@@ -100,9 +102,31 @@ class IndexPage extends React.Component {
         {this.getPoster(filcan, posterImage, speakers, campDate, year, theme)}
 
         <div style={{
-          backgroundColor: '#f5f5f5'
+          position: 'relative'
         }}>
-          <Mission />
+          <Img
+            className="breatcome_area"
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            sizes={youtubeImage.sizes}
+          />
+          <div className="youtube-overlay"></div>
+          <div className="container-fluid">
+            <div className="col-md-12">
+              <div className="breatcome_title">
+                <div className="breatcome_title_inner">
+                  <div className="breatcome_content">
+                    <Youtube />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="team_area" id="team">
@@ -121,7 +145,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
         <div className="container" style={{
-          marginBottom: '100px'
+          marginBottom: '100px',
         }}>
     			<div className="row">
     				<div className="col-md-12">
@@ -132,6 +156,12 @@ class IndexPage extends React.Component {
     					</div>
     				</div>
     			</div>
+        </div>
+
+        <div style={{
+          backgroundColor: '#f5f5f5'
+        }}>
+          <Mission />
         </div>
 
         <Portfolio images={grid} default={defaultImage} />
@@ -181,6 +211,11 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    youtubeImage: imageSharp(id: { regex: "/youtube-bg2/" }) {
+      sizes(maxWidth: 5000) {
+        ...GatsbyImageSharpSizes
       }
     }
     headerImage1: imageSharp(id: { regex: "/foothills/" }) {
