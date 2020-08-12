@@ -1,5 +1,7 @@
 ---
-title: Pastor Samuel Cadiz
+title: Pastor Neal Peralta
 type: Youth Speaker
-photo: /assets/pastor-sam-cadiz.jpg
+email: nperalta@bcadventist.ca
+photo: /assets/neal-peralta.jpg
 ---
+
