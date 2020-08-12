@@ -6916,6 +6916,12 @@ table#wp-calendar td#today{
   }
 }
 
+@media (max-width: 992px) {
+  .mobile-pic {
+    position: relative !important;
+  }
+}
+
 @media (max-width: 800px) {
   .em_slider_inner {
     width: 80%;
@@ -7217,6 +7223,12 @@ table#wp-calendar td#today{
   }
   .counter_bnt a {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .astute-event-thumb_adn {
+    height: 250px !important;
   }
 }
 

@@ -58,6 +58,7 @@ class ChurchesPage extends React.Component {
 
             <div className="em-content-image astute-event-thumb_adn">
               <Img
+                className="church-pic"
                 style={{
                   position: "absolute",
                   left: 0,

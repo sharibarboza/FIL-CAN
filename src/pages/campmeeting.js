@@ -223,7 +223,17 @@ class IndexPage extends React.Component {
             </div>
           </div>
           <div className="col-lg-6 col-md-12 col-xs-12" style={{ padding: 0 }}>
-            <Img sizes={this.campImage1.sizes} style={{ height: '100%' }} />
+              <Img
+                className="mobile-pic"
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+                sizes={this.campImage1.sizes}
+              />
           </div>
         </div>
 
@@ -251,11 +261,22 @@ class IndexPage extends React.Component {
         <div className="row" style={{ margin: 0 }}>
         <div className="col-lg-6 col-md-12 col-xs-12" style={{ padding: 0 }}>
           <div>
-            <Img sizes={this.campImage3.sizes} style={{ height: '100%' }} />
+            <Img
+              className="mobile-pic"
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                width: "100%",
+                height: "100%",
+              }}
+              sizes={this.campImage3.sizes}
+            />
           </div>
         </div>
           <div className="col-lg-6 col-md-12 col-xs-12" style={{
-            backgroundColor: '#f5f5f5'
+            backgroundColor: '#f5f5f5',
+            minHeight: '500px'
           }}>
             <div className="theme-container-right">
               <div className="section_title_lefts">
@@ -271,14 +292,6 @@ class IndexPage extends React.Component {
               <div style={{ marginTop: `20px` }}>
                 For directions to this location or to learn about its facilities, please visit the <a href="https://www.foothillscamp.ca/contact" target="_blank">Foothills Camp website</a>.
               </div>
-              <br /><br />
-              <strong>General Rules and Security Policy</strong>
-              <br />
-              1. Parents must know where your children are all the time.<br />
-              2. No parking on the grass in all areas in front of the auditorium.<br />
-              3. No open fire unless supervised by Foothills staff.<br />
-              4. Pets are allowed only in the lower ground portion of Foothills Camp.<br />
-              5. Quiet time is 11:00 p.m. (except Saturday night during social night).
             </div>
           </div>
         </div>
@@ -497,7 +510,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    campImage3: imageSharp(id: { regex: "/aerial/" }) {
+    campImage3: imageSharp(id: { regex: "/campingsite/" }) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
       }
