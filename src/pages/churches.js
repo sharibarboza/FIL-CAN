@@ -57,17 +57,16 @@ class ChurchesPage extends React.Component {
           <div className="astute-single-event_adn">
 
             <div className="em-content-image astute-event-thumb_adn">
-              <Img className="church-image" alt="" sizes={church.photo.childImageSharp.sizes} />
-              {church.website != null
-                ?
-                <a href={church.website} target="_blank">
-                <div className="event_date">
-  								<span className="fa fa-link"></span>
-                </div>
-                </a>
-                :
-                <div></div>
-              }
+              <Img
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+                sizes={church.photo.childImageSharp.sizes}
+              />
             </div>
             <div className="em-event-content-area_adn ">
 
@@ -117,6 +116,11 @@ export default ChurchesPage
 
 export const query = graphql`
   query ChurchQuery {
+    youtubeImage: imageSharp(id: { regex: "/youtube-bg2/" }) {
+      sizes(maxWidth: 5000) {
+        ...GatsbyImageSharpSizes
+      }
+    }
     churches: allMarkdownRemark(
   	   filter: { fileAbsolutePath: { regex: "/(churches)/.*\\.md$/" } }
        sort: { fields: [frontmatter___title], order: ASC }

@@ -6241,12 +6241,6 @@ astute event AREA CSS
 .souvenir-thumb img, .poster-thumb img {
   filter: grayscale(0);
 }
-.church-image {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100% !important;
-}
 .readmore_icon_adn {
     left: 50%;
     position: absolute;
