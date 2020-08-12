@@ -1,9 +1,9 @@
 ---
-title: That They May All Be One
-filipino: UPANG SILANG LAHAT AY MAGING ISA
+title: 'Yes, Lord'
+filipino: 'Opo, Panginoon'
 versetext: >-
-  That they all may be one; as thou, Father, art in me, and I in thee, that they
-  also may be one in us: that the world may believe that thou hast sent me.
-verse: 'John 17:21'
+  Martha said to him, "Yes Lord, I believe that you are the Messiah, the Son of
+  God, the one who was expected to come into the world."
+verse: 'John 11:27'
 ---
 
