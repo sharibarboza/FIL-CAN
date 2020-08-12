@@ -6949,6 +6949,7 @@ table#wp-calendar td#today{
   .em-button-button-area a {
     font-size: 0.8em;
     padding: 10px 15px;
+    z-index: 999;
   }
   .logo img {
     width: 70px;
