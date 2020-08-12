@@ -2195,6 +2195,11 @@ nav.astute_menu.main-search-menu {
 .donate-btn-header {
     display: inline-block;
 }
+.carousel-btn {
+  dipslay: block;
+  margin: 0 auto;
+  width: fit-content;
+}
 .social-nav .fa {
   margin-right: 10px;
 }
@@ -2211,6 +2216,7 @@ a.dtbtn, a.red-on-white {
     padding: 10px 30px;
     font-family: 'Montserrat', sans-serif;
     transition: 1s;
+    z-index: 999;
 }
 .donate-btn-header .dtbtn {
   padding: 5px 15px;
@@ -6949,7 +6955,6 @@ table#wp-calendar td#today{
   .em-button-button-area a {
     font-size: 0.8em;
     padding: 10px 15px;
-    z-index: 999;
   }
   .logo img {
     width: 70px;

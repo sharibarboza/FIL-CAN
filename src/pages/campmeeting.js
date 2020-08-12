@@ -193,8 +193,8 @@ class IndexPage extends React.Component {
                 }}>
                   <p className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
                 </div>
-                <div className="em-slider-button camp-carousel wow bounceInUp em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
-                  <Link to="/resources/">resources</Link>
+                <div className="carousel-btn">
+                  <Link className="red-on-white" to="/resources/">resources</Link>
                 </div>
               </div>
             </div>
