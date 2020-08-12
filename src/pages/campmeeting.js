@@ -191,9 +191,9 @@ class IndexPage extends React.Component {
                 <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
                   paddingTop: '20px'
                 }}>
-                  <p  className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
+                  <p className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
                 </div>
-                <div className="em-slider-button camp-carousel wow  bounceInUp  em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
+                <div className="em-slider-button camp-carousel wow bounceInUp em-button-button-area" data-wow-duration="3s" data-wow-delay="0s">
                   <Link to="/resources/">resources</Link>
                 </div>
               </div>
