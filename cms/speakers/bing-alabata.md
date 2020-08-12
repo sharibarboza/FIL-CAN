@@ -1,6 +1,7 @@
 ---
-title: Dr. VicLouis Arreola III
+title: Pastor Jesus Agol
 type: Adult Speaker
-email: vicarreola3@gmail.com
-photo: /assets/pastor-vic-arreola.jpg
+email: jagol@adventistontario.org
+photo: /assets/picture-pastor-agol-1.jpg
 ---
+
