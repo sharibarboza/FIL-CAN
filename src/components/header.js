@@ -128,7 +128,10 @@ class Header extends React.Component {
                   {this.getBrand()}
                 </div>
 
-      					<div className="col-xs-9" align="right" style={{ paddingLeft: '60px' }}>
+      					<div className="col-xs-9" align="right" style={{ 
+                  paddingLeft: '60px',
+                  textAlign: 'right'
+                }}>
                   <div className="row social-nav" style={{
                     float: this.state.scrollingLock ? 'right' : 'none',
                     display: this.state.mobileWindow ? 'none' : 'inline-flex',
