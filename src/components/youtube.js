@@ -2,7 +2,7 @@ import React from 'react';
 
 import Divider from './divider';
 
-import youtubePic from '../images/youtube-pic2.jpg';
+import youtubeImg from '../images/youtube-pic2.jpg';
 
 class Youtube extends React.Component {
   render() {
@@ -26,7 +26,7 @@ class Youtube extends React.Component {
       		textAlign: 'center'
       	}}>
       		<a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank">
-      			<img src={youtubePic} style={{
+      			<img src={youtubeImg} style={{
       				width: '90%'
       			}}/>
       		</a>
