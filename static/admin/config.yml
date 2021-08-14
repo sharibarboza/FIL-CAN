@@ -148,3 +148,10 @@ collections:
       - { label: Title of Meeting Minutes (Must be unique), name: title, widget: string }
       - { label: Date of Meeting, name: date, widget: date }
       - { label: File, name: file, widget: file }
+
+  - name: youtube_banner
+    label: Youtube Link Banner
+    folder: cms/youtube
+    create: true
+    fields:
+      - { label: Photo, name: photo, widget: image, default: /assets/thumbnail.png }

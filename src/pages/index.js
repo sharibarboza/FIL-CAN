@@ -46,7 +46,8 @@ class IndexPage extends React.Component {
     const defaultImage = get(this, 'props.data.defaultImage');
     const posterImage = get(this, 'props.data.posterImage');
     const fireImage = get(this, 'props.data.fireImage');
-    const youtubeImage = get(this, 'props.data.youtubeImage');
+    const youtubeBg = get(this, 'props.data.youtubeImage');
+    const youtubeImg = get(this, 'props.data.youtube.edges.0.node.frontmatter.photo');
 
     const featureImage1 = get(this, 'props.data.featureImage1');
     const featureImage2 = get(this, 'props.data.featureImage2');
@@ -113,7 +114,7 @@ class IndexPage extends React.Component {
               width: "100%",
               height: "100%",
             }}
-            sizes={youtubeImage.sizes}
+            sizes={youtubeBg.sizes}
           />
           <div className="youtube-overlay"></div>
           <div className="container-fluid">
@@ -121,7 +122,7 @@ class IndexPage extends React.Component {
               <div className="breatcome_title">
                 <div className="breatcome_title_inner">
                   <div className="breatcome_content">
-                    <Youtube />
+                    <Youtube img={youtubeImg} />
                   </div>
                 </div>
               </div>
@@ -185,6 +186,25 @@ export const query = graphql`
           id
           frontmatter {
             date
+          }
+        }
+      }
+    }
+    youtube: allMarkdownRemark(
+      limit: 1
+      filter: { fileAbsolutePath: { regex: "/(youtube)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            photo {
+              childImageSharp {
+                sizes(maxWidth: 1024 ) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

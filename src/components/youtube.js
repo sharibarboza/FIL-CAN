@@ -1,10 +1,31 @@
 import React from 'react';
+import Img from "gatsby-image";
 
 import Divider from './divider';
 
 import youtubeImg from '../images/youtube-pic2.jpg';
 
+import defaultPhoto from '../../static/assets/thumbnail.png';
+
 class Youtube extends React.Component {
+  constructor(props) {
+    super(props);
+    this.image = props.img;
+  }
+
+  getImage() {
+    let element;
+    try {
+      element = <img style={{
+        maxWidth: "65%"
+      }} src={this.image.childImageSharp.sizes.src} alt="" />;
+    } catch(e) {
+      element = <img src={defaultPhoto} />
+    }
+
+    return element;
+  }
+
   render() {
   	return (
   	<div className="container area-padding">
@@ -26,9 +47,7 @@ class Youtube extends React.Component {
       		textAlign: 'center'
       	}}>
       		<a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank">
-      			<img src={youtubeImg} style={{
-      				width: '90%'
-      			}}/>
+      			{this.getImage()}
       		</a>
       		<div style={{
       			paddingTop: '40px'
