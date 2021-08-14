@@ -2,7 +2,7 @@ import React from 'react';
 
 import Divider from './divider';
 
-import youtubePic from '../images/youtube-pic.png';
+import youtubePic from '../images/youtube-pic2.jpg';
 
 class Youtube extends React.Component {
   render() {
