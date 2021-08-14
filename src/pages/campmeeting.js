@@ -37,6 +37,7 @@ class IndexPage extends React.Component {
       this.dateStr = null;
     }
 
+    this.themeObj = props.data.theme.edges;
     this.theme = props.data.theme.edges[0].node.frontmatter;
     this.speakers = props.data.speakers.edges;
     this.faq = props.data.faq.edges;
@@ -46,6 +47,8 @@ class IndexPage extends React.Component {
     this.state = {
       accordion: null
     }
+
+    this.checkDate();
   }
 
   componentDidMount() {
@@ -55,6 +58,11 @@ class IndexPage extends React.Component {
           live: false
       }).init();
     }
+  }
+
+  checkDate() {
+    const currentDate = new Date();
+    return currentDate <= this.dateObj;
   }
 
   getDate() {
@@ -78,6 +86,22 @@ class IndexPage extends React.Component {
     return msg;
   }
 
+  validTheme() {
+    try {
+      const theme = this.themeObj[0].node.frontmatter;
+
+      if (theme.title == '') {
+        return false;
+      } else if (theme.versetext == '') {
+        return false;
+      }
+    } catch(e) {
+      return false;
+    }
+
+    return true;
+  }
+
   getThemeText() {
     const words = this.theme.title.split(' ');
     const numWords = words.length;
@@ -89,9 +113,12 @@ class IndexPage extends React.Component {
   getLastWord() {
     const words = this.theme.title.split(' ');
     const numWords = words.length;
-    const end = words[numWords-1];
 
-    return end;
+    if (numWords < 2) {
+      return '';
+    } else {
+      return words[numWords-1];
+    }
   }
 
   getRow(numSpeakers) {
@@ -197,14 +224,18 @@ class IndexPage extends React.Component {
                 <div className="wow fadeInUpBig" data-wow-duration="1.2s" data-wow-delay="0s">
                   <h2 className="em-slider-title">Filipino-Canadian Camp Meeting </h2>
                 </div>
-                <div className="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0s">
-                  <h1 className="em-slider-sub-title">{this.getDate()} </h1>
+                {this.checkDate() ?
+                <div>
+                  <div className="wow fadeInUpBig" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <h1 className="em-slider-sub-title">{this.getDate()} </h1>
+                  </div>
+                  <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
+                    paddingTop: '20px'
+                  }}>
+                    <p className="em-slider-descript"> {this.getInfo()}</p>
+                  </div>
                 </div>
-                <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
-                  paddingTop: '20px'
-                }}>
-                  <p className="em-slider-descript"> {this.getInfo()}</p>
-                </div>
+                : null}
                 <div className="carousel-btn">
                   <Link className="red-on-white" to="/resources/">resources</Link>
                 </div>
@@ -213,6 +244,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
+        {this.validTheme() ? 
         <div className="row" style={{ margin: 0 }}>
           <div className="col-lg-6 col-md-12 col-xs-12" style={{
             backgroundColor: '#f5f5f5'
@@ -248,6 +280,7 @@ class IndexPage extends React.Component {
               />
           </div>
         </div>
+        : null}
 
         {this.speakers.length > 0 ?
         <div className="team_area" id="speakers">
