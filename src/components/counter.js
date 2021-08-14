@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
 
-import counterBg from '../images/campmeeting.jpg';
+import counterBg from '../images/canada.jpeg';
 
 import Divider from './divider';
 
