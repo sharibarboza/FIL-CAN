@@ -155,3 +155,10 @@ collections:
     create: true
     fields:
       - { label: Photo, name: photo, widget: image, default: /assets/thumbnail.png }
+
+  - name: camp_info
+    label: Camp Meeting Info
+    folder: cms/info
+    create: true
+    fields:
+      - { label: Info, name: info, widget: string }

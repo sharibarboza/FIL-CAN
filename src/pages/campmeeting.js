@@ -41,6 +41,7 @@ class IndexPage extends React.Component {
     this.speakers = props.data.speakers.edges;
     this.faq = props.data.faq.edges;
     this.contact = props.data.contact.edges[0].node.frontmatter;
+    this.info = props.data.info.edges;
 
     this.state = {
       accordion: null
@@ -64,6 +65,17 @@ class IndexPage extends React.Component {
     } else {
       return '';
     }
+  }
+
+  getInfo() {
+    let msg = '';
+    try {
+      msg = this.info[0].node.frontmatter.info;
+    } catch(e) {
+      msg = 'Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!';
+    }
+
+    return msg;
   }
 
   getThemeText() {
@@ -191,7 +203,7 @@ class IndexPage extends React.Component {
                 <div className="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0s" style={{
                   paddingTop: '20px'
                 }}>
-                  <p className="em-slider-descript"> Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!</p>
+                  <p className="em-slider-descript"> {this.getInfo()}</p>
                 </div>
                 <div className="carousel-btn">
                   <Link className="red-on-white" to="/resources/">resources</Link>
@@ -491,6 +503,19 @@ export const query = graphql`
           frontmatter {
             title
             phone
+          }
+        }
+      }
+    }
+    info: allMarkdownRemark(
+      limit: 1
+      filter: { fileAbsolutePath: { regex: "/(info)/.*\\.md$/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            info
           }
         }
       }
