@@ -1,9 +1,6 @@
 import React from 'react';
-import Img from "gatsby-image";
 
 import Divider from './divider';
-
-import youtubeImg from '../images/youtube-pic2.jpg';
 
 import defaultPhoto from '../../static/assets/thumbnail.png';
 
