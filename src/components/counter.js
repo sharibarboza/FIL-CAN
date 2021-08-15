@@ -116,7 +116,7 @@ class Counter extends React.Component {
     try {
       var currentDate = new Date();
       var dateStr = date[0].node.frontmatter.date;
-      var dateObj = date;
+      var dateObj = new Date(dateStr);
 
       if (currentDate <= dateObj) {
         this.date = dateObj;
