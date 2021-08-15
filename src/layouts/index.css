@@ -274,7 +274,7 @@ astute HEADING TOP AREA CSS
 .countdown-col {
   display: inline-block;
   background-color: rgb(181,29,41,0.7);
-  margin: 25px;
+  margin: 25px 15px;
   padding: 35px 20px 0 20px;
   width: 175px;
   height: 175px;
@@ -2218,6 +2218,21 @@ a.dtbtn, a.red-on-white {
     transition: 1s;
     z-index: 999;
 }
+.white-on-red {
+    border: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #B51D29;
+    padding: 10px 30px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s;
+    z-index: 999;
+}
 .donate-btn-header .dtbtn {
   padding: 5px 15px;
   font-size: 12px;
@@ -2231,6 +2246,11 @@ a.red-on-white:hover {
     color: #B51D29;
     background-color: transparent;
     border: 1px solid #B51D29;
+}
+.white-on-red:hover {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
 }
 .redX {
     color: #B51D29;

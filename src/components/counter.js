@@ -2,8 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
 
-import counterBg from '../images/canada.jpeg';
-
 import Divider from './divider';
 
 var dateFormat = require('dateformat');
@@ -19,15 +17,19 @@ class Counter extends React.Component {
       sec: 0
     }
 
-    this.date = new Date(this.props.date);
-    this.year = this.date.getFullYear();
+    this.validDate = false;
+    this.date = null;
+    this.year = null;
+    this.verifyDate(this.props.date);
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => {
-      const date = this.calculateCountdown(this.props.date);
-      date ? this.setState(date) : this.stop();
-    }, 1000);
+    if (this.validDate) {
+      this.interval = setInterval(() => {
+        const date = this.calculateCountdown(this.date);
+        date ? this.setState(date) : this.stop();
+      }, 1000);
+    }
   }
 
   componentWillMount() {
@@ -110,87 +112,117 @@ class Counter extends React.Component {
     return num;
   }
 
+  verifyDate(date) {
+    try {
+      var currentDate = new Date();
+      var dateStr = date[0].node.frontmatter.date;
+      var dateObj = date;
+
+      if (currentDate <= dateObj) {
+        this.date = dateObj;
+        this.year = dateObj.getFullYear();
+        this.validDate = true;
+      }
+    } catch(e) {
+      return false;
+    }
+  }
+
   render() {
     const countDown = this.state;
 
     return (
-      <div className="count_down_area">
-        <Img
-          style={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            width: "100%",
-            height: "100%",
-          }}
-          sizes={this.props.bgImage.sizes}
-        />
-    		<div className="container" style={{
-          padding: '100px 0 100px'
-        }}>
-    			<div className="row">
-    				<div className="col-md-12">
-    					<div className="section-title1 t_center">
-                <h2>The {this.getYear()} Annual Filipino-Canadian Camp Meeting</h2>
-  							<h2 style={{ fontSize: '25px', marginTop: '10px' }}>{this.getDate()}</h2>
-  							<Divider white={true} />
+      <div>
+      {this.validDate ?
+        <div className="count_down_area">
+          <Img
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            sizes={this.props.bgImage.sizes}
+          />
+      		<div className="container" style={{
+            padding: "100px 0"
+          }}>
+      			<div className="row">
+      				<div className="col-md-12">
+      					<div className="section-title1 t_center">
+                  <h2>The {this.getYear()} Annual Filipino-Canadian Camp Meeting</h2>
+    							<h2 style={{ fontSize: '25px', marginTop: '10px' }}>{this.getDate()}</h2>
+    							<Divider white={true} />
 
-    					</div>
-    				</div>
-    			</div>
-    			<div className="row">
-    				<div className="col-md-12">
-    					<div className="counterdowns">
-    						<div className="counter">
-    							<div className="timer">
+      					</div>
+      				</div>
+      			</div>
+      			<div className="row">
+      				<div className="col-md-12">
+      					<div className="counterdowns">
+      						<div className="counter">
+      							<div className="timer">
 
-                    <div className="countdown">
-                      <span className="countdown-col">
-                        <span className="countdown-col-element">
-                            <strong className="countdown-number">{this.addLeadingZeros(countDown.days)}</strong>
-                            <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+                      <div className="countdown">
+                        <span className="countdown-col">
+                          <span className="countdown-col-element">
+                              <strong className="countdown-number">{this.addLeadingZeros(countDown.days)}</strong>
+                              <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+                          </span>
                         </span>
-                      </span>
 
-                      <span className="colon">:</span>
+                        <span className="colon">:</span>
 
-                      <span className="countdown-col">
-                        <span className="countdown-col-element">
-                          <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-                          <span>Hours</span>
+                        <span className="countdown-col">
+                          <span className="countdown-col-element">
+                            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
+                            <span>Hours</span>
+                          </span>
                         </span>
-                      </span>
 
-                      <span className="colon">:</span>
+                        <span className="colon">:</span>
 
-                      <span className="countdown-col">
-                        <span className="countdown-col-element">
-                          <strong>{this.addLeadingZeros(countDown.min)}</strong>
-                          <span>Minutes</span>
+                        <span className="countdown-col">
+                          <span className="countdown-col-element">
+                            <strong>{this.addLeadingZeros(countDown.min)}</strong>
+                            <span>Minutes</span>
+                          </span>
                         </span>
-                      </span>
 
-                      <span className="colon">:</span>
+                        <span className="colon">:</span>
 
-                      <span className="countdown-col">
-                        <span className="countdown-col-element">
-                          <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-                          <span>Seconds</span>
+                        <span className="countdown-col">
+                          <span className="countdown-col-element">
+                            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
+                            <span>Seconds</span>
+                          </span>
                         </span>
-                      </span>
+                      </div>
+
+      							</div>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+
+            <div className="container" style={{
+              marginBottom: '100px',
+            }}>
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="section-title t_center">
+                    <div className="donate-btn-header">
+                      <Link to="/campmeeting/" className="white-on-red" href="#">Learn More</Link>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    				<div className="col-md-12" align="center">
-    					<div className="counter_bnt">
-    						<Link to="/campmeeting/">Learn More</Link>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
+      		</div>
+        </div>
+      : null}
       </div>
     )
   }

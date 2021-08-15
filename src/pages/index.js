@@ -20,22 +20,6 @@ import Youtube from '../components/youtube'
 
 class IndexPage extends React.Component {
 
-  getCounter(filcan, dateStr, counterImage) {
-    if (filcan) {
-      return <Counter date={dateStr} bgImage={counterImage} />;
-    } else {
-      return '';
-    }
-  }
-
-  getPoster(filcan, posterImage, speakers, campDate, year, theme) {
-    if (filcan) {
-      return <Poster poster={posterImage} speakers={speakers} date={campDate} year={year} theme={theme} />;
-    } else {
-      return '';
-    }
-  }
-
   render() {
     // Get sharp images
     const headerImage1 = get(this, 'props.data.headerImage1');
@@ -55,36 +39,7 @@ class IndexPage extends React.Component {
     const featureImages = [featureImage1, featureImage2, featureImage3];
 
     // Get date for the next camp meeting
-    var filcan = false;
-    let dateObj;
-    let date;
-
-    try {
-      date = get(this, 'props.data.date.edges.0.node.frontmatter.date');
-    } catch(e) {
-
-    }
-
-    var dateStr = date;
-    if (date) {
-      dateObj = new Date(dateStr);
-    } else {
-      filcan = false;
-    }
-
-    let startDate, endDate, year, campDate;
-    let speakers, theme;
-
-    if (filcan) {
-      startDate = dateFormat(dateStr, "mmmm d");
-      endDate = dateObj.getDate() + 3;
-      year = dateObj.getFullYear();
-      campDate = startDate + '-' + endDate + ', ' + year;
-
-      // Get speakers
-      speakers = get(this, 'props.data.speakers.edges');
-      theme = get(this, 'props.data.theme.edges.0.node.frontmatter.title');
-    }
+    const campDate = get(this, 'props.data.date.edges');
 
     // Get grid images
     const grid = get(this, 'props.data.gridImages.edges');
@@ -98,9 +53,6 @@ class IndexPage extends React.Component {
 
         <Slider images={headerImages} />
         <Features images={featureImages} />
-
-        {this.getCounter(filcan, dateStr, counterImage)}
-        {this.getPoster(filcan, posterImage, speakers, campDate, year, theme)}
 
         <div style={{
           position: 'relative'
@@ -129,6 +81,8 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
+
+        <Counter date={campDate} bgImage={counterImage} />
 
         <div className="team_area" id="team">
           <div className="container">
@@ -253,7 +207,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    counterImage: imageSharp(id: { regex: "/campmeeting/" }) {
+    counterImage: imageSharp(id: { regex: "/campnight/" }) {
       sizes(maxWidth: 2000) {
         ...GatsbyImageSharpSizes
       }
