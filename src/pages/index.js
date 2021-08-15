@@ -200,7 +200,7 @@ export const query = graphql`
           frontmatter {
             photo {
               childImageSharp {
-                sizes(maxWidth: 1024 ) {
+                sizes(maxWidth: 1600 ) {
                   ...GatsbyImageSharpSizes
                 }
               }

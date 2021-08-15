@@ -14,7 +14,7 @@ class Youtube extends React.Component {
     let element;
     try {
       element = <img style={{
-        maxWidth: "65%"
+        maxWidth: "80%"
       }} src={this.image.childImageSharp.sizes.src} alt="" />;
     } catch(e) {
       element = <img src={defaultPhoto} />
