@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Divider from './divider';
+import Video from '../components/video'
 
 import defaultPhoto from '../../static/assets/thumbnail.png';
 
@@ -8,14 +9,13 @@ class Youtube extends React.Component {
   constructor(props) {
     super(props);
     this.image = props.img;
+    this.channel = 'UCRjkITPyt10LSzbOs5hojUw';
   }
 
   getImage() {
     let element;
     try {
-      element = <img style={{
-        maxWidth: "80%"
-      }} src={this.image.childImageSharp.sizes.src} alt="" />;
+      element = <div className="img-wrapper"><img src={this.image.childImageSharp.sizes.src} alt="" /></div>;
     } catch(e) {
       element = <img src={defaultPhoto} />
     }
@@ -61,6 +61,7 @@ class Youtube extends React.Component {
       		</div>
       	</div>
       </div>
+      <div><Video channel={this.channel} /></div>
   	</div>
   	)
   }
