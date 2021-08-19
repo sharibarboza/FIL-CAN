@@ -149,16 +149,21 @@ collections:
       - { label: Date of Meeting, name: date, widget: date }
       - { label: File, name: file, widget: file }
 
-  - name: youtube_banner
-    label: Youtube Link Banner
-    folder: cms/youtube
-    create: true
-    fields:
-      - { label: Photo, name: photo, widget: image, default: /assets/thumbnail.png }
-
   - name: camp_info
     label: Camp Meeting Info
     folder: cms/info
     create: true
     fields:
       - { label: Info, name: info, widget: string }
+
+  - name: schedules
+    label: Schedule Images
+    folder: cms/files/schedules
+    create: true
+    fields:
+      - { label: Title of Schedule, name: title, widget: string }
+      - { label: Photo, name: photo, widget: image }
+      - { label: Date, name: date, widget: datetime, required: false  }
+
+
+

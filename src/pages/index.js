@@ -17,6 +17,7 @@ import Mission from '../components/mission'
 import Divider from '../components/divider'
 import Poster from '../components/poster'
 import Youtube from '../components/youtube'
+import Schedules from '../components/schedules'
 
 class IndexPage extends React.Component {
 
@@ -31,7 +32,7 @@ class IndexPage extends React.Component {
     const posterImage = get(this, 'props.data.posterImage');
     const fireImage = get(this, 'props.data.fireImage');
     const youtubeBg = get(this, 'props.data.youtubeImage');
-    const youtubeImg = get(this, 'props.data.youtube.edges.0.node.frontmatter.photo');
+    const schedules = get(this, 'props.data.schedules.edges');
 
     const featureImage1 = get(this, 'props.data.featureImage1');
     const featureImage2 = get(this, 'props.data.featureImage2');
@@ -74,13 +75,17 @@ class IndexPage extends React.Component {
               <div className="breatcome_title">
                 <div className="breatcome_title_inner">
                   <div className="breatcome_content">
-                    <Youtube img={youtubeImg} />
+                    <Youtube />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {schedules ?
+        <Schedules images={schedules} />
+        : null }
 
         <Counter date={campDate} bgImage={counterImage} />
 
@@ -144,25 +149,6 @@ export const query = graphql`
         }
       }
     }
-    youtube: allMarkdownRemark(
-      limit: 1
-      filter: { fileAbsolutePath: { regex: "/(youtube)/.*\\.md$/" } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            photo {
-              childImageSharp {
-                sizes(maxWidth: 1600 ) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     officers: allMarkdownRemark(
       filter: { frontmatter: { type: { eq:"Officer" } } }
       sort: {
@@ -179,6 +165,30 @@ export const query = graphql`
             photo {
               childImageSharp {
                 sizes {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    schedules: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/(schedules)/.*\\.md$/" }
+      }
+      sort: {
+        fields: [frontmatter___date], order: ASC
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            photo {
+              childImageSharp {
+                sizes(maxWidth: 2000) {
                   ...GatsbyImageSharpSizes
                 }
               }
