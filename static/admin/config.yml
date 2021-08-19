@@ -161,9 +161,9 @@ collections:
     folder: cms/files/schedules
     create: true
     fields:
-      - { label: Title of Schedule, name: title, widget: string }
+      - { label: Title of Schedule, name: title, widget: string, pattern: ['^.{1,30}$', "Title must not exceed 30 characters."], required: true }
       - { label: Photo, name: photo, widget: image }
-      - { label: Date, name: date, widget: datetime, required: false  }
+      - { label: Date (Ignore this), name: date, widget: datetime, required: false  }
 
 
 
