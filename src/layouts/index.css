@@ -7287,6 +7287,9 @@ table#wp-calendar td#today{
   .counter_bnt a {
     font-size: 12px;
   }
+  .donate-btn-header {
+    margin-top: 60px;
+  }
 }
 
 @media (max-width: 575px) {
