@@ -159,6 +159,7 @@ collections:
   - name: schedules
     label: Schedule Images
     folder: cms/files/schedules
+    sortable_fields: ['date']
     create: true
     fields:
       - { label: Title of Schedule, name: title, widget: string, pattern: ['^.{1,30}$', "Title must not exceed 30 characters."], required: true }
