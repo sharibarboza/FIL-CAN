@@ -178,7 +178,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/(schedules)/.*\\.md$/" }
       }
       sort: {
-        fields: [frontmatter___date], order: ASC
+        fields: [frontmatter___position], order: ASC
       }
     ) {
       edges {
