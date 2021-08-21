@@ -4,7 +4,6 @@ backend:
   branch: dev
 
 media_folder: static/assets
-public_folder: /assets
 
 collections:
   - name: campmeeting_date
