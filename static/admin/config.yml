@@ -159,10 +159,10 @@ collections:
   - name: schedules
     label: Schedule Images
     folder: cms/files/schedules
-    sortable_fields: ['date']
     create: true
+    sortableFields: ['date', 'title']
     fields:
-      - { label: Title of Schedule, name: title, widget: string, pattern: ['^.{1,40}$', "Title must not exceed 30 characters."], required: true }
+      - { label: Title of Schedule, name: title, widget: string, pattern: ['^.{1,40}$', "Title must not exceed 40 characters."], required: true }
       - { label: Photo, name: photo, widget: image }
       - { label: Date (Ignore this), name: date, widget: datetime, required: false  }
 
