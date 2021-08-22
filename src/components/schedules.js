@@ -10,13 +10,22 @@ class Schedules extends React.Component {
   constructor(props) {
     super(props);
     this.images = props.images;
+    this.schedules = [];
+    this.sortSchedules();
+  }
+
+  sortSchedules() {
+    for (let i = 0; i < this.images.length; i++) {
+      let schedule = this.images[i].node.frontmatter;
+      this.schedules.splice(schedule.position - 1, 0, schedule);
+    }
   }
 
   displaySchedules() {
     let elements = [];
 
     for (let i = 0; i < this.images.length; i++) {
-      let schedule = this.images[i].node.frontmatter;
+      let schedule = this.schedules[i];
 
       let element = <div className="col-md-6">
         <div className="single_event_adn kc-elm kc-css-73682 souvenir-box">
