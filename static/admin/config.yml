@@ -163,7 +163,7 @@ collections:
     sortableFields: ['date', 'title']
     fields:
       - { label: Title of Schedule, name: title, widget: string, pattern: ['^.{1,40}$', "Title must not exceed 40 characters."], required: true }
-      - { label: Number Position of Photo, name: position, hint: 1 will be displayed 1st, 2 will be displayed 2nd, etc., widget: number, min: 1, step: 1 }
+      - { label: Number Position of Photo, name: position, widget: number, min: 1, step: 1, value_type: "int" }
       - { label: Photo, name: photo, widget: image }
 
 
