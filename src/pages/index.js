@@ -186,6 +186,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            position
             photo {
               childImageSharp {
                 sizes(maxWidth: 2000) {
