@@ -1,6 +1,6 @@
 ---
 title: 'Sabbath School '
-position: '7'
+position: '10'
 photo: /assets/saturday-sabbath-school.jpg
 ---
 
