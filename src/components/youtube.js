@@ -39,7 +39,7 @@ class Youtube extends React.Component {
     				<div className="col-md-12">
     					<div className="section-title t_center">
                 <div className="donate-btn-header">
-                  <a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank" className="red-on-white">Watch Now</a>
+                  <a href="https://www.youtube.com/channel/UCRjkITPyt10LSzbOs5hojUw" target="_blank" className="red-on-white">View More Videos</a>
                 </div>
     					</div>
     				</div>
