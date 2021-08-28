@@ -20,12 +20,14 @@ class Video extends React.Component {
   	const baseUrl = 'https://youtube.googleapis.com/youtube/v3/';
 
   	// Url for livestream
-  	const liveUrl = baseUrl + 'search?part=snippet&channelId=' + this.channel + '&eventType=live&type=video&key=' + this.key;
-  	const url1 = baseUrl + 'channels?part=contentDetails&id=' + this.channel + '&key=' + this.key;
+  	const liveUrl = baseUrl + 'search?part=id&channelId=' + this.channel + '&eventType=live&maxResults=1&type=video&key=' + this.key;
+  	const url1 = baseUrl + 'channels?part=contentDetails&maxResults=1&id=' + this.channel + '&key=' + this.key;
 
   	fetch(liveUrl).then((response) => {
 		  if (response.ok) {
 		  	return response.json();
+		  } else {
+		  	return response.text().then(text => { throw new Error(text) });
 		  }
 		})
 		.then((json) => {
@@ -44,13 +46,13 @@ class Video extends React.Component {
 				.then((result) => result.json())
 				.then((json) => {
 	  			var uploadsID = json.items[0].contentDetails.relatedPlaylists.uploads;
-	  			var url2 = baseUrl + 'playlistItems?part=snippet&maxResults=1&playlistId=' + uploadsID + '&key=' + this.key;
+	  			var url2 = baseUrl + 'playlistItems?part=contentDetails&maxResults=1&playlistId=' + uploadsID + '&key=' + this.key;
 
 	  			fetch(url2)
 	  				.then(result => result.json())
 	  				.then(json => this.setState({
 	  					isLoaded: true,
-	  					videoID: json.items[0].snippet.resourceId.videoId
+	  					videoID: json.items[0].contentDetails.videoId
 	  				})
 	  			);
 				});
