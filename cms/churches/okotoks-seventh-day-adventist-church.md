@@ -4,7 +4,7 @@ city: 'Okotoks, Alberta'
 pastor: Pastor Jinwook Lee
 address: 20 Banister Gate
 phone: 403 614 9512
-website: okotoksadventist.ca
+website: 'https://okotoksadventist.ca'
 photo: /assets/okotoks-picture.jpg
 ---
 
