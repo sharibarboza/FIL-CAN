@@ -5,6 +5,6 @@ pastor: Pastor Sam Cadiz
 address: '14640 6 St SW, Calgary, AB T2Y 0E1'
 phone: 403-230-6025
 website: ''
-photo: /assets/adventist_logo.png
+photo: /assets/calgary-fil-can.jpg
 ---
 
