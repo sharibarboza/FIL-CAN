@@ -53,20 +53,20 @@ class Schedules extends React.Component {
 
     return (
       <div className="service_area" id="service">
-    		<div className="container">
-    			<div className="row">
-    				<div className="col-md-12">
-    					<div className="section-title  t_center">
-    						<h2>Schedules: Videos & Livesteams</h2>
-    							<Divider />
-    					</div>
-    				</div>
-    			</div>
-    			<div className="row">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="section-title  t_center">
+                <h2>Schedules: Videos & Livesteams</h2>
+                  <Divider />
+              </div>
+            </div>
+          </div>
+          <div className="row">
             {this.displaySchedules()}
-    			</div>
-    		</div>
-    	</div>
+          </div>
+        </div>
+      </div>
     )
   }
 }

@@ -94,9 +94,9 @@ class IndexPage extends React.Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="section-title t_center">
-    						  <h2>Executive Officers</h2>
+                  <h2>Executive Officers</h2>
                   <Divider />
-    					  </div>
+                </div>
               </div>
             </div>
 
@@ -107,15 +107,15 @@ class IndexPage extends React.Component {
         <div className="container" style={{
           marginBottom: '100px',
         }}>
-    			<div className="row">
-    				<div className="col-md-12">
-    					<div className="section-title t_center">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="section-title t_center">
                 <div className="donate-btn-header">
                   <Link to="/board/" className="red-on-white" href="#">View Executive Board</Link>
                 </div>
-    					</div>
-    				</div>
-    			</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div style={{
@@ -138,7 +138,7 @@ export const query = graphql`
   query IndexQuery {
     date: allMarkdownRemark(
       limit: 1
-    	filter: { fileAbsolutePath: { regex: "/(dates)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(dates)/.*\\.md$/" } }
     ) {
       edges {
         node {
@@ -254,7 +254,7 @@ export const query = graphql`
       }
     }
     speakers: allMarkdownRemark(
-    	filter: {
+      filter: {
         fileAbsolutePath: { regex: "/(speakers)/.*\\.md$/" }
       }
       sort: {
@@ -281,7 +281,7 @@ export const query = graphql`
     }
     theme: allMarkdownRemark(
       limit: 1
-    	filter: { fileAbsolutePath: { regex: "/(theme)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(theme)/.*\\.md$/" } }
     ) {
       edges {
         node {
@@ -297,7 +297,7 @@ export const query = graphql`
     }
     gridImages: allMarkdownRemark(
       limit: 12
-  	  filter: { fileAbsolutePath: { regex: "/(grid)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(grid)/.*\\.md$/" } }
     ) {
       edges {
         node {

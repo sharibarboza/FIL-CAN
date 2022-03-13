@@ -145,24 +145,24 @@ class Counter extends React.Component {
             }}
             sizes={this.props.bgImage.sizes}
           />
-      		<div className="container" style={{
+          <div className="container" style={{
             padding: "100px 0"
           }}>
-      			<div className="row">
-      				<div className="col-md-12">
-      					<div className="section-title1 t_center">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="section-title1 t_center">
                   <h2>The {this.getYear()} Annual Filipino-Canadian Camp Meeting</h2>
-    							<h2 style={{ fontSize: '25px', marginTop: '10px' }}>{this.getDate()}</h2>
-    							<Divider white={true} />
+                  <h2 style={{ fontSize: '25px', marginTop: '10px' }}>{this.getDate()}</h2>
+                  <Divider white={true} />
 
-      					</div>
-      				</div>
-      			</div>
-      			<div className="row">
-      				<div className="col-md-12">
-      					<div className="counterdowns">
-      						<div className="counter">
-      							<div className="timer">
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="counterdowns">
+                  <div className="counter">
+                    <div className="timer">
 
                       <div className="countdown">
                         <span className="countdown-col">
@@ -200,11 +200,11 @@ class Counter extends React.Component {
                         </span>
                       </div>
 
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-      			</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="container" style={{
               marginBottom: '100px',
@@ -220,7 +220,7 @@ class Counter extends React.Component {
               </div>
             </div>
 
-      		</div>
+          </div>
         </div>
       : null}
       </div>

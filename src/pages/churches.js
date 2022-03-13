@@ -101,12 +101,12 @@ class ChurchesPage extends React.Component {
         <Helmet title="Filipino-Canadian Seventh-Day Adventist Association of Alberta - Churches"/>
 
         <div className="event_area">
-      		<div className="container">
-      			<div className="row">
+          <div className="container">
+            <div className="row">
               {this.initializeChurchPhotos()}
-      			</div>
-      		</div>
-      	</div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
@@ -123,7 +123,7 @@ export const query = graphql`
       }
     }
     churches: allMarkdownRemark(
-  	   filter: { fileAbsolutePath: { regex: "/(churches)/.*\\.md$/" } }
+       filter: { fileAbsolutePath: { regex: "/(churches)/.*\\.md$/" } }
        sort: { fields: [frontmatter___title], order: ASC }
     ) {
       edges {

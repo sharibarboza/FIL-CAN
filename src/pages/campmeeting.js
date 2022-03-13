@@ -162,7 +162,7 @@ class IndexPage extends React.Component {
                   height: "100%"
                 }} sizes={speaker.photo.childImageSharp.sizes} alt="" />
                 <div className="em-team-content-socials-inner" style={{ visibility: 'hidden' }}>
-                	<div className="em-team-content-socials">
+                  <div className="em-team-content-socials">
                     <Email addr={speaker.email} />
                   </div>
                 </div>
@@ -284,16 +284,16 @@ class IndexPage extends React.Component {
 
         {this.speakers.length > 0 ?
         <div className="team_area" id="speakers">
-      		<div className="container">
-      			<div className="row">
-      				<div className="col-md-12">
-      					<div className="section-title t_center">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="section-title t_center">
 
-      						<h2>Speakers</h2>
+                  <h2>Speakers</h2>
                   <Divider />
-      					</div>
-      				</div>
-      			</div>
+                </div>
+              </div>
+            </div>
             <div className="row" style={{
               paddingTop: '30px'
             }}>
@@ -502,7 +502,7 @@ export const query = graphql`
   query CampMeetingQuery {
     date: allMarkdownRemark(
       limit: 1
-    	filter: { fileAbsolutePath: { regex: "/(dates)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(dates)/.*\\.md$/" } }
     ) {
       edges {
         node {
@@ -514,7 +514,7 @@ export const query = graphql`
       }
     }
     faq: allMarkdownRemark(
-    	filter: { fileAbsolutePath: { regex: "/(faq)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(faq)/.*\\.md$/" } }
     ) {
       edges {
         node {
@@ -528,7 +528,7 @@ export const query = graphql`
     }
     contact: allMarkdownRemark(
       limit: 1
-    	filter: { fileAbsolutePath: { regex: "/(contact)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(contact)/.*\\.md$/" } }
     ) {
       edges {
         node {
@@ -595,7 +595,7 @@ export const query = graphql`
     }
     theme: allMarkdownRemark(
       limit: 1
-    	filter: { fileAbsolutePath: { regex: "/(theme)/.*\\.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(theme)/.*\\.md$/" } }
     ) {
       edges {
         node {
@@ -610,7 +610,7 @@ export const query = graphql`
       }
     }
     speakers: allMarkdownRemark(
-    	filter: {
+      filter: {
         fileAbsolutePath: { regex: "/(speakers)/.*\\.md$/" }
       }
       sort: {

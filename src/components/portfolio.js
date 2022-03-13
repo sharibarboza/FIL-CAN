@@ -11,9 +11,9 @@ class Portfolio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-			lightboxIsOpen: false,
-			currentImage: 0,
-		};
+      lightboxIsOpen: false,
+      currentImage: 0,
+    };
 
     this.maxImages = 12;
 
@@ -37,35 +37,35 @@ class Portfolio extends React.Component {
       this.images.push(src);
     }
 
-		this.closeLightbox = this.closeLightbox.bind(this);
-		this.gotoNext = this.gotoNext.bind(this);
-		this.gotoPrevious = this.gotoPrevious.bind(this);
-		this.openLightbox = this.openLightbox.bind(this);
+    this.closeLightbox = this.closeLightbox.bind(this);
+    this.gotoNext = this.gotoNext.bind(this);
+    this.gotoPrevious = this.gotoPrevious.bind(this);
+    this.openLightbox = this.openLightbox.bind(this);
   }
 
   openLightbox(index, e) {
-		e.preventDefault();
-		this.setState({
-			currentImage: index,
-			lightboxIsOpen: true,
-		});
-	}
-	closeLightbox() {
-		this.setState({
-			currentImage: 0,
-			lightboxIsOpen: false,
-		});
-	}
-	gotoPrevious() {
-		this.setState({
-			currentImage: this.state.currentImage - 1,
-		});
-	}
-	gotoNext() {
-		this.setState({
-			currentImage: this.state.currentImage + 1,
-		});
-	}
+    e.preventDefault();
+    this.setState({
+      currentImage: index,
+      lightboxIsOpen: true,
+    });
+  }
+  closeLightbox() {
+    this.setState({
+      currentImage: 0,
+      lightboxIsOpen: false,
+    });
+  }
+  gotoPrevious() {
+    this.setState({
+      currentImage: this.state.currentImage - 1,
+    });
+  }
+  gotoNext() {
+    this.setState({
+      currentImage: this.state.currentImage + 1,
+    });
+  }
 
   displayPhotos() {
     let elements = [];
@@ -119,7 +119,7 @@ class Portfolio extends React.Component {
 
     return (
       <div>
-    		<div className="container_fluid">
+        <div className="container_fluid">
           <div className="row li" style={{
             margin: '0'
           }}>
@@ -127,12 +127,12 @@ class Portfolio extends React.Component {
           </div>
         </div>
         <Lightbox
-					currentImage={this.state.currentImage}
+          currentImage={this.state.currentImage}
           images={this.images}
           isOpen={this.state.lightboxIsOpen}
           onClose={this.closeLightbox}
           onClickNext={this.gotoNext}
-					onClickPrev={this.gotoPrevious}
+          onClickPrev={this.gotoPrevious}
           backdropClosesModal={true}
         />
       </div>

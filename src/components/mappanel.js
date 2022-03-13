@@ -9,17 +9,19 @@ import loader from '../images/loading.gif';
 class MapPanel extends React.Component {
   constructor(props) {
     super(props);
+    this.key = process.env.GATSBY_MAP_KEY;
+
     this.state = {
       lat: 0,
       lng: 0,
       component: <div className="map-loader"><img src={loader} /></div>,
       loaded: false
     };
-    this.mapKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk&v=3.exp&sensor=false&libraries=geometry,drawing,places";
+    this.mapKey = "https://maps.googleapis.com/maps/api/js?key=" + MAP_KEY + "&v=3.exp&sensor=false&libraries=geometry,drawing,places";
   }
 
   componentDidMount() {
-    Geocode.setApiKey("AIzaSyA7KWXIvtfn2bgrIVL3FGXBpnPR8YQMXAk");
+    Geocode.setApiKey(MAP_KEY);
 
     this.interval = setInterval(() => {
       if (this.state.loaded) {

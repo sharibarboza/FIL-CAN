@@ -14,11 +14,11 @@ class Features extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-  					<div className="section-title t_center">
-  						<h2>Our Community</h2>
+            <div className="section-title t_center">
+              <h2>Our Community</h2>
               <Divider />
-  					</div>
-  				</div>
+            </div>
+          </div>
         </div>
         <div className="row feature_blocks">
           <div className="col-lg-4 col-md-12 col-xs-12">
@@ -50,11 +50,11 @@ class Features extends React.Component {
                   </div>
                 </div>
                 <div className="f-readmore">
-									<div className="feature_button">
-										<Link to="/history/">Read More<span><i className="fa fa-long-arrow-right"></i></span>
-										</Link>
-									</div>
-								</div>
+                  <div className="feature_button">
+                    <Link to="/history/">Read More<span><i className="fa fa-long-arrow-right"></i></span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -88,11 +88,11 @@ class Features extends React.Component {
                   </div>
                 </div>
                 <div className="f-readmore">
-									<div className="feature_button">
-										<Link to="/churches/">View Churches<span><i className="fa fa-long-arrow-right"></i></span>
-										</Link>
-									</div>
-								</div>
+                  <div className="feature_button">
+                    <Link to="/churches/">View Churches<span><i className="fa fa-long-arrow-right"></i></span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -126,18 +126,18 @@ class Features extends React.Component {
                   </div>
                 </div>
                 <div className="f-readmore">
-									<div className="feature_button">
-										<Link to="/campmeeting/">Learn More <span><i className="fa fa-long-arrow-right"></i></span>
-										</Link>
-									</div>
-								</div>
+                  <div className="feature_button">
+                    <Link to="/campmeeting/">Learn More <span><i className="fa fa-long-arrow-right"></i></span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
         </div>
       </div>
-  	</div>
+    </div>
     )
   }
 }

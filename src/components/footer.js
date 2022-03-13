@@ -44,8 +44,8 @@ class Footer extends React.Component {
 
         <div className="footer-middle">
           <div className="container">
-    			   <div className="row">
-  				     <div className=" col-md-4 col-sm-6">
+             <div className="row">
+               <div className=" col-md-4 col-sm-6">
                   <div className="widget">
                     <h2 className="widget-title">About Us</h2>
                     <div className="footer-col">
@@ -103,19 +103,19 @@ class Footer extends React.Component {
         <div className="footer-bottom">
           <div className="container">
           <div className="row">
-    				<div className="col-md-10 col-sm-6">
-    					<div className="copy-right-text">
-    							<p><i className="fa fa-copyright"></i> Copyright Filipino-Canadian Seventh-day Adventist Association of Alberta {this.getYear()}. All Rights Reserved.	</p>
-    					</div>
-    				</div>
-    				<div className="col-md-2 col-sm-6" style={{ paddingLeft: '2px' }}>
+            <div className="col-md-10 col-sm-6">
+              <div className="copy-right-text">
+                  <p><i className="fa fa-copyright"></i> Copyright Filipino-Canadian Seventh-day Adventist Association of Alberta {this.getYear()}. All Rights Reserved.  </p>
+              </div>
+            </div>
+            <div className="col-md-2 col-sm-6" style={{ paddingLeft: '2px' }}>
               <div className="footer-menu">
-    						 <ul>
-    							<li><Link to="/admin/" target="_blank">Admin</Link></li>
-    							<li data-netlify-identity-button></li>
-    						</ul>
-    					</div>
-    				</div>
+                 <ul>
+                  <li><Link to="/admin/" target="_blank">Admin</Link></li>
+                  <li data-netlify-identity-button></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -105,30 +105,30 @@ class Header extends React.Component {
     return (
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
-      		<div className={
+          <div className={
             this.state.scrollingLock || !this.state.collapsed || this.state.mobileWindow ? 'nav_black' : 'nav_white'
           }>
-      			<div className="container">
-      				<Navbar className="row logo-left" dark>
+            <div className="container">
+              <Navbar className="row logo-left" dark>
 
-      					<div className="col-xs-1">
-      						<div className="logo">
-      							<Link to="/" className="main_sticky_main_l" style={{
+                <div className="col-xs-1">
+                  <div className="logo">
+                    <Link to="/" className="main_sticky_main_l" style={{
                       color: this.state.scrollingLock || !this.state.collapsed || this.state.mobileWindow ? 'white' : 'black'
                     }}>
                       <img src={filcanLogo} alt={title} className={
                         this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
                       } />
                       {this.getShortBrand()}
-      							</Link>
-      						</div>
-      	  			</div>
+                    </Link>
+                  </div>
+                </div>
 
                 <div className="col-xs-2" align="left">
                   {this.getBrand()}
                 </div>
 
-      					<div className="col-xs-9" align="right" style={{ 
+                <div className="col-xs-9" align="right" style={{ 
                   paddingLeft: '60px',
                   textAlign: 'right'
                 }}>
@@ -154,10 +154,10 @@ class Header extends React.Component {
                     borderTop: this.state.scrollingLock || this.state.mobileWindow ? 'none' : '1px solid #ddd',
                     borderBottom: this.state.scrollingLock || this.state.mobileWindow ? 'none' : '1px solid #ddd'
                   }}>
-        						<nav className="astute_menu main-search-menu">
-        							<ul className="sub-menu">
-        								<li><Link to="/">Home</Link></li>
-        								<li><Link>About</Link>
+                    <nav className="astute_menu main-search-menu">
+                      <ul className="sub-menu">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link>About</Link>
                           <ul className="sub-menu">
                             <li><Link to="/history/">History</Link></li>
                             <li><Link to="/churches">Churches</Link></li>
@@ -165,7 +165,7 @@ class Header extends React.Component {
                             <li><Link to="/reports/">Annual Reports</Link></li>
                           </ul>
                         </li>
-        								<li><Link>Leadership</Link>
+                        <li><Link>Leadership</Link>
                           <ul className="sub-menu">
                             <li><Link to="/board/">Executive Board</Link></li>
                             <li><Link to="/committees/">Committees</Link></li>
@@ -173,7 +173,7 @@ class Header extends React.Component {
                             <li><AnchorLink to="/meetings/#minutes">Meeting Minutes</AnchorLink></li>
                           </ul>
                         </li>
-        								<li><Link to="/campmeeting/">Campmeeting</Link>
+                        <li><Link to="/campmeeting/">Campmeeting</Link>
                           <ul className="sub-menu">
                             <li><Link to="/campmeeting/">General Info</Link></li>
                             <li><AnchorLink to="/campmeeting/#accommodations">Accommodations</AnchorLink></li>
@@ -182,14 +182,14 @@ class Header extends React.Component {
                             <li><Link to="/resources/">Resources</Link></li>
                           </ul>
                         </li>
-        							</ul>
-        						</nav>
+                      </ul>
+                    </nav>
                   </div>
 
                   <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-      					</div>
+                </div>
 
-      				</Navbar>
+              </Navbar>
 
               <Collapse isOpen={!this.state.collapsed}>
                 <Nav navbar>
@@ -230,9 +230,9 @@ class Header extends React.Component {
                 </Nav>
               </Collapse>
 
-      			</div>
-      		</div>
-      	</div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
