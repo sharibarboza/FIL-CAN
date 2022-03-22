@@ -1,8 +1,8 @@
 ---
 title: Audio Visual
-position: Audio Visual
-name: Nehemiah Bautista
-photo: /assets/img_9083.jpg
 type: Chair
+position: Audio Visual
+name: Pastor Mark Bulahan
+photo: /assets/mark-bulahan.jpg
 ---
 
