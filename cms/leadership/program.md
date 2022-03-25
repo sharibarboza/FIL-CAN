@@ -1,8 +1,8 @@
 ---
 title: Program
-position: Program
-name: Japhet Cordero
-photo: /assets/japhet.jpg
 type: Chair
+position: Program
+name: Eredee Loriezo
+photo: /assets/eredee-loriezo-2-.jpg
 ---
 
