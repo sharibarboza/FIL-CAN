@@ -1,8 +1,8 @@
 ---
 title: Decoration
-position: Decoration
-name: 'Jun-Jun Piedad '
-photo: /assets/jun.jpg
 type: Chair
+position: Decoration
+name: Japhet Cordero
+photo: /assets/japhet.jpg
 ---
 
