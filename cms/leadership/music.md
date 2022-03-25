@@ -1,8 +1,8 @@
 ---
 title: Music
-position: Music
-name: Ken Pasayan
-photo: /assets/pasayan-1.jpg
 type: Chair
+position: Music
+name: Chillnee Bacus
+photo: /assets/chillnee-bacus.jpg
 ---
 
