@@ -1,8 +1,8 @@
 ---
 title: Sports
-position: Sports
-name: 'Rey Biton, Jr.'
-photo: /assets/vice-president-edmonton.jpg
 type: Chair
+position: Sports
+name: Ronniel Navarro
+photo: /assets/ronniel-navarro.jpg
 ---
 
