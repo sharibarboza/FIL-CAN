@@ -1,8 +1,8 @@
 ---
 title: First Aid
-position: First Aid
-name: Franz Chavez
-photo: /assets/franz-chavez-vice-president-lethbridge.jpg
 type: Chair
+position: First Aid
+name: Shiela Salvan
+photo: /assets/shiela-salvan.jpg
 ---
 
