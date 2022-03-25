@@ -1,8 +1,8 @@
 ---
 title: Communications
-position: Communications
-name: Bernardo Lacanilao
-photo: /assets/img_9043.jpg
 type: Chair
+position: Communications
+name: Jocelyn Adante
+photo: /assets/jocelyn-adante.jpg
 ---
 
