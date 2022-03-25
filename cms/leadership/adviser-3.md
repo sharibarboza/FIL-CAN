@@ -1,8 +1,8 @@
 ---
 title: Adviser 3
-position: Adviser
-name: Pastor Honey Todd
-photo: /assets/pastor-honey-todd.jpg
 type: Adviser
+position: Adviser
+name: Pastor Jonathan Deximo
+photo: /assets/pastor-jonathan-deximo.jpg
 ---
 
