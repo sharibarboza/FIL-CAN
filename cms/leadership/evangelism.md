@@ -1,8 +1,8 @@
 ---
 title: Evangelism
-position: Evangelism/Baptism
-name: Ephraim Baragona
-photo: /assets/img_9081.jpg
 type: Chair
+position: Evangelism/Baptism
+name: Pastor Rex Manuel
+photo: /assets/rex-manuel-3-.jpg
 ---
 
