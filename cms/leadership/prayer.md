@@ -1,8 +1,8 @@
 ---
 title: Prayer
-position: Prayer
-name: Benjie Arias
-photo: /assets/arias.jpg
 type: Chair
+position: Prayer
+name: Pastor Dave Sulite
+photo: /assets/sulite.jpg
 ---
 
