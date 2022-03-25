@@ -1,8 +1,8 @@
 ---
 title: Youth Treasurer
-position: Treasurer
-name: Waynedale Geollegue
-photo: /assets/waynedale.jpg
 type: Youth
+position: Treasurer
+name: Franz Chavez
+photo: /assets/franz-chavez-vice-president-lethbridge.jpg
 ---
 
