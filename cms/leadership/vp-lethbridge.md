@@ -2,7 +2,7 @@
 title: VP-Lethbridge
 type: Board VP
 position: VP-Lethbridge
-name: Jarie Persigas
+name: Chavez Franz
 email: ''
 photo: /assets/franz-chavez-vice-president-lethbridge.jpg
 ---
