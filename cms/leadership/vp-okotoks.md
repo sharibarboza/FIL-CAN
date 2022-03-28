@@ -2,7 +2,7 @@
 title: VP-Okotoks
 type: Board VP
 position: VP-Okotoks
-name: Bethoven Laurente
-photo: /assets/eredee-loriezo-2-.jpg
+name: Eredee Loriezo
+photo: /assets/eredee-002-.jpg
 ---
 
