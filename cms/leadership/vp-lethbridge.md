@@ -2,8 +2,8 @@
 title: VP-Lethbridge
 type: Board VP
 position: VP-Lethbridge
-name: Chavez Franz
+name: Richard Franz
 email: ''
-photo: /assets/franz-chavez-vice-president-lethbridge.jpg
+photo: /assets/richard-chavez.jpg
 ---
 
