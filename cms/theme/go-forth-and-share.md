@@ -1,9 +1,9 @@
 ---
-title: 'Yes, Lord'
-filipino: 'Opo, Panginoon'
+title: I Will Go
+filipino: Hahayu Ako
 versetext: >-
-  Martha said to him, "Yes Lord, I believe that you are the Messiah, the Son of
-  God, the one who was expected to come into the world."
-verse: 'John 11:27'
+  Then I heard the voice of the Lord saying, “Whom shall I send? And who will go
+  for us?” And I said, “Here am I. Send me!”
+verse: 'Isaiah 6:8'
 ---
 
