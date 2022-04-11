@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-var dateFormat = require('dateformat');
 import FileIcon from './fileicon'
 
 class FileDownload extends React.Component {
@@ -11,12 +10,7 @@ class FileDownload extends React.Component {
     this.key = props.node.id;
     this.file = props.node.frontmatter;
     this.has_file = this.file.file != null;
-
-    if (props.minutes) {
-      this.title = dateFormat(this.file.title, 'mmmm d, yyyy');
-    } else {
-      this.title = this.file.title;
-    }
+    this.title = this.file.title;
   }
 
   render() {
