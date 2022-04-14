@@ -83,6 +83,7 @@ class Header extends React.Component {
                 }}>
                   <div className="row social-nav" style={{
                     float: 'right',
+                    display: this.state.mobileWindow ? 'none' : 'block',
                     paddingTop: '12px',
                     paddingBottom: '5px'
                   }}>

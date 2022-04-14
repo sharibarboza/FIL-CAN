@@ -50,9 +50,7 @@ class Slider extends React.Component {
 
     return (
       <div>
-        <div className="main-slider-area" style={{
-          paddingTop: '100px'
-        }}>
+        <div className="main-slider-area">
           <Carousel
             renderCenterLeftControls={({ previousSlide }) => (
               <div className="carousel-control" onClick={previousSlide}><i className="fa fa-chevron-left"></i></div>
