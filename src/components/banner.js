@@ -49,7 +49,7 @@ class Banner extends React.Component {
               <div className="breatcome_title_inner">
                 <div className="breatcome_content">
                   <ul>
-                    <li>{this.getParent()} <i className="fa fa-angle-right"></i> <strong style={{ color: '#007bff' }}>{this.props.path}</strong></li>
+                    <li>{this.getParent()} <i className="fa fa-angle-right"></i> <strong style={{ color: '#57bff2' }}>{this.props.path}</strong></li>
                   </ul>
 
                 </div>

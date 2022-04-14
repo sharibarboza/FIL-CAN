@@ -564,12 +564,12 @@ export const query = graphql`
       }
     }
     campImage2: imageSharp(id: { regex: "/foothills/" }) {
-      sizes(maxWidth: 1240 ) {
+      sizes(maxWidth: 2000 ) {
         ...GatsbyImageSharpSizes
       }
     }
     campImage3: imageSharp(id: { regex: "/campingsite/" }) {
-      sizes(maxWidth: 1240 ) {
+      sizes(maxWidth: 2000 ) {
         ...GatsbyImageSharpSizes
       }
     }

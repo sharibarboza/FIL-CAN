@@ -91,7 +91,7 @@ export const query = graphql`
       }
     }
     bannerImage: imageSharp(id: { regex: "/filipinoflag/" }) {
-      sizes(maxWidth: 2000) {
+      sizes(maxWidth: 4000) {
         ...GatsbyImageSharpSizes
       }
     }

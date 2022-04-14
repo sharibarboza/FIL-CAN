@@ -204,22 +204,22 @@ export const query = graphql`
       }
     }
     headerImage1: imageSharp(id: { regex: "/foothills/" }) {
-      sizes(maxWidth: 2000) {
+      sizes(maxWidth: 4000) {
         ...GatsbyImageSharpSizes
       }
     }
     headerImage2: imageSharp(id: { regex: "/alberta/" }) {
-      sizes(maxWidth: 2000) {
+      sizes(maxWidth: 4000) {
         ...GatsbyImageSharpSizes
       }
     }
     headerImage3: imageSharp(id: { regex: "/filipinoflag/" }) {
-      sizes(maxWidth: 2000) {
+      sizes(maxWidth: 4000) {
         ...GatsbyImageSharpSizes
       }
     }
     counterImage: imageSharp(id: { regex: "/campnight/" }) {
-      sizes(maxWidth: 2000) {
+      sizes(maxWidth: 4000) {
         ...GatsbyImageSharpSizes
       }
     }
