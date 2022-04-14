@@ -9,27 +9,13 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrollingLock: false,
       collapsed: true,
       selected: null,
       mobileWindow: false
     }
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.scrollListener = this.scrollListener.bind(this);
     this.closeNav = this.closeNav.bind(this);
-  }
-
-  scrollListener() {
-    if (window.scrollY > 100) {
-      this.setState({
-        scrollingLock: true
-      });
-    } else if (window.scrollY < 100) {
-      this.setState({
-        scrollingLock: false
-      });
-    }
   }
 
   onClickItem(item) {
@@ -56,11 +42,6 @@ class Header extends React.Component {
       mobileWindow: mobile
     })
 
-    window.addEventListener('scroll', this.scrollListener);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollListener);
   }
 
   toggleNavbar() {
@@ -75,57 +56,25 @@ class Header extends React.Component {
     });
   }
 
-  getBrand() {
-    let element;
-
-    if (this.state.scrollingLock || this.state.mobileWindow) {
-      element = <span></span>;
-    } else {
-      element = <span className="brand">Filipino-Canadian Seventh-Day<br />Adventists Association of Alberta</span>;
-    }
-
-    return element;
-  }
-
-  getShortBrand() {
-    let element;
-
-    if (this.state.scrollingLock || this.state.mobileWindow) {
-      element = <span className="short-brand">FilCan</span>;
-    } else {
-      element = <span></span>
-    }
-
-    return element;
-  }
-
   render() {
     const title = this.props.siteTitle;
 
     return (
       <div>
         <div className="astute-main-menu one_page hidden-xs hidden-sm">
-          <div className={
-            this.state.scrollingLock || !this.state.collapsed || this.state.mobileWindow ? 'nav_black' : 'nav_white'
-          }>
+          <div className="nav_black">
             <div className="container">
               <Navbar className="row logo-left" dark>
 
-                <div className="col-xs-1">
+                <div className="col-xs-3">
                   <div className="logo">
                     <Link to="/" className="main_sticky_main_l" style={{
-                      color: this.state.scrollingLock || !this.state.collapsed || this.state.mobileWindow ? 'white' : 'black'
+                      color: 'black'
                     }}>
-                      <img src={filcanLogo} alt={title} className={
-                        this.state.scrollingLock ? 'smaller-logo' : 'default-logo'
-                      } />
-                      {this.getShortBrand()}
+                      <img src={filcanLogo} alt={title} className="smaller-logo" />
+                      <span className="short-brand">FilCan</span>
                     </Link>
                   </div>
-                </div>
-
-                <div className="col-xs-2" align="left">
-                  {this.getBrand()}
                 </div>
 
                 <div className="col-xs-9" align="right" style={{ 
@@ -133,9 +82,8 @@ class Header extends React.Component {
                   textAlign: 'right'
                 }}>
                   <div className="row social-nav" style={{
-                    float: this.state.scrollingLock ? 'right' : 'none',
-                    display: this.state.mobileWindow ? 'none' : 'inline-flex',
-                    paddingTop: this.state.scrollingLock ? '12px' : '0',
+                    float: 'right',
+                    paddingTop: '12px',
                     paddingBottom: '5px'
                   }}>
                     <a href="https://www.facebook.com/groups/filcamp/" target="_blank"><i className="fa fa-facebook-square" style={{
@@ -150,10 +98,7 @@ class Header extends React.Component {
                       <Link className="dtbtn" to="/contact/">Contact Us</Link>
                     </div>
                   </div>
-                  <div className="row" id={ this.state.scrollingLock ? 'small-nav' : 'large-nav' } style={{
-                    borderTop: this.state.scrollingLock || this.state.mobileWindow ? 'none' : '1px solid #ddd',
-                    borderBottom: this.state.scrollingLock || this.state.mobileWindow ? 'none' : '1px solid #ddd'
-                  }}>
+                  <div className="row" id="small-nav">
                     <nav className="astute_menu main-search-menu">
                       <ul className="sub-menu">
                         <li><Link to="/">Home</Link></li>
