@@ -121,6 +121,13 @@ collections:
       - { label: Email, name: title, widget: string }
       - { label: Phone Number, name: phone, widget: string }
 
+  - name: camp_info
+    label: Camp Meeting Info
+    folder: cms/info
+    create: true
+    fields:
+      - { label: Info, name: message, widget: string }
+
   - name: meetings
     label: Organizational Meetings
     folder: cms/meetings
@@ -148,13 +155,6 @@ collections:
       - { label: Title of Meeting Minutes (Must be unique), name: title, widget: string }
       - { label: Date of Meeting, name: date, widget: date }
       - { label: File, name: file, widget: file }
-
-  - name: camp_info
-    label: Camp Meeting Info
-    folder: cms/info
-    create: true
-    fields:
-      - { label: Info, name: info, widget: string }
 
   - name: schedules
     label: Schedule Images

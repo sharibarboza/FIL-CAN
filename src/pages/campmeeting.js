@@ -78,7 +78,7 @@ class IndexPage extends React.Component {
   getInfo() {
     let msg = '';
     try {
-      msg = this.info[0].node.frontmatter.info;
+      msg = this.info[0].node.frontmatter.message;
     } catch(e) {
       msg = 'Come join us for a weekend of spiritual services, camp activities, concerts, game nights, sports events, and more!';
     }
@@ -548,7 +548,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            info
+            message
           }
         }
       }
