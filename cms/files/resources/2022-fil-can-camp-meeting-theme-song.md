@@ -1,6 +1,6 @@
 ---
-title: 2022 Fil-Can Camp Meeting Theme Song
+title: 2022 Fil-Can Camp Meeting Theme Song Music Sheet
 type: Worship Services
-file: /assets/i-will-go-_-ay-theme-song-720p-.mp4
+file: /assets/i-will-go_en-complete-score.pdf
 ---
 
