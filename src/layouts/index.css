@@ -6625,6 +6625,10 @@ color:#fff;
     padding: 10px 15px 15px;
 }
 
+.calendar-col {
+  padding-right: 10px;
+}
+
 
 
 span.cdowns {
@@ -7096,13 +7100,13 @@ table#wp-calendar td#today{
     font-size: 0.9em;
   }
   .container [class*='col-'] {
-    padding: 0 !important;
+    padding: 0;
+  }
+  .calendar-col {
+    padding-right: 10px !important;
   }
   .banner-text {
     padding: 130px 0;
-  }
-  .calendar-col {
-    display: none;
   }
 }
 
@@ -7295,6 +7299,11 @@ table#wp-calendar td#today{
 @media (max-width: 575px) {
   .astute-event-thumb_adn {
     height: 250px !important;
+  }
+
+  .calendar-col {
+    width: 100px !important;
+    margin-bottom: 10px;
   }
 }
 

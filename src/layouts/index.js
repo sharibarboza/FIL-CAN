@@ -23,7 +23,7 @@ class Layout extends React.Component {
     const bannerImage = data.bannerImage;
     const contact = data.contact.edges[0];
     const bannerTitle = (location.pathname).replace(/\//g, '');
-    const noBanner = ['/', '/campmeeting/', '/meetings/'];
+    const noBanner = ['/', '/campmeeting/', '/meetings/', '/meetings'];
 
     return (
       <div>
