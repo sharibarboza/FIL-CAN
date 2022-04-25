@@ -145,7 +145,7 @@ class MeetingsPage extends React.Component {
         let date = new Date(meeting.title);
         let month = this.months[date.getMonth()];
 
-        let element = <div className="row" key={i} id={i}><div className="col-sm-2 col-xs-2 no-left-pad calendar-col"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-sm-10 col-xs-12 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div></div>;
+        let element = <div className="row meeting-panel" key={i} id={i}><div className="col-sm-2 col-xs-2 no-left-pad calendar-col"><div className="calendar-block"><div className="calendar-title">{month}</div><div className="calendar-date">{date.getDate()}</div></div></div><div className="col-sm-10 col-xs-12 no-right-pad"><span><strong>Location:</strong> {location}<br /><strong>Address:</strong> {address}</span><br /><div className="meeting-desc"><span><strong><i className="fa fa-info-circle"></i></strong> {meeting.description}</span></div></div></div>;
         panels.push(element);
       }
     } else {
@@ -262,7 +262,7 @@ class MeetingsPage extends React.Component {
           </div>
         </div>
 
-        <div className="container page-content" id="meeting-panels" style={{
+        <div className="container page-content" style={{
           padding: '100px 15px'
         }}>
 
