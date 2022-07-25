@@ -2,7 +2,7 @@
 title: Children
 type: Chair
 position: Children's Sabbath School
-name: Gem Batiancila
-photo: /assets/gem-batiancila.jpg
+name: Esther Ibo
+photo: /assets/1.jpg
 ---
 
