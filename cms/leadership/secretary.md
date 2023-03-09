@@ -2,7 +2,7 @@
 title: Secretary
 type: Officer
 position: Secretary
-name: Helina Perez
-photo: /assets/helina-perez-2-.jpg
+name: Eredee Loriezo
+photo: /assets/eredee-loriezo-2-.jpg
 ---
 
